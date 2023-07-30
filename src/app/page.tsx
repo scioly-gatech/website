@@ -1,113 +1,277 @@
-import Image from 'next/image'
+'use client'
+
+import { motion, AnimatePresence } from "framer-motion"
+import { Playfair } from "next/font/google"
+import { useEffect } from "react"
+import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
+
+const play = Playfair({subsets:['latin']})
 
 export default function Home() {
+
+  const allPictures = [
+    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg"
+]
+
+let index1 = 0
+let index2 = 1
+let index3 = 2
+
+function changePic (right: boolean) {
+
+    if (typeof(document) !== 'undefined') {
+        const firstPic = document.getElementById("1") as HTMLElement
+        const secondPic = document.getElementById("2") as HTMLElement
+        const thirdPic = document.getElementById("3") as HTMLElement
+        if (right === true) {
+            index1 = (index1 + 1) % allPictures.length
+            index2 = (index2 + 1) % allPictures.length
+            index3 = (index3 + 1) % allPictures.length
+        } else {
+            index1 = ((index1 - 1) % allPictures.length)
+            index2 = ((index2 - 1) % allPictures.length)
+            index3 = ((index3 - 1) % allPictures.length)
+            if (index1 < 0) {
+                index1 = index1 + allPictures.length
+            }
+            if (index2 < 0) {
+                index2 = index2 + allPictures.length
+            }
+            if (index3 < 0) {
+                index3 = index3 + allPictures.length
+            }
+        }
+        firstPic.setAttribute("src", allPictures[index1])
+        secondPic.setAttribute("src", allPictures[index2])
+        thirdPic.setAttribute("src", allPictures[index3])
+        console.log(index1)
+    }
+}
+
+function changePicTimed (right: boolean) {
+
+  if (typeof(document) !== 'undefined') {
+      const firstPic = document.getElementById("1") as HTMLElement
+      const secondPic = document.getElementById("2") as HTMLElement
+      const thirdPic = document.getElementById("3") as HTMLElement
+      if (right === true) {
+          index1 = (index1 + 1) % allPictures.length
+          index2 = (index2 + 1) % allPictures.length
+          index3 = (index3 + 1) % allPictures.length
+      } else {
+          index1 = ((index1 - 1) % allPictures.length)
+          index2 = ((index2 - 1) % allPictures.length)
+          index3 = ((index3 - 1) % allPictures.length)
+          if (index1 < 0) {
+              index1 = index1 + allPictures.length
+          }
+          if (index2 < 0) {
+              index2 = index2 + allPictures.length
+          }
+          if (index3 < 0) {
+              index3 = index3 + allPictures.length
+          }
+      }
+      firstPic?.setAttribute("src", allPictures[index1])
+      secondPic?.setAttribute("src", allPictures[index2])
+      thirdPic?.setAttribute("src", allPictures[index3])
+      console.log(index1)
+  }
+  setTimeout(() => changePicTimed(true), 6000)
+  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
+}
+
+function changePicSmall (right: boolean) {
+
+  if (typeof(document) !== 'undefined') {
+      const firstPic = document.getElementById("1s") as HTMLElement
+      if (right === true) {
+          index1 = (index1 + 1) % allPictures.length
+      } else {
+          index1 = ((index1 - 1) % allPictures.length)
+          if (index1 < 0) {
+              index1 = index1 + allPictures.length
+          }
+      }
+      firstPic?.setAttribute("src", allPictures[index1])
+  }
+}
+
+function changePicSmallTimed (right: boolean) {
+
+  if (typeof(document) !== 'undefined') {
+      const firstPic = document.getElementById("1s") as HTMLElement
+      if (right === true) {
+          index1 = (index1 + 1) % allPictures.length
+      } else {
+          index1 = ((index1 - 1) % allPictures.length)
+          if (index1 < 0) {
+              index1 = index1 + allPictures.length
+          }
+      }
+      firstPic?.setAttribute("src", allPictures[index1])
+  }
+  setTimeout(() => changePicSmallTimed(true), 4000)
+  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
+}
+
+useEffect(() => {
+  if (window.innerWidth < 1024) {
+    setTimeout(() => changePicSmallTimed(true), 4000)
+  } else {
+    setTimeout(() => changePicTimed(true), 4000)
+  }
+}, [])
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    
+    <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
+    <AnimatePresence>
+      <motion.div
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{duration:4}}
+        className="h-[24rem] flex justify-center items-center bg-[url(/images/atlantaSky.jpg)] "
+      >
+       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
+    </motion.div>
+    </AnimatePresence>
+
+    <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
+
+        <button id="left" onClick={() => {
+                changePicSmall(false)
+                
+                }} className="text-5xl dark:text-white"> &lt; </button>
+        <div className="m-2">
+            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
         </div>
+        <button id="right" onClick={() => changePicSmall(true)} className="text-5xl dark:text-white"> &gt; </button>
+    </div>
+
+    <div id="carousel" className="hidden lg:flex flex-row justify-center py-16 ">
+
+        <button id="left" onClick={() => {
+                changePic(false)
+                
+                }} className="text-6xl"> &lt; </button>
+        <div className="m-2">
+            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-lightOrange shadow-2xl shadow-lightOrange rounded-full"/>
+        </div>
+        <div className='m-2'>
+            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
+        </div>
+        <div className='m-2'>
+            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-darkOrange shadow-2xl shadow-darkOrange rounded-full"/>
+        </div>
+        <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
+    </div>
+
+<AnimatePresence>
+    <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:3}}
+    >
+    <div id="mission" className="bg-lightBlue flex flex-col items-center p-8 dark:bg-black">
+        <h2 className={`text-5xl ${play.className} border-4 border-black lg:w-1/2 text-center py-2 my-4 dark:text-white dark:border-white`}>Mission Statement</h2>
+        <p className="hidden lg:flex text-3xl text-center dark:text-white"><BiSolidQuoteLeft className="text-darkBlue dark:text-white hidden lg:block"/> Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. <BiSolidQuoteRight className="text-darkBlue dark:text-white hidden lg:block"/></p>
+        <p className="flex lg:hidden text-3xl text-center dark:text-white">"Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community." </p>
+    </div>
+    </motion.div>
+
+    <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:1}}
+    >
+    <div id="service" className={`flex flex-col lg:flex-row justify-evenly lg:m-12 lg:p-8 items-center m-4`}>
+      <div className="flex flex-col items-center">
+        <h2 className={`bg-lightOrange ${play.className} text-6xl p-4 m-2 lg:py-24 lg:px-8 lg:mr-4`}>Our Service</h2>
       </div>
+      <p className="text-2xl lg:w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
+      <figure className="m-2">
+        <img src="/images/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
+        <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
+      </figure>
+    </div>
+    </motion.div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:1}}
+    >
+    <div id="tournamentSmall" className={`flex flex-col items-center bg-lightBlue dark:bg-black`}>
+      <div className="flex flex-col items-center">
+        <h2 className={`bg-lightOrange ${play.className} text-6xl p-4 m-4`}>Our Tournament</h2>
       </div>
+      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white">The Georgia State Division C Science Olympiad competition will be hosted at Georgia Tech, centralized around the Clough Undergraduate Learning Commons' lab spaces. In addition to the 23 competitive events, several trial events will be hosted on competition day. Various major-specific and specialized Georgia Tech student organizations will host workshops and information sessions around campus to provide high school students with an experience in specific fields. Special tournament directors from the Georgia Science Olympiad organization will ensure fairness in scoring and resolving miscellaneous issues.</p>
+      <figure className="m-2">
+        <img src="/images/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
+        <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
+      </figure>
+    </div>
+    </motion.div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:1}}
+    >
+    <div id="tournamentLarge" className="bg-lightBlue dark:bg-black hidden lg:flex flex-row justify-evenly items-center p-16">
+      <figure>
+        <img src="/images/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
+        <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
+      </figure>
+      <p className="text-2xl w-1/2 border-4 border-black dark:border-white dark:text-white m-4 p-4">The Georgia State Division C Science Olympiad competition will be hosted at Georgia Tech, centralized around the Clough Undergraduate Learning Commons' lab spaces. In addition to the 23 competitive events, several trial events will be hosted on competition day. Various major-specific and specialized Georgia Tech student organizations will host workshops and information sessions around campus to provide high school students with an experience in specific fields. Special tournament directors from the Georgia Science Olympiad organization will ensure fairness in scoring and resolving miscellaneous issues.</p>
+      <div className="justify items-center">
+          <h2 className={`bg-lightOrange ${play.className} text-6xl py-28 px-4 text-center`}>Our Tournament</h2>
       </div>
+    </div>
+    </motion.div>
+
+  </AnimatePresence>
+
+  <AnimatePresence>
+<div id="sponsors">
+  <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:3}}
+    className="flex flex-row justify-around p-12"
+  >
+
+<div id="schools">
+<div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
+      <div className="flex flex-col items-center">
+      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2> 
+        <figure>
+
+        </figure>
+        <figure>
+          <img src="images/seal2.png" alt="Georgia Tech Seal" width="826" height="200"/>
+          <figcaption className="sr-only">Picture of the Georgia Tech Seal next to the words Georgia Institute of Technology</figcaption>
+        </figure>
+      </div>
+    </div>
+      <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
+      <p className="text-3xl m-2 shadow-2xl shadow-brightYellow border-4 border-brightYellow font-bold text-center dark:text-white">
+        Georgia Tech School of Materials Science and Engineering
+      </p>
+      <h3 id="silver" className={`${play.className} font-bold text-5xl m-4 bg-zinc-300 text-center`}>Silver</h3>
+      <p className="text-3xl m-2 shadow-2xl shadow-zinc-300 border-4 border-zinc-300 font-bold text-center dark:text-white">
+        Georgia Tech School of Chemical and Biomolecular Engineering
+      </p>
+      <h3 id="bronze" className={`${play.className} font-bold text-5xl m-4 bg-amber-600 text-center`}>Bronze</h3>
+      <p className="text-3xl m-2 shadow-2xl shadow-amber-600 border-4 border-amber-600 font-bold text-center dark:text-white">
+        Georgia Tech College of Design
+      </p>
+    </div>
+
+  </motion.div>
+    </div>
+    </AnimatePresence>
+
     </main>
   )
 }
