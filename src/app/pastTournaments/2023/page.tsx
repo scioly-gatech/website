@@ -175,7 +175,7 @@ const eventResults = eventResults2023
           {
             allResults.map((result) => {
               return (
-                <tr className={`${result.bold ? "font-bold": "font-normal"}`}>
+                <tr key={result.key} className={`${result.bold ? "font-bold": "font-normal"}`}>
                   <td className="m-3">
                     {result.key}
                   </td>
@@ -197,7 +197,7 @@ const eventResults = eventResults2023
             <tbody>
             {eventResults.map((event) => {
               return (
-                <tr>
+                <tr key={event.key}>
                 <td className="m-3 text-darkBlue dark:text-lightBlue">
                   {event.event}
                 </td>
