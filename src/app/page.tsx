@@ -125,7 +125,7 @@ useEffect(() => {
   } else {
     setTimeout(() => changePicTimed(true), 4000)
   }
-}, [changePicSmallTimed, changePicTimed])
+}, [])
   return (
     
     <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
