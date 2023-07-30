@@ -21,6 +21,10 @@ let index1 = 0
 let index2 = 1
 let index3 = 2
 
+let index = 0
+
+let count = 0
+
 function changePic (right: boolean) {
 
     if (typeof(document) !== 'undefined') {
@@ -48,12 +52,10 @@ function changePic (right: boolean) {
         firstPic.setAttribute("src", allPictures[index1])
         secondPic.setAttribute("src", allPictures[index2])
         thirdPic.setAttribute("src", allPictures[index3])
-        console.log(index1)
     }
 }
 
 function changePicTimed (right: boolean) {
-
   if (typeof(document) !== 'undefined') {
       const firstPic = document.getElementById("1") as HTMLElement
       const secondPic = document.getElementById("2") as HTMLElement
@@ -79,10 +81,11 @@ function changePicTimed (right: boolean) {
       firstPic?.setAttribute("src", allPictures[index1])
       secondPic?.setAttribute("src", allPictures[index2])
       thirdPic?.setAttribute("src", allPictures[index3])
-      console.log(index1)
+      if (firstPic) {
+        setTimeout(() => changePicTimed(true), 6000)
+        //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
+      }
   }
-  setTimeout(() => changePicTimed(true), 6000)
-  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
 }
 
 function changePicSmall (right: boolean) {
@@ -90,14 +93,14 @@ function changePicSmall (right: boolean) {
   if (typeof(document) !== 'undefined') {
       const firstPic = document.getElementById("1s") as HTMLElement
       if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
+          index = (index + 1) % allPictures.length
       } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
+          index = ((index - 1) % allPictures.length)
+          if (index < 0) {
+              index = index + allPictures.length
           }
       }
-      firstPic?.setAttribute("src", allPictures[index1])
+      firstPic?.setAttribute("src", allPictures[index])
   }
 }
 
@@ -106,25 +109,29 @@ function changePicSmallTimed (right: boolean) {
   if (typeof(document) !== 'undefined') {
       const firstPic = document.getElementById("1s") as HTMLElement
       if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
+          index = (index + 1) % allPictures.length
       } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
+          index = ((index - 1) % allPictures.length)
+          if (index < 0) {
+              index = index + allPictures.length
           }
       }
-      firstPic?.setAttribute("src", allPictures[index1])
+      firstPic?.setAttribute("src", allPictures[index])
+      if (firstPic) {
+        setTimeout(() => changePicSmallTimed(true), 6000)
+        //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
+      }
   }
-  setTimeout(() => changePicSmallTimed(true), 4000)
-  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
 }
 
 useEffect(() => {
-  if (window.innerWidth < 1024) {
-    setTimeout(() => changePicSmallTimed(true), 4000)
-  } else {
-    setTimeout(() => changePicTimed(true), 4000)
-  }
+    if (window.screen.width < 1024) {
+      setTimeout(() => changePicSmallTimed(true), 4000)
+      count++
+    } else {
+      setTimeout(() => changePicTimed(true), 4000)
+      count++
+    }
 }, [])
   return (
     

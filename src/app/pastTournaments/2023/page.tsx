@@ -117,7 +117,7 @@ const eventResults = eventResults2023
       } else {
         setTimeout(() => changePicTimed(true), 4000)
       }
-    }, )
+    }, [])
 
   return (
     <div className="min-h-screen bg-white dark:bg-blue-950 dark:text-white">
