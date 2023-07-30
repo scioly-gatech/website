@@ -26,10 +26,15 @@ export default function Sponsorships() {
         </figure>
         <div className="flex flex-col items-center">
         <p className="text-center text-lg lg:text-2xl m-4 lg:m-12 dark:text-white"> Science Olympiad provides a STEM-oriented competition environment, where passionate high school students and Georgia Tech student volunteers coalesce. Funding is necessary to host the State tournament and workshops for Atlanta high school students on the prestigious and pricey Georgia Tech campus. If you or your company/organization is interested in contributing to this noble effort, we, the executive board of this organization, encourage you to view the document applicable to your position. </p>
+        <motion.div
+          whileInView={{}}
+          transition={{}}
+        >
         <figure>
           <Image src="/images/GTLogo.png" alt="GT Logo" width="250" height="157" className="shadow-2xl shadow-white"/>
           <figcaption className="sr-only">Georgia Tech Logo</figcaption>
         </figure>
+        </motion.div>
         </div>
       </div>
       <h2 className="p-4 font-bold text-3xl animate-bounce text-center dark:text-white">&darr;</h2>
@@ -50,9 +55,9 @@ export default function Sponsorships() {
           <tr className="">
             <td>
             <motion.div
-            initial={{opacity:0}}
-            whileInView={{opacity:1}}
-            transition={{duration:1}}
+            initial={{opacity:0, translateX:100}}
+            whileInView={{opacity:1, translateX:0}}
+            transition={{}}
           >
             <div className="lg:mt-[3vh] text-2xl lg:text-3xl text-slate-700 hover:bg-brightYellow dark:hover:text-slate-700 dark:text-white border-8 border-brightYellow shadow-xl shadow-brightYellow text-center lg:px-[24vh]">
             <h3 ><span className={`font-bold `}> Gold </span> <br />$2500+</h3>
@@ -73,9 +78,9 @@ export default function Sponsorships() {
           <tr>
             <td>
             <motion.div
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1}}
+          initial={{opacity:0, translateX:100}}
+          whileInView={{opacity:1, translateX:0}}
+          transition={{delay:0.5}}
         >
           <h3 className="mt-[3vh] text-2xl lg:text-3xl hover:bg-zinc-300 text-slate-700 dark:hover:text-slate-700 dark:text-white border-8 border-zinc-300 shadow-lg shadow-zinc-300 text-center "> <span className="font-bold">Silver </span><br />$1000+</h3>
         </motion.div>
@@ -92,9 +97,9 @@ export default function Sponsorships() {
           <tr>
             <td>
             <motion.div
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1}}
+          initial={{opacity:0, translateX:100}}
+          whileInView={{opacity:1, translateX:0}}
+          transition={{delay:1}}
         >
           <h3 className="mt-[3vh] text-2xl lg:text-3xl hover:bg-amber-600 text-slate-700 dark:hover:text-slate-700 dark:text-white border-8 border-amber-600 shadow-lg shadow-amber-600 text-center"> <span className="font-bold">Bronze </span><br />$500+</h3>
         </motion.div>
@@ -129,16 +134,21 @@ export default function Sponsorships() {
             <h2 >Georgia Tech Departmental Sponsorships</h2>
             <div className="flex">
               <figure>
-                <Image src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
+                <Image src="/images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
                 <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
               </figure>
             </div>
           </div>
       <div id="schools" className="">
+          <motion.div
+            initial={{opacity:0, translateX: 1000}}
+            whileInView={{opacity:1, translateY: 0}}
+          >
             <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
             <p className="text-3xl m-2 shadow-2xl shadow-brightYellow border-4 border-brightYellow font-bold text-center dark:text-white">
               Georgia Tech School of Materials Science and Engineering
             </p>
+            </motion.div>
             <h3 id="silver" className={`${play.className} font-bold text-5xl m-4 bg-zinc-300 text-center`}>Silver</h3>
             <p className="text-3xl m-2 shadow-2xl shadow-zinc-300 border-4 border-zinc-300 font-bold text-center dark:text-white">
               Georgia Tech School of Chemical and Biomolecular Engineering
@@ -170,7 +180,7 @@ export default function Sponsorships() {
             <h2 >Georgia Tech Departmental Sponsorships</h2>
             <div className="flex">
               <figure>
-                <Image src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
+                <Image src="/images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
                 <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
               </figure>
             </div>
