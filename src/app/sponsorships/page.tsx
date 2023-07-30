@@ -140,15 +140,10 @@ export default function Sponsorships() {
             </div>
           </div>
       <div id="schools" className="">
-          <motion.div
-            initial={{opacity:0, translateX: 1000}}
-            whileInView={{opacity:1, translateY: 0}}
-          >
             <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
             <p className="text-3xl m-2 shadow-2xl shadow-brightYellow border-4 border-brightYellow font-bold text-center dark:text-white">
               Georgia Tech School of Materials Science and Engineering
             </p>
-            </motion.div>
             <h3 id="silver" className={`${play.className} font-bold text-5xl m-4 bg-zinc-300 text-center`}>Silver</h3>
             <p className="text-3xl m-2 shadow-2xl shadow-zinc-300 border-4 border-zinc-300 font-bold text-center dark:text-white">
               Georgia Tech School of Chemical and Biomolecular Engineering
@@ -163,7 +158,7 @@ export default function Sponsorships() {
 
     <div id="sponsorsLarge" className="hidden lg:block">
       <div id="schools" className="">
-            <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
+          <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
             <p className="text-3xl m-2 shadow-2xl shadow-brightYellow border-4 border-brightYellow font-bold text-center dark:text-white">
               Georgia Tech School of Materials Science and Engineering
             </p>
