@@ -147,7 +147,7 @@ useEffect(() => {
                 
                 }} className="text-5xl dark:text-white"> &lt; </button>
         <div className="m-2">
-            <Image id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
+            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
         </div>
         <button id="right" onClick={() => changePicSmall(true)} className="text-5xl dark:text-white"> &gt; </button>
     </div>
@@ -159,13 +159,13 @@ useEffect(() => {
                 
                 }} className="text-6xl"> &lt; </button>
         <div className="m-2">
-            <Image id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-lightOrange shadow-2xl shadow-lightOrange rounded-full"/>
+            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-lightOrange shadow-2xl shadow-lightOrange rounded-full"/>
         </div>
         <div className='m-2'>
-            <Image id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
+            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
         </div>
         <div className='m-2'>
-            <Image id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-darkOrange shadow-2xl shadow-darkOrange rounded-full"/>
+            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-darkOrange shadow-2xl shadow-darkOrange rounded-full"/>
         </div>
         <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
     </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import allResults2023 from '../../../../data/allResults/allResults2023'
 import eventResults2023 from '../../../../data/eventResults/eventResults2023'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -77,7 +77,6 @@ function changePicTimed (right: boolean) {
 }
 
 function changePicSmall (right: boolean) {
-
   if (typeof(document) !== 'undefined') {
       const firstPic = document.getElementById("1s") as HTMLElement
       if (right === true) {
@@ -93,7 +92,6 @@ function changePicSmall (right: boolean) {
 }
 
 function changePicSmallTimed (right: boolean) {
-
   if (typeof(document) !== 'undefined') {
       const firstPic = document.getElementById("1s") as HTMLElement
       if (right === true) {
@@ -119,7 +117,7 @@ const eventResults = eventResults2023
       } else {
         setTimeout(() => changePicTimed(true), 4000)
       }
-    }, [changePicSmallTimed, changePicTimed])
+    }, )
 
   return (
     <div className="min-h-screen bg-white dark:bg-blue-950 dark:text-white">
@@ -142,7 +140,7 @@ const eventResults = eventResults2023
                 
                 }} className="text-3xl"> &lt; </button>
     <figure id="carouselSmall" className="flex lg:hidden">
-            <Image id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="200" className="m-4"/>
+            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="200" height="150" className="m-4"/>
     </figure>
     <button id="right" onClick={() => changePicSmall(true)} className="text-3xl"> &gt; </button>
     </div>
@@ -155,13 +153,13 @@ const eventResults = eventResults2023
                 
                 }} className="text-6xl"> &lt; </button>
         <div className="m-2">
-            <Image id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
+            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
         </div>
         <div className='m-2'>
-            <Image id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
+            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
         </div>
         <div className='m-2'>
-            <Image id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
+            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
         </div>
         <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
     </div>

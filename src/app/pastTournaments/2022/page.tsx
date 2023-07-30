@@ -25,9 +25,9 @@ export default function PastTournament2022() {
         Science Olympiad at Georgia Tech was honored to host the Division C State Tournament for the first time on the Georgia Tech campus for the 2021-2022 season. 30 teams came from across the state to the premier public institution in science and engineering to kick off what we hope to be a long-standing Science Olympiad tradition.
         </p>
         <figure>
-          <Image src="/images/2022Pic.jpg" alt="Georgia Tech Student Center" width="375"/>
+          <Image src="/images/2022Pic.jpg" alt="Georgia Tech Student Center" width="375" height="285"/>
           <figcaption className="sr-only">
-            Picture of the Student Center on Georgia Tech's campus
+            Picture of the Student Center on the Georgia Tech campus
           </figcaption>
         </figure>
       </div>
@@ -40,7 +40,7 @@ export default function PastTournament2022() {
           {
             allResults.map((result) => {
               return (
-                <tr className={`${result.bold ? "font-bold": "font-normal"}`}>
+                <tr key={result.key} className={`${result.bold ? "font-bold": "font-normal"}`}>
                   <td className="m-3">
                     {result.key}
                   </td>
@@ -62,7 +62,7 @@ export default function PastTournament2022() {
           <tbody>
             {eventResults.map((event) => {
               return (
-                <tr>
+                <tr key={event.key}>
                 <td className="m-3 text-darkBlue dark:text-lightBlue">
                   {event.event}
                 </td>

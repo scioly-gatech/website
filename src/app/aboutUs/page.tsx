@@ -48,7 +48,7 @@ export default function MeetTeam() {
           </h1>
           <figure className="hidden lg:block">
             <Image src="images/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
-            <figcaption className="sr-only">Picture of one of the buildings on Georgia Tech's campus</figcaption>
+            <figcaption className="sr-only">Picture of one of the buildings on the Georgia Tech campus/</figcaption>
           </figure>
         </div>
         </motion.div>
