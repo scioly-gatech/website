@@ -2,8 +2,9 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Playfair } from 'next/font/google'
+import Image from 'next/image'
 
-const play = Playfair({ subsets: ['latin'] })
+const play = Playfair({ subsets: ['latin'], display: "swap" })
 
 export default function CurrentTournament() {
   return (
@@ -23,7 +24,7 @@ export default function CurrentTournament() {
       </AnimatePresence>
       <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 sm:mx-8 lg:mx-72 shadow-darkBlue dark:shadow-white shadow-xl"> Science Olympiad @ Georgia Tech is hosting the very first Georgia Tech Invitational! We are so excited to host all 23 of the events for the 2023-2024 season. <br /> <br />More information including dates and registration are coming soon! </p>
       <figure className="w-screen flex justify-center mt-8">
-        <img src="/images/view.jpg" alt="View of Georgia Tech campus" width="450" height="300" className="shadow-xl shadow-darkBlue dark:shadow-white mb-8"/>
+        <Image src="/images/view.jpg" alt="View of Georgia Tech campus" width="450" height="300" className="shadow-xl shadow-darkBlue dark:shadow-white mb-8"/>
         <figcaption className="sr-only">
           View of Georgia Tech campus with some of the Atlanta skyline in the background.
         </figcaption>

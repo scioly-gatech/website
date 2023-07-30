@@ -2,8 +2,9 @@
 import React from 'react'
 import { Playfair} from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 
-const play = Playfair({ subsets: ['latin'] })
+const play = Playfair({ subsets: ['latin'], display: "swap" })
 
 export default function Sponsorships() {
 
@@ -26,7 +27,7 @@ export default function Sponsorships() {
         <div className="flex flex-col items-center">
         <p className="text-center text-lg lg:text-2xl m-4 lg:m-12 dark:text-white"> Science Olympiad provides a STEM-oriented competition environment, where passionate high school students and Georgia Tech student volunteers coalesce. Funding is necessary to host the State tournament and workshops for Atlanta high school students on the prestigious and pricey Georgia Tech campus. If you or your company/organization is interested in contributing to this noble effort, we, the executive board of this organization, encourage you to view the document applicable to your position. </p>
         <figure>
-          <img src="/images/GTLogo.png" alt="GT Logo" width="250" height="157" className="shadow-2xl shadow-white"/>
+          <Image src="/images/GTLogo.png" alt="GT Logo" width="250" height="157" className="shadow-2xl shadow-white"/>
           <figcaption className="sr-only">Georgia Tech Logo</figcaption>
         </figure>
         </div>
@@ -128,7 +129,7 @@ export default function Sponsorships() {
             <h2 >Georgia Tech Departmental Sponsorships</h2>
             <div className="flex">
               <figure>
-                <img src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
+                <Image src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
                 <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
               </figure>
             </div>
@@ -169,7 +170,7 @@ export default function Sponsorships() {
             <h2 >Georgia Tech Departmental Sponsorships</h2>
             <div className="flex">
               <figure>
-                <img src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
+                <Image src="images/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
                 <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
               </figure>
             </div>

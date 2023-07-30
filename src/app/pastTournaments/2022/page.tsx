@@ -1,6 +1,7 @@
 import React from 'react'
 import allResults2022 from '../../../../data/allResults/allResults2022'
 import eventResults2022 from '../../../../data/eventResults/eventResults2022'
+import Image from 'next/image'
 
 const allResults = allResults2022
 const eventResults = eventResults2022
@@ -24,7 +25,7 @@ export default function PastTournament2022() {
         Science Olympiad at Georgia Tech was honored to host the Division C State Tournament for the first time on the Georgia Tech campus for the 2021-2022 season. 30 teams came from across the state to the premier public institution in science and engineering to kick off what we hope to be a long-standing Science Olympiad tradition.
         </p>
         <figure>
-          <img src="/images/2022Pic.jpg" alt="Georgia Tech Student Center" width="375"/>
+          <Image src="/images/2022Pic.jpg" alt="Georgia Tech Student Center" width="375"/>
           <figcaption className="sr-only">
             Picture of the Student Center on Georgia Tech's campus
           </figcaption>

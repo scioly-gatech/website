@@ -1,3 +1,4 @@
+import Image from "next/image"
 //Defines the types being passed in. For color, if the boolean is true, the color is a dark orange. If the boolean is false, the color is a light orange.
 type ProfileProps = {
     name: string,
@@ -16,7 +17,7 @@ export default function Profile(props: ProfileProps) {
     <>
     <main className={`flex flex-col items-center p-5 px-10`}>
         <figure className="border-4 border-darkBlue dark:border-lightBlue">
-            <img src={props.imgRoute} alt={altTag} width='300' height='300' className=''/>
+            <Image src={props.imgRoute} alt={altTag} width='300' height='300' className=''/>
             <figcaption className="sr-only">{altTag}</figcaption>
         </figure>
         <div className={`${props.color ? "bg-lightOrange" : "bg-darkOrange"} mt-2 flex flex-col items-center w-64 border-4 rounded-lg`}>

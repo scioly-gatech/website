@@ -3,9 +3,13 @@ import Profile from "../components/Profile"
 import { Libre_Franklin, Playfair } from 'next/font/google'
 
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 const libre = Libre_Franklin({subsets: ['latin']})
-const play = Playfair({subsets: ['latin']})
+const play = Playfair({
+  subsets: ['latin'],
+  display: "swap"
+})
 
 export default function MeetTeam() {
 
@@ -42,7 +46,7 @@ export default function MeetTeam() {
            About&nbsp;Us 
           </h1>
           <figure className="hidden lg:block">
-            <img src="images/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
+            <Image src="images/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
             <figcaption className="sr-only">Picture of one of the buildings on Georgia Tech's campus</figcaption>
           </figure>
         </div>

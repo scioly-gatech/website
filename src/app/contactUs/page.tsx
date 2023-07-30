@@ -1,7 +1,11 @@
 import React from 'react'
 import { Playfair } from 'next/font/google'
+import Image from 'next/image'
 
-const play = Playfair({ subsets: ['latin'] })
+const play = Playfair({ 
+  subsets: ['latin'],
+  display: "swap"
+ })
 
 export default function ContactUs() {
   return (
@@ -14,7 +18,7 @@ export default function ContactUs() {
           If you have any questions or comments regarding competing, sponsoring, or anything else related to Science Olympiad at Georgia Tech, we would love to hear from you! Please do not hesitate to reach out to us at <a href="malito:scioly.gatech@gmail.com" className="underline font-semibold">scioly.gatech@gmail.com</a>.
         </p>
         <figure>
-          <img src="/images/biggerLogo.jpeg" alt="Picture of the Science Olympiad at Georgia Tech Logo" width="288" height="300"/>
+          <Image src="/images/biggerLogo.jpeg" alt="Picture of the Science Olympiad at Georgia Tech Logo" width="288" height="300"/>
           <figcaption className="sr-only">
             Picture of the Science Olympiad at Georgia Tech Logo
           </figcaption>
