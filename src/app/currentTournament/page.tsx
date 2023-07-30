@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
-import { Playfair } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import Image from 'next/image'
 
-const play = Playfair({ subsets: ['latin'], display: "swap" })
+const play = Lora({ subsets: ['latin'], display: "swap" })
 
 export default function CurrentTournament() {
   return (

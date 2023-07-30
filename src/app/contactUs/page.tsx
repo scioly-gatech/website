@@ -1,8 +1,8 @@
 import React from 'react'
-import { Playfair } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import Image from 'next/image'
 
-const play = Playfair({ 
+const play = Lora({ 
   subsets: ['latin'],
   display: "swap"
  })

@@ -1,10 +1,10 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { Playfair } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import React from 'react'
 
-const play = Playfair({ subsets: ['latin'], display:"swap" })
+const play = Lora({ subsets: ['latin'], display:"swap" })
 
 export default function page() {
   return (

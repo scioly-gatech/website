@@ -1,12 +1,13 @@
 'use client'
 import Profile from "../components/Profile"
-import { Libre_Franklin, Playfair } from 'next/font/google'
+import { Libre_Franklin, Lora } from 'next/font/google'
 
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
 const libre = Libre_Franklin({subsets: ['latin']})
-const play = Playfair({
+
+const play = Lora({
   subsets: ['latin'],
   display: "swap"
 })

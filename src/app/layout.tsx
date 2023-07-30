@@ -1,11 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Rubik } from 'next/font/google'
 import { Open_Sans } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-const rubik = Rubik({ subsets: ['latin'] })
 const open = Open_Sans({subsets: ['latin']})
 
 export const metadata: Metadata = {

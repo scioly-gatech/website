@@ -1,12 +1,12 @@
 'use client'
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Playfair } from "next/font/google"
+import { Lora } from "next/font/google"
 import { useEffect } from "react"
 import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
 
-const play = Playfair({
+const play = Lora({
   subsets:['latin'],
   display:'swap'
 })
@@ -136,7 +136,7 @@ useEffect(() => {
         transition={{duration:4}}
         className="h-[24rem] flex justify-center items-center bg-[url(/images/atlantaSky.jpg)] "
       >
-       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
+       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
     </motion.div>
     </AnimatePresence>
 
@@ -205,7 +205,7 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
     >
-    <div id="tournamentSmall" className={`flex flex-col items-center bg-lightBlue dark:bg-black`}>
+    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black`}>
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-4 m-4`}>Our Tournament</h2>
       </div>
