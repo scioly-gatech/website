@@ -42,12 +42,12 @@ export default function MeetTeam() {
           animate={{opacity:1}}
           transition={{duration:1}}
         >
-        <div id="title" className="flex flex-row justify-center bg-[url('/images/background-1.jpg')] w-screen py-10">
+        <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-screen py-10">
           <h1 className= {`${play.className} text-white dark:text-darkBlue dark:bg-white font-bold text-5xl border-4 border-white m-10 p-8 lg:px-48 shadow-lg flex justify-center`}>
            About&nbsp;Us 
           </h1>
           <figure className="hidden lg:block">
-            <Image src="/images/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
+            <Image src="/images/about/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
             <figcaption className="sr-only">Picture of one of the buildings on the Georgia Tech campus/</figcaption>
           </figure>
         </div>
