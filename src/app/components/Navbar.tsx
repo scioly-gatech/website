@@ -62,7 +62,7 @@ export default function Navbar() {
 
   return (
     <main>
-        <div id="smallNavBar" className="lg:hidden relative z-10">
+        <div id="smallNavBar" className="lgNav:hidden relative z-10">
             {/* Style for the hamburger menu was inspired by Dave Gray's Tailwind CSS Video: https://www.youtube.com/watch?v=lCxcTsOHrjo */}
             <AnimatePresence>
                 <motion.div
@@ -118,7 +118,7 @@ export default function Navbar() {
             </AnimatePresence>
         </div>
 
-        <nav id="fullNavBar" className="hidden lg:flex sticky-top-0 shadow-md flex-row justify-between pr-5 text-darkBlue sm:hidden bg-gradient-to-b from-lightBlue dark:from-darkBlue dark:to-black dark:text-lightBlue">
+        <nav id="fullNavBar" className="hidden lgNav:flex sticky-top-0 shadow-md flex-row justify-between pr-5 text-darkBlue sm:hidden bg-gradient-to-b from-lightBlue dark:from-darkBlue dark:to-black dark:text-lightBlue">
             <AnimatePresence>
                 <motion.div
                     initial={{scale:1.5}}
@@ -131,46 +131,46 @@ export default function Navbar() {
 
                 </motion.div>
             </AnimatePresence>
-            <ul className="flex justify-between whitespace-nowrap">
-            <li className="m-2 mx-6 hover:opacity-40 hover:underline hover:animate-bounce2">
-                    <Link href="/">Home</Link>
+            <ul className="flex justify-between whitespace-nowrap py-6">
+            <li className="m-2 mx-6 hover:opacity-40 hover:underline">
+                    <Link href="/" className="text-xl">Home</Link>
                 </li>
 
-                <li className="m-2 mx-6 hover:opacity-40 hover:underline hover:animate-bounce2">
-                    <Link href="/aboutUs">About Us</Link>
+                <li className="m-2 mx-6 hover:opacity-40 hover:underline">
+                    <Link href="/aboutUs" className="text-xl">About Us</Link>
                 </li>
 
                 <div id="current">   
                     <li className="m-2 mx-6">
-                        <Link href="/currentTournament" className="hover:opacity-40 hover:underline">Georgia Tech Invitational</Link>
+                        <Link href="/currentTournament" className="hover:opacity-40 hover:underline text-xl">Georgia Tech Invitational</Link>
                         <ul id="currentDropdown" className="bg-gradient-to-b from-white dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 p-2 pl-0 hidden w-40">
                             <li>
-                                <Link href="/currentTournament/policy" className="hover:opacity-40"> Policies </Link>
+                                <Link href="/currentTournament/policy" className="hover:opacity-40 hover:underline text-xl"> Policies </Link>
                             </li>
                         </ul>
                     </li>
                 </div>
 
-                <li className="m-2 mx-6 hover:opacity-40 hover:animate-bounce2 hover:underline">
-                    <Link href="/sponsorships">Sponsorship</Link>
+                <li className="m-2 mx-6 hover:opacity-40 hover:underline">
+                    <Link href="/sponsorships" className="text-xl">Sponsorship</Link>
                 </li>
 
                 <div id="past">
                     <li className="m-2 mx-6">
-                        <p> Past Tournaments </p>
+                        <p className="text-xl"> Past Tournaments </p>
                         <ul id="pastDropdown" className="bg-gradient-to-b from-white dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 p-2 pl-0 hidden flex-col">
                             <li>
-                                <Link href="/pastTournaments/2022" className="hover:opacity-40">2022 Tournament</Link>
+                                <Link href="/pastTournaments/2022" className="hover:opacity-40 hover:underline text-xl">2022 Tournament</Link>
                             </li>
                             <li>
-                                <Link href="/pastTournaments/2023" className="hover:opacity-40 mt-2">2023 Tournament</Link>
+                                <Link href="/pastTournaments/2023" className="hover:opacity-40 mt-2 hover:underline text-xl">2023 Tournament</Link>
                             </li>
                         </ul>
                     </li>
                 </div>
 
-                <li className="m-2 mx-6 hover:opacity-40 hover:animate-bounce2 hover:underline">
-                    <Link href="/contactUs">Contact Us</Link>
+                <li className="m-2 mx-6 hover:opacity-40 hover:underline">
+                    <Link href="/contactUs" className="text-xl">Contact Us</Link>
                 </li>
             </ul>
         </nav>

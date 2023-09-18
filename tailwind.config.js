@@ -10,7 +10,8 @@ module.exports = {
       screens: {
         twoCol: '910px',
         threeCol: '1168px',
-        fourCol: '1426px'
+        fourCol: '1426px',
+        lgNav: '1195px',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -2,9 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 
 export default function Logo() {
+  const size = 80
   return (
     <section>
-        <Image src="/images/logo.jpeg" width="38" height="40" alt="Georgia Tech Science Olympiad Home"/>
+        <Image src="/images/officialLogo.png" width={size} height={size} alt="Georgia Tech Science Olympiad Home" className="ml-2"/>
     </section>
   )
 }

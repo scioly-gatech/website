@@ -21,20 +21,17 @@ export default function Sponsorships() {
     transition={{duration:1}}
   >
       <div id="why" className="flex flex-col lg:flex-row justify-around p-12">
-        <h2 className={`text-center text-5xl italic text-black dark:text-white bg-lightOrange dark:bg-black p-8 lg:px-20 ${play.className}`}> Why Sponsor Science Olympiad @ Georgia Tech? </h2>
+        <div id="centerWhy" className="flex justify-center items-center">
+          <h2 className={`text-center text-5xl italic text-black dark:text-white bg-lightOrange dark:bg-black p-8 lg:px-20 ${play.className}`}> Why Sponsor Science Olympiad @ Georgia Tech? </h2>
+        </div>
         <figure>
         </figure>
         <div className="flex flex-col items-center">
-        <p className="text-center text-lg lg:text-2xl m-4 lg:m-12 dark:text-white"> Science Olympiad provides a STEM-oriented competition environment, where passionate high school students and Georgia Tech student volunteers coalesce. Funding is necessary to host the State tournament and workshops for Atlanta high school students on the prestigious and pricey Georgia Tech campus. If you or your company/organization is interested in contributing to this noble effort, we, the executive board of this organization, encourage you to view the document applicable to your position. </p>
-        <motion.div
-          whileInView={{}}
-          transition={{}}
-        >
-        <figure>
-          <Image src="/images/GTLogo.png" alt="GT Logo" width="250" height="157" className="shadow-2xl shadow-white"/>
+        <p className="text-left text-lg lg:text-2xl m-4 lg:m-12 dark:text-white"> Science Olympiad provides a STEM-oriented competition environment, where passionate high school students and Georgia Tech student volunteers coalesce. Funding is necessary to host the State tournament and workshops for Atlanta high school students on the prestigious and pricey Georgia Tech campus. If you or your company/organization is interested in contributing to this noble effort, we, the executive board of this organization, encourage you to view the document applicable to your position. </p>
+        <figure className="lg:mr-80">
+          <Image src="/images/GTLogo.png" alt="GT Logo" width="250" height="157" className=""/>
           <figcaption className="sr-only">Georgia Tech Logo</figcaption>
         </figure>
-        </motion.div>
         </div>
       </div>
       <h2 className="p-4 font-bold text-3xl animate-bounce text-center dark:text-white">&darr;</h2>
