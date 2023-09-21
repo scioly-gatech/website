@@ -15,21 +15,21 @@ const play = Lora({
 export default function MeetTeam() {
 
   const profiles = [
-    {id: 1, name: "Allen Chang", role: "President", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 2, name: "Sparsh Kudrimoti", role: "Vice President", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 1, name: "Allen Chang", role: "President", imgRoute: "/images/execPics/Allen-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 2, name: "Sparsh Kudrimoti", role: "Vice President", imgRoute: "/images/execPics/Sparsh.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 3, name: "Vidit Pokharna", role: "Finance Officer", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 4, name: "Siva Appana", role: "Build Director", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 5, name: "Sean Ru", role: "Build Director", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 6, name: "Dylan Chandra", role: "Build Director", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 4, name: "Siva Appana", role: "Build Director", imgRoute: "/images/execPics/Siva.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 5, name: "Sean Ru", role: "Build Director", imgRoute: "/images/execPics/Sean-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 6, name: "Dylan Chandra", role: "Build Director", imgRoute: "/images/execPics/Dylan-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 7, name: "Syaam Khandaker", role: "Exam Director", role2: "Physics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 8, name: "Tonya Melnikova", role: "Exam Director/Chemistry", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 9, name: "Cade Jones", role: "Exam Director/Biology", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 10, name: "Shriya Nayak", role: "Exam Director/Earth Science", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 8, name: "Tonya Melnikova", role: "Exam Director/Chemistry", imgRoute: "/images/execPics/Tonya-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 9, name: "Cade Jones", role: "Exam Director/Biology", imgRoute: "/images/execPics/Cade.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 10, name: "Shriya Nayak", role: "Exam Director/Earth Science", imgRoute: "/images/execPics/Shriya-cropped.JPG", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 11, name: "Ashika Srivastava", role: "Logistics/Competitor Logistics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 12, name: "Morgan Duvall", role: "Logistics/Volunteer Logistics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 12, name: "Morgan Duvall", role: "Logistics/Volunteer Logistics", imgRoute: "/images/execPics/Morgan.JPG", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 13, name: "Jason Katz", role: "Logistics/Tournament Logistics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 14, name: "Harsha Gaddipati", role: "Public Relations", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 15, name: "Julie Young", role: "Technology", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 15, name: "Julie Young", role: "Technology", imgRoute: "/images/execPics/Julie-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
   ]
 
   //Stagger animation below was modified from Leigh Halliday's YouTube tutorial titled 'Staggered Animations in React with Framer Motion in 5 Minutes'. The video can be found at this link: https://www.youtube.com/watch?v=u_95SPKE6vg&ab_channel=LeighHalliday
