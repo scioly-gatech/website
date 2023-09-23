@@ -119,18 +119,10 @@ export default function Navbar() {
         </div>
 
         <nav id="fullNavBar" className="hidden lgNav:flex sticky-top-0 shadow-md flex-row justify-between pr-5 text-darkBlue sm:hidden bg-gradient-to-b from-lightBlue dark:from-darkBlue dark:to-black dark:text-lightBlue">
-            <AnimatePresence>
-                <motion.div
-                    initial={{scale:1.5}}
-                    animate={{scale:1, rotate: 360}}
-                    whileHover={{scale:1.2}}
-                >
-                    <Link href="/" className="hover:opacity-40">
-                        <Logo />
-                    </Link>
-
-                </motion.div>
-            </AnimatePresence>
+       
+             <Link href="/" className="hover:opacity-40">
+                <Logo />
+             </Link>
             <ul className="flex justify-between whitespace-nowrap py-6">
             <li className="m-2 mx-6 hover:opacity-40 hover:underline">
                     <Link href="/" className="text-xl">Home</Link>
