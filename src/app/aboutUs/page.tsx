@@ -28,7 +28,7 @@ export default function MeetTeam() {
     {id: 11, name: "Ashika Srivastava", role: "Logistics/Competitor Logistics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 12, name: "Morgan Duvall", role: "Logistics/Volunteer Logistics", imgRoute: "/images/execPics/Morgan.JPG", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 13, name: "Jason Katz", role: "Logistics/Tournament Logistics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 14, name: "Harsha Gaddipati", role: "Public Relations", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 14, name: "Harsha Gaddipati", role: "Public Relations", imgRoute: "/images/execPics/Harsha-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 15, name: "Julie Young", role: "Technology", imgRoute: "/images/execPics/Julie-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
   ]
 
