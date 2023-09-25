@@ -3,11 +3,27 @@ import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
 import Image from 'next/image'
+import Script from 'next/script'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
 export default function CurrentTournament() {
   return (
+    <>
+    <Script
+    strategy="lazyOnload"
+    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+    />
+    <Script strategy="lazyOnload">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+        page_path: window.location.pathname,
+        });
+      `}
+      </Script>
     <div className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh]">
       <AnimatePresence>
       <motion.div
@@ -30,5 +46,6 @@ export default function CurrentTournament() {
         </figcaption>
       </figure>
     </div>
+    </>
   )
 }

@@ -3,11 +3,27 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lora } from 'next/font/google'
 import React from 'react'
+import Script from 'next/script'
 
 const play = Lora({ subsets: ['latin'], display:"swap" })
 
 export default function page() {
   return (
+    <>
+    <Script
+    strategy="lazyOnload"
+    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+    />
+    <Script strategy="lazyOnload">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+        page_path: window.location.pathname,
+        });
+      `}
+      </Script>
     <div className="dark:bg-black bg-slate-200 min-h-screen h-full w-screen">
       <div id="page setup" className="pb-12">
       <AnimatePresence>
@@ -45,5 +61,6 @@ export default function page() {
     During check-in, coaches will receive one wristband for the head coach and 15 wristbands for their students. Wristbands are required for all students competing in events. Trial events will not require wristbands. Impound will not require wristbands. Students will be required to be wearing a wristband in order to compete; we will not be providing extra wristbands if they are lost. </p>
     </div>
     </div>
+    </>
   )
 }

@@ -4,6 +4,7 @@ import { Libre_Franklin, Lora } from 'next/font/google'
 
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
+import Script from "next/script"
 
 const libre = Libre_Franklin({subsets: ['latin']})
 
@@ -35,6 +36,22 @@ export default function MeetTeam() {
   //Stagger animation below was modified from Leigh Halliday's YouTube tutorial titled 'Staggered Animations in React with Framer Motion in 5 Minutes'. The video can be found at this link: https://www.youtube.com/watch?v=u_95SPKE6vg&ab_channel=LeighHalliday
 
   return (
+    <>
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
     <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-screen">
       <AnimatePresence>
       <motion.div
@@ -84,5 +101,6 @@ export default function MeetTeam() {
       </AnimatePresence>
       <hr />
     </main>
+    </>
   )
 }
