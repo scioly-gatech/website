@@ -18,7 +18,7 @@ export default function MeetTeam() {
   const profiles = [
     {id: 1, name: "Allen Chang", role: "President", imgRoute: "/images/execPics/Allen-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 2, name: "Sparsh Kudrimoti", role: "Vice President", imgRoute: "/images/execPics/Sparsh.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 3, name: "Vidit Pokharna", role: "Finance Officer", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 3, name: "Vidit Pokharna", role: "Finance Officer", imgRoute: "/images/execPics/Vidit-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 4, name: "Siva Appana", role: "Build Director", imgRoute: "/images/execPics/Siva.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 5, name: "Sean Ru", role: "Build Director", imgRoute: "/images/execPics/Sean-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 6, name: "Dylan Chandra", role: "Build Director", imgRoute: "/images/execPics/Dylan-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
