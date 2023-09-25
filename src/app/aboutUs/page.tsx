@@ -22,7 +22,7 @@ export default function MeetTeam() {
     {id: 4, name: "Siva Appana", role: "Build Director", imgRoute: "/images/execPics/Siva.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 5, name: "Sean Ru", role: "Build Director", imgRoute: "/images/execPics/Sean-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 6, name: "Dylan Chandra", role: "Build Director", imgRoute: "/images/execPics/Dylan-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
-    {id: 7, name: "Syaam Khandaker", role: "Exam Director/Physics", role2: "Physics", imgRoute: "/images/blankProfile.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    {id: 7, name: "Syaam Khandaker", role: "Exam Director/Physics", role2: "Physics", imgRoute: "/images/execPics/Syaam-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 8, name: "Tonya Melnikova", role: "Exam Director/Chemistry", imgRoute: "/images/execPics/Tonya-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 9, name: "Cade Jones", role: "Exam Director/Biology", imgRoute: "/images/execPics/Cade.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 10, name: "Shriya Nayak", role: "Exam Director/Earth Science", imgRoute: "/images/execPics/Shriya-cropped.JPG", info: "ANYTHING ANYTHING ANYTHING"},
