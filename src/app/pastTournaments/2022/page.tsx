@@ -10,20 +10,6 @@ const eventResults = eventResults2022
 export default function PastTournament2022() {
   return (
     <>
-    <Script
-    strategy="lazyOnload"
-    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-    />
-    <Script strategy="lazyOnload">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-      `}
-      </Script>
     <div className="min-h-screen bg-white dark:bg-slate-600 dark:text-white">
       <h1 className="bg-sky-100 dark:bg-black dark:text-white flex justify-center py-20">
         <div id="borderDiv" className="border-4 border-brightYellow text-center text-2xl lg:text-6xl font-bold p-4 m-4">

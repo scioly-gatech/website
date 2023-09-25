@@ -37,21 +37,6 @@ export default function MeetTeam() {
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script strategy="lazyOnload">
-        {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                `}
-      </Script>
     <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-screen">
       <AnimatePresence>
       <motion.div

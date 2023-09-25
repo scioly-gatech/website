@@ -122,20 +122,6 @@ const eventResults = eventResults2023
 
   return (
     <>
-    <Script
-    strategy="lazyOnload"
-    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-    />
-    <Script strategy="lazyOnload">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-      `}
-      </Script>
     <div className="min-h-screen bg-white dark:bg-blue-950 dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
         <div id="borderDiv" className="border-4 border-lime-400 text-center text-2xl lg:text-6xl font-bold p-4 m-4">

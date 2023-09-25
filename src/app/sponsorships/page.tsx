@@ -11,21 +11,6 @@ export default function Sponsorships() {
 
   return (
 <>
-    <Script
-    strategy="lazyOnload"
-    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-    />
-    <Script strategy="lazyOnload">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-      `}
-      </Script>
-
    <div id="allContent" className="bg-slate-200 dark:bg-darkBlue w-screen">
       <div id="topHeader" className = "bg-[url('/images/sponsorPage/sponsor.jpg')] flex justify-center items-center h-[30vh]">
         <h1 className={`text-5xl lg:text-7xl font-bold text-white border-8 lg:mx-8 p-4 lg:p-8 lg:px-20 ${play.className}`}>Sponsorship</h1>

@@ -10,20 +10,6 @@ const play = Lora({ subsets: ['latin'], display:"swap" })
 export default function page() {
   return (
     <>
-    <Script
-    strategy="lazyOnload"
-    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-    />
-    <Script strategy="lazyOnload">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-      `}
-      </Script>
     <div className="dark:bg-black bg-slate-200 min-h-screen h-full w-screen">
       <div id="page setup" className="pb-12">
       <AnimatePresence>
