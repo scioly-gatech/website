@@ -136,7 +136,7 @@ useEffect(() => {
 }, [])
   return (
     <>
-    {/* Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs 
+   Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs 
     <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -153,7 +153,6 @@ useEffect(() => {
                 `}
       </Script>
    
-*/}
     <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
     <AnimatePresence>
       <motion.div
@@ -165,7 +164,7 @@ useEffect(() => {
        <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-screen, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
     </motion.div>
     </AnimatePresence>
-{/*
+
     <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
 
         <button id="left" onClick={() => {
@@ -195,7 +194,7 @@ useEffect(() => {
         </div>
         <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
     </div>
-    */}          
+  
 <AnimatePresence>
     <motion.div
       initial={{opacity:0}}
