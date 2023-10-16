@@ -83,7 +83,7 @@ export default function Navbar() {
                         <RxCross1 />
                     </button>
                 </div>
-                <ul>
+                <ul onClick={toggleSmallNav}>
                     <li>
                         <Link href="/" className="font-bold flex flex-row"> 
                             <p> Home </p> <AiOutlineHome className="m-1"/> 

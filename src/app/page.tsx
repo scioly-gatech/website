@@ -136,7 +136,7 @@ useEffect(() => {
 }, [])
   return (
     <>
-    {/* Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs */}
+    {/* Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs 
     <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -153,7 +153,7 @@ useEffect(() => {
                 `}
       </Script>
    
-
+*/}
     <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
     <AnimatePresence>
       <motion.div
@@ -162,10 +162,10 @@ useEffect(() => {
         transition={{duration:4}}
         className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] "
       >
-       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
+       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-screen, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
     </motion.div>
     </AnimatePresence>
-
+{/*
     <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
 
         <button id="left" onClick={() => {
@@ -195,14 +195,14 @@ useEffect(() => {
         </div>
         <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
     </div>
-
+    */}          
 <AnimatePresence>
     <motion.div
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:3}}
     >
-    <div id="mission" className="bg-lightBlue flex flex-col items-center p-8 dark:bg-black">
+    <div id="mission" className="bg-lightBlue flex flex-col items-center p-8 dark:bg-black w-screen">
         <h2 className={`text-5xl ${play.className} border-4 border-black lg:w-1/2 text-center py-2 my-4 dark:text-white dark:border-white`}>Mission Statement</h2>
         <p className="hidden lg:flex text-3xl text-center dark:text-white"><BiSolidQuoteLeft className="text-darkBlue dark:text-white hidden lg:block"/> Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. <BiSolidQuoteRight className="text-darkBlue dark:text-white hidden lg:block"/></p>
         <p className="flex lg:hidden text-3xl text-center dark:text-white">&ldquo; Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. &rdquo; </p>
@@ -214,11 +214,11 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
     >
-    <div id="service" className={`flex flex-col lg:flex-row justify-evenly lg:m-12 lg:p-8 items-center m-4`}>
+    <div id="serviceSmall" className={`flex lg:hidden flex-col items-center w-screen`}>
       <div className="flex flex-col items-center">
-        <h2 className={`bg-lightOrange ${play.className} text-6xl p-4 m-2 lg:py-24 lg:px-8 lg:mr-4`}>Our Service</h2>
+        <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Service</h2>
       </div>
-      <p className="text-2xl lg:w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
+      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
       <figure className="m-2">
         <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
@@ -231,14 +231,31 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
     >
-    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black`}>
+    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black w-screen`}>
       <div className="flex flex-col items-center">
-        <h2 className={`bg-lightOrange ${play.className} text-6xl p-4 m-4`}>Our Tournament</h2>
+        <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Tournament</h2>
       </div>
       <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white">The Georgia State Division C Science Olympiad competition will be hosted at Georgia Tech, centralized around the Clough Undergraduate Learning Commons&apos; lab spaces. In addition to the 23 competitive events, several trial events will be hosted on competition day. Various major-specific and specialized Georgia Tech student organizations will host workshops and information sessions around campus to provide high school students with an experience in specific fields. Special tournament directors from the Georgia Science Olympiad organization will ensure fairness in scoring and resolving miscellaneous issues.</p>
       <figure className="m-2">
         <Image src="/images/home/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
+      </figure>
+    </div>
+    </motion.div>
+
+    <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:1}}
+    >
+    <div id="serviceLarge" className={`hidden lg:flex flex-row justify-evenly items-center p-16`}>
+      <div className="flex flex-col items-center">
+        <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2 lg:py-24 lg:px-8 lg:mr-4 `}>Our Service</h2>
+      </div>
+      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
+      <figure className="m-2">
+        <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
+        <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
       </figure>
     </div>
     </motion.div>
@@ -272,7 +289,7 @@ useEffect(() => {
   >
 
 <div id="schools">
-<div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
+  <div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
       <div className="flex flex-col items-center">
       <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2> 
         <figure>
@@ -299,8 +316,7 @@ useEffect(() => {
         <Image src="/images/sponsors/Design2.png" alt="Georgia Tech College of Design" width="800" height="100" className="shadow-amber-600 border-amber-600 shadow-2xl border-4 p-4 m-2"/>
           <figcaption className="sr-only">Picture of the Georgia Tech College of Design Logo</figcaption>
         </figure>
-    </div>
-
+  </div>
   </motion.div>
     </div>
     </AnimatePresence>
