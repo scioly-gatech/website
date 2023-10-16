@@ -136,7 +136,7 @@ useEffect(() => {
 }, [])
   return (
     <>
-   Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs 
+   {/*Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs */}
     <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
