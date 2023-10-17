@@ -8,7 +8,7 @@ const open = Open_Sans({subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: 'Science Olympiad at Georgia Tech',
-  description: 'Science Olympiad @ Georgia Tech is a student organization dedicated to encouraging student participation in Science Olympiad. We are hosting the Georgia State Tournament for the third year consecutive year as well as the Georgia Tech Invitational.',
+  description: 'Science Olympiad @ Georgia Tech is a student organization dedicated to encouraging student participation in Science Olympiad. We are hosting the Georgia State Tournament for the third year consecutive year as well as the Yellow Jacket Invitational.',
 }
 
 export default function RootLayout({

@@ -134,7 +134,7 @@ export default function Navbar() {
 
                 <div id="current">   
                     <li className="m-2 mx-6">
-                        <Link href="/currentTournament" className="hover:opacity-40 hover:underline text-xl">Georgia Tech Invitational</Link>
+                        <Link href="/currentTournament" className="hover:opacity-40 hover:underline text-xl">Yellow Jacket Invitational</Link>
                         <ul id="currentDropdown" className="bg-gradient-to-b from-white dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 p-2 pl-0 hidden w-40">
                             <li>
                                 <Link href="/currentTournament/policy" className="hover:opacity-40 hover:underline text-xl"> Policies </Link>

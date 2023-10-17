@@ -17,7 +17,7 @@ export default function Footer() {
           <Link href="/aboutUs">About Us</Link>
         </li>
         <li className="p-1 m-1 hover:text-black dark:hover:text-white hover:underline">
-          <Link href="/currentTournament">Georgia Tech Invitational</Link>
+          <Link href="/currentTournament">Yellow Jacket Invitational</Link>
         </li>
         <li className="p-1 m-1 hover:text-black dark:hover:text-white hover:underline">
           <Link href="/sponsorships">Sponsorship</Link>
