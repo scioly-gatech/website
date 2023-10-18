@@ -28,7 +28,7 @@ export default function CurrentTournament() {
         <figure className="w-screen flex justify-center mt-8 pb-8">
           <Image src="/images/curr/YJIFlier.png" alt="Yellow Jacket Invitational Promotional Flyer" width="700" height="300"/>
           <figcaption className="sr-only">
-            2024 Yellow Jacket Invitational applications are open! The southeast's premier Division C invitational will be held on February 3rd, 2024 at Georgia Tech. Applications close on January 13th, and we will close appls early if we reach capacity, so make sure to register early. The is a fee of $125 per team for up to 2 teams, although 3rd and 4th teams may be allowed on a case to case basis. For more information, please visit https://sciolygatech.org. 
+            2024 Yellow Jacket Invitational applications are open! The premier Division C invitational of the southeast will be held on February 3rd, 2024 at Georgia Tech. Applications close on January 13th, and we will close appls early if we reach capacity, so make sure to register early. The is a fee of $125 per team for up to 2 teams, although 3rd and 4th teams may be allowed on a case to case basis. For more information, please visit https://sciolygatech.org. 
           </figcaption>
         </figure>
       
