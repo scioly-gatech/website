@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
 import Script from "next/script"
+import Head from "next/head"
 
 const play = Lora({
   subsets:['latin'],
@@ -136,7 +137,6 @@ useEffect(() => {
 }, [])
   return (
     <>
-   {/*Tutorial for adding Google Analytics: https://www.mohammadfaisal.dev/blog/add-google-analytics-to-nextjs */}
     <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -151,7 +151,7 @@ useEffect(() => {
           page_path: window.location.pathname,
           });
       `}
-      </Script>
+      </Script> 
    
     <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
     <AnimatePresence>
