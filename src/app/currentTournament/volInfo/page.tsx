@@ -1,0 +1,45 @@
+'use client'
+
+import { AnimatePresence, motion } from 'framer-motion'
+import { Lora } from 'next/font/google'
+import React from 'react'
+import Script from 'next/script'
+import Head from 'next/head'
+
+const play = Lora({ subsets: ['latin'], display:"swap" })
+
+export default function page() {
+  return (
+    <>
+      <Head>
+            title = "Volunteer Information"
+        </Head>
+        <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
+
+          {/** Heading */}
+          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
+              <div className="flex justify-center text-center">
+                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-6xl ${play.className}`}>Volunteer Information</h1>
+              </div>
+          </div>
+
+          {/** Links */}
+          <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
+          <a href="https://forms.gle/8GLDTkrM7Yr4w8Nm8" target="_blank" className="underline font-bold text-4xl"> General Volunteer Sign-Ups </a>
+            <br />
+            We are looking for general volunteers for our tournament! You <span className="font-bold"> do not need </span> prior experience in Science Olympiad in high school to fill out the interest form. Breakfast and lunch will be provided to volunteers, along with snacks!
+
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwDl2peNj8t3DZEaZh8bkGEmBVjCgOEJyPGc8Z12o_DYlkBg/viewform?embedded=true" width="100%" height="750">Loading…</iframe>
+          </p>
+
+          <p className="bg-darkBlue text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+    
+            <span className='font-bold text-2xl underline'>Event Supervisor Sign-Ups</span> <br />
+              Sign-ups to be an Event Supervisor for the Yellow Jacket Invitational are closed at this time. If you would still like to be involved in our tournament, fill out our general volunteer interest form!
+
+          </p>
+
+        </main>
+    </>
+  )
+}

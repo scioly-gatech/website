@@ -37,38 +37,23 @@ export default function MeetTeam() {
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
     <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-screen">
       <AnimatePresence>
-      <motion.div
+        <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-screen py-10">
+        <motion.div
           initial={{opacity:0.5}}
           animate={{opacity:1}}
-          transition={{duration:1}}
+          transition={{duration:2}}
         >
-        <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-screen py-10">
           <h1 className= {`${play.className} text-white dark:text-darkBlue dark:bg-white font-bold text-5xl border-4 border-white m-10 p-8 lg:px-48 shadow-lg flex justify-center`}>
            About&nbsp;Us 
           </h1>
+          </motion.div>
           <figure className="hidden lg:block">
             <Image src="/images/about/gtbuilding.jpg" alt="Picture of one of the buildings on Georgia Tech's campus" width="300" height="200" className="mb-2"/>
             <figcaption className="sr-only">Picture of one of the buildings on the Georgia Tech campus/</figcaption>
           </figure>
         </div>
-        </motion.div>
       <div className="w-screen">
       <p className={`${libre.className} text-lg lg:mx-64 mx-8 text-center p-4 flex justify-center border-4 border-darkBlue dark:text-white mt-4`}>
       Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through improving the Science Olympiad experience. 

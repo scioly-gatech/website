@@ -9,6 +9,7 @@ import {RxCross1} from 'react-icons/rx'
 
 export default function Navbar() {
 
+    //Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
     useEffect(() => {
         if (typeof(document) !== 'undefined') {
             const currentHover = document.getElementById('current') as HTMLElement
@@ -60,6 +61,7 @@ export default function Navbar() {
         }
     }
 
+    //There is a small nav bar intended for devices with smaller screens. That navbar includes the hamburger menu, and will not usually be there. The larger nav bar is for larger devices like computers and is across the top page. 
   return (
     <main>
         <div id="smallNavBar" className="lgNav:hidden relative z-10">
@@ -96,7 +98,16 @@ export default function Navbar() {
                         <Link href="/currentTournament" className="font-bold py-3"> GT Invitational </Link>
                     </li>
                     <li>
-                        <Link href="/currentTournament/policy" className="my-2 mx-3"> Policies </Link>
+                        <Link href="/currentTournament/updates" className="my-2 mx-3"> General Info/Updates </Link>
+                    </li>
+                    {/*<li>
+                        <Link href="/currentTournament/teamInfo" className="my-2 mx-3"> Registered Teams </Link>
+  </li>*/}
+                    <li>
+                        <Link href="/currentTournament/compInfo" className="my-2 mx-3"> Competitor Links </Link>
+                    </li>
+                    <li>
+                        <Link href="/currentTournament/volInfo" className="my-2 mx-3"> Volunteer Links </Link>
                     </li>
                     <li>
                         <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
@@ -133,11 +144,20 @@ export default function Navbar() {
                 </li>
 
                 <div id="current">   
-                    <li className="m-2 mx-6">
+                    <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/currentTournament" className="hover:opacity-40 hover:underline text-xl">Yellow Jacket Invitational</Link>
-                        <ul id="currentDropdown" className="bg-gradient-to-b from-white dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 p-2 pl-0 hidden w-40">
+                        <ul id="currentDropdown" className="bg-gradient-to-b from-white dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 pl-0 pr-16 hidden flex-col">
                             <li>
-                                <Link href="/currentTournament/policy" className="hover:opacity-40 hover:underline text-xl"> Policies </Link>
+                                <Link href="/currentTournament/updates" className="hover:opacity-40 hover:underline text-xl"> General Info/Updates </Link>
+                            </li>
+                           {/* <li>
+                                <Link href="/currentTournament/teamInfo" className="hover:opacity-40 hover:underline text-xl"> Registered Teams </Link>
+  </li>  */}
+                            <li>
+                                <Link href="/currentTournament/compInfo" className="hover:opacity-40 hover:underline text-xl"> Competitor Links </Link>
+                            </li>
+                            <li>
+                                <Link href="/currentTournament/volInfo" className="hover:opacity-40 hover:underline text-xl"> Volunteer Links </Link>
                             </li>
                         </ul>
                     </li>

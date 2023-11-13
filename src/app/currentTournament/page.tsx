@@ -25,20 +25,22 @@ export default function CurrentTournament() {
           });
       `}
       </Script>
+      
     <div className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh]">
+    <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen">
       <AnimatePresence>
       <motion.div
           initial={{opacity:0}}
           animate={{opacity:1}}
           transition={{duration:1}}
+          className="text-3xl font-bold flex justify-center items-center"
         >
-          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
             <div className="flex justify-center text-center lg:w-1/3 mx-12">
               <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-6xl ${play.className}`}>Yellow Jacket Invitational</h1>
             </div>
-          </div>
       </motion.div>
       </AnimatePresence>
+      </div>
         {/*<p className="bg-lightBlue text-darkBlue text-center text-4xl m-4 sm:mx-8 lg:mx-72 shadow-darkBlue dark:shadow-white shadow-xl"> Science Olympiad @ Georgia Tech is hosting the very first Yellow Jacket Invitational! </p>*/}
         <figure className="w-screen flex justify-center mt-8 pb-8">
           <Image src="/images/curr/YJIFlier.png" alt="Yellow Jacket Invitational Promotional Flyer" width="700" height="300"/>

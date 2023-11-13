@@ -25,8 +25,6 @@ let index3 = 2
 
 let index = 0
 
-let count = 0
-
 function changePic (right: boolean) {
 
     if (typeof(document) !== 'undefined') {
@@ -129,10 +127,8 @@ function changePicSmallTimed (right: boolean) {
 useEffect(() => {
     if (window.screen.width < 1024) {
       setTimeout(() => changePicSmallTimed(true), 4000)
-      count++
     } else {
       setTimeout(() => changePicTimed(true), 4000)
-      count++
     }
 }, [])
   return (
@@ -154,17 +150,17 @@ useEffect(() => {
       </Script> 
    
     <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
-    <AnimatePresence>
-      <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:1}}
-        transition={{duration:4}}
-        className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] "
-      >
-       <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-screen, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
-    </motion.div>
-    </AnimatePresence>
-
+    <div id="topScreen" className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] ">
+      <AnimatePresence>
+        <motion.div
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{duration:4}}
+        >
+        <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-screen, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
+      </motion.div>
+      </AnimatePresence>
+    </div>
     <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
 
         <button id="left" onClick={() => {
