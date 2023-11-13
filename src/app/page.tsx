@@ -5,11 +5,18 @@ import { Lora } from "next/font/google"
 import { useEffect } from "react"
 import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
+import EmblaCarousel from '@/app/components/Carousel'
 
 const play = Lora({
   subsets:['latin'],
   display:'swap'
 })
+
+const indexToColor = {
+  0: 'lightOrange',
+  1: 'brightYellow',
+  2: `darkOrange`
+};
 
 export default function Home() {
 
@@ -147,35 +154,53 @@ useEffect(() => {
     </motion.div>
     </AnimatePresence>
 
-    <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
+    {/* For small screens*/}
+    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+        <EmblaCarousel numOfShownElements={1}
+                      elementWidth={200}
+                      options={{ dragFree: true, loop: true }}> 
+              {allPictures.map((imagePath, index) => {
+                // For passing type check
+                const mod = index % 3;
+                if (mod != 0 && mod != 1 && mod != 2) {
+                  return <></>;
+                }
 
-        <button id="left" onClick={() => {
-                changePicSmall(false)
-                
-                }} className="text-5xl dark:text-white"> &lt; </button>
-        <div className="m-2">
-            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
-        </div>
-        <button id="right" onClick={() => changePicSmall(true)} className="text-5xl dark:text-white"> &gt; </button>
-    </div>
+                return <Image
+                  className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
+                  style={{objectFit: "cover"}}
+                  src={imagePath}
+                  alt="Slideshow Picture"
+                  width={467}
+                  height={350}
+                />
+              })}
+        </EmblaCarousel>
+      </div>
+      
+      {/* For large screens*/}
+      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+        <EmblaCarousel numOfShownElements={3}
+                      elementWidth={467}
+                      options={{ dragFree: true, loop: true }}> 
+              {allPictures.map((imagePath, index) => {
+                // For passing type check
+                const mod = index % 3;
+                if (mod != 0 && mod != 1 && mod != 2) {
+                  return <></>;
+                }
 
-    <div id="carousel" className="hidden lg:flex flex-row justify-center py-16 ">
-
-        <button id="left" onClick={() => {
-                changePic(false)
-                
-                }} className="text-6xl"> &lt; </button>
-        <div className="m-2">
-            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-lightOrange shadow-2xl shadow-lightOrange rounded-full"/>
-        </div>
-        <div className='m-2'>
-            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
-        </div>
-        <div className='m-2'>
-            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-darkOrange shadow-2xl shadow-darkOrange rounded-full"/>
-        </div>
-        <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
-    </div>
+                return <Image
+                  className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
+                  style={{objectFit: "cover"}}
+                  src={imagePath}
+                  alt="Slideshow Picture"
+                  width={467}
+                  height={350}
+                />
+              })}
+        </EmblaCarousel>
+      </div>
 
 <AnimatePresence>
     <motion.div
