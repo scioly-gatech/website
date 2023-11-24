@@ -12,7 +12,7 @@ export default function page() {
   return (
     <>
       <Head>
-            title = "Competitor Information"
+            title = Competitor Information
         </Head>
         <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
 
