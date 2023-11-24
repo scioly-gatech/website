@@ -12,7 +12,7 @@ export default function page() {
   return (
     <>
       <Head>
-            title = "Registered Teams and Payment Status"
+            title = Registered Teams and Payment Status
         </Head>
         <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
