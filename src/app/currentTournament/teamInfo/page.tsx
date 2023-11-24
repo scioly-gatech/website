@@ -1,4 +1,4 @@
-{/*'use client'
+'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lora } from 'next/font/google'
@@ -27,7 +27,7 @@ export default function page() {
           <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
           <a href="https://docs.google.com/spreadsheets/d/1z4jwXF153mhkRGWuLyKvkAcD6BVCTugrgrTZyNHgzHc/edit?usp=sharing" target="_blank" className="underline font-bold text-4xl"> Registered Teams/Payment Status </a>
             <br />
-            Here are the teams that we have confirmed for the 2024 Yellow Jacket Invitational: 
+            Confirmed teams for the 2024 Yellow Jacket Invitational! 
 
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQBluwwHqoC3GpygCkKHMHSCmFpDvGBal7WKuswi1TUJ4dpSslWS5kCeiJDRAOTWSdLagkESmFdNhbK/pubhtml?widget=true&amp;headers=false" width="100%" height="750"></iframe>
           </p>
@@ -35,4 +35,4 @@ export default function page() {
         </main>
     </>
   )
-} */}
+}

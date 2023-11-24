@@ -100,9 +100,9 @@ export default function Navbar() {
                     <li>
                         <Link href="/currentTournament/updates" className="my-2 mx-3"> General Info/Updates </Link>
                     </li>
-                    {/*<li>
+                    <li>
                         <Link href="/currentTournament/teamInfo" className="my-2 mx-3"> Registered Teams </Link>
-  </li>*/}
+  </li>
                     <li>
                         <Link href="/currentTournament/compInfo" className="my-2 mx-3"> Competitor Links </Link>
                     </li>
@@ -150,9 +150,9 @@ export default function Navbar() {
                             <li>
                                 <Link href="/currentTournament/updates" className="hover:opacity-40 hover:underline text-xl"> General Info/Updates </Link>
                             </li>
-                           {/* <li>
+                           <li>
                                 <Link href="/currentTournament/teamInfo" className="hover:opacity-40 hover:underline text-xl"> Registered Teams </Link>
-  </li>  */}
+  </li>
                             <li>
                                 <Link href="/currentTournament/compInfo" className="hover:opacity-40 hover:underline text-xl"> Competitor Links </Link>
                             </li>
