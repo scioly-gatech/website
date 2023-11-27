@@ -27,7 +27,7 @@ export default function page() {
       `}
       </Script>
       <Head>
-            title = Competitor Information
+            title = Registration
         </Head>
         <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
 
