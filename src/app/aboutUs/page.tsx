@@ -37,6 +37,21 @@ export default function MeetTeam() {
 
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
+      />
+
+      <Script strategy="lazyOnload" id="main-script">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RQ1XF1G76X', {
+          page_path: window.location.pathname,
+          });
+      `}
+      </Script>
     <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-screen">
       <AnimatePresence>
         <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-screen py-10">
