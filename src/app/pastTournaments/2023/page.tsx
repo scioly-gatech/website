@@ -30,19 +30,24 @@ const eventResults = eventResults2023
             animate={{opacity:1}}
             transition={{duration:1}}
         >
-      {/* For small screens*/}
-      <div id="carouselSmall" className="flex flex-row justify-center lg:hidden">
+     
+    {/* For small screens*/}
+    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
-                      elementWidth={200}
+                      elementWidth={467}
                       options={{ dragFree: true, loop: true }}> 
-              {allPictures.map(imagePath => {
-                return <Image
-                  className="block"
+              {allPictures.map((imagePath, index) => {
+                // For passing type check
+                const mod = index % 3;
+                if (mod != 0 && mod != 1 && mod != 2) {
+                  return <></>;
+                }
+
+                return <img
+                  className={`block`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
-                  width={200}
-                  height={150}
                 />
               })}
         </EmblaCarousel>
@@ -53,14 +58,18 @@ const eventResults = eventResults2023
         <EmblaCarousel numOfShownElements={3}
                       elementWidth={467}
                       options={{ dragFree: true, loop: true }}> 
-              {allPictures.map(imagePath => {
-                return <Image
-                  className="block"
+              {allPictures.map((imagePath, index) => {
+                // For passing type check
+                const mod = index % 3;
+                if (mod != 0 && mod != 1 && mod != 2) {
+                  return <></>;
+                }
+
+                return <img
+                  className={`block`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
-                  width={467}
-                  height={350}
                 />
               })}
         </EmblaCarousel>

@@ -41,7 +41,7 @@ export default function Home() {
     {/* For small screens*/}
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
-                      elementWidth={200}
+                      elementWidth={467}
                       options={{ dragFree: true, loop: true }}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
@@ -50,13 +50,11 @@ export default function Home() {
                   return <></>;
                 }
 
-                return <Image
+                return <img
                   className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
-                  width={467}
-                  height={350}
                 />
               })}
         </EmblaCarousel>
@@ -74,13 +72,11 @@ export default function Home() {
                   return <></>;
                 }
 
-                return <Image
+                return <img
                   className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
-                  width={467}
-                  height={350}
                 />
               })}
         </EmblaCarousel>

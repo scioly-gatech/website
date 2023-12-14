@@ -9,6 +9,7 @@
 }
 .embla__viewport {
   overflow: hidden;
+  width: 90%
 }
 .embla__container {
   backface-visibility: hidden;
