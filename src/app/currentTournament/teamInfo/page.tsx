@@ -29,8 +29,8 @@ export default function page() {
       <Head>
             title = Registered Teams and Payment Status
         </Head>
-        <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
-          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
+        <main className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
+          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full text-center text-3xl font-bold flex justify-center items-center">
               <div className="flex justify-center text-center">
                   <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-6xl ${play.className}`}>Registered Teams</h1>
               </div>

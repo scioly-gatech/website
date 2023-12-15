@@ -149,7 +149,7 @@ useEffect(() => {
       `}
       </Script> 
    
-    <main className="bg-slate-200 dark:bg-darkBlue h-full w-screen">
+    <main className="bg-slate-200 dark:bg-darkBlue h-full w-full">
     <div id="topScreen" className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] ">
       <AnimatePresence>
         <motion.div
@@ -157,7 +157,7 @@ useEffect(() => {
           animate={{opacity:1}}
           transition={{duration:4}}
         >
-        <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-screen, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
+        <h1 className={`text-6xl text-center border-4 borer-white text-white lg:p-20 m-4 mx-12 w-full, ${play.className}`}><span className="">Science Olympiad @ Georgia Tech </span></h1>
       </motion.div>
       </AnimatePresence>
     </div>
@@ -197,7 +197,7 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:3}}
     >
-    <div id="mission" className="bg-lightBlue flex flex-col items-center p-8 dark:bg-black w-screen">
+    <div id="mission" className="bg-lightBlue flex flex-col items-center p-8 dark:bg-black w-full">
         <h2 className={`text-5xl ${play.className} border-4 border-black lg:w-1/2 text-center py-2 my-4 dark:text-white dark:border-white`}>Mission Statement</h2>
         <p className="hidden lg:flex text-3xl text-center dark:text-white"><BiSolidQuoteLeft className="text-darkBlue dark:text-white hidden lg:block"/> Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. <BiSolidQuoteRight className="text-darkBlue dark:text-white hidden lg:block"/></p>
         <p className="flex lg:hidden text-3xl text-center dark:text-white">&ldquo; Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. &rdquo; </p>
@@ -209,7 +209,7 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
     >
-    <div id="serviceSmall" className={`flex lg:hidden flex-col items-center w-screen`}>
+    <div id="serviceSmall" className={`flex lg:hidden flex-col items-center w-full`}>
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Service</h2>
       </div>
@@ -226,7 +226,7 @@ useEffect(() => {
       whileInView={{opacity:1}}
       transition={{duration:1}}
     >
-    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black w-screen`}>
+    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black w-full`}>
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Tournament</h2>
       </div>
