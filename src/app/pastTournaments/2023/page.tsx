@@ -34,7 +34,7 @@ const eventResults = eventResults2023
     {/* For small screens*/}
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
-                      elementWidth={467}
+                      maxElementWidth={467}
                       options={{ dragFree: true, loop: true }}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
@@ -56,7 +56,7 @@ const eventResults = eventResults2023
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
-                      elementWidth={467}
+                      maxElementWidth={467}
                       options={{ dragFree: true, loop: true }}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
