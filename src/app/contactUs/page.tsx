@@ -26,7 +26,7 @@ export default function ContactUs() {
           });
       `}
       </Script>
-    <div className="bg-slate-200 dark:bg-black md:min-h-[88vh] lg:min-h-[74vh] ">
+    <div className="bg-slate-200 dark:bg-black h-full">
         <div id="all content" className="w-screen flex flex-col items-center">
           <div id="header" className="bg-[url('/images/contact/contact.jpg')] w-screen flex justify-center items-center h-48">
             <h1 className={`text-white font-bold border-8 p-4 m-16 text-5xl md:text-7xl text-center ${play.className}`}>Contact Us </h1>
