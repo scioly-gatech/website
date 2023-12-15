@@ -3,11 +3,28 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lora } from 'next/font/google'
 import React from 'react'
+import Script from 'next/script'
 
 const play = Lora({ subsets: ['latin'], display:"swap" })
 
 export default function page() {
   return (
+    <>
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
+      />
+
+      <Script strategy="lazyOnload" id="main-script">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RQ1XF1G76X', {
+          page_path: window.location.pathname,
+          });
+      `}
+      </Script>
     <div className="dark:bg-black bg-slate-200 min-h-screen h-full w-screen">
       <div id="page setup" className="pb-12">
       <AnimatePresence>
@@ -16,7 +33,7 @@ export default function page() {
           animate={{opacity:1}}
           transition={{duration:1}}
         >
-          <div className="text-white bg-[url('/images/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
+          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
             <div className="flex justify-center text-center">
               <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-6xl ${play.className}`}>Policies</h1>
             </div>
@@ -45,5 +62,6 @@ export default function page() {
     During check-in, coaches will receive one wristband for the head coach and 15 wristbands for their students. Wristbands are required for all students competing in events. Trial events will not require wristbands. Impound will not require wristbands. Students will be required to be wearing a wristband in order to compete; we will not be providing extra wristbands if they are lost. </p>
     </div>
     </div>
+    </>
   )
 }
