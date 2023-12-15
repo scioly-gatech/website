@@ -43,7 +43,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
           className="embla__container"
           style={{
             // Negative margins is used here to offset the paddingLeft of the right element
-            marginLeft: `calc(${SPACING} * -1);`,
+            marginLeft: `calc(${SPACING} * -1)`,
             maxWidth: `calc(${
               maxElementWidth * numOfShownElements
             }px + ${numOfShownElements} * ${SPACING})`,
