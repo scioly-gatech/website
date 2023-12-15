@@ -1,4 +1,4 @@
-import React, { useCallback, ReactNode } from "react";
+import React, { useCallback, useEffect, ReactNode } from "react";
 import useEmblaCarousel, {
   EmblaOptionsType,
   EmblaCarouselType,
@@ -21,7 +21,13 @@ const SPACING = "1rem";
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
   const { maxElementWidth, options, numOfShownElements, children } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({...options, startIndex: 1}, [Autoplay()]);
+
+  useEffect(() => {
+    if (emblaApi) {
+      //emblaApi.scrollTo(1, false);
+    }
+  }, [emblaApi])
 
   const onButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const { autoplay } = emblaApi.plugins();

@@ -60,7 +60,7 @@ export default function Home() {
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true }}> 
+                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
@@ -68,12 +68,14 @@ export default function Home() {
                   return <></>;
                 }
 
-                return <img
-                  className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
+                return <Image
+                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
                   key={index}
+                  width={467}
+                  height={0}
                 />
               })}
         </EmblaCarousel>
@@ -83,7 +85,7 @@ export default function Home() {
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true }}> 
+                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
@@ -91,12 +93,14 @@ export default function Home() {
                   return <></>;
                 }
 
-                return <img
-                  className={`block border-4 border-${indexToColor[mod]} rounded-full my-16`}
+                return <Image
+                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
                   key={index}
+                  width={467}
+                  height={0}
                 />
               })}
         </EmblaCarousel>
