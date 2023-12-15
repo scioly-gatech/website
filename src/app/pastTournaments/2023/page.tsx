@@ -60,11 +60,12 @@ const eventResults = eventResults2023
                   return <></>;
                 }
 
-                return <img
+                return <Image
                   className={`block`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
+                  key={index}
                 />
               })}
         </EmblaCarousel>
@@ -82,11 +83,12 @@ const eventResults = eventResults2023
                   return <></>;
                 }
 
-                return <img
+                return <Image
                   className={`block`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
+                  key={index}
                 />
               })}
         </EmblaCarousel>
