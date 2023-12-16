@@ -72,25 +72,25 @@ export default function Home() {
                           child.classList.add("opacity-0");
                         });
                       }}
-                      viewportPadding={"0 50px" /* For ensuring that the shadow of the most left and right elements is not cutoff by the buttons*/}> 
-              {allPictures.map((imagePath, index) => {
-                // For passing type check
-                const mod = index % 3;
-                if (mod != 0 && mod != 1 && mod != 2) {
-                  return <></>;
-                }
+                      viewportPadding={"0 50px"}// * For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
+                      contents={allPictures.map((imagePath, index) => {
+                        const mod = index % 3;
+                        if (mod != 0 && mod != 1 && mod != 2) {
+                          return { node: <></>};
+                        }
 
-                return <Image
-                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
-                  style={{objectFit: "cover"}}
-                  src={imagePath}
-                  alt="Slideshow Picture"
-                  key={index}
-                  width={467}
-                  height={0}
-                />
-              })}
-        </EmblaCarousel>
+                        return {
+                          node: <Image
+                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
+                                  style={{objectFit: "cover"}}
+                                  src={imagePath}
+                                  alt="Slideshow Picture"
+                                  key={index}
+                                  width={467}
+                                  height={0}
+                                />
+                          }
+                      })} />
       </div>
 
       {/* For large screens*/}
@@ -107,25 +107,25 @@ export default function Home() {
                           child.classList.add("opacity-0");
                         });
                       }}
-                      viewportPadding={"0 50px" /* For ensuring that the shadow of the most left and right elements is not cutoff by the buttons*/}> 
-              {allPictures.map((imagePath, index) => {
-                // For passing type check
-                const mod = index % 3;
-                if (mod != 0 && mod != 1 && mod != 2) {
-                  return <></>;
-                }
+                      viewportPadding={"0 50px"} //For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
+                      contents={allPictures.map((imagePath, index) => {
+                        const mod = index % 3;
+                        if (mod != 0 && mod != 1 && mod != 2) {
+                          return { node: <></>};
+                        }
 
-                return <Image
-                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
-                  style={{objectFit: "cover"}}
-                  src={imagePath}
-                  alt="Slideshow Picture"
-                  key={index}
-                  width={467}
-                  height={0}
-                />
-              })}
-        </EmblaCarousel>
+                        return {
+                          node: <Image
+                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
+                                  style={{objectFit: "cover"}}
+                                  src={imagePath}
+                                  alt="Slideshow Picture"
+                                  key={index}
+                                  width={467}
+                                  height={0}
+                                />
+                          }
+                      })} />
       </div>
 
 <AnimatePresence>

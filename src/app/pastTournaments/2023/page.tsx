@@ -52,50 +52,40 @@ const eventResults = eventResults2023
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
-              {allPictures.map((imagePath, index) => {
-                // For passing type check
-                const mod = index % 3;
-                if (mod != 0 && mod != 1 && mod != 2) {
-                  return <></>;
-                }
-
-                return <Image
-                  className={`block`}
-                  style={{objectFit: "cover"}}
-                  src={imagePath}
-                  alt="Slideshow Picture"
-                  key={index}
-                  width={467}
-                  height={0}
-                />
-              })}
-        </EmblaCarousel>
+                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      contents={allPictures.map((imagePath, index) => {
+                        return {
+                          node: <Image
+                                      className={`block`}
+                                      style={{objectFit: "cover"}}
+                                      src={imagePath}
+                                      alt="Slideshow Picture"
+                                      key={index}
+                                      width={467}
+                                      height={0}
+                                    />
+                        }
+                      })}/> 
       </div>
       
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
-              {allPictures.map((imagePath, index) => {
-                // For passing type check
-                const mod = index % 3;
-                if (mod != 0 && mod != 1 && mod != 2) {
-                  return <></>;
-                }
-
-                return <Image
-                  className={`block`}
-                  style={{objectFit: "cover"}}
-                  src={imagePath}
-                  alt="Slideshow Picture"
-                  key={index}
-                  width={467}
-                  height={0}
-                />
-              })}
-        </EmblaCarousel>
+                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      contents={allPictures.map((imagePath, index) => {
+                        return {
+                          node: <Image
+                                      className={`block`}
+                                      style={{objectFit: "cover"}}
+                                      src={imagePath}
+                                      alt="Slideshow Picture"
+                                      key={index}
+                                      width={467}
+                                      height={0}
+                                    />
+                        }
+                      })} /> 
       </div>
 
     </motion.div>

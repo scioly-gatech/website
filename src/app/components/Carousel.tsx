@@ -10,10 +10,14 @@ import {
 } from "./EmblaCarouselArrowButtons";
 import Autoplay from "embla-carousel-autoplay";
 
+type EmblaCarouselEntry = {
+  node: ReactNode
+}
+
 type EmblaCarouselProps = {
   numOfShownElements: number;
-  children: ReactNode;
   maxElementWidth: number;
+  contents: EmblaCarouselEntry[]
   onSlidesInViewChange?: (
     inViewNodes: Element[],
     notInViewNodes: Element[]
@@ -31,7 +35,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
     numOfShownElements,
     onSlidesInViewChange,
     viewportPadding,
-    children,
+    contents,
   } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { ...options, startIndex: 1, inViewThreshold: 0.5 },
@@ -107,7 +111,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
         >
           {
             // Wrap each child in the Embla Carousel Slide wrapper
-            React.Children.map(children, (child, index) => (
+            contents.map((child, index) => (
               <div
                 className="embla__slide"
                 style={{
@@ -117,7 +121,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
                 }}
                 key={index}
               >
-                {child}
+                {child.node}
               </div>
             ))
           }
