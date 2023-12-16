@@ -52,7 +52,7 @@ const eventResults = eventResults2023
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
                       contents={allPictures.map((imagePath, index) => {
                         return {
                           node: <Image
@@ -72,7 +72,7 @@ const eventResults = eventResults2023
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }} // Start 1 instead since the start position in Embla seems to be based on the middle element
                       contents={allPictures.map((imagePath, index) => {
                         return {
                           node: <Image

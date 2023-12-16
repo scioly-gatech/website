@@ -26,7 +26,7 @@ type EmblaCarouselProps = {
   options?: EmblaOptionsType;
 };
 
-const SPACING = "1rem";
+const SPACING = "16px";
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
   const {
@@ -38,7 +38,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
     contents,
   } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { ...options, startIndex: 1, inViewThreshold: 0.5 },
+    { ...options, inViewThreshold: 0.5 },
     [Autoplay()]
   );
 
@@ -99,16 +99,14 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
       <div
         className="embla__viewport"
         ref={emblaRef}
-        style={{ padding: viewportPadding }}
+        style={{
+          padding: viewportPadding,
+          maxWidth: `calc(${
+            maxElementWidth * numOfShownElements
+          }px + ${numOfShownElements} * ${SPACING})`,
+        }}
       >
-        <div
-          className="embla__container"
-          style={{
-            maxWidth: `calc(${
-              maxElementWidth * numOfShownElements
-            }px + ${numOfShownElements} * ${SPACING})`,
-          }}
-        >
+        <div className="embla__container">
           {
             // Wrap each child in the Embla Carousel Slide wrapper
             contents.map((child, index) => (

@@ -60,7 +60,7 @@ export default function Home() {
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
                       onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
                         // Make not in view children to be invisible so their shadows do not appear as well
                         inViewChildren.forEach(child => {
@@ -97,7 +97,7 @@ export default function Home() {
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }}  // Start 1 instead since the start position in Embla seems to be based on the middle element
                       onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
                         // Make not in view children to be invisible so their shadows do not appear as well
                         inViewChildren.forEach(child => {
