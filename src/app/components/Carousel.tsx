@@ -11,13 +11,13 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 type EmblaCarouselEntry = {
-  node: ReactNode
-}
+  node: ReactNode;
+};
 
 type EmblaCarouselProps = {
   numOfShownElements: number;
   maxElementWidth: number;
-  contents: EmblaCarouselEntry[]
+  contents: EmblaCarouselEntry[];
   onSlidesInViewChange?: (
     inViewNodes: Element[],
     notInViewNodes: Element[]
