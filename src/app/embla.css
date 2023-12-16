@@ -1,5 +1,4 @@
 .embla {
-  --slide-spacing: 1rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -13,11 +12,9 @@
 .embla__container {
   backface-visibility: hidden;
   display: flex;
-  margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
   min-width: 0;
-  padding-left: var(--slide-spacing);
   position: relative;
 }
 .embla__slide__img {
@@ -45,6 +42,7 @@
 }
 .embla__button {
   z-index: 1;
+  background-color: transparent;
   color: var(--background-site);
   display: flex;
   align-items: center;

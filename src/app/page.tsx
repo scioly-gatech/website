@@ -60,7 +60,18 @@ export default function Home() {
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
+                      options={{ dragFree: true, loop: true, watchDrag: null }}
+                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        inViewChildren.forEach(child => {
+                          child.classList.add("shadow-2xl");
+                          child.classList.remove("opacity-0");
+                        });
+                        notInViewChildren.forEach(child => {
+                          child.classList.remove("shadow-2xl");
+                          child.classList.add("opacity-0");
+                        });
+                      }}
+                      viewportPadding={"0 50px"}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
@@ -69,7 +80,7 @@ export default function Home() {
                 }
 
                 return <Image
-                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16`}
+                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
@@ -80,12 +91,21 @@ export default function Home() {
               })}
         </EmblaCarousel>
       </div>
-      
+
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}> 
+                      options={{ dragFree: true, loop: true, watchDrag: null }}
+                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        inViewChildren.forEach(child => {
+                          child.classList.remove("opacity-0");
+                        });
+                        notInViewChildren.forEach(child => {
+                          child.classList.add("opacity-0");
+                        });
+                      }}
+                      viewportPadding={"0 50px"}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
@@ -94,7 +114,7 @@ export default function Home() {
                 }
 
                 return <Image
-                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16`}
+                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
                   style={{objectFit: "cover"}}
                   src={imagePath}
                   alt="Slideshow Picture"
