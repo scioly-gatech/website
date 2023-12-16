@@ -65,17 +65,17 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
       return;
     }
     emblaApi.off("slidesInView", callOnSlidesInViewChange);
-  }, [emblaApi, onSlidesInViewChange])
+  }, [emblaApi, onSlidesInViewChange, callOnSlidesInViewChange]);
 
   useEffect(() => {
     if (emblaApi && onSlidesInViewChange) {
-        emblaApi.on("slidesInView", callOnSlidesInViewChange);
+      emblaApi.on("slidesInView", callOnSlidesInViewChange);
     }
 
     return () => {
       removeOnSlidesInViewChangeListeners();
-    }
-  }, [emblaApi]);
+    };
+  }, [emblaApi, callOnSlidesInViewChange]);
 
   const onButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const { autoplay } = emblaApi.plugins();

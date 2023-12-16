@@ -60,8 +60,9 @@ export default function Home() {
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
                       onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        // Make not in view children to be invisible so their shadows do not appear as well
                         inViewChildren.forEach(child => {
                           child.classList.add("shadow-2xl");
                           child.classList.remove("opacity-0");
@@ -71,7 +72,7 @@ export default function Home() {
                           child.classList.add("opacity-0");
                         });
                       }}
-                      viewportPadding={"0 50px"}> 
+                      viewportPadding={"0 50px" /* For ensuring that the shadow of the most left and right elements is not cutoff by the buttons*/}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
@@ -96,8 +97,9 @@ export default function Home() {
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: null }}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false }}
                       onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        // Make not in view children to be invisible so their shadows do not appear as well
                         inViewChildren.forEach(child => {
                           child.classList.remove("opacity-0");
                         });
@@ -105,7 +107,7 @@ export default function Home() {
                           child.classList.add("opacity-0");
                         });
                       }}
-                      viewportPadding={"0 50px"}> 
+                      viewportPadding={"0 50px" /* For ensuring that the shadow of the most left and right elements is not cutoff by the buttons*/}> 
               {allPictures.map((imagePath, index) => {
                 // For passing type check
                 const mod = index % 3;
