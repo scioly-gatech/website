@@ -5,6 +5,7 @@ import { Lora } from "next/font/google"
 import { useEffect } from "react"
 import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
+import EmblaCarousel from '@/app/components/Carousel'
 import Script from "next/script"
 import Head from "next/head"
 
@@ -13,124 +14,18 @@ const play = Lora({
   display:'swap'
 })
 
+const indexToColor = {
+  0: 'lightOrange',
+  1: 'brightYellow',
+  2: `darkOrange`
+};
+
 export default function Home() {
 
   const allPictures = [
     "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg"
 ]
 
-let index1 = 0
-let index2 = 1
-let index3 = 2
-
-let index = 0
-
-function changePic (right: boolean) {
-
-    if (typeof(document) !== 'undefined') {
-        const firstPic = document.getElementById("1") as HTMLElement
-        const secondPic = document.getElementById("2") as HTMLElement
-        const thirdPic = document.getElementById("3") as HTMLElement
-        if (right === true) {
-            index1 = (index1 + 1) % allPictures.length
-            index2 = (index2 + 1) % allPictures.length
-            index3 = (index3 + 1) % allPictures.length
-        } else {
-            index1 = ((index1 - 1) % allPictures.length)
-            index2 = ((index2 - 1) % allPictures.length)
-            index3 = ((index3 - 1) % allPictures.length)
-            if (index1 < 0) {
-                index1 = index1 + allPictures.length
-            }
-            if (index2 < 0) {
-                index2 = index2 + allPictures.length
-            }
-            if (index3 < 0) {
-                index3 = index3 + allPictures.length
-            }
-        }
-        firstPic.setAttribute("src", allPictures[index1])
-        secondPic.setAttribute("src", allPictures[index2])
-        thirdPic.setAttribute("src", allPictures[index3])
-    }
-}
-
-function changePicTimed (right: boolean) {
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1") as HTMLElement
-      const secondPic = document.getElementById("2") as HTMLElement
-      const thirdPic = document.getElementById("3") as HTMLElement
-      if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
-          index2 = (index2 + 1) % allPictures.length
-          index3 = (index3 + 1) % allPictures.length
-      } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          index2 = ((index2 - 1) % allPictures.length)
-          index3 = ((index3 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
-          }
-          if (index2 < 0) {
-              index2 = index2 + allPictures.length
-          }
-          if (index3 < 0) {
-              index3 = index3 + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index1])
-      secondPic?.setAttribute("src", allPictures[index2])
-      thirdPic?.setAttribute("src", allPictures[index3])
-      if (firstPic) {
-        setTimeout(() => changePicTimed(true), 6000)
-        //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
-      }
-  }
-}
-
-function changePicSmall (right: boolean) {
-
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1s") as HTMLElement
-      if (right === true) {
-          index = (index + 1) % allPictures.length
-      } else {
-          index = ((index - 1) % allPictures.length)
-          if (index < 0) {
-              index = index + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index])
-  }
-}
-
-function changePicSmallTimed (right: boolean) {
-
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1s") as HTMLElement
-      if (right === true) {
-          index = (index + 1) % allPictures.length
-      } else {
-          index = ((index - 1) % allPictures.length)
-          if (index < 0) {
-              index = index + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index])
-      if (firstPic) {
-        setTimeout(() => changePicSmallTimed(true), 6000)
-        //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
-      }
-  }
-}
-
-useEffect(() => {
-    if (window.screen.width < 1024) {
-      setTimeout(() => changePicSmallTimed(true), 4000)
-    } else {
-      setTimeout(() => changePicTimed(true), 4000)
-    }
-}, [])
   return (
     <>
     <Script
@@ -161,36 +56,78 @@ useEffect(() => {
       </motion.div>
       </AnimatePresence>
     </div>
-    <div id="smallCarousel" className="flex lg:hidden flex-row justify-center py-16 ">
+    {/* For small screens*/}
+    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+        <EmblaCarousel numOfShownElements={1}
+                      maxElementWidth={467}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
+                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        // Make not in view children to be invisible so their shadows do not appear as well
+                        inViewChildren.forEach(child => {
+                          child.classList.add("shadow-2xl");
+                          child.classList.remove("opacity-0");
+                        });
+                        notInViewChildren.forEach(child => {
+                          child.classList.remove("shadow-2xl");
+                          child.classList.add("opacity-0");
+                        });
+                      }}
+                      viewportPadding={"0 50px"}// * For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
+                      contents={allPictures.map((imagePath, index) => {
+                        const mod = index % 3;
+                        if (mod != 0 && mod != 1 && mod != 2) {
+                          return { node: <></>};
+                        }
 
-        <button id="left" onClick={() => {
-                changePicSmall(false)
-                
-                }} className="text-5xl dark:text-white"> &lt; </button>
-        <div className="m-2">
-            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
-        </div>
-        <button id="right" onClick={() => changePicSmall(true)} className="text-5xl dark:text-white"> &gt; </button>
-    </div>
+                        return {
+                          node: <Image
+                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
+                                  style={{objectFit: "cover"}}
+                                  src={imagePath}
+                                  alt="Slideshow Picture"
+                                  key={index}
+                                  width={467}
+                                  height={0}
+                                />
+                          }
+                      })} />
+      </div>
 
-    <div id="carousel" className="hidden lg:flex flex-row justify-center py-16 ">
+      {/* For large screens*/}
+      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+        <EmblaCarousel numOfShownElements={3}
+                      maxElementWidth={467}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }}  // Start 1 instead since the start position in Embla seems to be based on the middle element
+                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
+                        // Make not in view children to be invisible so their shadows do not appear as well
+                        inViewChildren.forEach(child => {
+                          child.classList.remove("opacity-0");
+                        });
+                        notInViewChildren.forEach(child => {
+                          child.classList.add("opacity-0");
+                        });
+                      }}
+                      viewportPadding={"0 50px"} //For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
+                      contents={allPictures.map((imagePath, index) => {
+                        const mod = index % 3;
+                        if (mod != 0 && mod != 1 && mod != 2) {
+                          return { node: <></>};
+                        }
 
-        <button id="left" onClick={() => {
-                changePic(false)
-                
-                }} className="text-6xl"> &lt; </button>
-        <div className="m-2">
-            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-lightOrange shadow-2xl shadow-lightOrange rounded-full"/>
-        </div>
-        <div className='m-2'>
-            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-brightYellow shadow-2xl shadow-brightYellow rounded-full"/>
-        </div>
-        <div className='m-2'>
-            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className="border-4 border-darkOrange shadow-2xl shadow-darkOrange rounded-full"/>
-        </div>
-        <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
-    </div>
-  
+                        return {
+                          node: <Image
+                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
+                                  style={{objectFit: "cover"}}
+                                  src={imagePath}
+                                  alt="Slideshow Picture"
+                                  key={index}
+                                  width={467}
+                                  height={0}
+                                />
+                          }
+                      })} />
+      </div>
+
 <AnimatePresence>
     <motion.div
       initial={{opacity:0}}

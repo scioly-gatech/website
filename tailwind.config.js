@@ -74,6 +74,11 @@ module.exports = {
       }
     },
   },
+  safelist: [
+    {
+      pattern: /shadow-*/
+    }
+  ],
   plugins: [
   ],
 }
