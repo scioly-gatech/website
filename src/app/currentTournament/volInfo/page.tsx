@@ -34,7 +34,7 @@ export default function page() {
           {/** Heading */}
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
               <div className="flex justify-center text-center">
-                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-6xl ${play.className}`}>Volunteer Information</h1>
+                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className}`}>Volunteer Information</h1>
               </div>
           </div>
 

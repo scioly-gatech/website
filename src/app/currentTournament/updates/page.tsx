@@ -31,10 +31,19 @@ export default function page() {
         </Head>
         <main className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh] pb-12">
           {/** Heading */}
-          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
-              <div className="flex justify-center text-center">
-                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-6xl ${play.className}`}>General Info/Updates</h1>
-              </div>
+          <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen">
+            <AnimatePresence>
+              <motion.div
+                  initial={{opacity:0}}
+                  animate={{opacity:1}}
+                  transition={{duration:1}}
+                  className="text-3xl font-bold flex justify-center items-center max-w-screen"
+                >
+                    <div className="flex justify-center text-center lg:w-1/3 mx-24">
+                      <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className}`}>General Info & Updates</h1>
+                    </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
         {/** Documents */}

@@ -64,7 +64,7 @@ export default function Navbar() {
     //There is a small nav bar intended for devices with smaller screens. That navbar includes the hamburger menu, and will not usually be there. The larger nav bar is for larger devices like computers and is across the top page. 
   return (
     <main>
-        <div id="smallNavBar" className="lgNav:hidden relative z-10">
+        <div id="smallNavBar" className="lgNav:hidden z-10">
             {/* Style for the hamburger menu was inspired by Dave Gray's Tailwind CSS Video: https://www.youtube.com/watch?v=lCxcTsOHrjo */}
             <AnimatePresence>
                 <motion.div
@@ -72,16 +72,16 @@ export default function Navbar() {
                     animate={{rotate: 360, opacity: 1}}
                     transition={{delay:1}}
                 >
-                    <button onClick={toggleSmallNav} className="w-12 absolute right-0 z-10 pl-2">
+                    <button onClick={toggleSmallNav} className="w-12 fixed right-0 pl-2 z-10">
                         <div id="topLine" className="border-2 border-white m-1"></div>
                         <div id="middleLine" className="border-2 border-white m-1"></div>
                         <div id="bottomLine" className="border-2 border-white m-1"></div>
                     </button>
                 </motion.div>
 
-            <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[80vh]">
+            <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
                 <div className="flex flex-row justify-end">
-                    <button onClick={toggleSmallNav} className="w-1/4 right-2 z-10">
+                    <button onClick={toggleSmallNav} className="w-1/8 z-10">
                         <RxCross1 />
                     </button>
                 </div>
