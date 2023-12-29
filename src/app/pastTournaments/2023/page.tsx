@@ -5,6 +5,7 @@ import allResults2023 from '../../../../data/allResults/allResults2023'
 import eventResults2023 from '../../../../data/eventResults/eventResults2023'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
+import EmblaCarousel from '@/app/components/Carousel'
 import Script from 'next/script'
 
 export default function PastTournament2023() {
@@ -12,113 +13,8 @@ const allPictures = [
     "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg"
 ]
 
-let index1 = 0
-let index2 = 1
-let index3 = 2
-
-function changePic (right: boolean) {
-    if (typeof(document) !== 'undefined') {
-        const firstPic = document.getElementById("1") as HTMLElement
-        const secondPic = document.getElementById("2") as HTMLElement
-        const thirdPic = document.getElementById("3") as HTMLElement
-        if (right === true) {
-            index1 = (index1 + 1) % allPictures.length
-            index2 = (index2 + 1) % allPictures.length
-            index3 = (index3 + 1) % allPictures.length
-        } else {
-            index1 = ((index1 - 1) % allPictures.length)
-            index2 = ((index2 - 1) % allPictures.length)
-            index3 = ((index3 - 1) % allPictures.length)
-            if (index1 < 0) {
-                index1 = index1 + allPictures.length
-            }
-            if (index2 < 0) {
-                index2 = index2 + allPictures.length
-            }
-            if (index3 < 0) {
-                index3 = index3 + allPictures.length
-            }
-        }
-        firstPic.setAttribute("src", allPictures[index1])
-        secondPic.setAttribute("src", allPictures[index2])
-        thirdPic.setAttribute("src", allPictures[index3])
-    }
-}
-
-function changePicTimed (right: boolean) {
-
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1") as HTMLElement
-      const secondPic = document.getElementById("2") as HTMLElement
-      const thirdPic = document.getElementById("3") as HTMLElement
-      if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
-          index2 = (index2 + 1) % allPictures.length
-          index3 = (index3 + 1) % allPictures.length
-      } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          index2 = ((index2 - 1) % allPictures.length)
-          index3 = ((index3 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
-          }
-          if (index2 < 0) {
-              index2 = index2 + allPictures.length
-          }
-          if (index3 < 0) {
-              index3 = index3 + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index1])
-      secondPic?.setAttribute("src", allPictures[index2])
-      thirdPic?.setAttribute("src", allPictures[index3])
-  }
-  setTimeout(() => changePicTimed(true), 4000)
-  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
-}
-
-function changePicSmall (right: boolean) {
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1s") as HTMLElement
-      if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
-      } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index1])
-  }
-}
-
-function changePicSmallTimed (right: boolean) {
-  if (typeof(document) !== 'undefined') {
-      const firstPic = document.getElementById("1s") as HTMLElement
-      if (right === true) {
-          index1 = (index1 + 1) % allPictures.length
-      } else {
-          index1 = ((index1 - 1) % allPictures.length)
-          if (index1 < 0) {
-              index1 = index1 + allPictures.length
-          }
-      }
-      firstPic?.setAttribute("src", allPictures[index1])
-  }
-  setTimeout(() => changePicSmallTimed(true), 4000)
-  //Found solution on Stack Overflow response: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously
-}
-
 const allResults = allResults2023
 const eventResults = eventResults2023
-
-    useEffect(() => {
-      if (window.innerWidth < 1024) {
-        setTimeout(() => changePicSmallTimed(true), 4000)
-      } else {
-        setTimeout(() => changePicTimed(true), 4000)
-      }
-    }, [])
 
   return (
     <>
@@ -151,35 +47,47 @@ const eventResults = eventResults2023
             animate={{opacity:1}}
             transition={{duration:1}}
         >
-    <div className="flex flex-row justify-center lg:hidden">
-    <button id="left" onClick={() => {
-                changePicSmall(false)
-                
-                }} className="text-3xl"> &lt; </button>
-    <figure id="carouselSmall" className="flex lg:hidden">
-            <img id="1s" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="200" height="150" className="m-4"/>
-    </figure>
-    <button id="right" onClick={() => changePicSmall(true)} className="text-3xl"> &gt; </button>
-    </div>
+     
+    {/* For small screens*/}
+    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+        <EmblaCarousel numOfShownElements={1}
+                      maxElementWidth={467}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
+                      contents={allPictures.map((imagePath, index) => {
+                        return {
+                          node: <Image
+                                      className={`block`}
+                                      style={{objectFit: "cover"}}
+                                      src={imagePath}
+                                      alt="Slideshow Picture"
+                                      key={index}
+                                      width={467}
+                                      height={0}
+                                    />
+                        }
+                      })}/> 
+      </div>
+      
+      {/* For large screens*/}
+      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+        <EmblaCarousel numOfShownElements={3}
+                      maxElementWidth={467}
+                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }} // Start 1 instead since the start position in Embla seems to be based on the middle element
+                      contents={allPictures.map((imagePath, index) => {
+                        return {
+                          node: <Image
+                                      className={`block`}
+                                      style={{objectFit: "cover"}}
+                                      src={imagePath}
+                                      alt="Slideshow Picture"
+                                      key={index}
+                                      width={467}
+                                      height={0}
+                                    />
+                        }
+                      })} /> 
+      </div>
 
-
-    <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
-
-        <button id="left" onClick={() => {
-                changePic(false)
-                
-                }} className="text-6xl"> &lt; </button>
-        <div className="m-2">
-            <img id="1" src="/images/2023/2023-1.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
-        </div>
-        <div className='m-2'>
-            <img id="2" src="/images/2023/2023-2.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
-        </div>
-        <div className='m-2'>
-            <img id="3" src="/images/2023/2023-3.jpg" alt="Slideshow Picture" width="467" height="350" className=""/>
-        </div>
-        <button id="right" onClick={() => changePic(true)} className="text-6xl"> &gt; </button>
-    </div>
     </motion.div>
     </AnimatePresence>
 

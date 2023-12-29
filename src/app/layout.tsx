@@ -1,4 +1,5 @@
 import './globals.css'
+import './embla.css'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import Navbar from './components/Navbar'
@@ -18,9 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-w-fit">
-      <body className={open.className}>
+      <body className={`${open.className} min-h-screen flex flex-col`}>
         <Navbar />
-        {children}
+        <div className="grow bg-slate-200 dark:bg-black">
+          {children}
+        </div>
         <Footer/>
       </body>
     </html>
