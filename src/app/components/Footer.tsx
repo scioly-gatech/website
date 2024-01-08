@@ -7,7 +7,7 @@ export default function Footer() {
     const curr = new Date().getFullYear()
 
   return (
-    <div className="bottom-1 min-w-screen flex flex-col items-center text-darkBlue bg-lightBlue dark:bg-darkBlue dark:text-lightBlue p-10">
+    <div className="bottom-1 min-w-full flex flex-col items-center text-darkBlue bg-lightBlue dark:bg-darkBlue dark:text-lightBlue p-10">
     <nav className="hidden lg:block">
       <ul className="flex flex-row justify-center">
         <li className="p-1 m-1 hover:text-black hover:underline dark:hover:text-white">
