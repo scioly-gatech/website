@@ -34,17 +34,14 @@ export default function page() {
           {/** Heading */}
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-screen text-center text-3xl font-bold flex justify-center items-center">
               <div className="flex justify-center text-center">
-                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className}`}>Registration</h1>
+                  <h1 className={`border-8 border-lightOrange p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}>Registration</h1>
               </div>
           </div>
 
           {/** Links */}
           <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
-            <span className="font-bold text-4xl underline"> Tournament Registration</span>
+            <span className="font-bold text-4xl underline"> At this time, registration for the Yellow Jacket Invitational is full.</span>
             <br />
-            If your team is interested in participating in the 2024 Yellow Jacket Invitational, register using the following Google Form <span className="font-bold"> before January 13th @ 12 PM EST</span>:  <a href="https://forms.gle/6HqRES5dhBhiABpx6" target="_blank" className="hidden md:flex underline font-bold"> https://forms.gle/6HqRES5dhBhiABpx6.</a>
-
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSedXGxt9dEoVBCpiyNbsANtSA-LrJtdbc169hyS1rJjYzkM2A/viewform?embedded=true" width="100%" height="450">Loading…</iframe>
           </p>
 
         </main>

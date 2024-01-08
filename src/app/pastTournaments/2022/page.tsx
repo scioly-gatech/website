@@ -27,7 +27,7 @@ export default function PastTournament2022() {
       </Script>
     <div className="min-h-screen bg-white dark:bg-slate-600 dark:text-white">
       <h1 className="bg-sky-100 dark:bg-black dark:text-white flex justify-center py-20">
-        <div id="borderDiv" className="border-4 border-brightYellow text-center text-2xl lg:text-6xl font-bold p-4 m-4">
+        <div id="borderDiv" className="border-4 border-brightYellow text-center text-2xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow">
         2022 State Division C Tournament
         </div>
       </h1>
@@ -61,7 +61,7 @@ export default function PastTournament2022() {
                   <td className="m-3">
                     {result.key}
                   </td>
-                  <td>
+                  <td className="">
                     {result.school}
                   </td>
                 </tr>
@@ -80,10 +80,10 @@ export default function PastTournament2022() {
             {eventResults.map((event) => {
               return (
                 <tr key={event.key}>
-                <td className="m-3 text-darkBlue dark:text-lightBlue">
+                <td className="m-3 text-darkBlue dark:text-lightBlue border-2 p-2 rounded-2xl shadow-inner shadow-lightOrange">
                   {event.event}
                 </td>
-                <td>
+                <td className="italic border-2 p-2 rounded-2xl shadow-inner shadow-lightOrange">
                   {event.school}
                 </td>
                 </tr>

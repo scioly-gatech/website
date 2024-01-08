@@ -9,8 +9,8 @@ import EmblaCarousel from '@/app/components/Carousel'
 import Script from 'next/script'
 
 export default function PastTournament2023() {
-const allPictures = [
-    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg"
+  const allPictures = [
+    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg", 
 ]
 
 const allResults = allResults2023
@@ -35,7 +35,7 @@ const eventResults = eventResults2023
       </Script>
     <div className="min-h-screen bg-white dark:bg-blue-950 dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
-        <div id="borderDiv" className="border-4 border-lime-400 text-center text-2xl lg:text-6xl font-bold p-4 m-4">
+        <div id="borderDiv" className="border-4 border-lime-400 text-center text-2xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow">
         2023 State Division C Tournament
         </div>
       </h1>
@@ -123,10 +123,10 @@ const eventResults = eventResults2023
             {eventResults.map((event) => {
               return (
                 <tr key={event.key}>
-                <td className="m-3 text-darkBlue dark:text-lightBlue">
+                <td className="m-3 text-darkBlue dark:text-lightBlue border-2 p-2 rounded-2xl shadow-inner shadow-lightOrange">
                   {event.event}
                 </td>
-                <td>
+                <td className="italic border-2 p-2 rounded-2xl shadow-inner shadow-lightOrange">
                   {event.school}
                 </td>
                 </tr>

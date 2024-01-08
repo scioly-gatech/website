@@ -15,9 +15,9 @@ export default function Profile(props: ProfileProps) {
 
   return (
     <>
-    <main className={`flex flex-col items-center p-5 px-10`}>
-        <figure className="border-4 border-darkBlue dark:border-lightBlue">
-            <Image src={props.imgRoute} alt={altTag} width='300' height='300' className=''/>
+    <main className={`flex flex-col items-center p-5 px-10 bg-slate-100 dark:bg-darkBlue rounded-lg shadow-xl mx-8 my-8 hover:opacity-90 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500`}>
+        <figure className="border-4 border-color dark:border-lightBlue rounded-full">
+            <Image src={props.imgRoute} alt={altTag} width='300' height='300' className='rounded-full'/>
             <figcaption className="sr-only">{altTag}</figcaption>
         </figure>
         <div className={`${props.color ? "bg-lightOrange" : "bg-darkOrange"} mt-2 flex flex-col items-center w-64 border-4 rounded-lg`}>

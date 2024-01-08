@@ -28,7 +28,7 @@ export default function Sponsorships() {
       </Script>
    <div id="allContent" className="bg-slate-200 dark:bg-darkBlue w-screen">
       <div id="topHeader" className = "bg-[url('/images/sponsorPage/sponsor.jpg')] flex justify-center items-center h-[30vh]">
-        <h1 className={`text-5xl lg:text-7xl font-bold text-white border-8 lg:mx-8 p-4 lg:p-8 lg:px-20 ${play.className}`}>Sponsorship</h1>
+        <h1 className={`text-5xl lg:text-7xl font-bold text-white border-8 lg:mx-8 p-4 lg:p-8 lg:px-20 ${play.className} drop-shadow-titleShadow`}>Sponsorship</h1>
       </div>
 
 <AnimatePresence>
@@ -80,12 +80,9 @@ export default function Sponsorships() {
             </td>
             <td className="border-2 border-black dark:border-white ">
               <p className="text-lg dark:text-white">
-                Your name/logo will be a major feature every time the Georgia Science Olympiad State Tournament is mentioned at the event or on our social media. 
+                Major feature in all events, logo on any promotions, special mentions.
                 <br />
-                <br />
-                Press Release Example:  “The 2023 Georgia State Science Olympiad Competition Presented by…” 
-                <br />
-                <span className="bg-slate-200 dark:bg-darkBlue">This is in addition to the rewards from the previous level.</span>
+                <span className="bg-slate-200 dark:bg-darkBlue">This is in addition to the rewards below.</span>
               </p>
             </td>
           </tr>
@@ -101,10 +98,10 @@ export default function Sponsorships() {
             </td>
             <td className="border-2 border-black dark:border-white">
               <p className="text-lg dark:text-white">
-                Your name/logo will be featured on the Science Olympiad at Georgia Tech Volunteer T-shirts. 
+                Logo featured on t-shirts, mentions in selected events and media.
                 <br />
 
-                <span className="bg-slate-200 dark:bg-darkBlue">This is in addition to the rewards from the previous level.</span>
+                <span className="bg-slate-200 dark:bg-darkBlue">This is in addition to the rewards below.</span>
               </p>
             </td>
           </tr>
@@ -120,7 +117,7 @@ export default function Sponsorships() {
             </td>
             <td className="border-2 border-black dark:border-white">
               <p className="text-lg dark:text-white">
-            Your name/logo will be featured at the Georgia Science Olympiad State Tournament Awards Ceremony with over 500 prospective high school students, parents, and teachers. 
+            Acknowledgment during event, logo in program brochure.
             </p>
             </td>
           </tr>
@@ -133,91 +130,44 @@ export default function Sponsorships() {
       </AnimatePresence>
       </div>
 
-    <div id="GTSponsors" className="">
-
       <AnimatePresence>
-        <motion.div
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1}}
-          className="flex flex-row justify-around p-12"
-        >
+<div id="sponsors">
+  <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:3}}
+    className="flex flex-row justify-around p-12"
+  >
 
-<div id="sponsorsSmall" className="block lg:hidden">
-<div className={`text-center text-5xl italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
-            <h2 >Georgia Tech Departmental Sponsorships</h2>
-            <div className="flex">
-              <figure>
-                <Image src="/images/sponsorPage/seal.png" alt="Georgia Tech Seal" width="1000" height="242"/>
-                <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
-              </figure>
-            </div>
-          </div>
-      <div id="schools" className="">
-      <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
-      <figure className="flex justify-center">
-        <Image src="/images/sponsors/MSE.png" alt="Georgia Tech School of Materials Science and Engineering" width="900" height="400" className="shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 m-2"/>
-        <figcaption className="sr-only">Picture of the Georgia Tech School of Materials Science and Engineering Logo</figcaption>
-      </figure>
-      <h3 id="silver" className={`${play.className} font-bold text-5xl m-4 bg-zinc-300 text-center`}>Silver</h3>
-        <figure className="flex justify-center">
-          <Image src="/images/sponsors/ChBE.png" alt="Georgia Tech School of Chemical and Biomolecular Engineering" width="850" height="400" className="shadow-zinc-300 border-zinc-300 shadow-2xl border-4 p-4 m-2"/>
-          <figcaption className="sr-only">Picture of the Georgia Tech School of Chemical and Biomolecular Engineering Logo</figcaption>
+<div id="logos">
+  <div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
+      <div className="flex flex-col items-center">
+      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2> 
+        <figure>
+          <Image src="/images/sponsors/seal2.png" alt="Georgia Tech Seal" width="700" height="200"/>
+          <figcaption className="sr-only">Picture of the Georgia Tech Seal next to the words Georgia Institute of Technology</figcaption>
         </figure>
-      <h3 id="bronze" className={`${play.className} font-bold text-5xl m-4 bg-amber-600 text-center`}>Bronze</h3>
-        <figure className="flex justify-center">
-        <Image src="/images/sponsors/Design2.png" alt="Georgia Tech College of Design" width="800" height="100" className="shadow-amber-600 border-amber-600 shadow-2xl border-4 p-4 m-2"/>
-          <figcaption className="sr-only">Picture of the Georgia Tech College of Design Logo</figcaption>
-        </figure>
-          </div>
-          </div>
-
-
-    <div id="sponsorsLarge" className="hidden lg:block">
-      <div id="schools" className="">
-      <h3 id="gold" className={`${play.className} font-bold text-5xl bg-brightYellow m-4 text-center`}> Gold </h3>
-      <figure className="flex justify-center">
-        <Image src="/images/sponsors/MSE.png" alt="Georgia Tech School of Materials Science and Engineering" width="800" height="400" className="shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 m-2"/>
-        <figcaption className="sr-only">Picture of the Georgia Tech School of Materials Science and Engineering Logo</figcaption>
-      </figure>
-      <h3 id="silver" className={`${play.className} font-bold text-5xl m-4 bg-zinc-300 text-center`}>Silver</h3>
-        <figure className="flex justify-center">
-          <Image src="/images/sponsors/ChBE.png" alt="Georgia Tech School of Chemical and Biomolecular Engineering" width="750" height="400" className="shadow-zinc-300 border-zinc-300 shadow-2xl border-4 p-4 m-2"/>
-          <figcaption className="sr-only">Picture of the Georgia Tech School of Chemical and Biomolecular Engineering Logo</figcaption>
-        </figure>
-      <h3 id="bronze" className={`${play.className} font-bold text-5xl m-4 bg-amber-600 text-center`}>Bronze</h3>
-        <figure className="flex justify-center">
-        <Image src="/images/sponsors/Design2.png" alt="Georgia Tech College of Design" width="700" height="100" className="shadow-amber-600 border-amber-600 shadow-2xl border-4 p-4 m-2"/>
-          <figcaption className="sr-only">Picture of the Georgia Tech College of Design Logo</figcaption>
-        </figure>
-          </div>
-          <div className={`text-center text-4xl italic text-white bg-darkBlue dark:bg-black ${play.className} mt-8`}>
-            <h2 >Georgia Tech Departmental Sponsorships</h2>
-            <div className="flex">
-              <figure>
-                <Image src="/images/sponsorPage/seal.png" alt="Georgia Tech Seal" width="800" height="242"/>
-                <figcaption className="sr-only">Picture of the Georgia Tech seal next to the words Georgia Institute of Technology</figcaption>
-              </figure>
-            </div>
-          </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
-      <h2 className="p-4 font-bold text-3xl animate-bounce text-center dark:text-white">&darr;</h2>
+      </div>
     </div>
-   
-   <div id="contact" className="bg-lightOrange dark:bg-zinc-900 py-24">
-      <AnimatePresence>
-      <motion.div
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:3}}
-        >
-          <h2 className="border-4 border-black dark:border-white dark:text-white text-2xl md:text-4xl text-center lg:mx-48 mx-8 lg:p-36 leading-relaxed">We thank you for making any contributions! Please do not hesitate to reach out to us with any questions by emailing <a href="malito:scioly.gatech@gmail.com" className="underline font-semibold hover:opacity-50">scioly.gatech@gmail.com</a> </h2>
-
-        </motion.div>
-      </AnimatePresence>
-   </div>
+      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4">
+        {/** Sponsor Images */}
+        <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="500" height="300" className=""/>
+        <figcaption className="sr-only"> Logo for Campus Services </figcaption>
+        <Image src="/images/sponsors/ece.png" alt="School of Electrical and Computer Engineering" width="800" height="400" className=""/>
+        <figcaption className="sr-only"> Logo for School of Electrical and Computer Engineering </figcaption>
+        <Image src="/images/sponsors/gtsf.png" alt="Georgia Tech Alumni Association Student Foundation" width="800" height="400" className=""/>
+        <figcaption className="sr-only"> Logo for Georgia Tech Alumni Association Student Foundation </figcaption>
+        <Image src="/images/sponsors/mse.png" alt="School of Materials Science and Engineering" width="700" height="400" className=""/>
+        <figcaption className="sr-only"> Logo for School of Materials Science and Engineering </figcaption>
+        <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="600" height="400" className=""/>
+        <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
+        <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="600" height="400" className=""/>
+        <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
+      </figure>
+  </div>
+  </motion.div>
+    </div>
+    </AnimatePresence>
    </div>
    </>
   )

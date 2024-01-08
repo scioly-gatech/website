@@ -40,7 +40,7 @@ export default function page() {
                   className="text-3xl font-bold flex justify-center items-center max-w-screen"
                 >
                     <div className="flex justify-center text-center lg:w-1/3 mx-24">
-                      <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className}`}>General Info & Updates</h1>
+                      <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}>General Info & Updates</h1>
                     </div>
               </motion.div>
             </AnimatePresence>
