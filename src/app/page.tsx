@@ -150,7 +150,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Service</h2>
       </div>
-      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
+      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> Science Olympiad @ Georgia Tech will be hosting the very first Yellow Jacket Invitational in addition to the the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal competition experience for high school students.</p>
       <figure className="m-2">
         <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
@@ -184,7 +184,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h2 className={`bg-darkOrange dark:bg-black dark:text-white ${play.className} text-6xl p-2 m-2 lg:py-24 lg:px-8 lg:mr-4 rounded`}>Our Service</h2>
       </div>
-      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is hosting the Georgia State Division C Science Olympiad competition for the second consecutive year this year. Georgia Tech student volunteers with various expertise and immense passion for science coalesce to write exams, fabricate supplies, prepare labs, and host workshops to provide an optimal competition experience for high school students.</p>
+      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech will be hosting the very first Yellow Jacket Invitational in addition to the the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and shared passion for writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal competition experience for high school students.</p>
       <figure className="m-2">
         <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
@@ -232,17 +232,17 @@ export default function Home() {
     </div>
       <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4">
         {/** Sponsor Images */}
-        <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="500" height="300" className=""/>
+        <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
         <figcaption className="sr-only"> Logo for Campus Services </figcaption>
-        <Image src="/images/sponsors/ece.png" alt="School of Electrical and Computer Engineering" width="800" height="400" className=""/>
+        <Image src="/images/sponsors/ece.png" alt="School of Electrical and Computer Engineering" width="700" height="400" className=""/>
         <figcaption className="sr-only"> Logo for School of Electrical and Computer Engineering </figcaption>
-        <Image src="/images/sponsors/gtsf.png" alt="Georgia Tech Alumni Association Student Foundation" width="800" height="400" className=""/>
+        <Image src="/images/sponsors/gtsf.png" alt="Georgia Tech Alumni Association Student Foundation" width="700" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Georgia Tech Alumni Association Student Foundation </figcaption>
-        <Image src="/images/sponsors/mse.png" alt="School of Materials Science and Engineering" width="700" height="400" className=""/>
+        <Image src="/images/sponsors/mse.png" alt="School of Materials Science and Engineering" width="600" height="400" className=""/>
         <figcaption className="sr-only"> Logo for School of Materials Science and Engineering </figcaption>
-        <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="600" height="400" className=""/>
+        <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
-        <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="600" height="400" className=""/>
+        <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
       </figure>
   </div>

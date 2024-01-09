@@ -71,10 +71,10 @@ export default function MeetTeam() {
         </div>
       <div className="w-screen">
       <p className={`${libre.className} text-lg lg:mx-64 mx-8 text-center p-4 flex justify-center border-4 border-darkBlue dark:text-white mt-4`}>
-      Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through improving the Science Olympiad experience. 
+      Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience. 
       <br/>
       <br />
-        We work around the year both within Georgia Tech and in the Atlanta area to promote Science Olympiad opportunities for students. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 3rd year in a row, and this would not be possible without the dedication and effort of our members!
+        We work around the year both within Georgia Tech and in the Atlanta area to promote Science Olympiad opportunities for students. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 3rd year in a row and the very first Yellow Jacket Invitational, and this would not be possible without the dedication and effort of our members!
       </p>
       </div>
 
