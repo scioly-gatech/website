@@ -52,9 +52,9 @@ export default function MeetTeam() {
           });
       `}
       </Script>
-    <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-screen">
+    <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-full">
       <AnimatePresence>
-        <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-screen py-10">
+        <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-full py-10">
         <motion.div
           initial={{opacity:0.5}}
           animate={{opacity:1}}
@@ -69,7 +69,7 @@ export default function MeetTeam() {
             <figcaption className="sr-only">Picture of one of the buildings on the Georgia Tech campus/</figcaption>
           </figure>
         </div>
-      <div className="w-screen">
+      <div className="w-full">
       <p className={`${libre.className} text-lg lg:mx-64 mx-8 text-center p-4 flex justify-center border-4 border-darkBlue dark:text-white mt-4`}>
       Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience. 
       <br/>

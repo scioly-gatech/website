@@ -26,8 +26,8 @@ export default function CurrentTournament() {
       `}
       </Script>
       
-    <div className="dark:bg-black bg-slate-200 w-screen md:min-h-[88vh] lg:min-h-[74vh]">
-      <div className="text-white bg-[url('/images/pastTournaments/pastTournamentsImage.jpg')] p-12 w-screen">
+    <div className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh]">
+      <div className="text-white bg-[url('/images/pastTournaments/pastTournamentsImage.jpg')] p-12 w-full">
         <AnimatePresence>
         <motion.div
             initial={{opacity:0}}

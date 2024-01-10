@@ -26,7 +26,7 @@ export default function Sponsorships() {
           });
       `}
       </Script>
-   <div id="allContent" className="bg-slate-200 dark:bg-darkBlue w-screen">
+   <div id="allContent" className="bg-slate-200 dark:bg-darkBlue w-full">
       <div id="topHeader" className = "bg-[url('/images/sponsorPage/sponsor.jpg')] flex justify-center items-center h-[30vh]">
         <h1 className={`text-5xl lg:text-7xl font-bold text-white border-8 lg:mx-8 p-4 lg:p-8 lg:px-20 ${play.className} drop-shadow-titleShadow`}>Sponsorship</h1>
       </div>
