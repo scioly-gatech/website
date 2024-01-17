@@ -61,7 +61,7 @@ export default function Sponsorships() {
       
       <AnimatePresence>
       <div className="flex flex-col items-center bg-lightOrange dark:bg-zinc-900">
-          <h2 className={`mt-[4vh] text-6xl text-slate-900 bg-slate-200 p-4 m-4 mx-8 ${play.className}`}> Sponsorship Tiers</h2>
+          <h2 className={`mt-[4vh] text-4xl lg:text-6xl text-slate-900 bg-slate-200 p-4 m-4 mx-8 ${play.className}`}> Sponsorship Tiers</h2>
           <div id="tierContent" className="flex flex-row justify-evenly">
 
       <table className="lg:mt-8 border-separate lg:mx-72 border-spacing-x-8 lg:border-spacing-x-12 border-spacing-y-4">

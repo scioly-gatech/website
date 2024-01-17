@@ -35,8 +35,8 @@ export default function CurrentTournament() {
             transition={{duration:1}}
             className="text-3xl font-bold flex justify-center items-center"
           >
-              <div className="flex justify-center text-center lg:w-1/3 mx-12">
-                <h1 className={`border-8 border-darkOrange lg:p-8 tracking-widetext-center text-5xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Past Tournaments</h1>
+              <div className="flex justify-center text-center w-1/2 lg:w-1/3 mx-8">
+                <h1 className={`border-8 border-darkOrange lg:p-8 tracking-widetext-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Past Tournaments</h1>
               </div>
         </motion.div>
         </AnimatePresence>

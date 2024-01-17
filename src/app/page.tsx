@@ -56,7 +56,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
     </div>
-    {/* For small screens*/}
+    {/* For small screens
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -75,10 +75,9 @@ export default function Home() {
                       viewportPadding={"0 50px"}// * For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
                       contents={allPictures.map((imagePath, index) => {
                         const mod = index % 3;
-                        if (mod !=0 && mod != 1 && mod != 2) {
+                        if (mod != 0 && mod != 1 && mod != 2) {
                           return { node: <></>};
                         }
-
                         return {
                           node: <Image
                                   className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
@@ -92,6 +91,7 @@ export default function Home() {
                           }
                       })} />
       </div>
+      */}
 
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
