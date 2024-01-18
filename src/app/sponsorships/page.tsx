@@ -163,6 +163,8 @@ export default function Sponsorships() {
         <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
         <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
+        <Image src="/images/sponsors/gtri.png" alt="Georgia Tech Research Institute" width="550" height="400" className="mt-4"/>
+        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption>
       </figure>
   </div>
   </motion.div>
