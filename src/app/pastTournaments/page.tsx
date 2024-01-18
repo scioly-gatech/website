@@ -44,10 +44,10 @@ export default function CurrentTournament() {
         <div id="states">
             <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold">State Tournaments</p>
             <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center">
-                <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-4 lg:my-6">
+                <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                     <Link href="/pastTournaments/2022" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4">2022 Tournament</Link>
                 </li>
-                <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-4 lg:my-6">
+                <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                     <Link href="/pastTournaments/2023" className="bg-darkOrange text-2xl lg:text-3xl p-4 rounded-2xl">2023 Tournament</Link>
                 </li>
             </ul>
