@@ -4,8 +4,26 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
 import Image from 'next/image'
 import Script from 'next/script'
+import { ReactDOM } from 'react'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
+const Countdown = () => {
+  const today = new Date(Date.now())
+  const day = today.getDate()
+  var diff
+  if (day == 3) {
+    return(
+    <div className="p-8 bg-darkOrange w-1/4 text-2xl text-center m-4 shadow-xl shadow-white">
+      <p className="font-bold underline"> 0 Days Remaining</p>
+      <p className="">🐝 The Yellow Jacket Invitational has started! 🐝</p>
+    </div>)
+  } else if (day > 4) {
+    diff = 3 + (31 - day)
+  } else {
+    diff = 3 - day
+  }
+  return(<p className="p-8 bg-darkOrange lg:w-1/4 text-2xl text-center m-4 shadow-xl shadow-white"><span className="font-bold px-1 text-white bg-darkBlue rounded-full">{diff}</span> Day{diff == 1? '':'s'} Until Yellow Jacket Invitational!</p>)
+}
 
 export default function CurrentTournament() {
   return (
@@ -41,20 +59,10 @@ export default function CurrentTournament() {
         </motion.div>
         </AnimatePresence>
       </div>
-        {/*<p className="bg-lightBlue text-darkBlue text-center text-4xl m-4 sm:mx-8 lg:mx-72 shadow-darkBlue dark:shadow-white shadow-xl"> Science Olympiad @ Georgia Tech is hosting the very first Yellow Jacket Invitational! </p>*/}
-        <figure className="w-full flex justify-center mt-8 pb-8">
-          <Image src="/images/curr/YJIFlier.png" alt="Yellow Jacket Invitational Promotional Flyer" width="700" height="300"/>
-          <figcaption className="sr-only">
-            2024 Yellow Jacket Invitational applications are open! The premier Division C invitational of the southeast will be held on February 3rd, 2024 at Georgia Tech. Applications close on January 13th, and we will close appls early if we reach capacity, so make sure to register early. The is a fee of $125 per team for up to 2 teams, although 3rd and 4th teams may be allowed on a case to case basis. For more information, please visit https://sciolygatech.org. 
-          </figcaption>
-        </figure>
-      
-      {/*<figure className="w-full flex justify-center mt-8">
-        <Image src="/images/curr/view.jpg" alt="View of Georgia Tech campus" width="450" height="300" className="shadow-xl shadow-darkBlue dark:shadow-white mb-8"/>
-        <figcaption className="sr-only">
-          View of Georgia Tech campus with some of the Atlanta skyline in the background.
-        </figcaption>
-  </figure>*/}
+        <div className="text-blackborder-4 border-black bg-lightOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
+          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">Tournament Countdown</h2>
+          <Countdown/>
+        </div>
     </div>
     </>
   )
