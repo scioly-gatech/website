@@ -230,7 +230,7 @@ export default function Home() {
         </figure>
       </div>
     </div>
-      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4">
+      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 bg-lightBlue">
         {/** Sponsor Images */}
         <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
         <figcaption className="sr-only"> Logo for Campus Services </figcaption>
