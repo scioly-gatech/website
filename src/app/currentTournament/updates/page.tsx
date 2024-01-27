@@ -29,7 +29,7 @@ export default function page() {
         <Head>
             title = Updates/Tournament Information
         </Head>
-        <main className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
+        <main className="dark:bg-black bg-slate-200 max-w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
           {/** Heading */}
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full">
             <AnimatePresence>
@@ -39,14 +39,16 @@ export default function page() {
                   transition={{duration:1}}
                   className="text-3xl font-bold flex justify-center items-center max-w-full"
                 >
-                    <div className="flex justify-center text-center lg:w-1/3 mx-24">
-                      <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}>General Info & Updates</h1>
+                  
+                    <div className="flex justify-center text-center lg:w-1/2 mx-12 lg:mx-24">
+                      <h1 className={`${play.className} drop-shadow-titleShadow text-5xl lg:p-8 lg:text-6xl border-8 border-lightOrange tracking-wide`}>General Info & Updates</h1>
                     </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-        {/** Documents */}
+        {/** Documents 
+        */}
         <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
         <a href="https://docs.google.com/document/d/1tj11nzepfx-TmxBQowxljnuDXGWi94pnHHVvmDwy8Qg/edit?usp=sharing" target="_blank" className="underline font-bold text-4xl"> Tournament Information </a>
         <iframe src="https://docs.google.com/document/d/e/2PACX-1vTAJKgutEODpvzm4NzgBcuhqj0ky6u9P7DMkQV31TaTa2BemLjdolwm0cMXUsr8ha729CfR_zSeOmi_/pub?embedded=true" width="90%" height="750" className="mt-4 md:ml-0 lg:ml-24"></iframe>

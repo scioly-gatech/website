@@ -48,8 +48,21 @@ const eventResults = eventResults2023
             transition={{duration:1}}
         >
      
-    {/* For small screens*/}
+      {/* For small screens*/}
+      <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+        <Image
+          className={`block mx-4`}
+          style={{objectFit: "cover" }}
+          src={allPictures[0]}
+          alt="Slideshow Picture"
+          width={467}
+          height={0}
+        />
+      </div>
+
+      {/**  
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+        
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
@@ -67,7 +80,7 @@ const eventResults = eventResults2023
                         }
                       })}/> 
       </div>
-      
+      */}
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}

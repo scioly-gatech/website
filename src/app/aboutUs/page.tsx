@@ -60,7 +60,7 @@ export default function MeetTeam() {
           animate={{opacity:1}}
           transition={{duration:2}}
         >
-          <h1 className= {`${play.className} drop-shadow-titleShadow text-white dark:text-darkBlue dark:bg-white font-bold text-5xl border-4 border-white m-10 p-8 lg:px-48 flex justify-center`}>
+          <h1 className= {`${play.className} drop-shadow-titleShadow text-white dark:text-darkBlue dark:bg-white font-bold text-5xl border-8 border-lightOrange m-10 p-8 lg:px-48 flex justify-center`}>
            About&nbsp;Us 
           </h1>
           </motion.div>

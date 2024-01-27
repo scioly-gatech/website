@@ -61,7 +61,7 @@ export default function Sponsorships() {
       
       <AnimatePresence>
       <div className="flex flex-col items-center bg-lightOrange dark:bg-zinc-900">
-          <h2 className={`mt-[4vh] text-6xl text-slate-900 bg-slate-200 p-4 m-4 mx-8 ${play.className}`}> Sponsorship Tiers</h2>
+          <h2 className={`mt-[4vh] text-4xl lg:text-6xl text-slate-900 bg-slate-200 p-4 m-4 mx-8 ${play.className}`}> Sponsorship Tiers</h2>
           <div id="tierContent" className="flex flex-row justify-evenly">
 
       <table className="lg:mt-8 border-separate lg:mx-72 border-spacing-x-8 lg:border-spacing-x-12 border-spacing-y-4">
@@ -149,7 +149,7 @@ export default function Sponsorships() {
         </figure>
       </div>
     </div>
-      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4">
+      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 bg-lightBlue">
         {/** Sponsor Images */}
         <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
         <figcaption className="sr-only"> Logo for Campus Services </figcaption>
@@ -163,6 +163,8 @@ export default function Sponsorships() {
         <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
         <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
+        <Image src="/images/sponsors/gtri.png" alt="Georgia Tech Research Institute" width="550" height="400" className="mt-4"/>
+        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption>
       </figure>
   </div>
   </motion.div>

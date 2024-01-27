@@ -28,11 +28,11 @@ export default function ContactUs() {
       `}
       </Script>
     <div className="bg-amber-50 dark:bg-black h-full">
-        <div id="all content" className="w-full flex flex-col items-center">
+        <div id="all content" className="max-w-full flex flex-col items-center">
           <div id="header" className="bg-[url('/images/contact/contact.jpg')] w-full flex justify-center items-center h-48">
             <h1 className={`text-white font-bold border-8 p-4 m-16 text-5xl md:text-7xl text-center ${play.className} drop-shadow-titleShadow`}>Contact Us </h1>
           </div>
-        <p className="text-black dark:text-white border-4 border-black bg-lightOrange text-center text-2xl m-8 mx-72 p-4 shadow-2xl shadow-darkOrange">
+        <p className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-4 shadow-2xl shadow-darkOrange">
           If you have any questions or comments regarding competing, sponsoring, or anything else related to Science Olympiad at Georgia Tech, we would love to hear from you! 
           <br />
           <br />

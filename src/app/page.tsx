@@ -56,7 +56,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
     </div>
-    {/* For small screens*/}
+    {/* For small screens
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -75,10 +75,9 @@ export default function Home() {
                       viewportPadding={"0 50px"}// * For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
                       contents={allPictures.map((imagePath, index) => {
                         const mod = index % 3;
-                        if (mod !=0 && mod != 1 && mod != 2) {
+                        if (mod != 0 && mod != 1 && mod != 2) {
                           return { node: <></>};
                         }
-
                         return {
                           node: <Image
                                   className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
@@ -92,6 +91,7 @@ export default function Home() {
                           }
                       })} />
       </div>
+      */}
 
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
@@ -150,7 +150,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Service</h2>
       </div>
-      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> Science Olympiad @ Georgia Tech will be hosting the very first Yellow Jacket Invitational in addition to the the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal competition experience for high school students.</p>
+      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> Science Olympiad @ Georgia Tech is proud to announce that it will be hosting the very first Yellow Jacket Invitational in addition to the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for science to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal and memorable competition experience for high school students.</p>
       <figure className="m-2">
         <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
@@ -167,7 +167,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Tournament</h2>
       </div>
-      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white">The Georgia State Division C Science Olympiad competition will be hosted at Georgia Tech, centralized around the Clough Undergraduate Learning Commons&apos; lab spaces. In addition to the 23 competitive events, several trial events will be hosted on competition day. Various major-specific and specialized Georgia Tech student organizations will host workshops and information sessions around campus to provide high school students with an experience in specific fields. Special tournament directors from the Georgia Science Olympiad organization will ensure fairness in scoring and resolving miscellaneous issues.</p>
+      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> The Georgia Tech campus will be the bustling hub for two events: the Georgia Division C Science Olympiad Tournament and the Yellow Jacket Invitational. Centered around the Clough Undergraduate Learning Commons&apos; lab spaces. Centered around the Clough Undergraduate Learning Commons and using its state-of-the-art lab spaces, these competitions promise an immersive and challenging experience. Participants can look forward to 23 official competitive events, alongside a variety of intriguing trial events scheduled for the day. Additionally, the campus will be alive with interactive workshops and informative sessions. </p>
       <figure className="m-2">
         <Image src="/images/home/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
@@ -184,7 +184,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <h2 className={`bg-darkOrange dark:bg-black dark:text-white ${play.className} text-6xl p-2 m-2 lg:py-24 lg:px-8 lg:mr-4 rounded`}>Our Service</h2>
       </div>
-      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech will be hosting the very first Yellow Jacket Invitational in addition to the the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and shared passion for writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal competition experience for high school students.</p>
+      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is proud to announce that it will be hosting the very first Yellow Jacket Invitational in addition to the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for science to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal and memorable competition experience for high school students.</p>
       <figure className="m-2">
         <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
@@ -202,7 +202,7 @@ export default function Home() {
         <Image src="/images/home/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
         <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
       </figure>
-      <p className="text-2xl w-1/2 border-4 border-black dark:border-white dark:text-white m-4 p-4">The Georgia State Division C Science Olympiad competition will be hosted at Georgia Tech, centralized around the Clough Undergraduate Learning Commons&apos; lab spaces. In addition to the 23 competitive events, several trial events will be hosted on competition day. Various major-specific and specialized Georgia Tech student organizations will host workshops and information sessions around campus to provide high school students with an experience in specific fields. Special tournament directors from the Georgia Science Olympiad organization will ensure fairness in scoring and resolving miscellaneous issues.</p>
+      <p className="text-2xl w-1/2 border-4 border-black dark:border-white dark:text-white m-4 p-4"> The Georgia Tech campus will be the bustling hub for two events: the Georgia Division C Science Olympiad Tournament and the Yellow Jacket Invitational. Centered around the Clough Undergraduate Learning Commons&apos; lab spaces. Centered around the Clough Undergraduate Learning Commons and using its state-of-the-art lab spaces, these competitions promise an immersive and challenging experience. Participants can look forward to 23 official competitive events, alongside a variety of intriguing trial events scheduled for the day. Additionally, the campus will be alive with interactive workshops and informative sessions. </p>
       <div className="justify items-center">
           <h2 className={`bg-lightOrange dark:bg-black dark:text-white ${play.className} text-6xl py-28 px-4 text-center`}>Our Tournament</h2>
       </div>
@@ -230,7 +230,7 @@ export default function Home() {
         </figure>
       </div>
     </div>
-      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4">
+      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 bg-lightBlue">
         {/** Sponsor Images */}
         <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
         <figcaption className="sr-only"> Logo for Campus Services </figcaption>
@@ -244,6 +244,8 @@ export default function Home() {
         <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
         <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
+        <Image src="/images/sponsors/gtri.png" alt="Georgia Tech Research Institute" width="550" height="400" className="mt-4"/>
+        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption>
       </figure>
   </div>
   </motion.div>
