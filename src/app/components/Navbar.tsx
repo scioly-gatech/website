@@ -94,6 +94,9 @@ export default function Navbar() {
                         <Link href="/currentTournament/volInfo" className="my-2 mx-3"> Map </Link>
                     </li>
                     <li>
+                        <Link href="/currentTournament/volInfo" className="my-2 mx-3"> Map </Link>
+                    </li>
+                    <li>
                         <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
                     </li>
                     <li>
@@ -139,6 +142,9 @@ export default function Navbar() {
   </li>
                             <li>
                                 <Link href="/currentTournament/volInfo" className="hover:text-lightOrange text-xl"> Volunteer Info </Link>
+                            </li>
+                            <li>
+                                <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
                             </li>
                             <li>
                                 <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
