@@ -1,0 +1,18 @@
+.custom-tooltip {
+  background-color: #6D3228;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: revert;
+}
+
+.custom-tooltip::before {
+  display: none;
+}
+
+/* Make leaflet components use the website's font */
+.leaflet-container {
+  font-family: inherit
+}
