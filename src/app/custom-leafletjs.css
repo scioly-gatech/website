@@ -12,7 +12,8 @@
   display: none;
 }
 
-/* Make leaflet components use the website's font */
+/* Make leaflet components use the website's font. Also make map appear lower */
 .leaflet-container {
-  font-family: inherit
+  font-family: inherit;
+  z-index: 0;
 }

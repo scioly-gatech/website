@@ -14,7 +14,6 @@ const mapCenter: LatLngExpression = [33.776166952660056, -84.39719268319107];
 const mapZoom = 17;
 const mapHeight = "750px";
 export default function Page() {
-
   // For making LeafletJS map compatible with Next's SSR
   const CurrentTournamentMap = useMemo(
     () =>
@@ -61,7 +60,7 @@ export default function Page() {
                 <h1
                   className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}
                 >
-                  Tournament Map
+                  YJI Map
                 </h1>
               </div>
             </motion.div>
@@ -70,6 +69,9 @@ export default function Page() {
 
         {/** Map */}
         <div className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+          <p className="font-bold">
+            Click on the markers for events and homerooms!
+          </p>
           <CurrentTournamentMap
             mapContainerProps={{
               center: mapCenter,
