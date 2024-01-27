@@ -13,7 +13,7 @@ const play = Lora({ subsets: ["latin"], display: "swap" });
 const mapCenter: LatLngExpression = [33.776166952660056, -84.39719268319107];
 const mapZoom = 17;
 const mapHeight = "750px";
-export default function page() {
+export default function Page() {
 
   // For making LeafletJS map compatible with Next's SSR
   const CurrentTournamentMap = useMemo(
@@ -46,7 +46,7 @@ export default function page() {
           });
       `}
       </Script>
-      <Head>title = Updates/Tournament Information</Head>
+      <Head>title = Tournament Map</Head>
       <main className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
         {/** Heading */}
         <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full">
