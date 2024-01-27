@@ -14,6 +14,8 @@ const mapCenter: LatLngExpression = [33.776166952660056, -84.39719268319107];
 const mapZoom = 17;
 const mapHeight = "750px";
 export default function page() {
+
+  // For making LeafletJS map compatible with Next's SSR
   const CurrentTournamentMap = useMemo(
     () =>
       dynamic(() => import("@/app/components/TournamentMap"), {
@@ -85,11 +87,11 @@ export default function page() {
               <p className="font-bold text-3xl">Events</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.events) {
-                  return <></>;
+                  return null;
                 }
 
                 return (
-                  <div className="mb-2">
+                  <div className="mb-2" key={tournamentLocation.label}>
                     <p className="font-bold text-2xl">
                       {tournamentLocation.label}
                     </p>
@@ -97,7 +99,11 @@ export default function page() {
                       <ul>
                         {tournamentLocation.events.map(
                           ({ eventName, eventRoom }) => {
-                            return <li>{`${eventName} - ${eventRoom}`}</li>;
+                            return (
+                              <li
+                                key={eventName}
+                              >{`${eventName} - ${eventRoom}`}</li>
+                            );
                           }
                         )}
                       </ul>
@@ -110,11 +116,11 @@ export default function page() {
               <p className="font-bold text-3xl">Home Rooms</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.homerooms) {
-                  return <></>;
+                  return null;
                 }
 
                 return (
-                  <div className="mb-2">
+                  <div className="mb-2" key={tournamentLocation.label}>
                     <p className="font-bold text-2xl">
                       {tournamentLocation.label}
                     </p>
@@ -122,7 +128,11 @@ export default function page() {
                       <ul>
                         {tournamentLocation.homerooms.map(
                           ({ schoolName, homeRoom }) => {
-                            return <li>{`${schoolName} - ${homeRoom}`}</li>;
+                            return (
+                              <li
+                                key={schoolName}
+                              >{`${schoolName} - ${homeRoom}`}</li>
+                            );
                           }
                         )}
                       </ul>

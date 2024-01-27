@@ -187,7 +187,6 @@ const locations: TournamentLocation[] = [
         schoolName: "Northview High School",
         homeRoom: "170",
       },
-      ,
       {
         schoolName: "East Coweta High School",
         homeRoom: "171",

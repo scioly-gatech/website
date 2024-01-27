@@ -45,7 +45,10 @@ export default function TournamentMap({
       />
       {locations.map((tournamentLocation) => {
         return (
-          <Marker position={tournamentLocation.position}>
+          <Marker
+            position={tournamentLocation.position}
+            key={tournamentLocation.label}
+          >
             <Popup>
               <p className="font-bold text-xl">{tournamentLocation.label}</p>
               {tournamentLocation.events && (
@@ -54,7 +57,11 @@ export default function TournamentMap({
                   <ul>
                     {tournamentLocation.events.map(
                       ({ eventName, eventRoom }) => {
-                        return <li>{`${eventName} - ${eventRoom}`}</li>;
+                        return (
+                          <li
+                            key={eventName}
+                          >{`${eventName} - ${eventRoom}`}</li>
+                        );
                       }
                     )}
                   </ul>
@@ -67,7 +74,11 @@ export default function TournamentMap({
                   <ul>
                     {tournamentLocation.homerooms.map(
                       ({ schoolName, homeRoom }) => {
-                        return <li>{`${schoolName} - ${homeRoom}`}</li>;
+                        return (
+                          <li
+                            key={schoolName}
+                          >{`${schoolName} - ${homeRoom}`}</li>
+                        );
                       }
                     )}
                   </ul>

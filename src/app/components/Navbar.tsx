@@ -146,9 +146,6 @@ export default function Navbar() {
                             <li>
                                 <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
                             </li>
-                            <li>
-                                <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
-                            </li>
                         </ul>
                     </li>
                 </div>
