@@ -30,7 +30,7 @@ export default function page() {
             title = Updates/Tournament Information
         </Head>
         <main className="dark:bg-black bg-slate-200 max-w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
-          {/** Heading */}
+          {/** Heading 
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full">
             <AnimatePresence>
               <motion.div
@@ -46,15 +46,15 @@ export default function page() {
               </motion.div>
             </AnimatePresence>
           </div>
-
+*/}
         {/** Documents 
-        */}
+        
         <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
             The following makerspaces have offered to provide tours to Science Olympiad competitors during the invitational. Registration is limited for each makerspace tour, so <span className="font-bold"> all registrants are expected to attend their respective tours. </span> For more information about each makerspace, please consult the <a href="/currentTournament/updates" className="underline hover:opacity-50">Tournament Information</a> document.
 
         </p>
-        
-        {/** Registration for MILL */}
+        */}
+        {/** Registration for MILL 
         <div className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Materials Innovation and Learning Laboratory (MILL) </h2>
             <br />
@@ -72,8 +72,8 @@ export default function page() {
                 <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div>
         </div>
-
-        {/** Registration for Invention Studio */}
+      */}
+        {/** Registration for Invention Studio 
         <div className="bg-lightOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Invention Studio </h2>
             <br />
@@ -86,8 +86,8 @@ export default function page() {
                 <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376558-invention#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div>
         </div>
-
-        {/** Registration for Hive */}
+*/}
+        {/** Registration for Hive 
         <div className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> The HIVE (Interdisciplinary Design Commons) </h2>
             <br />
@@ -100,7 +100,7 @@ export default function page() {
                 <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47427420-hive#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div>
         </div>
-
+*/}
       </main>
     </>
   )
