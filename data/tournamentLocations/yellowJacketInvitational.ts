@@ -268,7 +268,7 @@ const locations: TournamentLocation[] = [
     ],
   },
   {
-    label: "Hunger-Henry",
+    label: "Bunger-Henry",
     position: [33.77582399765655, -84.39827320393375],
     homerooms: [
       {
