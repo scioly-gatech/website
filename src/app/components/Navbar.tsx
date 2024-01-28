@@ -88,6 +88,9 @@ export default function Navbar() {
                         <Link href="/currentTournament/map" className="my-2 mx-3"> Tournament Map </Link>
                     </li>
                     <li>
+                        <Link href="/currentTournament/tours" className="my-2 mx-3"> Makerspace Tours </Link>
+                    </li>
+                    <li>
                         <Link href="/currentTournament/teamInfo" className="my-2 mx-3"> Registered Teams </Link>
   </li>
                     <li>
@@ -136,6 +139,9 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
+                            </li>
+                            <li>
+                                <Link href="/currentTournament/tours" className="hover:text-lightOrange text-xl"> Makerspace Tours </Link>
                             </li>
                            <li>
                                 <Link href="/currentTournament/teamInfo" className="hover:text-lightOrange text-xl"> Registered Teams </Link>
