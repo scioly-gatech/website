@@ -85,13 +85,13 @@ export default function Navbar() {
                         <Link href="/currentTournament/schedule" className="my-2 mx-3"> Schedule </Link>
                     </li>
                     <li>
+                        <Link href="/currentTournament/map" className="my-2 mx-3"> Tournament Map </Link>
+                    </li>
+                    <li>
                         <Link href="/currentTournament/teamInfo" className="my-2 mx-3"> Registered Teams </Link>
   </li>
                     <li>
                         <Link href="/currentTournament/volInfo" className="my-2 mx-3"> Volunteer Info </Link>
-                    </li>
-                    <li>
-                        <Link href="/currentTournament/map" className="my-2 mx-3"> Tournament Map </Link>
                     </li>
                     <li>
                         <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
@@ -134,14 +134,14 @@ export default function Navbar() {
                             <li>
                                 <Link href="/currentTournament/schedule" className="hover:text-lightOrange text-xl"> Schedule </Link>
                             </li>
+                            <li>
+                                <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
+                            </li>
                            <li>
                                 <Link href="/currentTournament/teamInfo" className="hover:text-lightOrange text-xl"> Registered Teams </Link>
   </li>
                             <li>
                                 <Link href="/currentTournament/volInfo" className="hover:text-lightOrange text-xl"> Volunteer Info </Link>
-                            </li>
-                            <li>
-                                <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
                             </li>
                         </ul>
                     </li>

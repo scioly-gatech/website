@@ -56,7 +56,7 @@ export default function Page() {
               transition={{ duration: 1 }}
               className="text-3xl font-bold flex justify-center items-center max-w-full"
             >
-              <div className="flex justify-center text-center lg:w-1/3 mx-24">
+              <div className="flex justify-center text-center lg:w-1/3 lg:mx-24">
                 <h1
                   className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}
                 >
@@ -69,7 +69,7 @@ export default function Page() {
 
         {/** Map */}
         <div className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
-          <p className="font-bold">
+          <p className="font-bold underline">
             Click on the markers for events and homerooms!
           </p>
           <CurrentTournamentMap
@@ -86,7 +86,7 @@ export default function Page() {
           <p className="font-bold text-4xl underline">Key</p>
           <div className="flex flex-col lg:flex-row">
             <div className="basis-full lg:basis-3/6 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-blue-950">
-              <p className="font-bold text-3xl">Events</p>
+              <p className="font-bold text-3xl underline">Events</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.events) {
                   return null;
@@ -115,7 +115,7 @@ export default function Page() {
               })}
             </div>
             <div className="basis-full lg:basis-3/6 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-sky-950">
-              <p className="font-bold text-3xl">Home Rooms</p>
+              <p className="font-bold text-3xl underline">Home Rooms</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.homerooms) {
                   return null;
