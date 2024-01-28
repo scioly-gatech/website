@@ -30,7 +30,7 @@ export default function page() {
             title = Updates/Tournament Information
         </Head>
         <main className="dark:bg-black bg-slate-200 max-w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
-          {/** Heading 
+          {/** Heading */}
           <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full">
             <AnimatePresence>
               <motion.div
@@ -46,20 +46,21 @@ export default function page() {
               </motion.div>
             </AnimatePresence>
           </div>
-*/}
-        {/** Documents 
+
+        {/** Documents   */}
         
         <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
             The following makerspaces have offered to provide tours to Science Olympiad competitors during the invitational. Registration is limited for each makerspace tour, so <span className="font-bold"> all registrants are expected to attend their respective tours. </span> For more information about each makerspace, please consult the <a href="/currentTournament/updates" className="underline hover:opacity-50">Tournament Information</a> document.
 
         </p>
-        */}
-        {/** Registration for MILL 
+        {/** Registration for MILL       */}
         <div className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Materials Innovation and Learning Laboratory (MILL) </h2>
             <br />
-            <p className="text-xl text-darkBlue"> The MILL will offer two 45--minute sessions for 10 students each from 4:15 PM - 5:00 PM and 5:00 PM - 5:45 PM. Attendees are expected to wear proper personal protective equipment:
+            <p className="text-xl text-darkBlue"> The Materials Innovation and Learning Laboratory (The MILL) strives to serve as a hub for experiential education in Materials Science by providing hands-on scientific training with common equipment used in the discipline, nurturing the student staff to become engineering leaders, and fostering interdisciplinary collaboration across campus. They currently house over 30 pieces of equipment commonly found in both the materials industry and research labs. Some equipment includes high-tech microscopes for material characterization, 3D printers, and measurement devices such as a contact angle goniometer.
             </p>
+            <br />
+            <p className="text-darkBlue font-semibold italic">Attendees are expected to wear proper personal protective equipment:</p>
             <ul className="list-disc list-inside mx-8 text-lg text-black">
                 <li> Long, cotton pants </li>
                 <li> Closed toe shoes </li>
@@ -69,38 +70,41 @@ export default function page() {
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://mill.mse.gatech.edu/" target="_blank" className="underline hover:opacity-50"> MILL Website </a></p>
             <br />
             <div className="my-4">
-                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
-            </div>
+                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>*/}
+                <p className="bg-darkBlue p-4"> Registration </p>
+            </div> 
         </div>
-      */}
-        {/** Registration for Invention Studio 
+
+        {/** Registration for Invention Studio */}
         <div className="bg-lightOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Invention Studio </h2>
             <br />
-            <p className="text-xl text-darkBlue"> The Invention Studio will offer seven thirty-minute sessions for 30 students each from 4:00 PM - 4:30 PM, 4:15 PM - 4:45 PM, 4:30 PM - 5:00 PM, 4:45 PM to 5:15 PM, 5:00 PM - 5:30 PM, 5:15 PM - 5:45 PM, 5:30 PM - 6:00 PM
+            <p className="text-xl text-darkBlue"> The Invention Studio is a student-run makerspace that provides access to a wide variety of tools including 3D printers, laser cutters, waterjets, wood tools, and more. It is staffed by Prototyping Instructors (PIs), student volunteers who are always on hand to offer training and support for projects. They support all students, staff, and faculty in building their dream project, whether it is for research, personal, or academic usage with tools that are 100% free to use. It is the largest makerspace on campus by size, and by daily users.
             </p>
             <br />
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://inventionstudio.gatech.edu/about/" target="_blank" className="underline hover:opacity-50"> Invention Studio Website </a></p>
             <br />
             <div className="my-4">
-                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376558-invention#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
+                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376558-invention#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a> */}
+                <p className="bg-darkBlue p-4"> Registration </p>
             </div>
         </div>
-*/}
-        {/** Registration for Hive 
+
+        {/** Registration for Hive */}
         <div className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> The HIVE (Interdisciplinary Design Commons) </h2>
             <br />
-            <p className="text-xl text-darkBlue"> The HIVE will offer four thirty-minute sessions for 20 students each from 4:00 PM - 4:30 PM, 4:30 PM - 5:00 PM, 5:00 PM - 5:30 PM, 5:30 PM - 6:00 PM
+            <p className="text-xl text-darkBlue"> The Interdisciplinary Design Commons (IDC) is a 15,000 square foot, state-of-the-art makerspace that is located in the rotunda of the Van Leer Building at the heart of the Georgia Tech campus. Here, Tech students cultivate their making skills, create prototypes for their next big idea, or just build out their personal projects for fun! While the HIVE is considered the primary maker space for those interested in Electrical Engineering and other related disciplines, it is open to people from all backgrounds. They provide tools such as 3D printers, laser cutters, and spray paint booths to support the exploration of PCB fabrication, embedded systems, and much more.
+
             </p>
             <br />
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://hive.ece.gatech.edu/" target="_blank" className="underline hover:opacity-50"> HIVE Website </a></p>
             <br />
             <div className="my-4">
-                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47427420-hive#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
+                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47427420-hive#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>*/}
+                <p className="bg-darkBlue p-4"> Registration </p>
             </div>
         </div>
-*/}
       </main>
     </>
   )
