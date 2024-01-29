@@ -289,17 +289,7 @@ const tournamentLocations: TournamentLocation[] = [
         homeRoom: "258",
       },
     ],
-  },
-  {
-    label: "West Architecture",
-    position: [33.77606247565049, -84.3961210569472],
-    homerooms: [
-      {
-        schoolName: "Alliance Academy for Innovation",
-        homeRoom: "258",
-      },
-    ],
-  },
+  }
 ];
 
 const makerspaceLocations: MakerspaceLocation[] = [

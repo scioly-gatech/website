@@ -89,7 +89,7 @@ export default function Page() {
         <div className="bg-darkBlue text-white text-xl m-4 text-center lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
           <p className="font-bold text-4xl underline">Key</p>
           <div className="flex flex-col lg:flex-row flex-wrap justify-center">
-            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-blue-950">
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-indigo-950">
               <p className="font-bold text-3xl underline">Events</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.events) {
@@ -148,7 +148,7 @@ export default function Page() {
               })}
             </div>
 
-            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-sky-950">
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-blue-950">
               <p className="font-bold text-3xl underline">Makerspace Tours</p>
               {makerspaceLocations.map((makerspaceLocation) => {
                 return (
