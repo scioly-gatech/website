@@ -121,6 +121,7 @@ export default function TournamentMap({
               <p className="font-bold text-lg">
                 <a
                   href={`/currentTournament/tours#${makerspaceLocation.hrefId}`}
+                  className="hover:opacity-50"
                 >
                   {popupString}
                 </a>
