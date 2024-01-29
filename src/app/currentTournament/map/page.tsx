@@ -6,7 +6,10 @@ import React, { useMemo } from "react";
 import Script from "next/script";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import tournamentLocations from "../../../../data/tournamentLocations/yellowJacketInvitational";
+import {
+  tournamentLocations,
+  makerspaceLocations,
+} from "../../../../data/locations/yellowJacketInvitational";
 import { LatLngExpression } from "leaflet";
 
 const play = Lora({ subsets: ["latin"], display: "swap" });
@@ -78,7 +81,8 @@ export default function Page() {
               zoom: mapZoom,
               style: { height: "750px", width: "100%" },
             }}
-            locations={tournamentLocations}
+            tournamentLocations={tournamentLocations}
+            makerspaceLocations={makerspaceLocations}
           />
         </div>
 

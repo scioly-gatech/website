@@ -1,12 +1,20 @@
 .custom-tooltip {
-  background-color: #6D3228;
-  color: white;
   box-shadow: none;
   border: none;
   font-size: 1.2rem;
   text-align: center;
-  font-family: revert;
 }
+
+.custom-tooltip-makerspace {
+  background-color: #000080;
+  color: white
+}
+
+.custom-tooltip-tournament {
+  background-color: #6D3228;
+  color: white;
+}
+
 
 .custom-tooltip::before {
   display: none;
