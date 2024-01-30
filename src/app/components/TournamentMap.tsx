@@ -11,31 +11,41 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "../custom-leafletjs.css";
 
-export interface TournamentMapProps {
-  mapContainerProps: MapContainerProps;
-  locations: TournamentLocation[];
-}
-
-export interface EventLocation {
+export interface EventRoom {
   eventName: string;
   eventRoom: string;
 }
 
-export interface HomeroomLocation {
+export interface HomeRoom {
   schoolName: string;
   homeRoom: string;
 }
 
-export interface TournamentLocation {
+export interface Location {
   position: [number, number];
   label: string;
-  events?: EventLocation[];
-  homerooms?: HomeroomLocation[];
+}
+
+export interface MakerspaceLocation extends Location {
+  fullName?: string;
+  hrefId: string;
+}
+
+export interface TournamentLocation extends Location {
+  events?: EventRoom[];
+  homerooms?: HomeRoom[];
+}
+
+export interface TournamentMapProps {
+  mapContainerProps: MapContainerProps;
+  tournamentLocations: TournamentLocation[];
+  makerspaceLocations: MakerspaceLocation[];
 }
 
 export default function TournamentMap({
   mapContainerProps,
-  locations,
+  tournamentLocations,
+  makerspaceLocations,
 }: TournamentMapProps) {
   return (
     <MapContainer {...mapContainerProps}>
@@ -43,7 +53,7 @@ export default function TournamentMap({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {locations.map((tournamentLocation) => {
+      {tournamentLocations.map((tournamentLocation) => {
         return (
           <Marker
             position={tournamentLocation.position}
@@ -89,9 +99,41 @@ export default function TournamentMap({
               permanent
               direction="top"
               offset={[-15, 75]}
-              className="custom-tooltip"
+              className="custom-tooltip custom-tooltip-tournament"
             >
               {tournamentLocation.label}
+            </Tooltip>
+          </Marker>
+        );
+      })}
+
+      {makerspaceLocations.map((makerspaceLocation) => {
+        const popupString = makerspaceLocation.fullName
+          ? `${makerspaceLocation.label} (${makerspaceLocation.fullName}) Tour`
+          : `${makerspaceLocation.label} Tour`;
+
+        return (
+          <Marker
+            position={makerspaceLocation.position}
+            key={makerspaceLocation.label}
+          >
+            <Popup>
+              <p className="font-bold text-lg">
+                <a
+                  href={`/currentTournament/tours#${makerspaceLocation.hrefId}`}
+                  className="hover:opacity-50"
+                >
+                  {popupString}
+                </a>
+              </p>
+            </Popup>
+            <Tooltip
+              permanent
+              direction="top"
+              offset={[-15, 75]}
+              className="custom-tooltip custom-tooltip-makerspace"
+            >
+              {makerspaceLocation.label}
             </Tooltip>
           </Marker>
         );

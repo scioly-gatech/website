@@ -1,6 +1,9 @@
-import { TournamentLocation } from "@/app/components/TournamentMap";
+import {
+  MakerspaceLocation,
+  TournamentLocation,
+} from "@/app/components/TournamentMap";
 
-const locations: TournamentLocation[] = [
+const tournamentLocations: TournamentLocation[] = [
   {
     label: "Howey",
     position: [33.7776405764111, -84.3986783057815],
@@ -286,7 +289,27 @@ const locations: TournamentLocation[] = [
         homeRoom: "258",
       },
     ],
+  }
+];
+
+const makerspaceLocations: MakerspaceLocation[] = [
+  {
+    label: "MILL",
+    position: [33.776253752760226, -84.40172173860996],
+    fullName: "Materials Innovation and Learning Laboratory",
+    hrefId: "mill-tour",
+  },
+  {
+    label: "Invention Studio",
+    position: [33.77729993365719, -84.40071135550421],
+    hrefId: "invention-studio-tour",
+  },
+  {
+    label: "HIVE",
+    position: [33.775714564437145, -84.39741528060907],
+    fullName: "Interdisciplinary Design Commons",
+    hrefId: "hive-tour",
   },
 ];
 
-export default locations;
+export { tournamentLocations, makerspaceLocations };
