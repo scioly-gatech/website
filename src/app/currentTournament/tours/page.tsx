@@ -70,8 +70,7 @@ export default function page() {
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://mill.mse.gatech.edu/" target="_blank" className="underline hover:opacity-50"> MILL Website </a></p>
             <br />
             <div className="my-4">
-                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>*/}
-                <p className="bg-darkBlue p-4"> Registration </p>
+                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div> 
         </div>
 
@@ -85,8 +84,7 @@ export default function page() {
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://inventionstudio.gatech.edu/about/" target="_blank" className="underline hover:opacity-50"> Invention Studio Website </a></p>
             <br />
             <div className="my-4">
-                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376558-invention#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a> */}
-                <p className="bg-darkBlue p-4"> Registration </p>
+                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376558-invention#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div>
         </div>
 
@@ -101,8 +99,7 @@ export default function page() {
             <p className="text-xl text-darkBlue"> For more information, please visit the <a href="https://hive.ece.gatech.edu/" target="_blank" className="underline hover:opacity-50"> HIVE Website </a></p>
             <br />
             <div className="my-4">
-                {/** <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47427420-hive#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>*/}
-                <p className="bg-darkBlue p-4"> Registration </p>
+                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47427420-hive#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
             </div>
         </div>
       </main>
