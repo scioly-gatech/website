@@ -15,6 +15,10 @@
   color: white;
 }
 
+.custom-tooltip-parking {
+  background-color: #042f2e;
+  color: white;
+}
 
 .custom-tooltip::before {
   display: none;
