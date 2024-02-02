@@ -41,7 +41,7 @@ export default function page() {
                   className="text-3xl font-bold flex justify-center items-center max-w-full"
                 >
                   
-                    <div className="flex justify-center text-center lg:w-1/2 mx-8 lg:mx-24">
+                    <div className="flex justify-center text-center lg:w-1/2 lg:mx-24">
                       <h1 className={`${play.className} drop-shadow-titleShadow text-4xl lg:p-8 lg:text-6xl border-8 border-lightOrange tracking-wide`}>Volunteer Information</h1>
                     </div>
               </motion.div>

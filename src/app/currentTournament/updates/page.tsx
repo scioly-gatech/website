@@ -40,7 +40,7 @@ export default function page() {
                   className="text-3xl font-bold flex justify-center items-center max-w-full"
                 >
                   
-                    <div className="flex justify-center text-center lg:w-1/2 mx-12 lg:mx-24">
+                    <div className="flex justify-center text-center lg:w-1/2 lg:mx-24">
                       <h1 className={`${play.className} drop-shadow-titleShadow text-5xl lg:p-8 lg:text-6xl border-8 border-lightOrange tracking-wide`}>General Info & Updates</h1>
                     </div>
               </motion.div>

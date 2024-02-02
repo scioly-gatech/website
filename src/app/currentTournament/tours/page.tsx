@@ -40,7 +40,7 @@ export default function page() {
                   className="text-3xl font-bold flex justify-center items-center max-w-full"
                 >
                   
-                    <div className="flex justify-center text-center lg:w-1/2 mx-4 lg:mx-24">
+                    <div className="flex justify-center text-center lg:w-1/2 lg:mx-24">
                       <h1 className={`${play.className} drop-shadow-titleShadow text-4xl lg:p-8 lg:text-6xl border-8 border-lightOrange tracking-wide`}>Makerspace Tours</h1>
                     </div>
               </motion.div>
@@ -54,7 +54,7 @@ export default function page() {
 
         </p>
         {/** Registration for MILL       */}
-        <div id="mill-tour" className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+        <div id="mill-tour" className="bg-darkOrange text-white text-center text-xl lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Materials Innovation and Learning Laboratory (MILL) </h2>
             <br />
             <p className="text-xl text-darkBlue"> The Materials Innovation and Learning Laboratory (The MILL) strives to serve as a hub for experiential education in Materials Science by providing hands-on scientific training with common equipment used in the discipline, nurturing the student staff to become engineering leaders, and fostering interdisciplinary collaboration across campus. They currently house over 30 pieces of equipment commonly found in both the materials industry and research labs. Some equipment includes high-tech microscopes for material characterization, 3D printers, and measurement devices such as a contact angle goniometer.
@@ -71,11 +71,11 @@ export default function page() {
             <br />
             <div className="my-4">
                 <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
-            </div> 
+          </div> 
         </div>
 
         {/** Registration for Invention Studio */}
-        <div id="invention-studio-tour" className="bg-lightOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+        <div id="invention-studio-tour" className="bg-lightOrange text-white text-center text-xl lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> Invention Studio </h2>
             <br />
             <p className="text-xl text-darkBlue"> The Invention Studio is a student-run makerspace that provides access to a wide variety of tools including 3D printers, laser cutters, waterjets, wood tools, and more. It is staffed by Prototyping Instructors (PIs), student volunteers who are always on hand to offer training and support for projects. They support all students, staff, and faculty in building their dream project, whether it is for research, personal, or academic usage with tools that are 100% free to use. It is the largest makerspace on campus by size, and by daily users.
@@ -89,7 +89,7 @@ export default function page() {
         </div>
 
         {/** Registration for Hive */}
-        <div id="hive-tour" className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+        <div id="hive-tour" className="bg-darkOrange text-white text-center text-xl lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl"> The HIVE (Interdisciplinary Design Commons) </h2>
             <br />
             <p className="text-xl text-darkBlue"> The Interdisciplinary Design Commons (IDC) is a 15,000 square foot, state-of-the-art makerspace that is located in the rotunda of the Van Leer Building at the heart of the Georgia Tech campus. Here, Tech students cultivate their making skills, create prototypes for their next big idea, or just build out their personal projects for fun! While the HIVE is considered the primary maker space for those interested in Electrical Engineering and other related disciplines, it is open to people from all backgrounds. They provide tools such as 3D printers, laser cutters, and spray paint booths to support the exploration of PCB fabrication, embedded systems, and much more.
