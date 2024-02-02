@@ -1,5 +1,6 @@
 import {
   MakerspaceLocation,
+  ParkingLocation,
   TournamentLocation,
 } from "@/app/components/TournamentMap";
 
@@ -160,4 +161,11 @@ const makerspaceLocations: MakerspaceLocation[] = [
   },
 ];
 
-export { tournamentLocations, makerspaceLocations };
+const parkingLocations: ParkingLocation[] = [
+  {
+    label: "Bus Parking: W21 Lot",
+    position: [33.77715151834969, -84.39971892515817],
+    description: "Parking lot for buses",
+  },
+];
+export { tournamentLocations, makerspaceLocations, parkingLocations };

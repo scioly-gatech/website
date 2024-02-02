@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import {
   tournamentLocations,
   makerspaceLocations,
+  parkingLocations,
 } from "../../../../data/locations/yellowJacketInvitational";
 import { LatLngExpression } from "leaflet";
 
@@ -83,6 +84,7 @@ export default function Page() {
             }}
             tournamentLocations={tournamentLocations}
             makerspaceLocations={makerspaceLocations}
+            parkingLocations={parkingLocations}
           />
         </div>
 
@@ -159,6 +161,17 @@ export default function Page() {
                     >
                       <p className="font-bold">{`${makerspaceLocation.label} Tour`}</p>
                     </a>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-teal-950">
+              <p className="font-bold text-3xl underline">Parking Lots</p>
+              {parkingLocations.map((parkingLocation) => {
+                return (
+                  <div className="mb-2" key={parkingLocation.label}>
+                    <p className="font-bold">{parkingLocation.label}</p>
                   </div>
                 );
               })}
