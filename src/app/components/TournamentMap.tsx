@@ -36,7 +36,7 @@ export interface TournamentLocation extends Location {
   schoolHomeRooms?: SchoolHomeRoom[];
 }
 
-export interface ParkingLocation extends Location {
+export interface TransportLocation extends Location {
   description: string;
 }
 
@@ -44,14 +44,14 @@ export interface TournamentMapProps {
   mapContainerProps: MapContainerProps;
   tournamentLocations: TournamentLocation[];
   makerspaceLocations: MakerspaceLocation[];
-  parkingLocations: ParkingLocation[];
+  transportLocations: TransportLocation[];
 }
 
 export default function TournamentMap({
   mapContainerProps,
   tournamentLocations,
   makerspaceLocations,
-  parkingLocations,
+  transportLocations: transportLocations,
 }: TournamentMapProps) {
   return (
     <MapContainer {...mapContainerProps}>
@@ -145,15 +145,15 @@ export default function TournamentMap({
         );
       })}
 
-      {parkingLocations.map((parkingLocation) => {
+      {transportLocations.map((transportLocation) => {
         return (
           <Marker
-            position={parkingLocation.position}
-            key={parkingLocation.label}
+            position={transportLocation.position}
+            key={transportLocation.label}
           >
             <Popup>
-              <p className="font-bold text-xl">{parkingLocation.label}</p>
-              <p className="text">{parkingLocation.description}</p>
+              <p className="font-bold text-xl">{transportLocation.label}</p>
+              <p className="text">{transportLocation.description}</p>
             </Popup>
             <Tooltip
               permanent
@@ -161,7 +161,7 @@ export default function TournamentMap({
               offset={[-15, 75]}
               className="custom-tooltip custom-tooltip-parking"
             >
-              {parkingLocation.label}
+              {transportLocation.label}
             </Tooltip>
           </Marker>
         );
