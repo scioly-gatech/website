@@ -13,12 +13,12 @@ import "../custom-leafletjs.css";
 
 export interface EventRoom {
   eventName: string;
-  eventRoom: string;
+  eventRooms: string[];
 }
 
-export interface HomeRoom {
+export interface SchoolHomeRoom {
   schoolName: string;
-  homeRoom: string;
+  homeRooms: string[];
 }
 
 export interface Location {
@@ -33,7 +33,7 @@ export interface MakerspaceLocation extends Location {
 
 export interface TournamentLocation extends Location {
   events?: EventRoom[];
-  homerooms?: HomeRoom[];
+  schoolHomeRooms?: SchoolHomeRoom[];
 }
 
 export interface TournamentMapProps {
@@ -66,28 +66,28 @@ export default function TournamentMap({
                   <p className="font-bold text-lg">Events</p>
                   <ul>
                     {tournamentLocation.events.map(
-                      ({ eventName, eventRoom }) => {
+                      ({ eventName, eventRooms }) => {
                         return (
                           <li
                             key={eventName}
-                          >{`${eventName} - ${eventRoom}`}</li>
+                          >{`${eventName} - ${eventRooms.join(", ")}`}</li>
                         );
                       }
                     )}
                   </ul>
                 </>
               )}
-              {tournamentLocation.homerooms && (
+              {tournamentLocation.schoolHomeRooms && (
                 <>
                   <p className="font-bold text-lg/6">Home Rooms</p>
 
                   <ul>
-                    {tournamentLocation.homerooms.map(
-                      ({ schoolName, homeRoom }) => {
+                    {tournamentLocation.schoolHomeRooms.map(
+                      ({ schoolName, homeRooms }) => {
                         return (
                           <li
                             key={schoolName}
-                          >{`${schoolName} - ${homeRoom}`}</li>
+                          >{`${schoolName} - ${homeRooms.join(", ")}`}</li>
                         );
                       }
                     )}
