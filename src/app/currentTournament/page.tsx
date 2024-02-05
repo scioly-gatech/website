@@ -8,21 +8,8 @@ import { ReactDOM } from 'react'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 const Countdown = () => {
-  const today = new Date(Date.now())
-  const day = today.getDate()
-  var diff
-  if (day == 3) {
-    return(
-    <div className="p-8 bg-darkOrange w-1/4 text-2xl text-center m-4 shadow-xl shadow-white">
-      <p className="font-bold underline"> 0 Days Remaining</p>
-      <p className="">🐝 The Yellow Jacket Invitational has started! 🐝</p>
-    </div>)
-  } else if (day > 4) {
-    diff = 3 + (31 - day)
-  } else {
-    diff = 3 - day
-  }
-  return(<p className="p-8 bg-darkOrange lg:w-1/4 text-2xl text-center m-4 shadow-xl shadow-white"><span className="font-bold px-1 text-white bg-darkBlue rounded-full">{diff}</span> Day{diff == 1? '':'s'} Until Yellow Jacket Invitational!</p>)
+
+  return(<p className="p-8 bg-darkOrange lg:w-1/4 text-2xl text-center m-4 shadow-xl shadow-white"><span className="font-bold px-1 text-white bg-darkBlue rounded-full"> 0 </span> Days Until Yellow Jacket Invitational!</p>)
 }
 
 export default function CurrentTournament() {

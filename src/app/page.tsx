@@ -52,7 +52,7 @@ export default function Home() {
           animate={{opacity:1}}
           transition={{duration:4}}
         >
-        <h1 className={`text-6xl text-center border-4 borer-white text-white drop-shadow-titleShadow font-bold lg:p-20 m-4 mx-12 w-full, ${play.className}`}><span>Science Olympiad @ Georgia Tech </span></h1>
+        <h1 className={`text-6xl text-center border-4 borer-white text-white drop-shadow-titleShadow font-bold lg:p-20 mx-12 w-full, ${play.className}`}><span>Science Olympiad @ Georgia Tech </span></h1>
       </motion.div>
       </AnimatePresence>
     </div>
