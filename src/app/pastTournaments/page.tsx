@@ -36,7 +36,7 @@ export default function CurrentTournament() {
             className="text-3xl font-bold flex justify-center items-center"
           >
               <div className="flex justify-center text-center w-1/2 lg:w-1/3 mx-8">
-                <h1 className={`border-8 border-darkOrange lg:p-8 tracking-widetext-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Past Tournaments</h1>
+                <h1 className={`border-8 border-darkOrange lg:p-8 tracking-widetext-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow dark:text-white`}>Past Tournaments</h1>
               </div>
         </motion.div>
         </AnimatePresence>
