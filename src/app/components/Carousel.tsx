@@ -79,7 +79,12 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
     return () => {
       removeOnSlidesInViewChangeListeners();
     };
-  }, [emblaApi, callOnSlidesInViewChange]);
+  }, [
+    emblaApi,
+    callOnSlidesInViewChange,
+    onSlidesInViewChange,
+    removeOnSlidesInViewChangeListeners,
+  ]);
 
   const onButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
     const { autoplay } = emblaApi.plugins();
