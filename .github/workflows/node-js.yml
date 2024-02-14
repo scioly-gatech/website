@@ -3,7 +3,7 @@
 
 name: Node.js CI
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
         node-version: 18.x
         cache: 'npm'
     - run: npm ci
-    - run: npm run test
+    - run: npm test
 
 concurrency:
   # Here the group is defined by the head_ref of the PR
