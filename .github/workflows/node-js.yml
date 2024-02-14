@@ -3,7 +3,7 @@
 
 name: Node.js CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -17,3 +17,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run test
+
+concurrency:
+  # Here the group is defined by the head_ref of the PR
+  group: ${{ github.head_ref }}
+  # Here we specify that we'll cancel any "in progress" workflow of the same group. Thus if we push, ammend a commit and push
+  # again the previous workflow will be cancelled, thus saving us github action build minutes and avoid any conflicts
+  cancel-in-progress: true
