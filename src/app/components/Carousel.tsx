@@ -82,8 +82,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
   }, [
     emblaApi,
     callOnSlidesInViewChange,
-    onSlidesInViewChange,
-    removeOnSlidesInViewChangeListeners,
   ]);
 
   const onButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
