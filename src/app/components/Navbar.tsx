@@ -10,13 +10,13 @@ import {RxCross1} from 'react-icons/rx'
 export default function Navbar() {
 
     //Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
-    useEffect(() => {
-        if (typeof(document) !== 'undefined') {
-            const currentHover = document.getElementById('current') as HTMLElement
-            currentHover.addEventListener('mouseenter', showCurrent)
-            currentHover.addEventListener('mouseleave', hideCurrent)
-        }   
-    }, [])
+    // useEffect(() => {
+    //     if (typeof(document) !== 'undefined') {
+    //         const currentHover = document.getElementById('current') as HTMLElement
+    //         currentHover.addEventListener('mouseenter', showCurrent)
+    //         currentHover.addEventListener('mouseleave', hideCurrent)
+    //     }   
+    // }, [])
 
     function showCurrent() {
         if (typeof(document) !== 'undefined') {
@@ -127,7 +127,7 @@ export default function Navbar() {
                     <Link href="/aboutUs" className="text-xl">About Us</Link>
                 </li>
 
-                <div id="current">   
+                { /*<div id="current">   
                     <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/currentTournament" className="hover:text-lightOrange text-xl">Yellow Jacket Invitational</Link>
                         <ul id="currentDropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 pl-0 pr-16 hidden flex-col z-10">
@@ -151,7 +151,7 @@ export default function Navbar() {
                             </li>
                         </ul>
                     </li>
-                </div>
+  </div> */}
 
                 <li className="m-2 mx-6 hover:text-lightOrange">
                     <Link href="/sponsorships" className="text-xl">Sponsorship</Link>
