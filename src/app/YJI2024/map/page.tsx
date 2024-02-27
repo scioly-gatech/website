@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Lora } from "next/font/google";
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import Script from "next/script";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -17,6 +17,13 @@ const play = Lora({ subsets: ["latin"], display: "swap" });
 const mapCenter: LatLngExpression = [33.776166952660056, -84.39819268319107];
 const mapZoom = 17;
 const mapHeight = "750px";
+var currLoc;
+var id;
+
+function Update_Location(pos) {
+  currLoc = pos.coords;
+}
+
 export default function Page() {
   // For making LeafletJS map compatible with Next's SSR
   const CurrentTournamentMap = useMemo(
@@ -87,7 +94,8 @@ export default function Page() {
             transportLocations={transportLocations}
           />
         </div>
-
+        
+        {/** Key */}
         <div className="bg-darkBlue text-white text-xl m-4 text-center lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
           <p className="font-bold text-4xl underline">Key</p>
           <div className="flex flex-col lg:flex-row flex-wrap justify-center">

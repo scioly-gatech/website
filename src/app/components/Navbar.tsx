@@ -9,26 +9,26 @@ import {RxCross1} from 'react-icons/rx'
 
 export default function Navbar() {
 
-    //Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
-    // useEffect(() => {
-    //     if (typeof(document) !== 'undefined') {
-    //         const currentHover = document.getElementById('current') as HTMLElement
-    //         currentHover.addEventListener('mouseenter', showCurrent)
-    //         currentHover.addEventListener('mouseleave', hideCurrent)
-    //     }   
-    // }, [])
-
-    function showCurrent() {
+    // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
+    useEffect(() => {
         if (typeof(document) !== 'undefined') {
-            const aboutDrop = document.getElementById('currentDropdown') as HTMLElement
+            const currentHover = document.getElementById('dropdown-title') as HTMLElement
+            currentHover.addEventListener('mouseenter', showDropdown)
+            currentHover.addEventListener('mouseleave', hideDropdown)
+        }   
+    }, [])
+
+    function showDropdown() {
+        if (typeof(document) !== 'undefined') {
+            const aboutDrop = document.getElementById('dropdown') as HTMLElement
             aboutDrop.classList.remove('hidden')
             aboutDrop.classList.add('flex')
         }
     }
 
-    function hideCurrent() {
+    function hideDropdown() {
         if (typeof(document) !== 'undefined') {
-            const aboutDrop = document.getElementById('currentDropdown') as HTMLElement
+            const aboutDrop = document.getElementById('dropdown') as HTMLElement
             aboutDrop.classList.add('hidden')
             aboutDrop.classList.remove('flex')
         }
@@ -38,7 +38,7 @@ export default function Navbar() {
         if (typeof(document) !== 'undefined') {
             const smallNav = document.getElementById('smallNav') as HTMLElement
             smallNav.classList.toggle('hidden')
-            smallNav.classList.toggle('absolute')
+            smallNav.classList.toggle('fixed')
         }
     }
 
@@ -60,7 +60,7 @@ export default function Navbar() {
                     </button>
                 </motion.div>
 
-            <nav id="smallNav" className="hidden fixed right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
+            <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
                 <div className="flex flex-row justify-end">
                     <button onClick={toggleSmallNav} className="w-1/8 z-10 text-2xl">
                         <RxCross1 />
@@ -73,28 +73,18 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/states2024" className="font-bold py-3"> States 2024 </Link>
+                    </li>
+                    <li>
                         <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                     </li>
                     <li>
-                        <Link href="/currentTournament" className="font-bold py-3"> GT Invitational </Link>
+                        <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
+                            <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/currentTournament/updates" className="my-2 mx-3"> General Info/Updates </Link>
-                    </li>
-                    <li>
-                        <Link href="/currentTournament/schedule" className="my-2 mx-3"> Schedule </Link>
-                    </li>
-                    <li>
-                        <Link href="/currentTournament/map" className="my-2 mx-3"> Tournament Map </Link>
-                    </li>
-                    <li>
-                        <Link href="/currentTournament/tours" className="my-2 mx-3"> Makerspace Tours </Link>
-                    </li>
-                    <li>
-                        <Link href="/currentTournament/teamInfo" className="my-2 mx-3"> Registered Teams </Link>
-  </li>
-                    <li>
-                        <Link href="/currentTournament/volInfo" className="my-2 mx-3"> Volunteer Info </Link>
+                        <Link href="/getInvolved" className="font-bold my-3"> Get Involved </Link>
                     </li>
                     <li>
                         <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
@@ -124,34 +114,24 @@ export default function Navbar() {
                 </li>
 
                 <li className="m-2 mx-6 hover:text-lightOrange">
-                    <Link href="/aboutUs" className="text-xl">About Us</Link>
+                    <Link href="/states2024" className="text-xl">States 2024</Link>
                 </li>
 
-                { /*<div id="current">   
+                <div id="dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
-                        <Link href="/currentTournament" className="hover:text-lightOrange text-xl">Yellow Jacket Invitational</Link>
-                        <ul id="currentDropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 pl-0 pr-16 hidden flex-col z-10">
+                        <Link href="/aboutUs" className="hover:text-lightOrange text-xl">About Us</Link>
+                        <ul id="dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-16 hidden flex-col z-10">
                             <li>
-                                <Link href="/currentTournament/updates" className="hover:text-lightOrange text-xl"> General Info/Updates </Link>
+                                <Link href="/contactUs" className="hover:text-lightOrange text-xl"> Contact Us </Link>
                             </li>
-                            <li>
-                                <Link href="/currentTournament/schedule" className="hover:text-lightOrange text-xl"> Schedule </Link>
-                            </li>
-                            <li>
-                                <Link href="/currentTournament/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
-                            </li>
-                            <li>
-                                <Link href="/currentTournament/tours" className="hover:text-lightOrange text-xl"> Makerspace Tours </Link>
-                            </li>
-                           <li>
-                                <Link href="/currentTournament/teamInfo" className="hover:text-lightOrange text-xl"> Registered Teams </Link>
-  </li>
-                            <li>
-                                <Link href="/currentTournament/volInfo" className="hover:text-lightOrange text-xl"> Volunteer Info </Link>
-                            </li>
+                            
                         </ul>
                     </li>
-  </div> */}
+                </div>
+
+                <li className="m-2 mx-6 hover:text-lightOrange">
+                    <Link href="/getInvolved" className="text-xl">Get Involved</Link>
+                </li>
 
                 <li className="m-2 mx-6 hover:text-lightOrange">
                     <Link href="/sponsorships" className="text-xl">Sponsorship</Link>
@@ -160,10 +140,6 @@ export default function Navbar() {
                 <div id="past" className="m-2 mx-5 hover:text-lightOrange">
                     <Link href="/pastTournaments" className="text-xl">Past Tournaments</Link>
                 </div>
-
-                <li className="m-2 mx-6 hover:text-lightOrange">
-                    <Link href="/contactUs" className="text-xl">Contact Us</Link>
-                </li>
             </ul>
         </nav>
     </main>

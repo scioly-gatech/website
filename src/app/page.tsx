@@ -7,7 +7,6 @@ import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
 import EmblaCarousel from '@/app/components/Carousel'
 import Script from "next/script"
-import Head from "next/head"
 
 const play = Lora({
   subsets:['latin'],

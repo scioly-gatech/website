@@ -40,11 +40,16 @@ export interface TransportLocation extends Location {
   description: string;
 }
 
+export interface UserLocation extends Location {
+
+}
+
 export interface TournamentMapProps {
   mapContainerProps: MapContainerProps;
   tournamentLocations: TournamentLocation[];
   makerspaceLocations: MakerspaceLocation[];
   transportLocations: TransportLocation[];
+  userLocation: UserLocation
 }
 
 export default function TournamentMap({
