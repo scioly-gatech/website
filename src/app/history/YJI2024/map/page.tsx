@@ -10,7 +10,7 @@ import {
   tournamentLocations,
   makerspaceLocations,
   transportLocations,
-} from "../../../../data/locations/yellowJacketInvitational";
+} from "../../../../../data/locations/yellowJacketInvitational";
 import { LatLngExpression } from "leaflet";
 
 const play = Lora({ subsets: ["latin"], display: "swap" });
@@ -20,9 +20,9 @@ const mapHeight = "750px";
 var currLoc;
 var id;
 
-function Update_Location(pos) {
-  currLoc = pos.coords;
-}
+// function Update_Location(pos) {
+//   currLoc = pos.coords;
+// }
 
 export default function Page() {
   // For making LeafletJS map compatible with Next's SSR
