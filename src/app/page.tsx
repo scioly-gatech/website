@@ -132,6 +132,7 @@ export default function Home() {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:3}}
+      key="1"
     >
     <div id="mission" className="bg-darkOrange flex flex-col items-center p-8 dark:bg-black mx-0 lg:mx-24">
         <h2 className={`text-3xl lg:text-5xl ${play.className} border-4 border-black lg:w-1/2 text-center py-2 my-4 dark:text-white dark:border-white`}>Mission Statement</h2>
@@ -144,6 +145,7 @@ export default function Home() {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:1}}
+      key="2"
     >
     <div id="serviceSmall" className={`flex lg:hidden flex-col items-center w-full`}>
       <div className="flex flex-col items-center">
@@ -161,6 +163,7 @@ export default function Home() {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:1}}
+      key="3"
     >
     <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black w-full`}>
       <div className="flex flex-col items-center">
@@ -178,6 +181,7 @@ export default function Home() {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:1}}
+      key="4"
     >
     <div id="serviceLarge" className={`hidden lg:flex flex-row justify-evenly items-center p-16 mx-12`}>
       <div className="flex flex-col items-center">
@@ -195,6 +199,7 @@ export default function Home() {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration:1}}
+      key="5"
     >
     <div id="tournamentLarge" className="bg-darkOrange dark:bg-black hidden lg:flex flex-row justify-evenly items-center p-8 mx-24">
       <figure>
