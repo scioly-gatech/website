@@ -42,15 +42,15 @@ const eventResults = eventResults2023
       </h1>
 
 
-    <AnimatePresence>
+    {/* <AnimatePresence>
     <motion.div
             initial={{opacity:0.5}}
             animate={{opacity:1}}
             transition={{duration:1}}
-        >
+        > */}
      
       {/* For small screens*/}
-    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+    {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -68,10 +68,10 @@ const eventResults = eventResults2023
                                     />
                         }
                       })}/> 
-      </div>
+      </div> */}
      
       {/* For large screens*/}
-      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+      {/* <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }} // Start 1 instead since the start position in Embla seems to be based on the middle element
@@ -91,9 +91,9 @@ const eventResults = eventResults2023
       </div>
 
     </motion.div>
-    </AnimatePresence>
+    </AnimatePresence> */}
 
-      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-10 sm:text-sm lg:text-2xl">
+      {/* <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-10 sm:text-sm lg:text-2xl">
         <h2 className="border-4 border-red-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
         🏆 Overall Results 🏆
         </h2>
@@ -136,7 +136,7 @@ const eventResults = eventResults2023
             })}
             </tbody>
         </table>
-      </div>
+      </div> */}
     </div>
     </>
   )
