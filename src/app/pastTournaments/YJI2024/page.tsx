@@ -1,22 +1,21 @@
 'use client'
 
 import React, { useCallback, useEffect } from 'react'
-import allResults2023 from '../../../../data/allResults/allResults2023'
-import eventResults2023 from '../../../../data/eventResults/eventResults2023'
+import allResultsYJI2024 from '../../../../data/allResults/allResultsYJI2024'
+import eventResultsYJI2024 from '../../../../data/eventResults/eventResultsYJI2024'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
 import Script from 'next/script'
+import Link from 'next/link'
 
-export default function PastTournament2023() {
+export default function YJITournament2024() {
   const allPictures = [
-    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg", 
+    "/images/2024/YJIPictures/YJI_1.jpg", "/images/2024/YJIPictures/YJI_2.jpg", "/images/2024/YJIPictures/YJI_3.jpg", "/images/2024/YJIPictures/YJI_4.jpg", "/images/2024/YJIPictures/YJI_5.jpg", "/images/2024/YJIPictures/YJI_7.jpg", "/images/2024/YJIPictures/YJI_10.jpg", "/images/2024/YJIPictures/YJI_11.jpg"
 ]
 
-
-
-const allResults = allResults2023
-const eventResults = eventResults2023
+const allResults = allResultsYJI2024
+const eventResults = eventResultsYJI2024
 
   return (
     <>
@@ -42,15 +41,15 @@ const eventResults = eventResults2023
       </h1>
 
 
-    {/* <AnimatePresence>
+    <AnimatePresence>
     <motion.div
             initial={{opacity:0.5}}
             animate={{opacity:1}}
             transition={{duration:1}}
-        > */}
+        >
      
       {/* For small screens*/}
-    {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -68,10 +67,10 @@ const eventResults = eventResults2023
                                     />
                         }
                       })}/> 
-      </div> */}
+      </div>
      
       {/* For large screens*/}
-      {/* <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }} // Start 1 instead since the start position in Embla seems to be based on the middle element
@@ -90,10 +89,15 @@ const eventResults = eventResults2023
                       })} /> 
       </div>
 
+    <div className="flex justify-center">
+      <p className="text-3xl text-center font-bold p-4 my-4 bg-pink-300 rounded-xl w-1/3 lg:w-1/6 hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
+        <Link href="https://photos.app.goo.gl/a4nUMNFUTm5BHeKx6" target='__blank'>All Photos</Link>
+      </p>
+    </div>
     </motion.div>
-    </AnimatePresence> */}
+    </AnimatePresence> 
 
-      {/* <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-10 sm:text-sm lg:text-2xl">
+      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-10 sm:text-sm lg:text-2xl">
         <h2 className="border-4 border-red-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
         🏆 Overall Results 🏆
         </h2>
@@ -136,7 +140,22 @@ const eventResults = eventResults2023
             })}
             </tbody>
         </table>
-      </div> */}
+        <div className="flex justify-center">
+        <p className="text-3xl text-center font-bold p-4 my-4 bg-pink-300 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
+          <Link href="https://www.duosmium.org/results/2024-02-03_yellow_jacket_invitational_c/" target='__blank'>All Results</Link>
+        </p>
+    </div>
+      </div>
+    
+      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-4 sm:text-sm lg:text-2xl">
+        <h2 className="border-4 border-red-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
+        Tournament Information
+        </h2>
+        <div className="w-full flex justify-center my-8">
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vTAJKgutEODpvzm4NzgBcuhqj0ky6u9P7DMkQV31TaTa2BemLjdolwm0cMXUsr8ha729CfR_zSeOmi_/pub?embedded=true" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
+        </div>
+      </div>
+     
     </div>
     </>
   )
