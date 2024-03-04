@@ -43,7 +43,7 @@ export default function CurrentTournament() {
       </div>
         <div className="flex flex-row justify-center">
           <div id="states-wrapper">
-          <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">State Tournaments</p>
+          <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">State Tournament</p>
           <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center">
               <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                   <Link href="/pastTournaments/2022" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4">2022 Tournament</Link>
@@ -54,7 +54,7 @@ export default function CurrentTournament() {
           </ul>
           </div>
           <div id="YJI-wrapper">
-            <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">Yellow Jacket Invitationals</p>
+            <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">Yellow Jacket Invitational</p>
             <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center">
                 <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                     <Link href="/pastTournaments/YJI2024" className="bg-darkOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2024</Link>

@@ -1,8 +1,11 @@
 "use client";
 
+import {
+  Location
+} from "@/app/components/TournamentMap";
 import { AnimatePresence, motion } from "framer-motion";
 import { Lora } from "next/font/google";
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo, useEffect, useState } from "react";
 import Script from "next/script";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -17,14 +20,29 @@ const play = Lora({ subsets: ["latin"], display: "swap" });
 const mapCenter: LatLngExpression = [33.776166952660056, -84.39819268319107];
 const mapZoom = 17;
 const mapHeight = "750px";
-var currLoc;
-var id;
-
-// function Update_Location(pos) {
-//   currLoc = pos.coords;
-// }
 
 export default function Page() {
+
+  const [myPosition, setMyPosition] = useState<[number, number]>([33.776218438041454, -84.39499178593599])
+  const [myLocation, setMyLocation] = useState<Location>({label: "Me", position: myPosition})
+  const [id, setId] = useState(0)
+
+  function Update_Location(pos: GeolocationPosition) {
+    setMyPosition([pos.coords.latitude, pos.coords.longitude])
+    console.log(myPosition)
+  }
+
+  // useEffect(() => {
+  //   const createdId = navigator.geolocation.watchPosition(Update_Location)
+  //   setId(navigator.geolocation.watchPosition(Update_Location))
+  //   console.log(id)
+  // }, [])
+
+  function Locate_Me() {
+    setId(navigator.geolocation.watchPosition(Update_Location))
+    console.log(myPosition)
+  }
+
   // For making LeafletJS map compatible with Next's SSR
   const CurrentTournamentMap = useMemo(
     () =>
@@ -78,6 +96,8 @@ export default function Page() {
           </AnimatePresence>
         </div>
 
+        <button onClick={Locate_Me} className="text-red bg-red-700">Locate Me</button>
+
         {/** Map */}
         <div className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
           <p className="font-bold underline">
@@ -92,6 +112,7 @@ export default function Page() {
             tournamentLocations={tournamentLocations}
             makerspaceLocations={makerspaceLocations}
             transportLocations={transportLocations}
+            myLocation={myLocation}
           />
         </div>
         
@@ -102,7 +123,7 @@ export default function Page() {
             <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-indigo-950">
               <p className="font-bold text-3xl underline">Events</p>
               {tournamentLocations.map((tournamentLocation) => {
-                if (!tournamentLocation.events) {
+                if (!tournamentLocation.events) { 
                   return null;
                 }
 

@@ -20,6 +20,11 @@
   color: white;
 }
 
+.custom-tooltip-curr {
+  background-color: #f50a0a;
+  color: white;
+}
+
 .custom-tooltip::before {
   display: none;
 }

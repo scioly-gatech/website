@@ -45,12 +45,14 @@ export interface TournamentMapProps {
   tournamentLocations: TournamentLocation[];
   makerspaceLocations: MakerspaceLocation[];
   transportLocations: TransportLocation[];
+  myLocation?: Location
 }
 
 export default function TournamentMap({
   mapContainerProps,
   tournamentLocations,
   makerspaceLocations,
+  myLocation,
   transportLocations: transportLocations,
 }: TournamentMapProps) {
   return (
@@ -166,6 +168,23 @@ export default function TournamentMap({
           </Marker>
         );
       })}
+
+      {(myLocation != undefined) ? 
+       <Marker
+       position={myLocation.position}
+       key={myLocation.label}
+     >
+       <Tooltip
+         permanent
+         direction="top"
+         offset={[-15, 75]}
+         className="custom-tooltip custom-tooltip-curr"
+       >
+         {myLocation.label}
+       </Tooltip>
+     </Marker> : null
+    }
+        
     </MapContainer>
   );
 }

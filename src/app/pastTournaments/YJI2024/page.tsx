@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 export default function YJITournament2024() {
   const allPictures = [
-    "/images/2024/YJIPictures/YJI_1.jpg", "/images/2024/YJIPictures/YJI_2.jpg", "/images/2024/YJIPictures/YJI_3.jpg", "/images/2024/YJIPictures/YJI_4.jpg", "/images/2024/YJIPictures/YJI_5.jpg", "/images/2024/YJIPictures/YJI_7.jpg", "/images/2024/YJIPictures/YJI_10.jpg", "/images/2024/YJIPictures/YJI_11.jpg"
+    "/images/2024/YJIPictures/YJI_1.jpg", "/images/2024/YJIPictures/YJI_2.jpg", "/images/2024/YJIPictures/YJI_3.jpg", "/images/2024/YJIPictures/YJI_4.jpg", "/images/2024/YJIPictures/YJI_5.jpg", "/images/2024/YJIPictures/YJI_6.jpg", "/images/2024/YJIPictures/YJI_7.jpg", "/images/2024/YJIPictures/YJI_10.jpg", "/images/2024/YJIPictures/YJI_11.jpg"
 ]
 
 const allResults = allResultsYJI2024
@@ -58,12 +58,12 @@ const eventResults = eventResultsYJI2024
                         return {
                           node: <Image
                                       className={`block`}
-                                      style={{objectFit: "cover"}}
+                                      style={{objectFit: "cover", width:467, height:352}}
                                       src={imagePath}
                                       alt="Slideshow Picture"
                                       key={index}
                                       width={467}
-                                      height={0}
+                                      height={352}
                                     />
                         }
                       })}/> 
@@ -78,12 +78,12 @@ const eventResults = eventResultsYJI2024
                         return {
                           node: <Image
                                       className={`block`}
-                                      style={{objectFit: "cover"}}
+                                      style={{objectFit: "cover", width:467, height:352}}
                                       src={imagePath}
                                       alt="Slideshow Picture"
                                       key={index}
                                       width={467}
-                                      height={0}
+                                      height={352}
                                     />
                         }
                       })} /> 
