@@ -12,25 +12,44 @@ export default function Navbar() {
     // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
     useEffect(() => {
         if (typeof(document) !== 'undefined') {
-            const currentHover = document.getElementById('dropdown-title') as HTMLElement
-            currentHover.addEventListener('mouseenter', showDropdown)
-            currentHover.addEventListener('mouseleave', hideDropdown)
+            const contactHover = document.getElementById('contact-dropdown-title') as HTMLElement
+            contactHover.addEventListener('mouseenter', showContactDropdown)
+            contactHover.addEventListener('mouseleave', hideContactDropdown)
+            const statesHover = document.getElementById('states-dropdown-title') as HTMLElement
+            statesHover.addEventListener('mouseenter', showStatesDropdown)
+            statesHover.addEventListener('mouseleave', hideStatesDropdown)
         }   
     }, [])
 
-    function showDropdown() {
+    function showContactDropdown() {
         if (typeof(document) !== 'undefined') {
-            const aboutDrop = document.getElementById('dropdown') as HTMLElement
-            aboutDrop.classList.remove('hidden')
-            aboutDrop.classList.add('flex')
+            const contactDrop = document.getElementById('contact-dropdown') as HTMLElement
+            contactDrop.classList.remove('hidden')
+            contactDrop.classList.add('flex')
         }
     }
 
-    function hideDropdown() {
+    function hideContactDropdown() {
         if (typeof(document) !== 'undefined') {
-            const aboutDrop = document.getElementById('dropdown') as HTMLElement
-            aboutDrop.classList.add('hidden')
-            aboutDrop.classList.remove('flex')
+            const contactDrop = document.getElementById('contact-dropdown') as HTMLElement
+            contactDrop.classList.add('hidden')
+            contactDrop.classList.remove('flex')
+        }
+    }
+
+    function showStatesDropdown() {
+        if (typeof(document) !== 'undefined') {
+            const statesDrop = document.getElementById('states-dropdown') as HTMLElement
+            statesDrop.classList.remove('hidden')
+            statesDrop.classList.add('flex')
+        }
+    }
+
+    function hideStatesDropdown() {
+        if (typeof(document) !== 'undefined') {
+            const statesDrop = document.getElementById('states-dropdown') as HTMLElement
+            statesDrop.classList.add('hidden')
+            statesDrop.classList.remove('flex')
         }
     }
 
@@ -76,6 +95,11 @@ export default function Navbar() {
                         <Link href="/states2024" className="font-bold py-3"> States 2024 </Link>
                     </li>
                     <li>
+                        <Link href="/states2024/info" className="flex flex-row my-1 mx-3"> 
+                            <p> General Info </p>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                     </li>
                     <li>
@@ -113,14 +137,22 @@ export default function Navbar() {
                     <Link href="/" className="text-xl">Home</Link>
                 </li>
 
-                <li className="m-2 mx-6 hover:text-lightOrange">
-                    <Link href="/states2024" className="text-xl">States 2024</Link>
-                </li>
-
-                <div id="dropdown-title">   
+                <div id="states-dropdown-title">   
+                    <li className="m-2 mx-6 flex-col items-center">
+                        <Link href="/states2024" className="hover:text-lightOrange text-xl">States 2024</Link>
+                        <ul id="states-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                            <li>
+                                <Link href="/states2024/info" className="hover:text-lightOrange text-xl"> General Info </Link>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </div>
+                
+                <div id="contact-dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/aboutUs" className="hover:text-lightOrange text-xl">About Us</Link>
-                        <ul id="dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-16 hidden flex-col z-10">
+                        <ul id="contact-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
                             <li>
                                 <Link href="/contactUs" className="hover:text-lightOrange text-xl"> Contact Us </Link>
                             </li>
