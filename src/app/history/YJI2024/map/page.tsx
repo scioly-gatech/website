@@ -23,24 +23,14 @@ const mapHeight = "750px";
 
 export default function Page() {
 
-  const [myPosition, setMyPosition] = useState<[number, number]>([33.776218438041454, -84.39499178593599])
-  const [myLocation, setMyLocation] = useState<Location>({label: "Me", position: myPosition})
-  const [id, setId] = useState(0)
+  const [myLocation, setMyLocation] = useState<Location>({label: "Me", position: [0, 0]})
+  const [id, setId] = useState(() => {
+    return(navigator.geolocation?.watchPosition(Update_Location))
+  })
 
   function Update_Location(pos: GeolocationPosition) {
-    setMyPosition([pos.coords.latitude, pos.coords.longitude])
-    console.log(myPosition)
-  }
-
-  // useEffect(() => {
-  //   const createdId = navigator.geolocation.watchPosition(Update_Location)
-  //   setId(navigator.geolocation.watchPosition(Update_Location))
-  //   console.log(id)
-  // }, [])
-
-  function Locate_Me() {
-    setId(navigator.geolocation.watchPosition(Update_Location))
-    console.log(myPosition)
+    setMyLocation({label: "Me", position: [pos.coords.latitude, pos.coords.longitude]})
+    return([pos.coords.latitude, pos.coords.longitude])
   }
 
   // For making LeafletJS map compatible with Next's SSR
@@ -95,8 +85,6 @@ export default function Page() {
             </motion.div>
           </AnimatePresence>
         </div>
-
-        <button onClick={Locate_Me} className="text-red bg-red-700">Locate Me</button>
 
         {/** Map */}
         <div className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
