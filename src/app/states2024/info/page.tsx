@@ -37,19 +37,19 @@ export default function Info() {
             className="text-3xl font-bold flex justify-center items-center"
           >
               <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
-              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>States Info</h1>
+              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>General Info</h1>
               </div>
         </motion.div>
         </AnimatePresence>
       </div>
 
         <p className="bg-lightOrange text-center m-4 lg:m-12 lg:mx-72 shadow-darkBlue dark:shadow-white shadow-2xl p-8"> 
-            <a href="https://docs.google.com/document/d/1ISn3Sr6WHQgJy206Grmc8CR_OpLJxwhtJhXywGIzEVE/edit?usp=sharing" target="_blank" className="text-3xl font-bold border-black border-4 p-2 text-black hover:opacity-50"> Tournament Information </a>
+            <a href="https://docs.google.com/document/d/1ISn3Sr6WHQgJy206Grmc8CR_OpLJxwhtJhXywGIzEVE/edit?usp=sharing" target="_blank" className="text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black hover:opacity-50"> Tournament Information </a>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQPfytnHwVwA5zMfrH7gC92gMBvyX0IO3WsRRhFfgSMhUx5YpMEw-mSgBeg5_fDRMF73oNQcyXKbDDk/pub?embedded=true" width="90%" height="750" className="mt-8 md:ml-0 lg:ml-24"></iframe>
         </p>
 
         <p className="bg-darkOrange text-center m-4 lg:m-12 lg:mx-72 p-8 shadow-darkBlue dark:shadow-white shadow-2xl"> 
-            <a href="https://docs.google.com/document/d/1fCWeo-ZeQq2dVuc_I5UV9qlhHSIeM9hdEG6bFIR2EGQ/edit?usp=sharing" target="_blank" className="text-3xl font-bold m-2 border-black border-4 p-2 text-black hover:opacity-50"> Tournament Communiques </a>
+            <a href="https://docs.google.com/document/d/1fCWeo-ZeQq2dVuc_I5UV9qlhHSIeM9hdEG6bFIR2EGQ/edit?usp=sharing" target="_blank" className="text-3xl font-bold m-2 underline md:no-underline md:border-black md:border-4 p-2 text-black hover:opacity-50"> Tournament Communiques </a>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vSko6vVraaAC7_Z--c9cbHFuLXql1RvvaFaBQvR68YTYV2Qn1wD89cIDqMjD6OeN425Y0twvT9vtYr7/pub?embedded=true" width="90%" height="750" className="mt-8 md:ml-0 lg:ml-24"></iframe>
         </p>
     </div>

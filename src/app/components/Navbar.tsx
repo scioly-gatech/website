@@ -98,6 +98,9 @@ export default function Navbar() {
                         <Link href="/states2024/info" className="flex flex-row my-1 mx-3"> 
                             <p> General Info </p>
                         </Link>
+                        <Link href="/states2024/tours" className="flex flex-row my-1 mx-3"> 
+                            <p>  Makerspace Tours </p>
+                        </Link>
                     </li>
                     <li>
                         <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -143,6 +146,9 @@ export default function Navbar() {
                         <ul id="states-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
                             <li>
                                 <Link href="/states2024/info" className="hover:text-lightOrange text-xl"> General Info </Link>
+                            </li>
+                            <li>
+                                <Link href="/states2024/tours" className="hover:text-lightOrange text-xl"> Makerspace Tours </Link>
                             </li>
                             
                         </ul>
