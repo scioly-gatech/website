@@ -1,8 +1,6 @@
 "use client";
 
-import {
-  Location
-} from "@/app/components/TournamentMap";
+import { Location } from "@/app/components/TournamentMap";
 import { AnimatePresence, motion } from "framer-motion";
 import { Lora } from "next/font/google";
 import React, { useMemo, useEffect, useState } from "react";
@@ -13,7 +11,7 @@ import {
   tournamentLocations,
   makerspaceLocations,
   transportLocations,
-} from "../../../../../data/locations/yellowJacketInvitational2024Locations";
+} from "../../../../data/locations/state2024Locations";
 import { LatLngExpression } from "leaflet";
 
 const play = Lora({ subsets: ["latin"], display: "swap" });
@@ -22,15 +20,20 @@ const mapZoom = 17;
 const mapHeight = "750px";
 
 export default function Page() {
-
-  const [myLocation, setMyLocation] = useState<Location>({label: "Me", position: [0, 0]})
+  const [myLocation, setMyLocation] = useState<Location>({
+    label: "Me",
+    position: [0, 0],
+  });
   const [id, setId] = useState(() => {
-    return(navigator.geolocation?.watchPosition(Update_Location))
-  })
+    return navigator.geolocation?.watchPosition(Update_Location);
+  });
 
   function Update_Location(pos: GeolocationPosition) {
-    setMyLocation({label: "Me", position: [pos.coords.latitude, pos.coords.longitude]})
-    return([pos.coords.latitude, pos.coords.longitude])
+    setMyLocation({
+      label: "Me",
+      position: [pos.coords.latitude, pos.coords.longitude],
+    });
+    return [pos.coords.latitude, pos.coords.longitude];
   }
 
   // For making LeafletJS map compatible with Next's SSR
@@ -103,7 +106,7 @@ export default function Page() {
             myLocation={myLocation}
           />
         </div>
-        
+
         {/** Key */}
         <div className="bg-darkBlue text-white text-xl m-4 text-center lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
           <p className="font-bold text-4xl underline">Key</p>
@@ -111,7 +114,7 @@ export default function Page() {
             <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-indigo-950">
               <p className="font-bold text-3xl underline">Events</p>
               {tournamentLocations.map((tournamentLocation) => {
-                if (!tournamentLocation.events) { 
+                if (!tournamentLocation.events) {
                   return null;
                 }
 
@@ -162,22 +165,6 @@ export default function Page() {
                         )}
                       </ul>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-blue-950">
-              <p className="font-bold text-3xl underline">Makerspace Tours</p>
-              {makerspaceLocations.map((makerspaceLocation) => {
-                return (
-                  <div className="mb-2" key={makerspaceLocation.label}>
-                    <a
-                      href={`/currentTournament/tours#${makerspaceLocation.hrefId}`}
-                      className="underline hover:opacity-50"
-                    >
-                      <p className="font-bold">{`${makerspaceLocation.label} Tour`}</p>
-                    </a>
                   </div>
                 );
               })}

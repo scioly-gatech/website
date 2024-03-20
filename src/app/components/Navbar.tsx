@@ -101,6 +101,9 @@ export default function Navbar() {
                         <Link href="/states2024/tours" className="flex flex-row my-1 mx-3"> 
                             <p>  Makerspace Tours </p>
                         </Link>
+                        <Link href="/states2024/map" className="flex flex-row my-1 mx-3"> 
+                            <p>  Tournament Map </p>
+                        </Link>
                     </li>
                     <li>
                         <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -150,7 +153,9 @@ export default function Navbar() {
                             <li>
                                 <Link href="/states2024/tours" className="hover:text-lightOrange text-xl"> Makerspace Tours </Link>
                             </li>
-                            
+                            <li>
+                                <Link href="/states2024/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
+                            </li>
                         </ul>
                     </li>
                 </div>
