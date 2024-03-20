@@ -75,7 +75,7 @@ export default function Page() {
       <Head>title = Tournament Map</Head>
       <main className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
         {/** Heading */}
-        <div className="text-white bg-[url('/images/curr/birdView-modified.jpg')] p-12 w-full">
+        <div className="text-white bg-[url('/images/2024/States/states-24.jpg')] p-12 w-full">
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
