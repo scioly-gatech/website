@@ -24,10 +24,14 @@ const mapHeight = "750px";
 export default function Page() {
 
   const [myLocation, setMyLocation] = useState<Location>({label: "Me", position: [0, 0]})
-  const [id, setId] = useState(() => {
-    return(navigator.geolocation?.watchPosition(Update_Location))
-  })
+  useEffect(() => {
+    const id = navigator.geolocation?.watchPosition(Update_Location);
 
+    return () => {
+      navigator.geolocation?.clearWatch(id);
+    }
+  }, []);
+  
   function Update_Location(pos: GeolocationPosition) {
     setMyLocation({label: "Me", position: [pos.coords.latitude, pos.coords.longitude]})
     return([pos.coords.latitude, pos.coords.longitude])

@@ -24,15 +24,20 @@ export default function Page() {
     label: "Me",
     position: [0, 0],
   });
-  const [id, setId] = useState(() => {
-    return navigator.geolocation?.watchPosition(Update_Location);
-  });
+  useEffect(() => {
+    const id = navigator.geolocation?.watchPosition(Update_Location);
+
+    return () => {
+      navigator.geolocation?.clearWatch(id);
+    }
+  }, []);
 
   function Update_Location(pos: GeolocationPosition) {
     setMyLocation({
       label: "Me",
       position: [pos.coords.latitude, pos.coords.longitude],
     });
+
     return [pos.coords.latitude, pos.coords.longitude];
   }
 
@@ -82,7 +87,7 @@ export default function Page() {
                 <h1
                   className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-5xl md:text-6xl ${play.className} drop-shadow-titleShadow`}
                 >
-                  YJI Map
+                  States 2024 Map
                 </h1>
               </div>
             </motion.div>
