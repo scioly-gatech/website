@@ -128,6 +128,7 @@ export default function Page() {
                     <p className="font-bold text-2xl">
                       {tournamentLocation.label}
                     </p>
+                    <a className="text-sky-400 hover:opacity-50" target="__blank" href={tournamentLocation.mapLink}>Google Maps</a>
                     <div>
                       <ul>
                         {tournamentLocation.events.map(
@@ -157,6 +158,7 @@ export default function Page() {
                     <p className="font-bold text-2xl">
                       {tournamentLocation.label}
                     </p>
+                    <a className="text-sky-400 hover:opacity-50" target="__blank" href={tournamentLocation.mapLink}>Google Maps</a>
                     <div>
                       <ul>
                         {tournamentLocation.schoolHomeRooms.map(
@@ -183,6 +185,7 @@ export default function Page() {
                 return (
                   <div className="mb-2" key={transportLocation.label}>
                     <p className="font-bold">{transportLocation.label}</p>
+                    <a className="text-sky-400 hover:opacity-50" target="__blank" href={transportLocation.mapLink}>Google Maps</a>
                   </div>
                 );
               })}

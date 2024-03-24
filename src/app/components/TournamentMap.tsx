@@ -29,15 +29,18 @@ export interface Location {
 export interface MakerspaceLocation extends Location {
   fullName?: string;
   hrefId: string;
+  mapLink?: string;
 }
 
 export interface TournamentLocation extends Location {
   events?: EventRoom[];
   schoolHomeRooms?: SchoolHomeRoom[];
+  mapLink?: string;
 }
 
 export interface TransportLocation extends Location {
   description: string;
+  mapLink?: string;
 }
 
 export interface TournamentMapProps {
@@ -102,6 +105,8 @@ export default function TournamentMap({
                   </ul>
                 </>
               )}
+              <br />
+              <a href={tournamentLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
             </Popup>
             <Tooltip
               permanent
@@ -128,12 +133,13 @@ export default function TournamentMap({
             <Popup>
               <p className="font-bold text-lg">
                 <a
-                  href={`/currentTournament/tours#${makerspaceLocation.hrefId}`}
+                  href={`/states2024/${makerspaceLocation.hrefId}`}
                   className="hover:opacity-50"
                 >
                   {popupString}
                 </a>
               </p>
+              <a href={makerspaceLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
             </Popup>
             <Tooltip
               permanent
@@ -156,6 +162,7 @@ export default function TournamentMap({
             <Popup>
               <p className="font-bold text-xl">{transportLocation.label}</p>
               <p className="text">{transportLocation.description}</p>
+              <a href={transportLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
             </Popup>
             <Tooltip
               permanent
