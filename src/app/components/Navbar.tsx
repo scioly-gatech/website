@@ -107,6 +107,9 @@ export default function Navbar() {
                         <Link href="/states2024/merch" className="flex flex-row my-1 mx-3"> 
                             <p>  Merch </p>
                         </Link>
+                        <Link href="/states2024/sponsors" className="flex flex-row my-1 mx-3"> 
+                            <p>  Prize/Club Sponsors </p>
+                        </Link>
                     </li>
                     <li>
                         <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -161,6 +164,9 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <Link href="/states2024/merch" className="hover:text-lightOrange text-xl"> Merch </Link>
+                            </li>
+                            <li>
+                                <Link href="/states2024/sponsors" className="hover:text-lightOrange text-xl"> Prize/Club Sponsors </Link>
                             </li>
                         </ul>
                     </li>
