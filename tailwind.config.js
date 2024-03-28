@@ -76,7 +76,8 @@ module.exports = {
         'profileBox': '0 8px 16px rgba(0, 0, 0, 0.2)'
       },
       dropShadow: {
-        'titleShadow': '3px 3px #da9100'
+        'titleShadow': '3px 3px #da9100',
+        'otherShadow': '3px 3px #b4cad8',
       },
     },
   },
