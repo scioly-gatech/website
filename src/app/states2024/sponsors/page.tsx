@@ -47,7 +47,7 @@ export default function Info() {
         <div className="bg-lightOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg ">
             <h2 className="font-bold text-4xl drop-shadow-otherShadow"> Smile Belle </h2>
             <br />
-            <p className="text-xl text-darkBlue"> As a daily fashion jewelry brand, SmileBelle aims to provide more people to find their own beauty with affordable jewelry. Be bold to do "SmileBelle"! Just smile your way, it is worth a million. SmileBelle offers a platform for you to share your pleasure and joy with your BFF, family members and be yourself.
+            <p className="text-xl text-darkBlue"> As a daily fashion jewelry brand, SmileBelle aims to provide more people to find their own beauty with affordable jewelry. Be bold to do SmileBelle! Just smile your way, it is worth a million. SmileBelle offers a platform for you to share your pleasure and joy with your BFF, family members and be yourself.
             </p>
             <br />
             <p className="text-xl text-darkBlue"> To be eligible to win jewelry sets (includes necklaces, earrings, bracelets & more) make sure to follow <a href="https://www.instagram.com/smilebelleofficial/" target="_blank" className="underline hover:opacity-50 font-bold"> @smilebelleofficial </a> on instagram before you visit the table. </p>
@@ -61,7 +61,7 @@ export default function Info() {
             <p className="text-xl text-darkBlue"> Rile is a family run skincare brand aimed towards making products specifically for teens! Stop by the CULC between 4-6 to get some free merch and products, alongside with entering their giveaway for a chance at winning: a jacket, bucket hat, t-shirt, headband, bag, air fresheners, and more!
             </p>
             <br />
-            <p className="text-xl text-darkBlue"> Make sure to follow <a href="https://www.instagram.com/get.rile/" target="_blank" className="underline hover:opacity-50 font-bold"> @get.rile </a> before visiting the table! If you're interested in more information, visit <a href="https://rile.co/" target="_blank" className="underline hover:opacity-50 font-bold"> rile.co </a></p>
+            <p className="text-xl text-darkBlue"> Make sure to follow <a href="https://www.instagram.com/get.rile/" target="_blank" className="underline hover:opacity-50 font-bold"> @get.rile </a> before visiting the table! If you are interested in more information, visit <a href="https://rile.co/" target="_blank" className="underline hover:opacity-50 font-bold"> rile.co </a></p>
             <br />
         </div>
 
@@ -160,7 +160,7 @@ export default function Info() {
         <div className="bg-darkOrange text-white text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <h2 className="font-bold text-4xl drop-shadow-otherShadow"> Big Data Big Impact @ GT</h2>
             <br />
-            <p className="text-xl text-darkBlue"> Big Data Big Impact is a Georgia Institute of Technology College of Computing (CoC) organization focused on leveraging big data to provide insight into some of the world's greatest social challenges, from poverty to climate action.
+            <p className="text-xl text-darkBlue"> Big Data Big Impact is a Georgia Institute of Technology College of Computing (CoC) organization focused on leveraging big data to provide insight into some of the greatest global social challenges, from poverty to climate action.
             </p>
             <br />
             <p className="text-xl text-darkBlue"> They pride themselves on offering students valuable hands-on opportunities to pursue excellence and growth in computer science and career development.
