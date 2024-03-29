@@ -104,6 +104,9 @@ export default function Navbar() {
                         <Link href="/states2024/map" className="flex flex-row my-1 mx-3"> 
                             <p>  Tournament Map </p>
                         </Link>
+                        <Link href="https://photos.app.goo.gl/XdMw9MzsvQxwv6Ca9" className="flex flex-row my-1 mx-3" target="_blank"> 
+                            <p>  Photos </p>
+                        </Link>
                         <Link href="/states2024/merch" className="flex flex-row my-1 mx-3"> 
                             <p>  Merch </p>
                         </Link>
@@ -161,6 +164,9 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <Link href="/states2024/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
+                            </li>
+                            <li>
+                                <Link href="https://photos.app.goo.gl/XdMw9MzsvQxwv6Ca9" target="_blank" className="hover:text-lightOrange text-xl"> Photos </Link>
                             </li>
                             <li>
                                 <Link href="/states2024/merch" className="hover:text-lightOrange text-xl"> Merch </Link>
