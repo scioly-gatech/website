@@ -13,6 +13,7 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Experimental Design", eventRooms: ["573"] },
       { eventName: "Forensics", eventRooms: ["581"] },
       { eventName: "Fossils", eventRooms: ["575"] },
+      { eventName: "Codebusters", eventRooms: ["152"] },
     ],
     schoolHomeRooms: [
       { schoolName: "Central HS", homeRooms: ["125"] },
