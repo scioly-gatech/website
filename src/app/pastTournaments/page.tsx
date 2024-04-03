@@ -44,12 +44,15 @@ export default function CurrentTournament() {
         <div className="flex flex-row justify-center">
           <div id="states-wrapper">
           <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">State Tournament</p>
-          <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center">
+          <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center px-12">
               <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
-                  <Link href="/pastTournaments/2022" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4">2022 Tournament</Link>
+                  <Link href="/pastTournaments/2022" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2022</Link>
               </li>
               <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
-                  <Link href="/pastTournaments/2023" className="bg-darkOrange text-2xl lg:text-3xl p-4 rounded-2xl">2023 Tournament</Link>
+                  <Link href="/pastTournaments/2023" className="bg-darkOrange text-2xl lg:text-3xl p-4 rounded-2xl px-12">2023</Link>
+              </li>
+              <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
+                  <Link href="/pastTournaments/2024" className="bg-lightOrange text-2xl lg:text-3xl p-4 rounded-2xl px-12">2024</Link>
               </li>
           </ul>
           </div>
