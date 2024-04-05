@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 export default function YJITournament2024() {
   const allPictures = [
-    "/images/2024/States/Pictures/1.jpg", "/images/2024/States/Pictures/2.jpg", "/images/2024/States/Pictures/3.jpg", "/images/2024/States/Pictures/4.jpg", "/images/2024/States/Pictures/5.jpg", "/images/2024/States/Pictures/6.jpg", "/images/2024/States/Pictures/7.jpg", "/images/2024/States/Pictures/8.jpg", "/images/2024/States/Pictures/9.jpg", "/images/2024/States/Pictures/10.jpg", "/images/2024/States/Pictures/11.jpg", "/images/2024/States/Pictures/12.jpg", "/images/2024/States/Pictures/13.jpg", "/images/2024/States/Pictures/14.jpg", "/images/2024/States/Pictures/15.jpg", "/images/2024/States/Pictures/16.jpg", "/images/2024/States/Pictures/17.jpg", "/images/2024/States/Pictures/18.jpg", "/images/2024/States/Pictures/20.jpg", "/images/2024/States/Pictures/21.jpg", "/images/2024/States/Pictures/22.jpg"
+    "/images/2024/States/Pictures/1.jpg", "/images/2024/States/Pictures/2.jpg", "/images/2024/States/Pictures/3.jpg", "/images/2024/States/Pictures/4.jpg", "/images/2024/States/Pictures/5.jpg", "/images/2024/States/Pictures/6.jpg", "/images/2024/States/Pictures/9.jpg", "/images/2024/States/Pictures/10.jpg", "/images/2024/States/Pictures/11.jpg", "/images/2024/States/Pictures/12.jpg", "/images/2024/States/Pictures/13.jpg", "/images/2024/States/Pictures/14.jpg", "/images/2024/States/Pictures/15.jpg", "/images/2024/States/Pictures/16.jpg", "/images/2024/States/Pictures/17.jpg", "/images/2024/States/Pictures/18.jpg", "/images/2024/States/Pictures/20.jpg", "/images/2024/States/Pictures/21.jpg", "/images/2024/States/Pictures/22.jpg"
 ]
 
 const allResultsA = allResults2024A
