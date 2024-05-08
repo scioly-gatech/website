@@ -94,7 +94,7 @@ export default function MeetTeam() {
             whileInView={{opacity:1}}
             transition={{duration:0.2, delay:i*0.1}}
             >
-              <Profile name={profile.name} role={profile.role} imgRoute={profile.imgRoute} color={profile.id % 2 === 0} info={profile.info}/>
+              <Profile name={profile.name} role={profile.role} imgRoute={profile.imgRoute} color={profile.id % 2 === 0}/>
             </motion.div>
           ))}
           </div>

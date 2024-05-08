@@ -5,7 +5,6 @@ type ProfileProps = {
     role: string,
     imgRoute: string,
     color: boolean,
-    info: string,
 }
 
 export default function Profile(props: ProfileProps) {
@@ -26,7 +25,6 @@ export default function Profile(props: ProfileProps) {
         </div>
         
     </main>
-    <p id="info" className="hidden">{props.info}</p>
     </>
   )
 }
