@@ -9,15 +9,12 @@ import {RxCross1} from 'react-icons/rx'
 
 export default function Navbar() {
 
-    // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. 
+    // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. There could be an easier way to make a function Navbar such as with using other libraries, but this is the current implementation. 
     useEffect(() => {
         if (typeof(document) !== 'undefined') {
             const contactHover = document.getElementById('contact-dropdown-title') as HTMLElement
             contactHover.addEventListener('mouseenter', showContactDropdown)
             contactHover.addEventListener('mouseleave', hideContactDropdown)
-            const statesHover = document.getElementById('states-dropdown-title') as HTMLElement
-            statesHover.addEventListener('mouseenter', showStatesDropdown)
-            statesHover.addEventListener('mouseleave', hideStatesDropdown)
         }   
     }, [])
 
@@ -34,22 +31,6 @@ export default function Navbar() {
             const contactDrop = document.getElementById('contact-dropdown') as HTMLElement
             contactDrop.classList.add('hidden')
             contactDrop.classList.remove('flex')
-        }
-    }
-
-    function showStatesDropdown() {
-        if (typeof(document) !== 'undefined') {
-            const statesDrop = document.getElementById('states-dropdown') as HTMLElement
-            statesDrop.classList.remove('hidden')
-            statesDrop.classList.add('flex')
-        }
-    }
-
-    function hideStatesDropdown() {
-        if (typeof(document) !== 'undefined') {
-            const statesDrop = document.getElementById('states-dropdown') as HTMLElement
-            statesDrop.classList.add('hidden')
-            statesDrop.classList.remove('flex')
         }
     }
 
@@ -79,72 +60,49 @@ export default function Navbar() {
                     </button>
                 </motion.div>
 
-            <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
-                <div className="flex flex-row justify-end">
-                    <button onClick={toggleSmallNav} className="w-1/8 z-10 text-2xl">
-                        <RxCross1 />
-                    </button>
-                </div>
-                <ul onClick={toggleSmallNav} className="text-xl">
-                    <li>
-                        <Link href="/" className="font-bold flex flex-row"> 
-                            <p> Home </p> <AiOutlineHome className="m-1"/> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/states2024" className="font-bold py-3"> States 2024 </Link>
-                    </li>
-                    <li>
-                        <Link href="/states2024/info" className="flex flex-row my-1 mx-3"> 
-                            <p> General Info </p>
-                        </Link>
-                        <Link href="/states2024/tours" className="flex flex-row my-1 mx-3"> 
-                            <p>  Makerspace Tours </p>
-                        </Link>
-                        <Link href="/states2024/map" className="flex flex-row my-1 mx-3"> 
-                            <p>  Tournament Map </p>
-                        </Link>
-                        <Link href="https://photos.app.goo.gl/XdMw9MzsvQxwv6Ca9" className="flex flex-row my-1 mx-3" target="_blank"> 
-                            <p>  Photos </p>
-                        </Link>
-                        <Link href="/states2024/merch" className="flex flex-row my-1 mx-3"> 
-                            <p>  Merch </p>
-                        </Link>
-                        <Link href="/states2024/sponsors" className="flex flex-row my-1 mx-3"> 
-                            <p>  Prize/Club Sponsors </p>
-                        </Link>
-                        <Link href="/pastTournaments/2024" className="flex flex-row my-1 mx-3"> 
-                            <p>  Results </p>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
-                    </li>
-                    <li>
-                        <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
-                            <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/getInvolved" className="font-bold my-3"> Get Involved </Link>
-                    </li>
-                    <li>
-                        <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
-                    </li>
-                    <li>
-                        <Link href="/pastTournaments" className="font-bold my-1"> Past Tournaments </Link>
-                    </li>
-                    <li>
-                        <Link href="/contactUs" className="font-bold flex flex-row"> 
-                            <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-
+                <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
+                    <div className="flex flex-row justify-end">
+                        <button onClick={toggleSmallNav} className="w-1/8 z-10 text-2xl">
+                            <RxCross1 />
+                        </button>
+                    </div>
+                    <ul onClick={toggleSmallNav} className="text-xl">
+                        <li>
+                            <Link href="/" className="font-bold flex flex-row"> 
+                                <p> Home </p> <AiOutlineHome className="m-1"/> 
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/YJI2025" className="font-bold py-3"> YJI 2025 </Link>
+                        </li>
+                        <li>
+                            <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
+                        </li>
+                        <li>
+                            <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
+                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/getInvolved" className="font-bold my-3"> Get Involved </Link>
+                        </li>
+                        <li>
+                            <Link href="/sponsorships" className="font-bold my-1"> Sponsorship </Link>
+                        </li>
+                        <li>
+                            <Link href="/pastTournaments" className="font-bold my-1"> Past Tournaments </Link>
+                        </li>
+                        <li>
+                            <Link href="/contactUs" className="font-bold flex flex-row"> 
+                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
             </AnimatePresence>
         </div>
 
+        {/* Beginning of full nav bar */}
         <nav id="fullNavBar" className="hidden lgNav:flex sticky-top-0 shadow-md flex-row justify-between pr-5 text-white sm:hidden bg-black">
        
              <Link href="/" className="hover:text-lightOrange">
@@ -157,30 +115,7 @@ export default function Navbar() {
 
                 <div id="states-dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
-                        <Link href="/states2024" className="hover:text-lightOrange text-xl">States 2024</Link>
-                        <ul id="states-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
-                            <li>
-                                <Link href="/states2024/info" className="hover:text-lightOrange text-xl"> General Info </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2024/tours" className="hover:text-lightOrange text-xl"> Makerspace Tours </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2024/map" className="hover:text-lightOrange text-xl"> Tournament Map </Link>
-                            </li>
-                            <li>
-                                <Link href="https://photos.app.goo.gl/XdMw9MzsvQxwv6Ca9" target="_blank" className="hover:text-lightOrange text-xl"> Photos </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2024/merch" className="hover:text-lightOrange text-xl"> Merch </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2024/sponsors" className="hover:text-lightOrange text-xl"> Prize/Club Sponsors </Link>
-                            </li>
-                            <li>
-                                <Link href="/pastTournaments/2024" className="hover:text-lightOrange text-xl"> Results </Link>
-                            </li>
-                        </ul>
+                        <Link href="/YJI2025" className="hover:text-lightOrange text-xl">YJI 2025</Link>
                     </li>
                 </div>
                 
