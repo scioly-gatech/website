@@ -43,7 +43,7 @@ export default function CurrentTournament() {
         </AnimatePresence>
       </div>
         <div className="text-blackborder-4 border-black bg-lightOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
-          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">We will be hosting the second annual Yellow Jacket Invitational on February 8th, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
+          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">We will be hosting the second annual Yellow Jacket Invitational on February 1st, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
         </div>
     </div>
     </>
