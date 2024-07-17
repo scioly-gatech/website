@@ -73,12 +73,20 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
+                            <Link href="/join" className="font-bold py-3"> Join SciOly </Link>
+                        </li>
+                        <li>
                             <Link href="/YJI2025" className="font-bold py-3"> YJI 2025 </Link>
                         </li>
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                         </li>
                         <li>
+                            <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
+                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                            </Link>
+                        </li>
+                         <li>
                             <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
                                 <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
                             </Link>
@@ -116,6 +124,12 @@ export default function Navbar() {
                 <div id="states-dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/YJI2025" className="hover:text-lightOrange text-xl">YJI 2025</Link>
+                    </li>
+                </div>
+
+                <div id="states-dropdown-title">   
+                    <li className="m-2 mx-6 flex-col items-center">
+                        <Link href="/join" className="hover:text-lightOrange text-xl">Join SciOly</Link>
                     </li>
                 </div>
                 
