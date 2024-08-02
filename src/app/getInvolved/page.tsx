@@ -49,12 +49,25 @@ export default function page() {
           </div>
 
           {/** Links */}
-          <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
-          <a href="https://forms.gle/8GLDTkrM7Yr4w8Nm8" target="_blank" className="underline font-bold text-2xl lg:text-4xl"> General Volunteer Sign-Up </a>
-            <br />
-
-
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwDl2peNj8t3DZEaZh8bkGEmBVjCgOEJyPGc8Z12o_DYlkBg/viewform?embedded=true" width="100%" height="750">Loading…</iframe>
+          <p className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-4 shadow-2xl shadow-darkOrange">
+          <br></br>
+          <h1 style={{zoom: '200%'}}> Join SciOly </h1>
+          <br></br>
+                    1. Go to <a href='https://engagesupport.campuslabs.com/hc/en-us'> https://engagesupport.campuslabs.com/hc/en-us</a> (Engage).
+            <br>
+            </br>
+              2. Login using your Georgia Tech Email.
+              <br>
+              </br>
+              3. Click join 
+              <br>
+              </br>
+              4. Search Science Olympiad
+              <br></br>
+              <br></br>
+           <h1 style={{zoom: '200%'}}> General Volunteer Sign-Up </h1>
+           <br></br>
+           Information will be added soon!
           </p>
         </main>
     </>

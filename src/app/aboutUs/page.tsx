@@ -14,7 +14,7 @@ const play = Lora({
 })
 
 export default function MeetTeam() {
-
+  /*
   const profiles = [
     {id: 1, name: "Allen Chang", role: "President", imgRoute: "/images/execPics/Allen-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 2, name: "Sparsh Kudrimoti", role: "Vice President", imgRoute: "/images/execPics/Sparsh.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
@@ -31,7 +31,26 @@ export default function MeetTeam() {
     {id: 13, name: "Jason Katz", role: "Tournament Logistics", imgRoute: "/images/execPics/Jason.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 14, name: "Harsha Gaddipati", role: "Public Relations", imgRoute: "/images/execPics/Harsha-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
     {id: 15, name: "Julie Young", role: "Technology", imgRoute: "/images/execPics/Julie-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
-  ]
+  ]*/
+
+    const profiles = [
+      {id: 1, name: "Jason Katz", role: "President", imgRoute: "/images/execPics/Jason.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 2, name: "Harsha Gaddipati", role: "Vice President Club Logistics", imgRoute: "/images/execPics/Harsha-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 3, name: "Morgan Duvall", role: "Vice President Tournament Logistics", imgRoute: "/images/execPics/Morgan.JPG", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 4, name: "Ethan Maraldo", role: "Logistics Co-Director", imgRoute: "/images/execPics/Ethan.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 5, name: "Gopesh Singal", role: "Logistics Co-Director", imgRoute: "/images/execPics/Gopesh.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 6, name: "Shriya Nayak", role: "Exam Co-Director", imgRoute: "/images/execPics/Shriya-cropped.JPG", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 7, name: "Devam Shrivastava", role: "Build Co-Director", imgRoute: "/images/execPics/Devam.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 8, name: "Victor Hesu", role: "Build Co-Director", imgRoute: "/images/execPics/Victor.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 9, name: "Vidit Pokharna", role: "Finance Officer", imgRoute: "/images/execPics/Vidit-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 10, name: "Justin Li", role: "Junior Finance Officer", imgRoute: "/images/execPics/Justin.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 11, name: "Femke Kovoor", role: "Social Director", imgRoute: "/images/execPics/Femke.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 12, name: "Aleena Khetani", role: "PR Co-Director", imgRoute: "/images/execPics/Aleena.png", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 13, name: "aditi abhilash", role: "PR Co-Director", imgRoute: "/images/execPics/Aditi.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 14, name: "Julie Young", role: "Outreach Co-Director", imgRoute: "/images/execPics/Julie-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 15, name: "Anish Kristipati", role: "Outreach Co-Director", imgRoute: "/images/execPics/Anish.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 16, name: "Royce Arockiasamy", role: "Tech Lead", imgRoute: "/images/execPics/Royce.jpeg", info: "ANYTHING ANYTHING ANYTHING"},
+    ]
 
   //Stagger animation below was modified from Leigh Halliday's YouTube tutorial titled 'Staggered Animations in React with Framer Motion in 5 Minutes'. The video can be found at this link: https://www.youtube.com/watch?v=u_95SPKE6vg&ab_channel=LeighHalliday
 
