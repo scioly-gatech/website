@@ -78,11 +78,6 @@ export default function Navbar() {
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                         </li>
-                        <li>
-                            <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
-                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
-                            </Link>
-                        </li>
                          <li>
                             <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
                                 <p> Contact Us </p> <AiOutlineMail className="m-1"/>  

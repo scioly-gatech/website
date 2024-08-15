@@ -46,7 +46,7 @@ export default function MeetTeam() {
       {id: 10, name: "Justin Li", role: "Junior Finance Officer", imgRoute: "/images/execPics/Justin.jpg", info: "ANYTHING ANYTHING ANYTHING"},
       {id: 11, name: "Femke Kovoor", role: "Social Director", imgRoute: "/images/execPics/Femke.jpg", info: "ANYTHING ANYTHING ANYTHING"},
       {id: 12, name: "Aleena Khetani", role: "PR Co-Director", imgRoute: "/images/execPics/Aleena.png", info: "ANYTHING ANYTHING ANYTHING"},
-      {id: 13, name: "aditi abhilash", role: "PR Co-Director", imgRoute: "/images/execPics/Aditi.jpg", info: "ANYTHING ANYTHING ANYTHING"},
+      {id: 13, name: "Aditi Abhilash", role: "PR Co-Director", imgRoute: "/images/execPics/Aditi.jpg", info: "ANYTHING ANYTHING ANYTHING"},
       {id: 14, name: "Julie Young", role: "Outreach Co-Director", imgRoute: "/images/execPics/Julie-cropped.jpg", info: "ANYTHING ANYTHING ANYTHING"},
       {id: 15, name: "Anish Kristipati", role: "Outreach Co-Director", imgRoute: "/images/execPics/Anish.jpg", info: "ANYTHING ANYTHING ANYTHING"},
       {id: 16, name: "Royce Arockiasamy", role: "Tech Lead", imgRoute: "/images/execPics/Royce.jpeg", info: "ANYTHING ANYTHING ANYTHING"},

@@ -49,26 +49,39 @@ export default function page() {
           </div>
 
           {/** Links */}
-          <p className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-4 shadow-2xl shadow-darkOrange">
-          <br></br>
-          <h1 style={{zoom: '200%'}}> Join SciOly </h1>
-          <br></br>
-                    1. Go to <a href='https://engagesupport.campuslabs.com/hc/en-us'> https://engagesupport.campuslabs.com/hc/en-us</a> (Engage).
-            <br>
-            </br>
-              2. Login using your Georgia Tech Email.
-              <br>
-              </br>
-              3. Click join 
-              <br>
-              </br>
-              4. Search Science Olympiad
+          <div className="max-w-full flex flex-col items-center">
+            {/* <p className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-4 shadow-2xl shadow-darkOrange">
               <br></br>
+              <h1 className="font-bold text-3xl"> Join Science Olympiad </h1>
               <br></br>
-           <h1 style={{zoom: '200%'}}> General Volunteer Sign-Up </h1>
-           <br></br>
-           Information will be added soon!
-          </p>
+                        1. Go to <a href='https://engagesupport.campuslabs.com/hc/en-us'> https://engagesupport.campuslabs.com/hc/en-us</a> (Engage).
+                <br>
+                </br>
+                  2. Login using your Georgia Tech Email.
+                  <br>
+                  </br>
+                  3. Click join 
+                  <br>
+                  </br>
+                  4. Search Science Olympiad
+                  <br></br>
+                  <br></br>
+              <h1 className="font-bold"> General Volunteer Sign-Up </h1>
+              <br></br>
+              Information will be added soon!
+            </p> */}
+          <div className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-8 shadow-2xl shadow-darkOrange">
+              <h1 className="font-bold text-4xl">Join Science Olympiad</h1>
+              <span>1. Go to </span><a href="https://engagesupport.campuslabs.com/hc/en-us" target="_blank" className="hover:text-darkOrange underline">Engage</a>
+              <br />
+              <p>2. Login using your Georgia Tech email </p>
+              <p>3. Click join </p>
+              <p>4. Search Science Olympiad </p>
+              <br />
+              <h1 className="font-bold text-4xl">General Volunteer Sign-Up</h1>
+              <p> Information will be added soon! </p>
+        </div>
+          </div>
         </main>
     </>
   )
