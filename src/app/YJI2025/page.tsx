@@ -56,10 +56,39 @@ export default function CurrentTournament() {
           
         </div> */}
         <p className="bg-lightOrange text-black border-4 border-black text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGgaHX6D247qVS7Q4jd7WJ4az5cyqaj-XIQQ1VPfxAYf80jw/viewform" target="_blank" className="underline font-bold text-2xl lg:text-4xl"> Interest Form </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSftYdiG5C9d8CfHPMhuwKC0Rz0MbJW_Xh9rw1TLxQEoH1Ze-Q/viewform" target="_blank" className="underline font-bold text-2xl lg:text-4xl"> Sign-Up Form </a>
             <br /><br />
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGgaHX6D247qVS7Q4jd7WJ4az5cyqaj-XIQQ1VPfxAYf80jw/viewform" width="100%" height="750">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftYdiG5C9d8CfHPMhuwKC0Rz0MbJW_Xh9rw1TLxQEoH1Ze-Q/viewform" width="100%" height="750">Loading…</iframe>
+        </p>
+        <div className=" bg-darkOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
+          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">FAQ</h2>
+          <p className="text-xl">
+          <span className="font-bold">Q: </span>How many teams will be able to participate?
+          <br />
+          <span className="font-bold">A: </span>Due to logistical constraints, we will only be able to accept 50 Division C teams and 30 Division B teams. In the case we receive more sign-ups on the registration form than we are able to support, spots will be allotted on a first-come first-served basis.
+          <br />
+          <br />
+          <span className="font-bold">Q: </span> How many teams per school are allowed? 
+          <br />
+          <span className="font-bold">A: </span>We can guarantee 2 teams per school per division (meaning schools with both B and C programs will be allowed a total of 4 teams) up to the division limits mentioned above. We may allow more than 2 teams per school on a case-by-case basis. On the registration form, you will be able to indicate how many teams you'd like to bring, but again, we will only be able to guarantee 2 teams at the time registration opens.
+          <br />
+          <br />
+          <span className="font-bold">Q:</span> When does registration start?
+          <br />
+          <span className="font-bold">A: </span>Registration will open Monday, September 2nd. We will send out a follow-up email with a link to the registration form once it officially opens and post the form on our website.
+          <br />
+          <br />
+          <span className="font-bold">Q: </span> When does registration close?
+          <br />
+          <span className="font-bold">A: </span>Registration will close Friday, December 13th.
+          <br />
+          <br />
+          <span className="font-bold">Q: </span> What is the registration fee per team?
+          <br />
+          <span className="font-bold">A: </span>We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form.
+          <br />
           </p>
+        </div>
     </div>
     </>
   )
