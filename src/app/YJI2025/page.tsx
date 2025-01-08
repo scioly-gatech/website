@@ -117,8 +117,8 @@ export default function CurrentTournament() {
           <ul className="w-full" id="questions_answers">
             {
               questions.map((item, i) => 
-                <div>
-                  <li key={i} className="pl-8 font-bold text-3xl bg-orange-300 py-4 w-full hover: cursor-pointer " onClick={() => showAnswer(i)}>{item.question}</li>
+                <div key={i}>
+                  <li className="pl-8 font-bold text-3xl bg-orange-300 py-4 w-full hover: cursor-pointer " onClick={() => showAnswer(i)}>{item.question}</li>
                   {i != 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> {item.answer} </li>}
                   {i == 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form. <br /><br />We will be accepting checks made payable to Georgia Tech. The check MUST include Science Olympiad @ Georgia Tech in the memo line for it to be accepted. Please send the check to: 
                   <br/><br/>
