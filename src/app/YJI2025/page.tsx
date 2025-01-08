@@ -5,10 +5,69 @@ import { Lora } from 'next/font/google'
 import Image from 'next/image'
 import Script from 'next/script'
 import { ReactDOM } from 'react'
+import { AiFillStepForward } from 'react-icons/ai'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
 export default function CurrentTournament() {
+
+  //When question is clicked, show corresponding answer function 
+  function showAnswer(id: number) {
+    if (typeof(document) !== 'undefined') {
+      const answer = document.getElementById('answer' + id) as HTMLElement
+      answer.classList.toggle('hidden')
+      answer.classList.toggle('flex')
+    } 
+  }
+
+  const questions = [
+    {
+      key: 1,
+      question: "How many teams will be able to participate?",
+      answer: "Due to logistical constraints, we will only be able to accept 50 Division C teams and 30 Division B teams. In the case we receive more sign-ups on the registration form than we are able to support, spots will be allotted on a first-come first-served basis."
+    },
+    {
+      key: 2,
+      question: "How many teams per school are allowed?",
+      answer: "We can guarantee 2 teams per school per division (meaning schools with both B and C programs will be allowed a total of 4 teams) up to the division limits mentioned above. We may allow more than 2 teams per school on a case-by-case basis. On the registration form, you will be able to indicate how many teams you'd like to bring, but again, we will only be able to guarantee 2 teams at the time registration opens."
+
+    },
+    {
+      key: 3,
+      question: "When does registration start?",
+      answer: "Registration will open Monday, September 2nd. We will send out a follow-up email with a link to the registration form once it officially opens and post the form on our website."
+    },
+    {
+      key: 4,
+      question: "When does registration close?",
+      answer: "Registration will close Friday, December 13th."
+    },
+    {
+      key: 5,
+      question: "What is the registration fee per team?",
+      answer: "e payable to Georgia Tech. The check MUST include Science Olympiad @ Georgia Tech in the memo line for it to be accepted. Please send the check to:"
+    },
+    {
+      key: 6,
+      question: "I need an invoice for payment!",
+      answer: "Email scioly.gatech@gmail.com if you would need an invoice for payment."
+    }
+
+    // Harsha Gaddipati
+    // 326032 Georgia Tech Station
+    // Atlanta, GA 30332-1400
+
+    // Additionally, for those schools that have requested more than 2 teams, please only pay for the first 2 teams at this time. If we can accept more than 2 teams per school, we will send out more information to let you know this is the case. The price of any additional teams we are able to accept will still be considered early bird ($110/team) as long as the form was filled out with the correct number of teams by the early bird deadline."
+
+  ]
+
+  const answers=[
+    {
+      key: 1,
+      answer:"OSIDJFIOSDJF"
+    }
+  ]
+
   return (
     <>
     <Script
@@ -42,52 +101,36 @@ export default function CurrentTournament() {
         </motion.div>
         </AnimatePresence>
       </div>
-        <div className="text-blackborder-4 border-black bg-darkOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
-          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">We will be hosting the second annual Yellow Jacket Invitational on February 1st, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
+        <div className="text-blackborder-4 border-black bg-orange-300 flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
+          <h2 className="text-3xl m-2 p-2 text-center font-bold">We will be hosting the second annual Yellow Jacket Invitational on February 1st, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
+          <h3 className="text-2xl text-center font-semibold underline">Unfortunately, Div B registration is now closed due to reaching the max team limit (updated on October 23 2024)</h3>
+          <div></div>
+          <h3 className="text-2xl text-center font-semibold underline">Unfortunately, Div C registration is now closed due to reaching the max team limit (updated on October 29 2024)</h3>
         </div>
-        {/* <div className="text-blackborder-4 border-black bg-lightOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
-          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">
-            <h1> Interest Form </h1>
-            <br>
-            </br>
-          <iframe height="700px" width="800px" src="https://docs.google.com/forms/d/e/1FAIpQLSfGgaHX6D247qVS7Q4jd7WJ4az5cyqaj-XIQQ1VPfxAYf80jw/viewform">
-          </iframe>
-          </h2>
-          
-        </div> */}
-        <p className="bg-lightOrange text-black border-4 border-black text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSftYdiG5C9d8CfHPMhuwKC0Rz0MbJW_Xh9rw1TLxQEoH1Ze-Q/viewform" target="_blank" className="underline font-bold text-2xl lg:text-4xl"> Sign-Up Form </a>
-            <br /><br />
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftYdiG5C9d8CfHPMhuwKC0Rz0MbJW_Xh9rw1TLxQEoH1Ze-Q/viewform" width="100%" height="750">Loading…</iframe>
-        </p>
-        <div className=" bg-darkOrange flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
-          <h2 className="text-3xl font-bold m-2 border-black border-4 p-2 text-center">FAQ</h2>
-          <p className="text-xl">
-          <span className="font-bold">Q: </span>How many teams will be able to participate?
-          <br />
-          <span className="font-bold">A: </span>Due to logistical constraints, we will only be able to accept 50 Division C teams and 30 Division B teams. In the case we receive more sign-ups on the registration form than we are able to support, spots will be allotted on a first-come first-served basis.
-          <br />
-          <br />
-          <span className="font-bold">Q: </span> How many teams per school are allowed? 
-          <br />
-          <span className="font-bold">A: </span>We can guarantee 2 teams per school per division (meaning schools with both B and C programs will be allowed a total of 4 teams) up to the division limits mentioned above. We may allow more than 2 teams per school on a case-by-case basis. On the registration form, you will be able to indicate how many teams you'd like to bring, but again, we will only be able to guarantee 2 teams at the time registration opens.
-          <br />
-          <br />
-          <span className="font-bold">Q:</span> When does registration start?
-          <br />
-          <span className="font-bold">A: </span>Registration will open Monday, September 2nd. We will send out a follow-up email with a link to the registration form once it officially opens and post the form on our website.
-          <br />
-          <br />
-          <span className="font-bold">Q: </span> When does registration close?
-          <br />
-          <span className="font-bold">A: </span>Registration will close Friday, December 13th.
-          <br />
-          <br />
-          <span className="font-bold">Q: </span> What is the registration fee per team?
-          <br />
-          <span className="font-bold">A: </span>We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form.
-          <br />
-          </p>
+
+        {/* Inspiration from Stack Overflow: https://stackoverflow.com/questions/39818569/pass-id-through-on-click-react-js */}
+
+        {/*  FAQs */}
+        <div className=" bg-lightOrange flex flex-col items-center p-4 shadow-2xl shadow-white">
+          <h2 className="text-3xl font-bold m-2 mb-4 border-black border-4 p-2">FAQs</h2>
+
+          <ul className="w-full" id="questions_answers">
+            {
+              questions.map((item, i) => 
+                <div>
+                  <li className="pl-8 font-bold text-3xl bg-orange-300 py-4 w-full hover: cursor-pointer " onClick={() => showAnswer(i)}>{item.question}</li>
+                  {i != 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> {item.answer} </li>}
+                  {i == 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form. <br /><br />We will be accepting checks made payable to Georgia Tech. The check MUST include Science Olympiad @ Georgia Tech in the memo line for it to be accepted. Please send the check to: 
+                  <br/><br/>
+                  Harsha Gaddipati<br/>
+                  326032 Georgia Tech Station<br/>
+                  Atlanta, GA 30332-1400<br/><br/>
+                  Additionally, for those schools that have requested more than 2 teams, please only pay for the first 2 teams at this time. If we can accept more than 2 teams per school, we will send out more information to let you know this is the case. The price of any additional teams we are able to accept will still be considered early bird ($110/team) as long as the form was filled out with the correct number of teams by the early bird deadline.
+                   </li>}
+                </div>
+              )
+            }
+          </ul>
         </div>
     </div>
     </>
