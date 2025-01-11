@@ -18,8 +18,8 @@ export default function Profile(props: ProfileProps) {
           <Image
             src={props.imgRoute}
             alt={altTag}
-            fill={true}
-            style={{ borderRadius: '50%'}}
+            fill
+            style={{ borderRadius: '50%', objectFit:"cover"}}
           />
         </div>
         <figcaption className="sr-only">{altTag}</figcaption>
