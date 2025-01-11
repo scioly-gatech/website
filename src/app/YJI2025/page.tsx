@@ -103,9 +103,9 @@ export default function CurrentTournament() {
       </div>
         <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
           <h2 className="text-3xl m-2 p-2 text-center font-bold">We will be hosting the second annual Yellow Jacket Invitational on February 1st, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
-          <h3 className="text-2xl text-center font-semibold underline">Unfortunately, Div B registration is now closed due to reaching the max team limit (updated on October 23 2024)</h3>
+          <h3 className="text-xl text-center font-semibold">Unfortunately, Div B registration is now closed due to reaching the max team limit (updated on October 23 2024)</h3>
           <div></div>
-          <h3 className="text-2xl text-center font-semibold underline">Unfortunately, Div C registration is now closed due to reaching the max team limit (updated on October 29 2024)</h3>
+          <h3 className="text-xl text-center font-semibold">Unfortunately, Div C registration is now closed due to reaching the max team limit (updated on October 29 2024)</h3>
         </div>
 
         {/* Inspiration from Stack Overflow: https://stackoverflow.com/questions/39818569/pass-id-through-on-click-react-js */}
