@@ -41,7 +41,7 @@ const VirtualWorkshop: React.FC = () => {
             className="text-3xl font-bold flex justify-center items-center"
           >
               <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
-              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Virtual Workshops</h1>
+              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Virtual Workshops!!</h1>
               </div>
         </motion.div>
         </AnimatePresence>
