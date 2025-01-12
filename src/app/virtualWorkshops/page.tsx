@@ -4,21 +4,54 @@ import React from 'react';
 import { Container, Typography, Box, Card, CardContent, Button, List, ListItem, ListItemText, Link } from '@mui/material';
 import { workshopData } from './workshopData';
 import DownloadIcon from '@mui/icons-material/Download';
+import Script from 'next/script'
+import { motion, AnimatePresence } from "framer-motion"
+import { Lora } from 'next/font/google'
+const play = Lora({ subsets: ['latin'], display: "swap" })
 
 const VirtualWorkshop: React.FC = () => {
   // Create workshop IDs for linking
   const getWorkshopId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
-      <Typography variant="h3" component="h1" gutterBottom>
-        Virtual Workshops
-      </Typography>
+    <div>
+    <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
+      />
 
+      <Script strategy="lazyOnload" id="main-script">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RQ1XF1G76X', {
+          page_path: window.location.pathname,
+          });
+      `}
+      </Script>
+      
+    <div className="dark:bg-black bg-slate-200 w-full">
+      <div className="text-white bg-black p-12 w-full">
+        <AnimatePresence>
+        <motion.div
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{duration:1}}
+            className="text-3xl font-bold flex justify-center items-center"
+          >
+              <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
+              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Virtual Workshops</h1>
+              </div>
+        </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+    <Container maxWidth="lg" sx={{ py: 2 }}>
       {/* Table of Contents */}
       <Card sx={{ mb: 4 }}>
         <CardContent>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h4" align="center" gutterBottom>
             Table of Contents
           </Typography>
           <List>
@@ -118,6 +151,7 @@ const VirtualWorkshop: React.FC = () => {
         </Box>
       ))}
     </Container>
+    </div>
   );
 };
 
