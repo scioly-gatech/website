@@ -93,8 +93,8 @@ export default function Navbar() {
                             <Link href="/pastTournaments" className="font-bold my-1"> Past Tournaments </Link>
                         </li>
                         <li>
-                            <Link href="/contactUs" className="font-bold flex flex-row"> 
-                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                            <Link href="/virtualWorkshops" className="font-bold flex flex-row"> 
+                                Workshop Recordings 
                             </Link>
                         </li>
                     </ul>
@@ -142,6 +142,10 @@ export default function Navbar() {
 
                 <div id="past" className="m-2 mx-5 hover:text-lightOrange">
                     <Link href="/pastTournaments" className="text-xl">Past Tournaments</Link>
+                </div>
+
+                <div id="past" className="m-2 mx-5 hover:text-lightOrange">
+                    <Link href="/virtualWorkshops" className="text-xl">Workshop Recordings</Link>
                 </div>
             </ul>
         </nav>

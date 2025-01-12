@@ -2,10 +2,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
-import Image from 'next/image'
 import Script from 'next/script'
-import { ReactDOM } from 'react'
-import { AiFillStepForward } from 'react-icons/ai'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
