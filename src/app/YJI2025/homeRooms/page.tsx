@@ -43,7 +43,7 @@ export default function HomeRooms() {
         </AnimatePresence>
       </div>
         <p className="bg-lightOrange text-center m-4 lg:m-12 lg:mx-48 shadow-darkBlue dark:shadow-white shadow-2xl p-8"> 
-            <a href="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=1488145442#gid=1488145442" target="_blank" className="sm:text-2xl lg:text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black bg-white hover:opacity-50"> Home Rooms Sheet</a>
+            <a href="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=1488145442#gid=1488145442" target="_blank" className="sm:text-2xl lg:text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black bg-white hover:opacity-50"> Home Rooms Link</a>
             <iframe src="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=1488145442#gid=1488145442" width="90%" height="750" className="mt-8 md:ml-0 lg:ml-24"></iframe>
         </p>
     </div>

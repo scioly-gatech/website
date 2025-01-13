@@ -40,31 +40,47 @@ export default function page() {
                 className="text-3xl font-bold flex justify-center items-center"
                 >
                     <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
-                    <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Makerspace Tours</h1>
+                    <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>General Info</h1>
                     </div>
             </motion.div>
             </AnimatePresence>
       </div>
-
-        {/** Documents   */}
         
-        <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
-            We will providing makerspace tours to Science Olympiad competitors during the invitational. Registration is limited for each makerspace tour, so <span className="font-bold"> all registrants are expected to attend their respective tours. </span> Coaches with students who miss their tours will be contacted after the tournament. <span className="italic">For more information, please consult the <a href="/states2024/info" className="underline hover:opacity-50">Tournament Information</a> document.</span>
+        <p className="bg-lightBlue text-black text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg font-bold"> 
+            Please see the <a href="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" className="underline hover:cursor-pointer hover:opacity-50">tournament communiques</a> for current information. If you have any further questions, feel free to contact us at scioly.gatech@gmail.com!
 
         </p>
-        {/** Registration      */}
-        <div id="mill-tour" className="bg-darkOrange text-white text-center text-xl lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
-            <h2 className="font-bold text-4xl"> Registration </h2>
+
+        <div className="bg-lightOrange text-black text-center text-xl lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
+            <h2 className="text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black bg-white mx-12"> Reminders </h2>
             <br />
-            <p className="text-xl text-darkBlue font-semibold"> Please put your school in the comment field when you sign up. Any sign-ups that do not list the school they are affiliated with will be removed. 
-            </p>
-            <br />
-            <p className="text-black">Students should show up 5 minutes before the listed time outside CULC 144 and 152 (where awards are occurring) at the time the tour is scheduled to start. There will be no waiting for students that arrive late. </p>
-            <br />
-            <div className="my-4">
-                <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-48517559-georgia#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
-          </div> 
+            <ul className="font-semibold">
+                <li >We will be using <span className="font-bold underline">National</span> level rules for all events.</li>
+                <br />
+                <li className="">The awards entry period will begin at 5:15 PM and will end at 5:45 PM. We anticipate awards ending somewhere between 7:00 PM and 7:30 PM. This will be updated on the schedule sheet in the coming days.
+                </li>
+                <br />
+                <li>For day-of communications, we will be setting up a Remind class. The code to join will be shared at check-in. Additionally, we will have dedicated volunteers assigned to each building with homerooms/event rooms who will act as direct liaisons with tournament HQ, so there will always be an SO@GT representative nearby! <br /><span className="font-bold">Please note: we will not be checking the official email (scioly.gatech@gmail.com) the day of the tournament.</span>
+                </li>
+                <br />
+                <li>We will be running two <span className="font-bold">trial events</span>, Protein Modeling (exam only) and Engineering CAD. Both events will be run for both Division B and C. Please note that for Division B Protein Modeling, the same rules will be used as Division C. You may bring up to 2 alternates who may compete in these trial events (full team members may compete in trial events as well).
+                </li>
+                <br />
+                <li>An invoice containing payment details has been sent to you on or around November 8th. All checks should be made payable to Georgia Tech with Science Olympiad @ Georgia Tech in the memo sent to: 
+                  <br/><br/>
+                  Harsha Gaddipati<br/>
+                  326032 Georgia Tech Station<br/>
+                  Atlanta, GA 30332-1400<br/><br/>
+                  If you would prefer to pay registration fees online rather than mailing a check, you can do so using our PayPal account: <span className="font-bold">@ScienceOlympiadGT</span>. Payment status can be found <a href="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=0#gid=0" className="underline hover:cursor-pointer hover:opacity-50">here</a>. If you have sent in payment but it is not marked as received, please reach out as soon as possible.
+                </li>
+            </ul>
+            
         </div>
+
+        <p className="bg-lightBlue text-center m-4 lg:m-12 lg:mx-48 shadow-darkBlue dark:shadow-white shadow-2xl p-8"> 
+            <a href="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" target="_blank" className="text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black bg-white hover:opacity-50"> Tournament Communiques Link</a>
+            <iframe src="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" width="90%" height="750" className="mt-8 md:ml-0 lg:ml-24"></iframe>
+        </p>
       </main>
     </>
   )

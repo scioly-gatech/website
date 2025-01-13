@@ -100,6 +100,11 @@ export default function Navbar() {
                             <Link href="/YJI2025" className="font-bold py-3"> YJI 2025 </Link>
                         </li>
                         <li>
+                            <Link href="/YJI2025/generalInfo" className="flex flex-row my-1 mx-3"> 
+                                <p> General Info </p>  
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="/YJI2025/schedules" className="flex flex-row my-1 mx-3"> 
                                 <p> Schedules </p>  
                             </Link>
@@ -161,6 +166,9 @@ export default function Navbar() {
                     <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/YJI2025" className="hover:text-lightOrange text-xl">YJI 2025</Link>
                         <ul id="YJI-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                            <li>
+                                <Link href="/YJI2025/generalInfo" className="hover:text-lightOrange text-xl"> General Info </Link>
+                            </li>
                             <li>
                                 <Link href="/YJI2025/schedules" className="hover:text-lightOrange text-xl"> Schedules </Link>
                             </li>
