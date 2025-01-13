@@ -37,7 +37,7 @@ const VirtualWorkshop: React.FC = () => {
         <motion.div
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:1}}
+            transition={{duration:0.5}}
             className="text-3xl font-bold flex justify-center items-center"
           >
               <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
