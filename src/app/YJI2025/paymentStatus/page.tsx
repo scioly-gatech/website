@@ -2,12 +2,13 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
+import Image from 'next/image'
 import Script from 'next/script'
+import { ReactDOM } from 'react'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
-export default function CurrentTournament() {
-
+export default function Payments() {
   return (
     <>
     <Script
@@ -36,20 +37,15 @@ export default function CurrentTournament() {
             className="text-3xl font-bold flex justify-center items-center"
           >
               <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
-              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>YJI 2025</h1>
+              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Payment Status</h1>
               </div>
         </motion.div>
         </AnimatePresence>
       </div>
-        <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
-          <h2 className="text-3xl m-2 p-2 text-center font-bold">We will be hosting the second annual Yellow Jacket Invitational on February 1st, 2025! <br /><br /> For the first time, we will be have both division B and C teams competing. </h2>
-          <h3 className="text-xl text-center font-semibold">Unfortunately, Div B registration is now closed due to reaching the max team limit (updated on October 23 2024)</h3>
-          <div></div>
-          <h3 className="text-xl text-center font-semibold">Unfortunately, Div C registration is now closed due to reaching the max team limit (updated on October 29 2024)</h3>
-          <br /><br />
-          <h3 className="text-2xl text-center font-semibold">Please visit our <a href="/YJI2025/generalInfo" className="underline hover:opacity-50 cursor-pointer">General Info page</a> for more information!</h3>
-        </div>
-
+        <p className="bg-lightOrange text-center m-4 lg:m-12 lg:mx-48 shadow-darkBlue dark:shadow-white shadow-2xl p-8"> 
+            <a href="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=0#gid=0" target="_blank" className="sm:text-2xl lg:text-3xl font-bold underline md:no-underline md:border-black md:border-4 p-2 text-black bg-white hover:opacity-50"> Payment Status Sheet</a>
+            <iframe src="https://docs.google.com/spreadsheets/d/1kOYBfp-Gi84R9hhx1bvS9u9bnkPBmegz1RxKiB1jpck/edit?gid=0#gid=0" width="90%" height="750" className="mt-8 md:ml-0 lg:ml-24"></iframe>
+        </p>
     </div>
     </>
   )

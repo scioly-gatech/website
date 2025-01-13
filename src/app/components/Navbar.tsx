@@ -15,9 +15,14 @@ export default function Navbar() {
             const contactHover = document.getElementById('contact-dropdown-title') as HTMLElement
             contactHover.addEventListener('mouseenter', showContactDropdown)
             contactHover.addEventListener('mouseleave', hideContactDropdown)
+            const yjiHover = document.getElementById('YJI-dropdown-title') as HTMLElement
+            yjiHover.addEventListener('mouseenter', showYJIDropdown)
+            yjiHover.addEventListener('mouseleave', hideYJIDropdown)
         }   
     }, [])
 
+    //TODO: Make these functions more resusable. Impracticle to create individual dropdowns for each part of the header. 
+    // Helper functions to show and hide the "Contact Us" dropdown menu
     function showContactDropdown() {
         if (typeof(document) !== 'undefined') {
             const contactDrop = document.getElementById('contact-dropdown') as HTMLElement
@@ -34,6 +39,23 @@ export default function Navbar() {
         }
     }
 
+    // Helper functions to show and hide the "YJI" dropdown menu
+    function showYJIDropdown() {
+        if (typeof(document) !== 'undefined') {
+            const yjiDrop = document.getElementById('YJI-dropdown') as HTMLElement
+            yjiDrop.classList.remove('hidden')
+            yjiDrop.classList.add('flex')
+        }
+    }
+
+    function hideYJIDropdown() {
+        if (typeof(document) !== 'undefined') {
+            const yjiDrop = document.getElementById('YJI-dropdown') as HTMLElement
+            yjiDrop.classList.add('hidden')
+            yjiDrop.classList.remove('flex')
+        }
+    }
+
     function toggleSmallNav() {
         if (typeof(document) !== 'undefined') {
             const smallNav = document.getElementById('smallNav') as HTMLElement
@@ -41,6 +63,8 @@ export default function Navbar() {
             smallNav.classList.toggle('fixed')
         }
     }
+
+    //TODO: Create a singular nav bar instead of 2 independent ones. 
 
     //There is a small nav bar intended for devices with smaller screens. That navbar includes the hamburger menu, and will not usually be there. The larger nav bar is for larger devices like computers and is across the top page. 
   return (
@@ -74,6 +98,26 @@ export default function Navbar() {
                         </li>
                         <li>
                             <Link href="/YJI2025" className="font-bold py-3"> YJI 2025 </Link>
+                        </li>
+                        <li>
+                            <Link href="/YJI2025/schedules" className="flex flex-row my-1 mx-3"> 
+                                <p> Schedules </p>  
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/YJI2025/homeRooms" className="flex flex-row my-1 mx-3"> 
+                                <p> Home Rooms </p>  
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/YJI2025/paymentStatus" className="flex flex-row my-1 mx-3"> 
+                                <p> Payment Status </p>  
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/YJI2025/faq" className="flex flex-row my-1 mx-3"> 
+                                <p> FAQs </p>  
+                            </Link>
                         </li>
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -113,9 +157,23 @@ export default function Navbar() {
                     <Link href="/" className="text-xl">Home</Link>
                 </li>
 
-                <div id="states-dropdown-title">   
+                <div id="YJI-dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
                         <Link href="/YJI2025" className="hover:text-lightOrange text-xl">YJI 2025</Link>
+                        <ul id="YJI-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                            <li>
+                                <Link href="/YJI2025/schedules" className="hover:text-lightOrange text-xl"> Schedules </Link>
+                            </li>
+                            <li>
+                                <Link href="/YJI2025/homeRooms" className="hover:text-lightOrange text-xl"> Home Rooms </Link>
+                            </li>
+                            <li>
+                                <Link href="/YJI2025/paymentStatus" className="hover:text-lightOrange text-xl"> Payment Status </Link>
+                            </li>
+                            <li>
+                                <Link href="/YJI2025/faq" className="hover:text-lightOrange text-xl"> FAQs </Link>
+                            </li>
+                        </ul>
                     </li>
                 </div>
 
