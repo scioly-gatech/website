@@ -47,7 +47,7 @@ export default function page() {
       </div>
         
         <p className="bg-lightBlue text-black text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg font-bold"> 
-            Please see the <a href="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" className="underline hover:cursor-pointer hover:opacity-50">tournament communiques</a> for current information. If you have any further questions, feel free to contact us at scioly.gatech@gmail.com!
+            Please see the <a href="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" className="underline hover:cursor-pointer hover:opacity-50" target="_blank">tournament communiques</a> for current information. If you have any further questions, feel free to contact us at scioly.gatech@gmail.com!
 
         </p>
 
