@@ -18,6 +18,9 @@ export default function Navbar() {
             const yjiHover = document.getElementById('YJI-dropdown-title') as HTMLElement
             yjiHover.addEventListener('mouseenter', showYJIDropdown)
             yjiHover.addEventListener('mouseleave', hideYJIDropdown)
+            const statesHover = document.getElementById('States-dropdown-title') as HTMLElement
+            statesHover.addEventListener('mouseenter', showStatesDropdown)
+            statesHover.addEventListener('mouseleave', hideStatesDropdown)
         }   
     }, [])
 
@@ -55,6 +58,23 @@ export default function Navbar() {
             yjiDrop.classList.remove('flex')
         }
     }
+
+        // Helper functions to show and hide the "State Tournament" dropdown menu
+        function showStatesDropdown() {
+            if (typeof(document) !== 'undefined') {
+                const yjiDrop = document.getElementById('States-dropdown') as HTMLElement
+                yjiDrop.classList.remove('hidden')
+                yjiDrop.classList.add('flex')
+            }
+        }
+    
+        function hideStatesDropdown() {
+            if (typeof(document) !== 'undefined') {
+                const yjiDrop = document.getElementById('States-dropdown') as HTMLElement
+                yjiDrop.classList.add('hidden')
+                yjiDrop.classList.remove('flex')
+            }
+        }
 
     function toggleSmallNav() {
         if (typeof(document) !== 'undefined') {
@@ -125,6 +145,14 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
+                            <Link href="/states2025" className="font-bold py-3"> States 2025 </Link>
+                        </li>
+                        <li>
+                            <Link href="/states2025/esApp" className="flex flex-row my-1 mx-3"> 
+                                <p> ES App </p>  
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                         </li>
                          <li>
@@ -185,6 +213,16 @@ export default function Navbar() {
                     </li>
                 </div>
 
+                <div id="States-dropdown-title">   
+                    <li className="m-2 mx-6 flex-col items-center">
+                        <Link href="/states2025" className="hover:text-lightOrange text-xl">States 2025</Link>
+                        <ul id="States-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                            <li>
+                                <Link href="/states2025/esApp" className="hover:text-lightOrange text-xl"> ES Application </Link>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
                 
                 <div id="contact-dropdown-title">   
                     <li className="m-2 mx-6 flex-col items-center">
