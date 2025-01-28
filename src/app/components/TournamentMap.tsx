@@ -21,6 +21,11 @@ export interface SchoolHomeRoom {
   homeRooms: string[];
 }
 
+export interface ActivityRoom {
+  activityName: string;
+  activityRooms: string[];
+}
+
 export interface Location {
   position: [number, number];
   label: string;
@@ -35,6 +40,7 @@ export interface MakerspaceLocation extends Location {
 export interface TournamentLocation extends Location {
   events?: EventRoom[];
   schoolHomeRooms?: SchoolHomeRoom[];
+  activityRooms? : ActivityRoom[];
   mapLink?: string;
 }
 
@@ -105,6 +111,23 @@ export default function TournamentMap({
                   </ul>
                 </>
               )}
+              {tournamentLocation.activityRooms && (
+                <>
+                  <p className="font-bold text-lg/6">Activities</p>
+
+                  <ul>
+                    {tournamentLocation.activityRooms.map(
+                      ({ activityName, activityRooms }) => {
+                        return (
+                          <li
+                            key={activityName}
+                          >{`${activityName} - ${activityRooms.join(", ")}`}</li>
+                        );
+                      }
+                    )}
+                  </ul>
+                </>
+              )}
               <br />
               <a href={tournamentLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
             </Popup>
@@ -115,39 +138,6 @@ export default function TournamentMap({
               className="custom-tooltip custom-tooltip-tournament"
             >
               {tournamentLocation.label}
-            </Tooltip>
-          </Marker>
-        );
-      })}
-
-      {makerspaceLocations.map((makerspaceLocation) => {
-        const popupString = makerspaceLocation.fullName
-          ? `${makerspaceLocation.label} (${makerspaceLocation.fullName}) Tour`
-          : `${makerspaceLocation.label} Tour`;
-
-        return (
-          <Marker
-            position={makerspaceLocation.position}
-            key={makerspaceLocation.label}
-          >
-            <Popup>
-              <p className="font-bold text-lg">
-                <a
-                  href={`/states2024/${makerspaceLocation.hrefId}`}
-                  className="hover:opacity-50"
-                >
-                  {popupString}
-                </a>
-              </p>
-              <a href={makerspaceLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
-            </Popup>
-            <Tooltip
-              permanent
-              direction="top"
-              offset={[-15, 75]}
-              className="custom-tooltip custom-tooltip-makerspace"
-            >
-              {makerspaceLocation.label}
             </Tooltip>
           </Marker>
         );
