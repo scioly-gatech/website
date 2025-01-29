@@ -11,6 +11,7 @@ import {
   tournamentLocations,
   makerspaceLocations,
   transportLocations,
+  foodLocations
 } from "../../../../../data/locations/state2024Locations";
 import { LatLngExpression } from "leaflet";
 
@@ -108,6 +109,7 @@ export default function Page() {
             tournamentLocations={tournamentLocations}
             makerspaceLocations={makerspaceLocations}
             transportLocations={transportLocations}
+            foodLocations={foodLocations}
             myLocation={myLocation}
           />
         </div>

@@ -2,6 +2,7 @@ import {
   MakerspaceLocation,
   TransportLocation,
   TournamentLocation,
+  FoodLocation
 } from "@/app/components/TournamentMap";
 
 const tournamentLocations: TournamentLocation[] = [
@@ -158,4 +159,6 @@ const transportLocations: TransportLocation[] = [
     mapLink: "https://www.google.com/maps/place/33%C2%B046'31.1%22N+84%C2%B023'45.5%22W/@33.7753134,-84.3985424,17z/data=!3m1!4b1!4m4!3m3!8m2!3d33.775309!4d-84.3959675?entry=ttu",
   },
 ];
-export { tournamentLocations, makerspaceLocations, transportLocations };
+
+const foodLocations: FoodLocation[] = []
+export { tournamentLocations, makerspaceLocations, transportLocations, foodLocations };

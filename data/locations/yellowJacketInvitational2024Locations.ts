@@ -2,6 +2,7 @@ import {
   MakerspaceLocation,
   TransportLocation,
   TournamentLocation,
+  FoodLocation
 } from "@/app/components/TournamentMap";
 
 const tournamentLocations: TournamentLocation[] = [
@@ -178,4 +179,5 @@ const transportLocations: TransportLocation[] = [
     description: "Location for drop off",
   },
 ];
+
 export { tournamentLocations, makerspaceLocations, transportLocations };
