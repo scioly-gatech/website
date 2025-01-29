@@ -201,15 +201,6 @@ const tournamentLocations: TournamentLocation[] = [
     ],
   },
   {
-    label: "Sustainable Education",
-    mapLink: "https://www.google.com/maps/place/O.+Lamar+Allen+Sustainable+Education+Building/@33.7761191,-84.3996065,18.78z/data=!4m6!3m5!1s0x88f5048a2ca38d3b:0xb548a71368636f38!8m2!3d33.776197!4d-84.3988033!16s%2Fg%2F11b6xm6hx7?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77626756857958, -84.39882918523382],
-    events: [
-      { eventName: "Engineering CAD", eventRooms: ["121"] },
-      { eventName: "Protein Modeling", eventRooms: ["102"] },
-    ],
-  },
-  {
     label: "O'Keefe Gym",
     mapLink: "https://www.google.com/maps/place/O'Keefe+Gym/@33.7794362,-84.3941487,17z/data=!3m1!4b1!4m6!3m5!1s0x88f50460c8400001:0x609877aed89fe965!8m2!3d33.7794362!4d-84.3915738!16s%2Fg%2F11cs180q1l?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
     position: [33.77961452582521, -84.39161671825269],
