@@ -192,12 +192,12 @@ const tournamentLocations: TournamentLocation[] = [
     ],
   },
   {
-    label: "Sustainable Education",
-    mapLink: "https://www.google.com/maps/place/O.+Lamar+Allen+Sustainable+Education+Building/@33.7761191,-84.3996065,18.78z/data=!4m6!3m5!1s0x88f5048a2ca38d3b:0xb548a71368636f38!8m2!3d33.776197!4d-84.3988033!16s%2Fg%2F11b6xm6hx7?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77626756857958, -84.39882918523382],
+    label: "Boggs",
+    mapLink: "https://www.google.com/maps/place/Gilbert+Hillhouse+Boggs+Building/@33.7757611,-84.4023174,16z/data=!3m1!4b1!4m6!3m5!1s0x88f5048963bf0de9:0xb9a8c30e4aaf1178!8m2!3d33.7757611!4d-84.3997425!16s%2Fg%2F11_qr2n_t?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77597510547729, -84.39980687592467],
     events: [
-      { eventName: "Engineering CAD", eventRooms: ["121"] },
-      { eventName: "Protein Modeling", eventRooms: ["102"] },
+      { eventName: "Engineering CAD", eventRooms: ["B5"] },
+      { eventName: "Protein Modeling", eventRooms: ["B9"] },
     ],
   },
   {
