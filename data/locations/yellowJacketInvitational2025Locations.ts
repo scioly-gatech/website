@@ -2,21 +2,32 @@ import {
   MakerspaceLocation,
   TransportLocation,
   TournamentLocation,
+  FoodLocation
 } from "@/app/components/TournamentMap";
 
 const tournamentLocations: TournamentLocation[] = [
   {
-    label: "East Architecture",
-    mapLink: "https://www.google.com/maps/place/East+Architecture+Building/@33.7761579,-84.4055308,15z/data=!3m1!4b1!4m6!3m5!1s0x88f50461f73d1e21:0xcb0416f07a761d41!8m2!3d33.7761583!4d-84.3952311!16s%2Fg%2F11cr_gm9y3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.776218438041454, -84.39499178593599],
+    label: "Boggs",
+    mapLink: "https://www.google.com/maps/place/Gilbert+Hillhouse+Boggs+Building/@33.7757611,-84.4023174,16z/data=!3m1!4b1!4m6!3m5!1s0x88f5048963bf0de9:0xb9a8c30e4aaf1178!8m2!3d33.7757611!4d-84.3997425!16s%2Fg%2F11_qr2n_t?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77597510547729, -84.39980687592467],
     events: [
-      { eventName: "Astronomy", eventRooms: ["123"] },
-      { eventName: "Reach for the Stars", eventRooms: ["123"] }
+      { eventName: "Engineering CAD", eventRooms: ["B5"] },
+      { eventName: "Protein Modeling", eventRooms: ["B9"] },
+    ],
+  },
+  {
+    label: "CoC",
+    mapLink: "https://www.google.com/maps/place/College+of+Computing/@33.7735466,-84.4062637,15z/data=!4m6!3m5!1s0x88f5048a69a04763:0xee74b8c342f891fa!8m2!3d33.7772356!4d-84.3973254!16s%2Fm%2F026fw2j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77769047534177, -84.39732736008136],
+    events: [
+      { eventName: "Codebusters", eventRooms: ["16"] },
+      { eventName: "Meteorology", eventRooms: ["17"] },
     ],
     schoolHomeRooms: [
-      { schoolName: "Tift County High School", homeRooms: ["107"] },
-      { schoolName: "The Westminster Schools", homeRooms: ["207"] },
-      { schoolName: "Upson Lee High School", homeRooms: ["309"] }
+      { schoolName: "Friendship Christian School", homeRooms: ["101"] },
+      { schoolName: "Innovation Academy", homeRooms: ["53"] },
+      { schoolName: "Sprayberry High School", homeRooms: ["102"] },
+      { schoolName: "Woodward Academy Upper School", homeRooms: ["52"] },
     ],
   },
   {
@@ -40,6 +51,29 @@ const tournamentLocations: TournamentLocation[] = [
     ]
   },
   {
+    label: "East Architecture",
+    mapLink: "https://www.google.com/maps/place/East+Architecture+Building/@33.7761579,-84.4055308,15z/data=!3m1!4b1!4m6!3m5!1s0x88f50461f73d1e21:0xcb0416f07a761d41!8m2!3d33.7761583!4d-84.3952311!16s%2Fg%2F11cr_gm9y3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.776218438041454, -84.39499178593599],
+    events: [
+      { eventName: "Astronomy", eventRooms: ["123"] },
+      { eventName: "Reach for the Stars", eventRooms: ["123"] }
+    ],
+    schoolHomeRooms: [
+      { schoolName: "Tift County High School", homeRooms: ["107"] },
+      { schoolName: "The Westminster Schools", homeRooms: ["207"] },
+      { schoolName: "Upson Lee High School", homeRooms: ["309"] }
+    ],
+  },
+  {
+    label: "Howey",
+    mapLink: "https://www.google.com/maps/place/Howey+Physics+Bldg,+Atlanta,+GA+30332/@33.7772352,-84.4076251,15z/data=!4m6!3m5!1s0x88f5048a4eae2249:0x1fb553e4ed731e06!8m2!3d33.777489!4d-84.3986032!16s%2Fg%2F1tctyd3j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.7776405764111, -84.3986783057815],
+    events: [
+      { eventName: "Disease Detectives", eventRooms: ["L3"] },
+      { eventName: "Wind Power", eventRooms: ["L4"] },
+    ],
+  },
+  {
     label: "IC",
     mapLink: "https://www.google.com/maps/place/Instructional+Center/@33.7754474,-84.4115495,15z/data=!3m1!4b1!4m6!3m5!1s0x88f5048ea3eb8fa1:0x3e4111b0dbacc6a6!8m2!3d33.7754478!4d-84.4012498!16s%2Fg%2F11c1n7f4t3?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
     position: [33.77550128156202, -84.40126053276917],
@@ -54,6 +88,22 @@ const tournamentLocations: TournamentLocation[] = [
       { schoolName: "American Heritage School (B/C)", homeRooms: ["209"] },
       { schoolName: "Fulton Science Academy (B/C)", homeRooms: ["205"] },
     ],
+  },
+  {
+    label: "Klaus",
+    mapLink: "https://www.google.com/maps/place/Klaus+Advanced+Computing+Building/@33.7770288,-84.4061148,15z/data=!3m1!4b1!4m6!3m5!1s0x87b781ec0ab42ea5:0x16eec927f37b40ec!8m2!3d33.7770292!4d-84.3958151!16s%2Fm%2F02vws0z?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.777180777225105, -84.39583656160448],
+    events: [
+      { eventName: "Dynamic Planet", eventRooms: ["2447"] },
+      { eventName: "Ecology", eventRooms: ["1456"] },
+      { eventName: "Entomology", eventRooms: ["1443"] },
+      { eventName: "Geologic Mapping", eventRooms: ["1447"] },
+      { eventName: "Optics", eventRooms: ["2456"] },
+    ],
+    activityRooms: [
+      { activityName: "SciOly Trivia", activityRooms: ["1443"]},
+      { activityName: "E-Sports", activityRooms: ["1447"]},
+    ]
   },
   {
     label: "Love",
@@ -75,6 +125,25 @@ const tournamentLocations: TournamentLocation[] = [
       { schoolName: "Duluth High School", homeRooms: ["3132"] },
       { schoolName: "Durham Academy Upper School", homeRooms: ["3133"] },
       { schoolName: "North Atlanta High School", homeRooms: ["2117"] },
+    ],
+  },
+  {
+    label: "Molecular Science & Engineering Building",
+    mapLink: "https://www.google.com/maps/place/Molecular+Sciences+And+Engineering/@33.7759997,-84.3971331,16z/data=!4m6!3m5!1s0x88f5048aa2160b4f:0x1701591279ef9cda!8m2!3d33.7798348!4d-84.3966424!16s%2Fg%2F11c3tjv98j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77987258678034, -84.3966265376535],
+    events: [
+      { eventName: "Air Trajectory", eventRooms: ["Atrium 4, G021, G011"] },
+      { eventName: "Anatomy and Physiology", eventRooms: ["G011"] },
+      { eventName: "Electric Vehicle", eventRooms: ["G021, Atrium 2, G011"] },
+      { eventName: "Scrambler", eventRooms: ["G021, Atrium 2, G011"] },
+    ],
+  },
+  {
+    label: "O'Keefe Gym",
+    mapLink: "https://www.google.com/maps/place/O'Keefe+Gym/@33.7794362,-84.3941487,17z/data=!3m1!4b1!4m6!3m5!1s0x88f50460c8400001:0x609877aed89fe965!8m2!3d33.7794362!4d-84.3915738!16s%2Fg%2F11cs180q1l?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77961452582521, -84.39161671825269],
+    activityRooms: [
+      { activityName: "Awards", activityRooms: ["Gym"] },
     ],
   },
   {
@@ -108,62 +177,12 @@ const tournamentLocations: TournamentLocation[] = [
     ],
   },
   {
-    label: "CoC",
-    mapLink: "https://www.google.com/maps/place/College+of+Computing/@33.7735466,-84.4062637,15z/data=!4m6!3m5!1s0x88f5048a69a04763:0xee74b8c342f891fa!8m2!3d33.7772356!4d-84.3973254!16s%2Fm%2F026fw2j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77769047534177, -84.39732736008136],
-    events: [
-      { eventName: "Codebusters", eventRooms: ["16"] },
-      { eventName: "Meteorology", eventRooms: ["17"] },
-    ],
-    schoolHomeRooms: [
-      { schoolName: "Friendship Christian School", homeRooms: ["101"] },
-      { schoolName: "Innovation Academy", homeRooms: ["53"] },
-      { schoolName: "Sprayberry High School", homeRooms: ["102"] },
-      { schoolName: "Woodward Academy Upper School", homeRooms: ["52"] },
-    ],
-  },
-  {
-    label: "Howey",
-    mapLink: "https://www.google.com/maps/place/Howey+Physics+Bldg,+Atlanta,+GA+30332/@33.7772352,-84.4076251,15z/data=!4m6!3m5!1s0x88f5048a4eae2249:0x1fb553e4ed731e06!8m2!3d33.777489!4d-84.3986032!16s%2Fg%2F1tctyd3j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.7776405764111, -84.3986783057815],
-    events: [
-      { eventName: "Disease Detectives", eventRooms: ["L3"] },
-      { eventName: "Wind Power", eventRooms: ["L4"] },
-    ],
-  },
-  {
-    label: "Klaus",
-    mapLink: "https://www.google.com/maps/place/Klaus+Advanced+Computing+Building/@33.7770288,-84.4061148,15z/data=!3m1!4b1!4m6!3m5!1s0x87b781ec0ab42ea5:0x16eec927f37b40ec!8m2!3d33.7770292!4d-84.3958151!16s%2Fm%2F02vws0z?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.777180777225105, -84.39583656160448],
-    events: [
-      { eventName: "Dynamic Planet", eventRooms: ["2447"] },
-      { eventName: "Ecology", eventRooms: ["1456"] },
-      { eventName: "Entomology", eventRooms: ["1443"] },
-      { eventName: "Geologic Mapping", eventRooms: ["1447"] },
-      { eventName: "Optics", eventRooms: ["2456"] },
-    ],
-    activityRooms: [
-      { activityName: "SciOly Trivia", activityRooms: ["1443"]},
-      { activityName: "E-Sports", activityRooms: ["1447"]},
-    ]
-  },
-  {
     label: "Tech Green",
     mapLink: "https://www.google.com/maps/place/Tech+White/@33.7746152,-84.4076351,15z/data=!3m1!4b1!4m6!3m5!1s0x88f50489ec1c461b:0x2d7e31c7758e29b3!8m2!3d33.7746156!4d-84.3973354!16s%2Fg%2F1w4vks6x?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
     position: [33.77478161322192, -84.39730757397054],
     activityRooms: [
       { activityName: "Outdoor Games", activityRooms: ["Field"]},
     ]
-  },
-  {
-    label: "West Architecture",
-    mapLink: "https://www.google.com/maps/place/33%C2%B046'33.8%22N+84%C2%B023'46.0%22W/@33.7760621,-84.4064208,15z/data=!3m1!4b1!4m4!3m3!8m2!3d33.7760625!4d-84.3961211?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77606247565049, -84.3961210569472],
-    schoolHomeRooms: [
-      { schoolName: "Eagles Home Educators (B)", homeRooms: ["260"] },
-      { schoolName: "Eagles Home Educators (C)", homeRooms: ["259"] },
-      { schoolName: "GSMST", homeRooms: ["258"] },
-    ],
   },
   {
     label: "Van Leer",
@@ -181,33 +200,16 @@ const tournamentLocations: TournamentLocation[] = [
     ],
   },
   {
-    label: "Molecular Science & Engineering Building",
-    mapLink: "https://www.google.com/maps/place/Molecular+Sciences+And+Engineering/@33.7759997,-84.3971331,16z/data=!4m6!3m5!1s0x88f5048aa2160b4f:0x1701591279ef9cda!8m2!3d33.7798348!4d-84.3966424!16s%2Fg%2F11c3tjv98j?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77987258678034, -84.3966265376535],
-    events: [
-      { eventName: "Air Trajectory", eventRooms: ["Atrium 4, G021, G011"] },
-      { eventName: "Anatomy and Physiology", eventRooms: ["G011"] },
-      { eventName: "Electric Vehicle", eventRooms: ["G021, Atrium 2, G011"] },
-      { eventName: "Scrambler", eventRooms: ["G021, Atrium 2, G011"] },
+    label: "West Architecture",
+    mapLink: "https://www.google.com/maps/place/33%C2%B046'33.8%22N+84%C2%B023'46.0%22W/@33.7760621,-84.4064208,15z/data=!3m1!4b1!4m4!3m3!8m2!3d33.7760625!4d-84.3961211?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77606247565049, -84.3961210569472],
+    schoolHomeRooms: [
+      { schoolName: "Eagles Home Educators (B)", homeRooms: ["260"] },
+      { schoolName: "Eagles Home Educators (C)", homeRooms: ["259"] },
+      { schoolName: "GSMST", homeRooms: ["258"] },
     ],
   },
-  {
-    label: "Boggs",
-    mapLink: "https://www.google.com/maps/place/Gilbert+Hillhouse+Boggs+Building/@33.7757611,-84.4023174,16z/data=!3m1!4b1!4m6!3m5!1s0x88f5048963bf0de9:0xb9a8c30e4aaf1178!8m2!3d33.7757611!4d-84.3997425!16s%2Fg%2F11_qr2n_t?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77597510547729, -84.39980687592467],
-    events: [
-      { eventName: "Engineering CAD", eventRooms: ["B5"] },
-      { eventName: "Protein Modeling", eventRooms: ["B9"] },
-    ],
-  },
-  {
-    label: "O'Keefe Gym",
-    mapLink: "https://www.google.com/maps/place/O'Keefe+Gym/@33.7794362,-84.3941487,17z/data=!3m1!4b1!4m6!3m5!1s0x88f50460c8400001:0x609877aed89fe965!8m2!3d33.7794362!4d-84.3915738!16s%2Fg%2F11cs180q1l?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D",
-    position: [33.77961452582521, -84.39161671825269],
-    activityRooms: [
-      { activityName: "Awards", activityRooms: ["Gym"] },
-    ],
-  },
+  
 ];
 
 const makerspaceLocations: MakerspaceLocation[] = [
@@ -229,6 +231,28 @@ const makerspaceLocations: MakerspaceLocation[] = [
     hrefId: "hive-tour",
   },
 ];
+
+const foodLocations: FoodLocation[] = [
+  {
+    label: "Student Center",
+    mapLink: "https://www.google.com/maps/place/John+Lewis+Student+Center/@33.7757611,-84.4023174,16z/data=!4m6!3m5!1s0x88f50489a73dcb65:0xe5b99fb6b844e7bb!8m2!3d33.7740362!4d-84.3990168!16s%2Fm%2F0k6_f62?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77407184605421, -84.39884514153347],
+    food: [
+      { foodName: "Panda Express"},
+      { foodName: "Chick-fil-A"},
+      { foodName: "Blue Donkey"},
+    ],
+  },
+  {
+    label: "Dunkin'/Jimmy John's",
+    mapLink: "https://www.google.com/maps/place/Jimmy+John's/@33.7740344,-84.4170414,14z/data=!4m6!3m5!1s0x88f5050068a779ef:0xbcdd9da5f6c123bb!8m2!3d33.7750687!4d-84.4005218!16s%2Fg%2F11vrzn07v3?entry=ttu&g_ep=EgoyMDI1MDEyNi4wIKXMDSoASAFQAw%3D%3D",
+    position: [33.77646007113777, -84.4003902676549],
+    food: [
+      { foodName: "Dunkin' Donuts"},
+      { foodName: "Jimmy John's"},
+    ],
+  },
+]
 
 const transportLocations: TransportLocation[] = [
   {
@@ -256,4 +280,4 @@ const transportLocations: TransportLocation[] = [
     description: "Parking lot for general vehicles",
   },
 ];
-export { tournamentLocations, makerspaceLocations, transportLocations };
+export { tournamentLocations, makerspaceLocations, transportLocations, foodLocations };

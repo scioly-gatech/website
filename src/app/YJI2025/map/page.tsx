@@ -11,6 +11,7 @@ import {
   tournamentLocations,
   makerspaceLocations,
   transportLocations,
+  foodLocations
 } from "../../../../data/locations/yellowJacketInvitational2025Locations";
 import { LatLngExpression } from "leaflet";
 
@@ -107,6 +108,7 @@ export default function Page() {
             }}
             tournamentLocations={tournamentLocations}
             makerspaceLocations={makerspaceLocations}
+            foodLocations={foodLocations}
             transportLocations={transportLocations}
             myLocation={myLocation}
           />
@@ -176,13 +178,12 @@ export default function Page() {
                 );
               })}
             </div>
-            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-violet-950">
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-pink-950">
               <p className="font-bold text-3xl underline">Activities</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.activityRooms) {
                   return null;
                 }
-//Howey, Bio Quad G10, Student Center
                 return (
                   <div className="mb-2" key={tournamentLocation.label}>
                     <p className="font-bold text-2xl">
@@ -197,6 +198,35 @@ export default function Page() {
                               <li
                                 key={activityName}
                               >{`${activityName} - ${activityRooms.join(", ")}`}</li>
+                            );
+                          }
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-orange-950">
+              <p className="font-bold text-3xl underline">Food</p>
+              {foodLocations.map((foodLocation) => {
+                if (!foodLocation.food) {
+                  return null;
+                }
+                return (
+                  <div className="mb-2" key={foodLocation.label}>
+                    <p className="font-bold text-2xl">
+                      {foodLocation.label}
+                    </p>
+                    <a className="text-sky-400 hover:opacity-50 hover:cursor-pointer" target="__blank" href={foodLocation.mapLink}>Google Maps</a>
+                    <div>
+                      <ul>
+                        {foodLocation.food.map(
+                          ({ foodName }) => {
+                            return (
+                              <li
+                                key={foodName}
+                              >{`${foodName}`}</li>
                             );
                           }
                         )}

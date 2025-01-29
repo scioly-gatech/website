@@ -26,6 +26,10 @@ export interface ActivityRoom {
   activityRooms: string[];
 }
 
+export interface Food {
+  foodName: string;
+}
+
 export interface Location {
   position: [number, number];
   label: string;
@@ -44,6 +48,11 @@ export interface TournamentLocation extends Location {
   mapLink?: string;
 }
 
+export interface FoodLocation extends Location {
+  food? : Food[];
+  mapLink?: string;
+}
+
 export interface TransportLocation extends Location {
   description: string;
   mapLink?: string;
@@ -54,6 +63,7 @@ export interface TournamentMapProps {
   tournamentLocations: TournamentLocation[];
   makerspaceLocations: MakerspaceLocation[];
   transportLocations: TransportLocation[];
+  foodLocations: FoodLocation[];
   myLocation?: Location
 }
 
@@ -61,6 +71,7 @@ export default function TournamentMap({
   mapContainerProps,
   tournamentLocations,
   makerspaceLocations,
+  foodLocations,
   myLocation,
   transportLocations: transportLocations,
 }: TournamentMapProps) {
@@ -165,6 +176,44 @@ export default function TournamentMap({
           </Marker>
         );
       })}
+
+      {foodLocations.map((foodLocation) => {
+        return (
+          <Marker
+            position={foodLocation.position}
+            key={foodLocation.label}
+          >
+            <Popup>
+              <p className="font-bold text-xl">{foodLocation.label}</p>
+              {foodLocation.food && (
+                <>
+                  <ul>
+                    {foodLocation.food.map(
+                      ({ foodName }) => {
+                        return (
+                          <li
+                            key={foodName}
+                          >{`${foodName} `}</li>
+                        );
+                      }
+                    )}
+                  </ul>
+                </>
+              )}
+              <a href={foodLocation.mapLink} className="font-bold text-lg" target="__blank">Google Maps</a>
+            </Popup>
+            <Tooltip
+              permanent
+              direction="top"
+              offset={[-15, 75]}
+              className="custom-tooltip custom-tooltip-food"
+            >
+              {foodLocation.label}
+            </Tooltip>
+          </Marker>
+        );
+      })}
+      
 
       {(myLocation != undefined) ? 
        <Marker
