@@ -151,20 +151,20 @@ export default function Sponsorships() {
     </div>
       <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 bg-lightBlue">
         {/** Sponsor Images */}
-        <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
+        {/* <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
         <figcaption className="sr-only"> Logo for Campus Services </figcaption>
         <Image src="/images/sponsors/ece.png" alt="School of Electrical and Computer Engineering" width="700" height="400" className=""/>
         <figcaption className="sr-only"> Logo for School of Electrical and Computer Engineering </figcaption>
         <Image src="/images/sponsors/gtsf.png" alt="Georgia Tech Alumni Association Student Foundation" width="700" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for Georgia Tech Alumni Association Student Foundation </figcaption>
+        <figcaption className="sr-only"> Logo for Georgia Tech Alumni Association Student Foundation </figcaption> */}
         <Image src="/images/sponsors/mse.png" alt="School of Materials Science and Engineering" width="600" height="400" className=""/>
         <figcaption className="sr-only"> Logo for School of Materials Science and Engineering </figcaption>
-        <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="500" height="400" className=""/>
+        {/* <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
         <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
         <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
         <Image src="/images/sponsors/gtri.png" alt="Georgia Tech Research Institute" width="550" height="400" className="mt-4"/>
-        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption>
+        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption> */}
       </figure>
   </div>
   </motion.div>
