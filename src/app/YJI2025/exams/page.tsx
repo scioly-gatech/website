@@ -45,7 +45,7 @@ export default function Payments() {
         <div className="bg-lightBlue text-center m-4 lg:m-12 lg:mx-48 shadow-darkBlue dark:shadow-white shadow-2xl p-8"> 
             
             <p className="sm:text-2xl lg:text-3xl font-bold md:border-darkBlue md:border-4 p-2 text-black bg-white mb-8"> Thank you to everyone who attended our 2025 Yellow Jacket Invitational! Please use the link below to see the published exams from the event. </p>
-            <a href="https://drive.google.com/file/d/1egVORNPbZQE9YNJKJggjtunUvWXyNz7T/edit" target="_blank" className="sm:text-2xl lg:text-3xl bg-lightOrange underline hover:opacity-50 font-bold p-4"> Exams Link</a>
+            <a href="https://drive.google.com/drive/folders/1egVORNPbZQE9YNJKJggjtunUvWXyNz7T?usp=sharing" target="_blank" className="sm:text-2xl lg:text-3xl bg-lightOrange underline hover:opacity-50 font-bold p-4"> Exams Link</a>
         </div>
     </div>
     </>
