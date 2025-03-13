@@ -62,6 +62,9 @@ export default function CurrentTournament() {
                 <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                     <Link href="/pastTournaments/YJI2024" className="bg-darkOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2024</Link>
                 </li>
+                <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
+                    <Link href="/YJI2025/exams" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2025 Exams</Link>
+                </li>
             </ul>
           </div>
         </div>
