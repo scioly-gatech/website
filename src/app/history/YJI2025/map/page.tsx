@@ -12,7 +12,7 @@ import {
   makerspaceLocations,
   transportLocations,
   foodLocations
-} from "../../../../data/locations/yellowJacketInvitational2025Locations";
+} from "../../../../../data/locations/yellowJacketInvitational2025Locations";
 import { LatLngExpression } from "leaflet";
 
 const play = Lora({ subsets: ["latin"], display: "swap" });
