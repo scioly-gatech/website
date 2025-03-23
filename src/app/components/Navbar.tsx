@@ -100,8 +100,11 @@ export default function Navbar() {
                             <Link href="/states2025" className="font-bold py-3"> States 2025 </Link>
                         </li>
                         <li>
-                            <Link href="/states2025/esApp" className="flex flex-row my-1 mx-3"> 
-                                <p> ES App </p>  
+                            <Link href="/states2025/schedule" className="flex flex-row my-1 mx-3"> 
+                                <p> Schedule </p>  
+                            </Link>
+                            <Link href="/states2025/homeRooms" className="flex flex-row my-1 mx-3"> 
+                                <p> Home Rooms </p>  
                             </Link>
                         </li>
                         <li>
@@ -147,7 +150,10 @@ export default function Navbar() {
                         <Link href="/states2025" className="hover:text-lightOrange text-xl">States 2025</Link>
                         <ul id="States-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
                             <li>
-                                <Link href="/states2025/esApp" className="hover:text-lightOrange text-xl"> ES Application </Link>
+                                <Link href="/states2025/schedule" className="hover:text-lightOrange text-xl"> Schedule </Link>
+                            </li>
+                            <li>
+                                <Link href="/states2025/homeRooms" className="hover:text-lightOrange text-xl"> Home Rooms </Link>
                             </li>
                         </ul>
                     </li>
