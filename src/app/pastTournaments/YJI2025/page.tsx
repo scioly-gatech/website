@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useCallback, useEffect } from 'react'
-import allResults2024A from '../../../../data/allResults/allResults2024A'
-import allResults2024AA from '../../../../data/allResults/allResults2024AA'
-import eventResults2024A from '../../../../data/eventResults/eventResults2024A'
-import eventResults2024AA from '../../../../data/eventResults/eventResults2024AA'
+import allResultsYJI2025B from '../../../../data/allResults/allResultsYJI2025B'
+import allResultsYJI2025C from '../../../../data/allResults/allResultsYJI2025C'
+import eventResultsYJI2025B from '../../../../data/eventResults/eventResultsYJI2025B'
+import eventResultsYJI2025C from '../../../../data/eventResults/eventResultsYJI2025C'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
@@ -16,10 +16,10 @@ export default function YJITournament2025() {
     "/images/2025/YJI/1.jpg", "/images/2025/YJI/2.jpg", "/images/2025/YJI/3.jpg", "/images/2025/YJI/4.jpg", "/images/2025/YJI/6.jpg", "/images/2025/YJI/7.jpg", "/images/2025/YJI/8.jpg"
 ]
 
-const allResultsA = allResults2024A
-const allResultsAA = allResults2024AA
-const eventResultsA = eventResults2024A
-const eventResultsAA = eventResults2024AA
+const allResultsB = allResultsYJI2025B
+const allResultsC = allResultsYJI2025C
+const eventResultsB = eventResultsYJI2025B
+const eventResultsC = eventResultsYJI2025C
 
   return (
     <>
@@ -44,16 +44,9 @@ const eventResultsAA = eventResults2024AA
         </div>
       </h1>
 
-
-    <AnimatePresence>
-    <motion.div
-            initial={{opacity:0.5}}
-            animate={{opacity:1}}
-            transition={{duration:1}}
-        >
      
       {/* For small screens*/}
-    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+    {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -71,7 +64,7 @@ const eventResultsAA = eventResults2024AA
                                     />
                         }
                       })}/> 
-      </div>
+      </div> */}
      
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
@@ -98,18 +91,22 @@ const eventResultsAA = eventResults2024AA
         <Link href="https://drive.google.com/drive/u/2/folders/1OpN_nn9gztiPVLHnxrHHQEG91ASNSXAb" target='__blank'>All Photos</Link>
       </p>
     </div>
-    </motion.div>
-    </AnimatePresence> 
 
-      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-row justify-center py-10 sm:text-sm lg:text-2xl">
+    <div id="exams" className="bg-green-200 dark:bg-green-950 dark:text-white flex flex-row justify-center py-10 sm:text-sm lg:text-2xl">
+        <p className="text-3xl text-center font-bold p-4 my-4 bg-purple-500 rounded-xl w-1/3 lg:w-1/6 hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
+        <Link href="https://drive.google.com/drive/u/1/folders/1egVORNPbZQE9YNJKJggjtunUvWXyNz7T" target='_blank'>Exams</Link>
+      </p>
+      </div>
+      
+      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col lg:flex-row justify-center py-10 sm:text-sm lg:text-2xl">
         <div className="m-4">
             <h2 className="border-4 border-sky-400 text-center sm:text-lg lg:text-3xl font-bold py-4">
-            🏆 AA Overall Results 🏆
+            🏆 Div B Overall Results 🏆
             </h2>
             <table className="table-auto border-separate border-spacing-x-2 mt-4 sm:mx-4">
                 <tbody>
             {
-                allResultsAA.map((result) => {
+                allResultsB.map((result) => {
                 return (
                     <tr key={result.key} className={`${result.bold ? "font-bold": "font-normal"}`}>
                     <td className="m-3">
@@ -127,12 +124,12 @@ const eventResultsAA = eventResults2024AA
         </div>
         <div className="m-4">
             <h2 className="border-4 border-sky-400 text-center sm:text-lg lg:text-3xl font-bold py-4">
-            🏆 A Overall Results 🏆
+            🏆 Div C Overall Results 🏆
             </h2>
             <table className="table-auto border-separate border-spacing-x-2 mt-4 sm:mx-4">
                 <tbody>
             {
-                allResultsA.map((result) => {
+                allResultsC.map((result) => {
                 return (
                     <tr key={result.key} className={`${result.bold ? "font-bold": "font-normal"}`}>
                     <td className="m-3">
@@ -149,14 +146,14 @@ const eventResultsAA = eventResults2024AA
             </table>
         </div>
       </div>
-      <div id="eventResults" className="items-center py-10 sm:text-sm lg:text-2xl flex flex-row justify-center">
+      <div id="eventResults" className="items-center py-10 sm:text-sm lg:text-2xl flex flex-col justify-center">
         <div id="AA" className="m-4">
             <h2 className="border-4 border-green-400 text-center sm:text-lg lg:text-3xl font-bold py-4 text-black">
-            🏅 AA Event Winners 🏅
+            🏅 Div B Event Winners 🏅
             </h2>
             <table className="table-auto mt-4 border-separate lg:border-spacing-x-8">
                 <tbody>
-                {eventResultsAA.map((event) => {
+                {eventResultsB.map((event) => {
                 return (
                     <tr key={event.key}>
                     <td className="m-3 text-black dark:text-black border-2 p-2 rounded-2xl shadow-inner shadow-darkOrange">
@@ -171,18 +168,18 @@ const eventResultsAA = eventResults2024AA
                 </tbody>
             </table>
             <div className="flex justify-center">
-            <p className="text-3xl text-center font-bold p-4 my-4 bg-green-400 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
-            <Link href="https://www.duosmium.org/results/2024-03-30_GA_states_aa_flight_c/" target='__blank'>AA All Results</Link>
-            </p>
+            {/* <p className="text-3xl text-center font-bold p-4 my-4 bg-green-400 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
+            <Link href="https://www.duosmium.org/results/2024-03-30_GA_states_aa_flight_c/" target='__blank'>All Results</Link>
+            </p> */}
             </div>
         </div>
         <div id="A">
             <h2 className="border-4 border-emerald-400 text-center sm:text-lg lg:text-3xl font-bold py-4 text-black">
-            🏅 A Event Winners 🏅
+            🏅 Div C Event Winners 🏅
             </h2>
             <table className="table-auto mt-4 border-separate lg:border-spacing-x-8">
                 <tbody>
-                {eventResultsA.map((event) => {
+                {eventResultsC.map((event) => {
                 return (
                     <tr key={event.key}>
                     <td className="m-3 text-black dark:text-black border-2 p-2 rounded-2xl shadow-inner shadow-darkOrange">
@@ -196,11 +193,11 @@ const eventResultsAA = eventResults2024AA
                 })}
                 </tbody>
             </table>
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
             <p className="text-3xl text-center font-bold p-4 my-4 bg-violet-400 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
             <Link href="https://www.duosmium.org/results/2024-03-30_GA_states_a_flight_c/" target='__blank'>A All Results</Link>
             </p>
-            </div>
+            </div> */}
         </div>
       </div>
     
@@ -209,7 +206,7 @@ const eventResultsAA = eventResults2024AA
         Tournament Information
         </h2>
         <div className="w-full flex justify-center my-8">
-          <iframe src="https://docs.google.com/document/d/e/2PACX-1vTAJKgutEODpvzm4NzgBcuhqj0ky6u9P7DMkQV31TaTa2BemLjdolwm0cMXUsr8ha729CfR_zSeOmi_/pub?embedded=true" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
+          <iframe src="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
         </div>
       </div>
      

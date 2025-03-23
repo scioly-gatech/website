@@ -41,7 +41,7 @@ export default function CurrentTournament() {
         </motion.div>
         </AnimatePresence>
       </div>
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-col lg:flex-row justify-center">
           <div id="states-wrapper">
           <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">State Tournament</p>
           <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center px-12">
@@ -63,7 +63,7 @@ export default function CurrentTournament() {
                     <Link href="/pastTournaments/YJI2024" className="bg-darkOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2024</Link>
                 </li>
                 <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
-                    <Link href="/YJI2025/exams" className="bg-lightOrange text-lg lg:text-3xl rounded-2xl p-4 px-12">2025 Exams</Link>
+                    <Link href="/pastTournaments/YJI2025" className="bg-lightOrange text-2xl lg:text-3xl rounded-2xl p-4 px-12">2025</Link>
                 </li>
             </ul>
           </div>

@@ -53,7 +53,7 @@ const eventResultsAA = eventResults2024AA
         >
      
       {/* For small screens*/}
-    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
+    {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
@@ -61,17 +61,17 @@ const eventResultsAA = eventResults2024AA
                       contents={allPictures.map((imagePath, index) => {
                         return {
                           node: <Image
-                                      className={`block`}
+                                      className={`block w-full max-w-[467px] h-auto`}
                                       style={{objectFit: "cover", width:467, height:352}}
                                       src={imagePath}
                                       alt="Slideshow Picture"
                                       key={index}
-                                      width={467}
+                                      width={400}
                                       height={352}
                                     />
                         }
                       })}/> 
-      </div>
+      </div> */}
      
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
@@ -101,7 +101,7 @@ const eventResultsAA = eventResults2024AA
     </motion.div>
     </AnimatePresence> 
 
-      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-row justify-center py-10 sm:text-sm lg:text-2xl">
+      <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col lg:flex-row justify-center py-10 sm:text-sm lg:text-2xl">
         <div className="m-4">
             <h2 className="border-4 border-sky-400 text-center sm:text-lg lg:text-3xl font-bold py-4">
             🏆 AA Overall Results 🏆
@@ -149,7 +149,7 @@ const eventResultsAA = eventResults2024AA
             </table>
         </div>
       </div>
-      <div id="eventResults" className="items-center py-10 sm:text-sm lg:text-2xl flex flex-row justify-center">
+      <div id="eventResults" className="items-center py-10 sm:text-sm lg:text-2xl flex flex-col lg:flex-row justify-center">
         <div id="AA" className="m-4">
             <h2 className="border-4 border-purple-400 text-center sm:text-lg lg:text-3xl font-bold py-4 text-black">
             🏅 AA Event Winners 🏅
