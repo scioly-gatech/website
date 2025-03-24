@@ -106,6 +106,9 @@ export default function Navbar() {
                             <Link href="/states2025/homeRooms" className="flex flex-row my-1 mx-3"> 
                                 <p> Home Rooms </p>  
                             </Link>
+                            <Link href="/states2025/map" className="flex flex-row my-1 mx-3"> 
+                                <p> Map </p>  
+                            </Link>
                         </li>
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -154,6 +157,9 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <Link href="/states2025/homeRooms" className="hover:text-lightOrange text-xl"> Home Rooms </Link>
+                            </li>
+                            <li>
+                                <Link href="/states2025/map" className="hover:text-lightOrange text-xl"> Map </Link>
                             </li>
                         </ul>
                     </li>
