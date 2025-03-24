@@ -15,6 +15,11 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Experimental Design", eventRooms: ["572"] },
       { eventName: "Forensics", eventRooms: ["571"] },
       { eventName: "Materials Science", eventRooms: ["587"] },
+    ],
+    activityRooms: [
+      { activityName: "Puzzle Hunt Room", activityRooms: ["571"]},
+      { activityName: "Puzzle Hunt Room", activityRooms: ["581"]},
+      { activityName: "Puzzle Hunt Room", activityRooms: ["572"]},
     ]
   },
   {
@@ -40,6 +45,10 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Codebusters", eventRooms: ["L2"] },
       { eventName: "Wind Power", eventRooms: ["L1"] },
     ],
+    activityRooms: [
+      { activityName: "Puzzle Hunt Room", activityRooms: ["L1"]},
+      { activityName: "Puzzle Hunt Room", activityRooms: ["L2"]},
+    ]
   },
   {
     label: "IC",
@@ -54,6 +63,9 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Science in the News", eventRooms: ["209"] },
       { eventName: "Write It Do It", eventRooms: ["111, 115"] },
     ],
+    activityRooms: [
+      { activityName: "Puzzle Hunt Room", activityRooms: ["109"]},
+    ]
   },
   {
     label: "Klaus",
@@ -67,6 +79,11 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Microbe Mission", eventRooms: ["1447"] },
       { eventName: "Optics", eventRooms: ["2443"] },
     ],
+    activityRooms: [
+      { activityName: "Puzzle Hunt Room", activityRooms: ["1443"]},
+      { activityName: "Puzzle Hunt Room", activityRooms: ["2443"]},
+      { activityName: "Puzzle Hunt Room", activityRooms: ["1456"]},
+    ]
   },
   {
     label: "Montgomery-Knight",
@@ -84,6 +101,9 @@ const tournamentLocations: TournamentLocation[] = [
       { eventName: "Electric Vehicle", eventRooms: ["Atrium"] },
       { eventName: "Robot Tour", eventRooms: ["Atrium"] },
     ],
+    activityRooms: [
+      { activityName: "Puzzle Hunt Room", activityRooms: ["Atrium"]},
+    ]
   },
   {
     label: "Skiles",
@@ -122,6 +142,14 @@ const tournamentLocations: TournamentLocation[] = [
     events: [
       { eventName: "Engineering CAD", eventRooms: ["121"] },
     ],
+  },
+  {
+    label: "Skiles Walkway",
+    mapLink: "https://www.google.com/maps/place/Skiles+Walkway,+Atlanta,+GA+30332/@33.77386,-84.3975467,20.23z/data=!4m6!3m5!1s0x88f50489c105980b:0xe5fa0b593ff84900!8m2!3d33.774003!4d-84.3969282!16s%2Fg%2F11g_zlkj1m?entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    position: [33.77401664869434, -84.39741833588879],
+    activityRooms: [
+      { activityName: "Club Fair", activityRooms: ["Atrium"]},
+    ]
   },
   {
     label: "Van Leer",

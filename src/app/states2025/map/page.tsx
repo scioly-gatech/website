@@ -178,7 +178,7 @@ export default function Page() {
                 );
               })}
             </div>
-            {/* <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-pink-950">
+            <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-pink-950">
               <p className="font-bold text-3xl underline">Activities</p>
               {tournamentLocations.map((tournamentLocation) => {
                 if (!tournamentLocation.activityRooms) {
@@ -206,7 +206,7 @@ export default function Page() {
                   </div>
                 );
               })}
-            </div> */}
+            </div>
             <div className="basis-full lg:basis-5/12 border-4 border-black p-4 m-4 dark:text-white dark:border-white bg-orange-950">
               <p className="font-bold text-3xl underline">Food</p>
               {foodLocations.map((foodLocation) => {
