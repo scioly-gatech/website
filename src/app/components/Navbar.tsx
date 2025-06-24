@@ -59,8 +59,7 @@ export default function Navbar() {
     function toggleSmallNav() {
         if (typeof(document) !== 'undefined') {
             const smallNav = document.getElementById('smallNav') as HTMLElement
-            smallNav.classList.toggle('hidden')
-            smallNav.classList.toggle('fixed')
+            smallNav.classList.toggle('translate-x-full')
         }
     }
 
@@ -84,7 +83,7 @@ export default function Navbar() {
                     </button>
                 </motion.div>
 
-                <nav id="smallNav" className="hidden right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
+                <nav id="smallNav" className="fixed translate-x-full transition-transform duration-300 right-0 p-2 text-darkBlue dark:text-lightBlue bg-gradient-to-b from-lightBlue to-white dark:from-darkBlue dark:to-black min-h-[100vh] z-10">
                     <div className="flex flex-row justify-end">
                         <button onClick={toggleSmallNav} className="w-1/8 z-10 text-2xl">
                             <RxCross1 />
