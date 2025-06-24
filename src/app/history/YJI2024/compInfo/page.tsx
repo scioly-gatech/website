@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lora } from 'next/font/google'
 import React from 'react'
-import Script from 'next/script'
+
 import Head from 'next/head'
 
 const play = Lora({ subsets: ['latin'], display:"swap" })
@@ -11,21 +11,7 @@ const play = Lora({ subsets: ['latin'], display:"swap" })
 export default function page() {
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
 
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
       <Head>
             title = Registration
         </Head>
@@ -39,7 +25,7 @@ export default function page() {
           </div>
 
           {/** Links */}
-          <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
+          <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             <span className="font-bold text-4xl underline"> At this time, registration for the Yellow Jacket Invitational is full.</span>
             <br />
           </p>

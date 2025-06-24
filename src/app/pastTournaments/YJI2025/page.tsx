@@ -8,7 +8,6 @@ import eventResultsYJI2025C from '../../../../data/eventResults/eventResultsYJI2
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
-import Script from 'next/script'
 import Link from 'next/link'
 
 export default function YJITournament2025() {
@@ -23,31 +22,16 @@ const eventResultsC = eventResultsYJI2025C
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
     <div className="min-h-screen bg-white dark:bg-lightBlue dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
         <div id="borderDiv" className="border-4 border-green-500 text-center text-4xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow"> 2025 Yellow Jacket Invitational
         </div>
       </h1>
 
-     
+
       {/* For small screens*/}
     {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
-        
+
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
@@ -63,9 +47,9 @@ const eventResultsC = eventResultsYJI2025C
                                       height={352}
                                     />
                         }
-                      })}/> 
+                      })}/>
       </div> */}
-     
+
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
@@ -83,7 +67,7 @@ const eventResultsC = eventResultsYJI2025C
                                       height={352}
                                     />
                         }
-                      })} /> 
+                      })} />
       </div>
 
     <div className="flex justify-center">
@@ -97,7 +81,7 @@ const eventResultsC = eventResultsYJI2025C
         <Link href="https://drive.google.com/drive/u/1/folders/1egVORNPbZQE9YNJKJggjtunUvWXyNz7T" target='_blank'>Exams</Link>
       </p>
       </div>
-      
+
       <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col lg:flex-row justify-center py-10 sm:text-sm lg:text-2xl">
         <div className="m-4">
             <h2 className="border-4 border-sky-400 text-center sm:text-lg lg:text-3xl font-bold py-4">
@@ -200,7 +184,7 @@ const eventResultsC = eventResultsYJI2025C
             </div> */}
         </div>
       </div>
-    
+
       <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-4 sm:text-sm lg:text-2xl">
         <h2 className="border-4 border-sky-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
         Tournament Information
@@ -209,7 +193,7 @@ const eventResultsC = eventResultsYJI2025C
           <iframe src="https://docs.google.com/document/d/1j9YKMA2QOkeO1PnCeraj5KCvax4C3yn5Auroo70hkhE/edit?tab=t.0" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
         </div>
       </div>
-     
+
     </div>
     </>
   )

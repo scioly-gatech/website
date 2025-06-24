@@ -4,7 +4,6 @@ import { Location } from "@/app/components/TournamentMap";
 import { AnimatePresence, motion } from "framer-motion";
 import { Lora } from "next/font/google";
 import React, { useMemo, useEffect, useState } from "react";
-import Script from "next/script";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import {
@@ -58,21 +57,6 @@ export default function Page() {
 
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
       <Head>title = Tournament Map</Head>
       <main className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh] pb-12">
         {/** Heading */}

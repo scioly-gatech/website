@@ -3,7 +3,6 @@ import React from 'react'
 import { Lora} from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
-import Script from 'next/script'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
@@ -11,21 +10,6 @@ export default function Sponsorships() {
 
   return (
 <>
-<Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
    <div id="allContent" className="bg-slate-200 dark:bg-darkBlue w-full">
       <div id="topHeader" className = "bg-[url('/images/sponsorPage/sponsor.jpg')] flex justify-center items-center h-[30vh]">
         <h1 className={`text-5xl lg:text-7xl font-bold text-white border-8 lg:mx-8 p-4 lg:p-8 lg:px-20 ${play.className} drop-shadow-titleShadow`}>Sponsorship</h1>
@@ -58,7 +42,7 @@ export default function Sponsorships() {
 
 
       <div id="tiers">
-      
+
       <AnimatePresence>
       <div className="flex flex-col items-center bg-lightOrange dark:bg-zinc-900">
           <h2 className={`mt-[4vh] text-4xl lg:text-6xl text-slate-900 bg-slate-200 p-4 m-4 mx-8 ${play.className}`}> Sponsorship Tiers</h2>
@@ -142,7 +126,7 @@ export default function Sponsorships() {
 <div id="logos">
   <div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
       <div className="flex flex-col items-center">
-      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2> 
+      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2>
         <figure>
           <Image src="/images/sponsors/seal2.png" alt="Georgia Tech Seal" width="700" height="200"/>
           <figcaption className="sr-only">Picture of the Georgia Tech Seal next to the words Georgia Institute of Technology</figcaption>

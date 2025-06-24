@@ -6,7 +6,6 @@ import { useEffect } from "react"
 import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
 import Image from "next/image"
 import EmblaCarousel from '@/app/components/Carousel'
-import Script from "next/script"
 
 const play = Lora({
   subsets:['latin'],
@@ -22,27 +21,12 @@ const indexToColor = {
 export default function Home() {
 
   const allPictures = [
-    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg", 
+    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg",
 ]
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
 
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script> 
-   
     <main className="bg-amber-50 dark:bg-darkBlue h-full w-full">
     <div id="topScreen" className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] ">
       <AnimatePresence>
@@ -227,7 +211,7 @@ export default function Home() {
 <div id="logos">
   <div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
       <div className="flex flex-col items-center">
-      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2> 
+      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2>
         <figure>
           <Image src="/images/sponsors/seal2.png" alt="Georgia Tech Seal" width="700" height="200"/>
           <figcaption className="sr-only">Picture of the Georgia Tech Seal next to the words Georgia Institute of Technology</figcaption>

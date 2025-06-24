@@ -4,7 +4,6 @@ import { Libre_Franklin, Lora } from 'next/font/google'
 
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import Script from "next/script"
 
 const libre = Libre_Franklin({subsets: ['latin']})
 
@@ -38,21 +37,6 @@ export default function MeetTeam() {
 
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
     <main className="bg-slate-200 dark:bg-black flex flex-col items-center w-full">
       <AnimatePresence>
         <div id="title" className="flex flex-row justify-center bg-[url('/images/about/background-1.jpg')] w-full py-10">
@@ -62,7 +46,7 @@ export default function MeetTeam() {
           transition={{duration:2}}
         >
           <h1 className= {`${play.className} drop-shadow-titleShadow text-white dark:text-darkBlue dark:bg-white font-bold text-5xl border-8 border-lightOrange m-10 p-8 lg:px-48 flex justify-center`}>
-           About&nbsp;Us 
+           About&nbsp;Us
           </h1>
           </motion.div>
           <figure className="hidden lg:block">
@@ -72,7 +56,7 @@ export default function MeetTeam() {
         </div>
       <div className="w-full">
       <p className={`${libre.className} text-lg lg:mx-64 mx-8 text-center p-4 flex justify-center border-4 border-darkBlue dark:text-white mt-4`}>
-      Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience. 
+      Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience.
       <br/>
       <br />
         We work around the year both within Georgia Tech and in the Atlanta area to promote Science Olympiad opportunities for students. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 3rd year in a row and the very first Yellow Jacket Invitational, and this would not be possible without the dedication and effort of our members!

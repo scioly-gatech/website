@@ -9,7 +9,7 @@ import {RxCross1} from 'react-icons/rx'
 
 export default function Navbar() {
 
-    // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. There could be an easier way to make a function Navbar such as with using other libraries, but this is the current implementation. 
+    // Below methods are used to add the hover effect to the site. Whenever the user enters the text area of the navbar, a dropdown menu appears. There could be an easier way to make a function Navbar such as with using other libraries, but this is the current implementation.
     useEffect(() => {
         if (typeof(document) !== 'undefined') {
             const contactHover = document.getElementById('contact-dropdown-title') as HTMLElement
@@ -18,10 +18,10 @@ export default function Navbar() {
             const statesHover = document.getElementById('States-dropdown-title') as HTMLElement
             statesHover.addEventListener('mouseenter', showStatesDropdown)
             statesHover.addEventListener('mouseleave', hideStatesDropdown)
-        }   
+        }
     }, [])
 
-    //TODO: Make these functions more resusable. Impracticle to create individual dropdowns for each part of the header. 
+    //TODO: Make these functions more resusable. Impracticle to create individual dropdowns for each part of the header.
     // Helper functions to show and hide the "Contact Us" dropdown menu
     function showContactDropdown() {
         if (typeof(document) !== 'undefined') {
@@ -47,7 +47,7 @@ export default function Navbar() {
                 yjiDrop.classList.add('flex')
             }
         }
-    
+
         function hideStatesDropdown() {
             if (typeof(document) !== 'undefined') {
                 const yjiDrop = document.getElementById('States-dropdown') as HTMLElement
@@ -64,9 +64,9 @@ export default function Navbar() {
         }
     }
 
-    //TODO: Create a singular nav bar instead of 2 independent ones. 
+    //TODO: Create a singular nav bar instead of 2 independent ones.
 
-    //There is a small nav bar intended for devices with smaller screens. That navbar includes the hamburger menu, and will not usually be there. The larger nav bar is for larger devices like computers and is across the top page. 
+    //There is a small nav bar intended for devices with smaller screens. That navbar includes the hamburger menu, and will not usually be there. The larger nav bar is for larger devices like computers and is across the top page.
   return (
     <main >
         <div id="smallNavBar" className="lgNav:hidden z-10">
@@ -92,30 +92,30 @@ export default function Navbar() {
                     </div>
                     <ul onClick={toggleSmallNav} className="text-xl">
                         <li>
-                            <Link href="/" className="font-bold flex flex-row"> 
-                                <p> Home </p> <AiOutlineHome className="m-1"/> 
+                            <Link href="/" className="font-bold flex flex-row">
+                                <p> Home </p> <AiOutlineHome className="m-1"/>
                             </Link>
                         </li>
                         <li>
                             <Link href="/states2025" className="font-bold py-3"> States 2025 </Link>
                         </li>
                         <li>
-                            <Link href="/states2025/schedule" className="flex flex-row my-1 mx-3"> 
-                                <p> Schedule </p>  
+                            <Link href="/states2025/schedule" className="flex flex-row my-1 mx-3">
+                                <p> Schedule </p>
                             </Link>
-                            <Link href="/states2025/homeRooms" className="flex flex-row my-1 mx-3"> 
-                                <p> Home Rooms </p>  
+                            <Link href="/states2025/homeRooms" className="flex flex-row my-1 mx-3">
+                                <p> Home Rooms </p>
                             </Link>
-                            <Link href="/states2025/map" className="flex flex-row my-1 mx-3"> 
-                                <p> Map </p>  
+                            <Link href="/states2025/map" className="flex flex-row my-1 mx-3">
+                                <p> Map </p>
                             </Link>
                         </li>
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
                         </li>
                          <li>
-                            <Link href="/contactUs" className="flex flex-row my-1 mx-3"> 
-                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>  
+                            <Link href="/contactUs" className="flex flex-row my-1 mx-3">
+                                <p> Contact Us </p> <AiOutlineMail className="m-1"/>
                             </Link>
                         </li>
                         <li>
@@ -128,8 +128,8 @@ export default function Navbar() {
                             <Link href="/pastTournaments" className="font-bold my-1"> Past Tournaments </Link>
                         </li>
                         <li>
-                            <Link href="/virtualWorkshops" className="font-bold flex flex-row"> 
-                                Workshop Recordings 
+                            <Link href="/virtualWorkshops" className="font-bold flex flex-row">
+                                Workshop Recordings
                             </Link>
                         </li>
                     </ul>
@@ -139,7 +139,7 @@ export default function Navbar() {
 
         {/* Beginning of full nav bar */}
         <nav id="fullNavBar" className="hidden lgNav:flex sticky-top-0 shadow-md flex-row justify-between pr-5 text-white sm:hidden bg-black">
-       
+
              <Link href="/" className="hover:text-lightOrange">
                 <Logo />
              </Link>
@@ -148,10 +148,10 @@ export default function Navbar() {
                     <Link href="/" className="text-xl">Home</Link>
                 </li>
 
-                <div id="States-dropdown-title">   
+                <div id="States-dropdown-title">
                     <li className="m-2 mx-6 flex-col items-center">
-                        <Link href="/states2025" className="hover:text-lightOrange text-xl">States 2025</Link>
-                        <ul id="States-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                        <Link href="/states2025" className="hover:text-lightOrange text-xl pl-2">States 2025</Link>
+                        <ul id="States-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-2 pr-6 hidden flex-col z-10">
                             <li>
                                 <Link href="/states2025/schedule" className="hover:text-lightOrange text-xl"> Schedule </Link>
                             </li>
@@ -164,15 +164,15 @@ export default function Navbar() {
                         </ul>
                     </li>
                 </div>
-                
-                <div id="contact-dropdown-title">   
+
+                <div id="contact-dropdown-title">
                     <li className="m-2 mx-6 flex-col items-center">
-                        <Link href="/aboutUs" className="hover:text-lightOrange text-xl">About Us</Link>
-                        <ul id="contact-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-0 pr-8 hidden flex-col z-10">
+                        <Link href="/aboutUs" className="hover:text-lightOrange text-xl pl-2">About Us</Link>
+                        <ul id="contact-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-2 pr-6 hidden flex-col z-10">
                             <li>
                                 <Link href="/contactUs" className="hover:text-lightOrange text-xl"> Contact Us </Link>
                             </li>
-                            
+
                         </ul>
                     </li>
                 </div>

@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lora } from 'next/font/google'
 import React from 'react'
-import Script from 'next/script'
 import Head from 'next/head'
 
 const play = Lora({ subsets: ['latin'], display:"swap" })
@@ -11,21 +10,6 @@ const play = Lora({ subsets: ['latin'], display:"swap" })
 export default function page() {
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
         <Head>
             title = Updates/Tournament Information
         </Head>
@@ -39,7 +23,7 @@ export default function page() {
                   transition={{duration:1}}
                   className="text-3xl font-bold flex justify-center items-center max-w-full"
                 >
-                  
+
                     <div className="flex justify-center text-center lg:w-1/2 lg:mx-24">
                       <h1 className={`${play.className} drop-shadow-titleShadow text-4xl lg:p-8 lg:text-6xl border-8 border-lightOrange tracking-wide`}>Makerspace Tours</h1>
                     </div>
@@ -48,8 +32,8 @@ export default function page() {
           </div>
 
         {/** Documents   */}
-        
-        <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg"> 
+
+        <p className="bg-lightBlue text-darkBlue text-center text-xl m-4 lg:m-12 lg:mx-72 p-5 shadow-darkBlue dark:shadow-white shadow-lg">
             The following makerspaces have offered to provide tours to Science Olympiad competitors during the invitational. Registration is limited for each makerspace tour, so <span className="font-bold"> all registrants are expected to attend their respective tours. </span> For more information about each makerspace, please consult the <a href="/currentTournament/updates" className="underline hover:opacity-50">Tournament Information</a> document. <br /><br /><span className="italic"> Registration will open on Tuesday, January 30th at 11 AM EST. </span>
 
         </p>
@@ -71,7 +55,7 @@ export default function page() {
             <br />
             <div className="my-4">
                 <a href="https://www.signupgenius.com/go/10C0945ABAE29AAF8C43-47376663-mill#/" target="_blank" className="hover:opacity-50 bg-darkBlue p-4 shadow-white shadow-lg"> Registration </a>
-          </div> 
+          </div>
         </div>
 
         {/** Registration for Invention Studio */}

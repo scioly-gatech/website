@@ -8,7 +8,6 @@ import eventResults2024AA from '../../../../data/eventResults/eventResults2024AA
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
-import Script from 'next/script'
 import Link from 'next/link'
 
 export default function YJITournament2024() {
@@ -23,21 +22,6 @@ const eventResultsAA = eventResults2024AA
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
     <div className="min-h-screen bg-white dark:bg-lightBlue dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
         <div id="borderDiv" className="border-4 border-purple-500 text-center text-4xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow"> 2024 State Tournament
@@ -51,10 +35,10 @@ const eventResultsAA = eventResults2024AA
             animate={{opacity:1}}
             transition={{duration:1}}
         >
-     
+
       {/* For small screens*/}
     {/* <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
-        
+
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
@@ -70,9 +54,9 @@ const eventResultsAA = eventResults2024AA
                                       height={352}
                                     />
                         }
-                      })}/> 
+                      })}/>
       </div> */}
-     
+
       {/* For large screens*/}
       <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
@@ -90,7 +74,7 @@ const eventResultsAA = eventResults2024AA
                                       height={352}
                                     />
                         }
-                      })} /> 
+                      })} />
       </div>
 
     <div className="flex justify-center">
@@ -99,7 +83,7 @@ const eventResultsAA = eventResults2024AA
       </p>
     </div>
     </motion.div>
-    </AnimatePresence> 
+    </AnimatePresence>
 
       <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col lg:flex-row justify-center py-10 sm:text-sm lg:text-2xl">
         <div className="m-4">
@@ -203,7 +187,7 @@ const eventResultsAA = eventResults2024AA
             </div>
         </div>
       </div>
-    
+
       <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-4 sm:text-sm lg:text-2xl">
         <h2 className="border-4 border-sky-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
         Tournament Information
@@ -212,7 +196,7 @@ const eventResultsAA = eventResults2024AA
           <iframe src="https://docs.google.com/document/d/e/2PACX-1vTAJKgutEODpvzm4NzgBcuhqj0ky6u9P7DMkQV31TaTa2BemLjdolwm0cMXUsr8ha729CfR_zSeOmi_/pub?embedded=true" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
         </div>
       </div>
-     
+
     </div>
     </>
   )

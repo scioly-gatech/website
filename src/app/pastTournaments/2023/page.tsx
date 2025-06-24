@@ -6,11 +6,10 @@ import eventResults2023 from '../../../../data/eventResults/eventResults2023'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
-import Script from 'next/script'
 
 export default function PastTournament2023() {
   const allPictures = [
-    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg", 
+    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg",
 ]
 
 const allResults = allResults2023
@@ -18,21 +17,6 @@ const eventResults = eventResults2023
 
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
-
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
     <div className="min-h-screen bg-white dark:bg-blue-950 dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
         <div id="borderDiv" className="border-4 border-lime-400 text-center text-2xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow">
@@ -47,7 +31,7 @@ const eventResults = eventResults2023
             animate={{opacity:1}}
             transition={{duration:1}}
         >
-     
+
       {/* For small screens*/}
       <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
         <Image
@@ -60,9 +44,9 @@ const eventResults = eventResults2023
         />
       </div>
 
-      {/**  
+      {/**
     <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
-        
+
         <EmblaCarousel numOfShownElements={1}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
@@ -78,7 +62,7 @@ const eventResults = eventResults2023
                                       height={0}
                                     />
                         }
-                      })}/> 
+                      })}/>
       </div>
       */}
       {/* For large screens*/}
@@ -98,7 +82,7 @@ const eventResults = eventResults2023
                                       height={0}
                                     />
                         }
-                      })} /> 
+                      })} />
       </div>
 
     </motion.div>

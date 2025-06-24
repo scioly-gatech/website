@@ -2,19 +2,19 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
-import Script from 'next/script'
+
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
 
 export default function FAQs() {
 
-  //When question is clicked, show corresponding answer function 
+  //When question is clicked, show corresponding answer function
   function showAnswer(id: number) {
     if (typeof(document) !== 'undefined') {
       const answer = document.getElementById('answer' + id) as HTMLElement
       answer.classList.toggle('hidden')
       answer.classList.toggle('flex')
-    } 
+    }
   }
 
   const questions = [
@@ -50,25 +50,10 @@ export default function FAQs() {
       answer: "Email scioly.gatech@gmail.com if you would need an invoice for payment."
     }
   ]
-  
+
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
 
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
-      
     <div className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh]">
       <div className="text-white bg-[url('/images/2024/States/states-24.jpg')] p-12 w-full">
         <AnimatePresence>
@@ -93,11 +78,11 @@ export default function FAQs() {
 
           <ul className="w-full" id="questions_answers">
             {
-              questions.map((item, i) => 
+              questions.map((item, i) =>
                 <div key={i}>
                   <li className="pl-8 font-bold text-3xl bg-orange-300 py-4 w-full hover: cursor-pointer " onClick={() => showAnswer(i)}>{item.question}</li>
                   {i != 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> {item.answer} </li>}
-                  {i == 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form. <br /><br />We will be accepting checks made payable to Georgia Tech. The check MUST include Science Olympiad @ Georgia Tech in the memo line for it to be accepted. Please send the check to: 
+                  {i == 4 && <li id={"answer" + i} className="text-center bg-white text-2xl hidden"> We will have an early bird registration period from Sept. 2nd - Oct. 16th, during which registration will cost $110, and a standard registration period from Oct. 17th - Dec. 13th, during which registration will cost $150. Whether or not you qualify for early bird registration will be based on the time you fill out the registration form. <br /><br />We will be accepting checks made payable to Georgia Tech. The check MUST include Science Olympiad @ Georgia Tech in the memo line for it to be accepted. Please send the check to:
                   <br/><br/>
                   Harsha Gaddipati<br/>
                   326032 Georgia Tech Station<br/>

@@ -4,7 +4,6 @@ import React from 'react';
 import { Container, Typography, Box, Card, CardContent, Button, List, ListItem, ListItemText, Link } from '@mui/material';
 import { workshopData } from './workshopData';
 import DownloadIcon from '@mui/icons-material/Download';
-import Script from 'next/script'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
 const play = Lora({ subsets: ['latin'], display: "swap" })
@@ -15,22 +14,7 @@ const VirtualWorkshop: React.FC = () => {
 
   return (
     <div>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
 
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
-      
     <div className="dark:bg-black bg-slate-200 w-full">
       <div className="text-white bg-black p-12 w-full">
         <AnimatePresence>
@@ -70,15 +54,15 @@ const VirtualWorkshop: React.FC = () => {
 
       {/* Workshop Sections */}
       {workshopData.map((workshop, index) => (
-        <Box 
-          key={index} 
-          sx={{ mb: 8 }} 
+        <Box
+          key={index}
+          sx={{ mb: 8 }}
           id={getWorkshopId(workshop.title)}
         >
           <Typography variant="h4" component="h2" gutterBottom>
             {workshop.title}
           </Typography>
-          
+
           <Box sx={{ mb: 4 }}>
             <Typography variant="body1" paragraph>
               {workshop.description}
@@ -134,8 +118,8 @@ const VirtualWorkshop: React.FC = () => {
                   )}
                   {workshop.slidesPath && (
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                      <Button 
-                        variant="contained" 
+                      <Button
+                        variant="contained"
                         component="a"
                         href={workshop.slidesPath}
                         startIcon={<DownloadIcon />}
@@ -155,4 +139,4 @@ const VirtualWorkshop: React.FC = () => {
   );
 };
 
-export default VirtualWorkshop; 
+export default VirtualWorkshop;

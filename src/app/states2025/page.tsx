@@ -3,7 +3,6 @@ import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { Lora } from 'next/font/google'
 import Image from 'next/image'
-import Script from 'next/script'
 import { ReactDOM } from 'react'
 
 const play = Lora({ subsets: ['latin'], display: "swap" })
@@ -26,22 +25,7 @@ const Countdown = () => {
 export default function CurrentTournament() {
   return (
     <>
-    <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RQ1XF1G76X`}
-      />
 
-      <Script strategy="lazyOnload" id="main-script">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-RQ1XF1G76X', {
-          page_path: window.location.pathname,
-          });
-      `}
-      </Script>
-      
     <div className="dark:bg-black bg-slate-200 w-full md:min-h-[88vh] lg:min-h-[74vh]">
       <div className="text-white bg-[url('/images/2025/States/Skyline.jpg')] p-12 w-full">
         <AnimatePresence>
