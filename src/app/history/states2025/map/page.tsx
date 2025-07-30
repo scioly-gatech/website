@@ -11,7 +11,7 @@ import {
   makerspaceLocations,
   transportLocations,
   foodLocations
-} from "../../../../data/locations/state2025Locations";
+} from "../../../../../data/locations/state2025Locations";
 import { LatLngExpression } from "leaflet";
 
 const play = Lora({ subsets: ["latin"], display: "swap" });
