@@ -15,9 +15,11 @@ export default function Navbar() {
             const contactHover = document.getElementById('contact-dropdown-title') as HTMLElement
             contactHover.addEventListener('mouseenter', showContactDropdown)
             contactHover.addEventListener('mouseleave', hideContactDropdown)
+            /** State Hoverbar event listeners; bring back for next state tournament
             const statesHover = document.getElementById('States-dropdown-title') as HTMLElement
             statesHover.addEventListener('mouseenter', showStatesDropdown)
             statesHover.addEventListener('mouseleave', hideStatesDropdown)
+            */
         }
     }, [])
 
@@ -38,7 +40,7 @@ export default function Navbar() {
             contactDrop.classList.remove('flex')
         }
     }
-
+    /** States dropdown functions; bring back for next state tournament
         // Helper functions to show and hide the "State Tournament" dropdown menu
         function showStatesDropdown() {
             if (typeof(document) !== 'undefined') {
@@ -55,6 +57,7 @@ export default function Navbar() {
                 yjiDrop.classList.remove('flex')
             }
         }
+    */
 
     function toggleSmallNav() {
         if (typeof(document) !== 'undefined') {
@@ -96,18 +99,7 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/states2025" className="font-bold py-3"> States 2025 </Link>
-                        </li>
-                        <li>
-                            <Link href="/states2025/schedule" className="flex flex-row my-1 mx-3">
-                                <p> Schedule </p>
-                            </Link>
-                            <Link href="/states2025/homeRooms" className="flex flex-row my-1 mx-3">
-                                <p> Home Rooms </p>
-                            </Link>
-                            <Link href="/states2025/map" className="flex flex-row my-1 mx-3">
-                                <p> Map </p>
-                            </Link>
+                            <Link href="/YJI2026" className="font-bold my-3"> YJI 2026 </Link>
                         </li>
                         <li>
                             <Link href="/aboutUs" className="font-bold my-3"> About Us </Link>
@@ -147,22 +139,9 @@ export default function Navbar() {
                     <Link href="/" className="text-xl">Home</Link>
                 </li>
 
-                <div id="States-dropdown-title">
-                    <li className="m-2 mx-6 flex-col items-center">
-                        <Link href="/states2025" className="hover:text-lightOrange text-xl pl-2">States 2025</Link>
-                        <ul id="States-dropdown" className="bg-gradient-to-b from-black dark:from-black to-lightBlue dark:to-darkBlue absolute mt-2 py-2 pl-2 pr-6 hidden flex-col z-10">
-                            <li>
-                                <Link href="/states2025/schedule" className="hover:text-lightOrange text-xl"> Schedule </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2025/homeRooms" className="hover:text-lightOrange text-xl"> Home Rooms </Link>
-                            </li>
-                            <li>
-                                <Link href="/states2025/map" className="hover:text-lightOrange text-xl"> Map </Link>
-                            </li>
-                        </ul>
-                    </li>
-                </div>
+                <li className="m-2 mx-6 hover:text-lightOrange">
+                    <Link href="/YJI2026" className="text-xl">YJI 2026</Link>
+                </li>
 
                 <div id="contact-dropdown-title">
                     <li className="m-2 mx-6 flex-col items-center">
