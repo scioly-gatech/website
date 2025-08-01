@@ -30,9 +30,14 @@ export default function CurrentTournament() {
           <h2 className="text-3xl m-2 p-2 text-center font-bold">We will be hosting the third annual Yellow Jacket Invitational on January 31st, 2026!</h2>
           <Countdown targetDate='1-31-2026' eventName='YJI 2026' />
           <br /><br />
+          <h3 className="text-3xl text-center font-semibold">
+            Registration is now live! Sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing&ouid=115768010646187932553"
+                target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>
+          </h3>
+          <br /><br />
           <h3 className="text-xl text-center font-semibold">
             Both Divison B and Division C teams will be allowed to compete! For more info, check out our <a href="https://www.instagram.com/p/DLbEC_PyAyQ/"
-                target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange">Instagram!</a>
+                target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">Instagram!</a>
           </h3>
         </div>
 
