@@ -26,21 +26,28 @@ export default function CurrentTournament() {
         </motion.div>
         </AnimatePresence>
       </div>
-        <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-white">
+        <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-[#c5d4e6]">
           <h2 className="text-3xl m-2 p-2 text-center font-bold">We will be hosting the third annual Yellow Jacket Invitational on January 31st, 2026!</h2>
           <Countdown targetDate='1-31-2026' eventName='YJI 2026' />
-          <br /><br />
-          <h3 className="text-3xl text-center font-semibold">
+        </div>
+        <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-[#c5d4e6]">
+          <h2 className="text-3xl m-2 text-center font-bold">
             Registration is now live! Sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing&ouid=115768010646187932553"
                 target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>
-          </h3>
+          </h2>
           <br /><br />
           <h3 className="text-xl text-center font-semibold">
-            Both Divison B and Division C teams will be allowed to compete! For more info, check out our <a href="https://www.instagram.com/p/DLbEC_PyAyQ/"
-                target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">Instagram!</a>
+            Registration is open to both Division B and Division C!
           </h3>
+          <br />
+          <ul className="list-disc">
+              <li>Registration opens: August 1st, 2025</li>
+              <li>Standard Registration Closes: November 1st, 2025 ($150 per team)</li>
+              <li>Late Registration Closes: January 9th, 2026 ($180 per team)</li>
+          </ul>
+          <br />
+          <p className='mb-2'>For complete details, including penalty fees, team number limits,<br /> and registration requirements, please refer to the registration form.</p>
         </div>
-
     </div>
     </>
   )

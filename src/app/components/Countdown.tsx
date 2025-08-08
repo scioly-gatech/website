@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+// I made this component!! - Johnny
+
 const TIME_CONSTANTS = {
   MILLISECONDS_IN_SECOND: 1000,
   MILLISECONDS_IN_MINUTE: 60 * 1000,
