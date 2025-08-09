@@ -25,7 +25,7 @@ export default function CurrentTournament() {
         </motion.div>
         </AnimatePresence>
       </div>
-        <div className="flex flex-col lg:flex-row justify-center">
+        <div className="flex flex-col lg:flex-row justify-center lg:min-h-[48vh]">
           <div id="states-wrapper">
           <p className="text-center text-3xl lg:text-4xl m-4 lg:m-6 font-bold dark:text-white underline">State Tournament</p>
           <ul className="flex flex-col justify-evenly self-center lg:justify-center items-center px-12">
@@ -37,6 +37,9 @@ export default function CurrentTournament() {
               </li>
               <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
                   <Link href="/pastTournaments/2024" className="bg-lightOrange text-2xl lg:text-3xl p-4 rounded-2xl px-12">2024</Link>
+              </li>
+              <li className="hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500 my-6">
+                  <Link href="/pastTournaments/2025" className="bg-darkOrange text-2xl lg:text-3xl p-4 rounded-2xl px-12">2025</Link>
               </li>
           </ul>
           </div>
@@ -52,7 +55,7 @@ export default function CurrentTournament() {
             </ul>
           </div>
         </div>
-    </div>
+      </div>
     </>
   )
 }
