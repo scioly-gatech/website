@@ -35,7 +35,7 @@ export default function CurrentTournament() {
             Registration is now live! Sign up <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing&ouid=115768010646187932553"
                 target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>
           </h2>
-          <br /><br />
+          <br />
           <h3 className="text-xl text-center font-semibold">
             Registration is open to both Division B and Division C!
           </h3>
@@ -46,7 +46,10 @@ export default function CurrentTournament() {
               <li>Late Registration Closes: January 9th, 2026 ($180 per team)</li>
           </ul>
           <br />
-          <p className='mb-2'>For complete details, including penalty fees, team number limits,<br /> and registration requirements, please refer to the registration form.</p>
+          <p> For complete details, including penalty fees, team number limits,<br /> and registration requirements, please refer to the registration form.</p>
+          <br />
+          <p className="mb-2">Check out a list of teams who have registered <a href="https://docs.google.com/spreadsheets/d/1BT2hHQufuZorei2g5WCbZpkftRFcOr9A5f9TKtuJ2KA/edit?usp=sharing"
+            target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>!</p>
         </div>
     </div>
     </>
