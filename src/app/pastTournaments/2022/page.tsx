@@ -1,6 +1,6 @@
 import React from 'react'
-import allResults2022 from '../../../../data/allResults/allResults2022'
-import eventResults2022 from '../../../../data/eventResults/eventResults2022'
+import allResults2022 from '../../../../data/allResults/states/allResults2022'
+import eventResults2022 from '../../../../data/eventResults/states/eventResults2022'
 import Image from 'next/image'
 
 const allResults = allResults2022

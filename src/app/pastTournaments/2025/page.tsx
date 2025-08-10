@@ -1,30 +1,30 @@
 'use client'
 
 import React, { useCallback, useEffect } from 'react'
-import allResults2024A from '../../../../data/allResults/states/allResults2024A'
-import allResults2024AA from '../../../../data/allResults/states/allResults2024AA'
-import eventResults2024A from '../../../../data/eventResults/states/eventResults2024A'
-import eventResults2024AA from '../../../../data/eventResults/states/eventResults2024AA'
+import allResults2025A from '../../../../data/allResults/states/allResults2025A'
+import allResults2025AA from '../../../../data/allResults/states/allResults2025AA'
+import eventResults2025A from '../../../../data/eventResults/states/eventResults2025A'
+import eventResults2025AA from '../../../../data/eventResults/states/eventResults2025AA'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
 import Link from 'next/link'
 
-export default function YJITournament2024() {
+export default function YJITournament2025() {
   const allPictures = [
-    "/images/2024/States/Pictures/1.jpg", "/images/2024/States/Pictures/23.jpg", "/images/2024/States/Pictures/2.jpg", "/images/2024/States/Pictures/25.jpg", "/images/2024/States/Pictures/3.jpg", "/images/2024/States/Pictures/4.jpg", "/images/2024/States/Pictures/5.jpg", "/images/2024/States/Pictures/6.jpg", "/images/2024/States/Pictures/9.jpg", "/images/2024/States/Pictures/10.jpg", "/images/2024/States/Pictures/11.jpg", "/images/2024/States/Pictures/12.jpg", "/images/2024/States/Pictures/13.jpg", "/images/2024/States/Pictures/24.jpg", "/images/2024/States/Pictures/14.jpg", "/images/2024/States/Pictures/15.jpg", "/images/2024/States/Pictures/16.jpg", "/images/2024/States/Pictures/17.jpg",  "/images/2024/States/Pictures/26.jpg", "/images/2024/States/Pictures/18.jpg", "/images/2024/States/Pictures/20.jpg", "/images/2024/States/Pictures/22.jpg"
+    
 ]
 
-const allResultsA = allResults2024A
-const allResultsAA = allResults2024AA
-const eventResultsA = eventResults2024A
-const eventResultsAA = eventResults2024AA
+const allResultsA = allResults2025A
+const allResultsAA = allResults2025AA
+const eventResultsA = eventResults2025A
+const eventResultsAA = eventResults2025AA
 
   return (
     <>
     <div className="min-h-screen bg-white dark:bg-lightBlue dark:text-white">
       <h1 className="bg-lightOrange dark:bg-black  dark:text-white flex justify-center py-20">
-        <div id="borderDiv" className="border-4 border-purple-500 text-center text-4xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow"> 2024 State Tournament
+        <div id="borderDiv" className="border-4 border-blue-500 text-center text-4xl lg:text-6xl font-bold p-4 m-4 drop-shadow-titleShadow"> 2025 State Tournament
         </div>
       </h1>
 
@@ -58,7 +58,7 @@ const eventResultsAA = eventResults2024AA
       </div> */}
 
       {/* For large screens*/}
-      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
+      {/* <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
         <EmblaCarousel numOfShownElements={3}
                       maxElementWidth={467}
                       options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }} // Start 1 instead since the start position in Embla seems to be based on the middle element
@@ -75,13 +75,13 @@ const eventResultsAA = eventResults2024AA
                                     />
                         }
                       })} />
-      </div>
+      </div> */}
 
-    <div className="flex justify-center">
+    {/* <div className="flex justify-center">
       <p className="text-3xl text-center font-bold p-4 my-4 bg-purple-500 rounded-xl w-1/3 lg:w-1/6 hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
         <Link href="https://photos.app.goo.gl/XdMw9MzsvQxwv6Ca9" target='__blank'>All Photos</Link>
       </p>
-    </div>
+    </div> */}
     </motion.div>
     </AnimatePresence>
 
@@ -156,7 +156,7 @@ const eventResultsAA = eventResults2024AA
             </table>
             <div className="flex justify-center">
             <p className="text-3xl text-center font-bold p-4 my-4 bg-purple-400 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
-            <Link href="https://www.duosmium.org/results/2024-03-30_GA_states_aa_flight_c/" target='__blank'>AA All Results</Link>
+            <Link href="https://www.duosmium.org/results/2025-03-29_GA_states_aa_flight_c/" target='__blank'>AA All Results</Link>
             </p>
             </div>
         </div>
@@ -182,7 +182,7 @@ const eventResultsAA = eventResults2024AA
             </table>
             <div className="flex justify-center">
             <p className="text-3xl text-center font-bold p-4 my-4 bg-violet-400 rounded-xl hover:opacity-60 hover:transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:duration-500">
-            <Link href="https://www.duosmium.org/results/2024-03-30_GA_states_a_flight_c/" target='__blank'>A All Results</Link>
+            <Link href="https://www.duosmium.org/results/2025-03-29_GA_states_a_flight_c/" target='__blank'>A All Results</Link>
             </p>
             </div>
         </div>
@@ -193,8 +193,7 @@ const eventResultsAA = eventResults2024AA
         Tournament Information
         </h2>
         <div className="w-full flex justify-center my-8">
-          <iframe src="https://docs.google.com/document/d/e/2PACX-1vTAJKgutEODpvzm4NzgBcuhqj0ky6u9P7DMkQV31TaTa2BemLjdolwm0cMXUsr8ha729CfR_zSeOmi_/pub?embedded=true" width="90%" height="750" className="text-center lg:w-1/2"></iframe>
-        </div>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vQLpwFPRhY108IKXY2QAjRHFXRIDQWNNE591EB75ESCOWprOqaH1z_80JlemvtSyipHbT-8FeY0O34u/pub?embedded=true" width="90%" height="750" className="text-center lg:w-1/2"></iframe>        </div>
       </div>
 
     </div>

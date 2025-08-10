@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useCallback, useEffect } from 'react'
-import allResultsYJI2025B from '../../../../data/allResults/allResultsYJI2025B'
-import allResultsYJI2025C from '../../../../data/allResults/allResultsYJI2025C'
-import eventResultsYJI2025B from '../../../../data/eventResults/eventResultsYJI2025B'
-import eventResultsYJI2025C from '../../../../data/eventResults/eventResultsYJI2025C'
+import allResultsYJI2025B from '../../../../data/allResults/YJI/allResultsYJI2025B'
+import allResultsYJI2025C from '../../../../data/allResults/YJI/allResultsYJI2025C'
+import eventResultsYJI2025B from '../../../../data/eventResults/yji/eventResultsYJI2025B'
+import eventResultsYJI2025C from '../../../../data/eventResults/yji/eventResultsYJI2025C'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
@@ -186,7 +186,7 @@ const eventResultsC = eventResultsYJI2025C
       </div>
 
       <div id="overallResults" className="bg-lightOrange dark:bg-black dark:text-white flex flex-col items-center py-4 sm:text-sm lg:text-2xl">
-        <h2 className="border-4 border-sky-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
+        <h2 className="border-4 p-4 border-sky-500 text-center sm:text-lg lg:text-3xl font-bold py-4">
         Tournament Information
         </h2>
         <div className="w-full flex justify-center my-8">

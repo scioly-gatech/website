@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useCallback, useEffect } from 'react'
-import allResultsYJI2024 from '../../../../data/allResults/allResultsYJI2024'
-import eventResultsYJI2024 from '../../../../data/eventResults/eventResultsYJI2024'
+import allResultsYJI2024 from '../../../../data/allResults/YJI/allResultsYJI2024'
+import eventResultsYJI2024 from '../../../../data/eventResults/yji/eventResultsYJI2024'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import EmblaCarousel from '@/app/components/Carousel'
