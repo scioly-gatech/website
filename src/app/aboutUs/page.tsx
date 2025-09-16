@@ -15,22 +15,23 @@ const play = Lora({
 export default function MeetTeam() {
 
     const profiles = [
-      {id: 1, name: "Jason Katz", role: "President", imgRoute: "/images/execPics/Jason.jpg"},
-      {id: 2, name: "Harsha Gaddipati", role: "Vice President Club Logistics", imgRoute: "/images/execPics/Harsha-cropped.jpg"},
-      {id: 3, name: "Morgan Duvall", role: "Vice President Tournament Logistics", imgRoute: "/images/execPics/Morgan.JPG"},
-      {id: 4, name: "Ethan Maraldo", role: "Logistics Co-Director", imgRoute: "/images/execPics/Ethan.jpeg"},
-      {id: 5, name: "Gopesh Singal", role: "Logistics Co-Director", imgRoute: "/images/execPics/Gopesh.jpg"},
-      {id: 6, name: "Shriya Nayak", role: "Exam Co-Director", imgRoute: "/images/execPics/Shriya-cropped.JPG"},
-      {id: 7, name: "Devam Shrivastava", role: "Build Co-Director", imgRoute: "/images/execPics/Devam.jpeg"},
-      {id: 8, name: "Victor Hesu", role: "Build Co-Director", imgRoute: "/images/execPics/Victor.jpg"},
-      {id: 9, name: "Vidit Pokharna", role: "Finance Officer", imgRoute: "/images/execPics/Vidit-cropped.jpg"},
-      {id: 10, name: "Justin Li", role: "Junior Finance Officer", imgRoute: "/images/execPics/Justin.jpg"},
-      {id: 11, name: "Femke Kovoor", role: "Social Director", imgRoute: "/images/execPics/Femke.jpg"},
-      {id: 12, name: "Aleena Khetani", role: "PR Co-Director", imgRoute: "/images/execPics/Aleena.png"},
-      {id: 13, name: "Aditi Abhilash", role: "PR Co-Director", imgRoute: "/images/execPics/Aditi.jpg"},
-      {id: 14, name: "Julie Young", role: "Outreach Co-Director", imgRoute: "/images/execPics/Julie-cropped.jpg"},
-      {id: 15, name: "Anish Kristipati", role: "Outreach Co-Director", imgRoute: "/images/execPics/Anish.jpg"},
-      {id: 16, name: "Royce Arockiasamy", role: "Tech Lead", imgRoute: "/images/execPics/Royce.jpeg"},
+      {id: 1, name: "Ethan Maraldo", role: "President", imgRoute: "/images/execPics/Ethan.jpeg"},
+      {id: 2, name: "Femke Kovoor", role: "Vice President Club Logistics", imgRoute: "/images/execPics/Femke.jpg"},
+      {id: 3, name: "Krish Patil", role: "Vice President Tournament Logistics", imgRoute: "/images/execPics/Blank.jpg"},
+      {id: 4, name: "Victor Hesu", role: "Vice President Communications", imgRoute: "/images/execPics/Victor.jpg"},
+      {id: 5, name: "Samrita Shetty ", role: "Logistics Co-Director", imgRoute: "/images/execPics/Samrita.jpeg"},
+      {id: 6, name: "Rachel Nam", role: "Logistics Co-Director", imgRoute: "/images/execPics/Blank.jpg"},
+      {id: 7, name: "Thomas Becker", role: "Exam Co-Director", imgRoute: "/images/execPics/Thomas.JPG"},
+      {id: 8, name: "Larissa Martin ", role: "Exam Co-Director", imgRoute: "/images/execPics/Blank.JPG"},
+      {id: 9, name: "Devam Shrivastava", role: "Build Co-Director", imgRoute: "/images/execPics/Devam.jpeg"},
+      {id: 10, name: "Nathan Donagi", role: "Build Co-Director", imgRoute: "/images/execPics/Blank.jpg"},
+      {id: 11, name: "Justin Li", role: "Finance Co-Director", imgRoute: "/images/execPics/Justin.jpg"},
+      {id: 12, name: "Sishnukeshav Balamurali", role: "Finance Co-Director", imgRoute: "/images/execPics/Blank.jpg"},
+      {id: 13, name: "Swathi Mugundu Pradeep", role: "Creative Co-Director", imgRoute: "/images/execPics/Swathi.jpg"},
+      {id: 14, name: "Melody Lee", role: "Creative Co-Director", imgRoute: "/images/execPics/Melody.jpeg"},
+      {id: 15, name: "Johnny Chen", role: "Outreach Co-Director", imgRoute: "/images/execPics/Blank.jpg"},
+      {id: 16, name: "Yaitihya Sahoo", role: "Outreach Co-Director", imgRoute: "/images/execPics/Blank.jpg"},
+
     ]
 
   //Stagger animation below was modified from Leigh Halliday's YouTube tutorial titled 'Staggered Animations in React with Framer Motion in 5 Minutes'. The video can be found at this link: https://www.youtube.com/watch?v=u_95SPKE6vg&ab_channel=LeighHalliday
