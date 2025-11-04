@@ -52,19 +52,6 @@ export default function CurrentTournament() {
           <p className="mb-2">Check out a list of teams who have registered <a href="https://docs.google.com/spreadsheets/d/1BT2hHQufuZorei2g5WCbZpkftRFcOr9A5f9TKtuJ2KA/edit?usp=sharing"
             target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>!</p>
         </div>
-        <div className="text-blackborder-4 border-black light:bg-lightBlue dark:bg-darkBlue dark:text-white flex flex-col items-center m-8 lg:mx-72 p-4 shadow-2xl shadow-[#c5d4e6]">
-          <h2 className="text-3xl m-2 text-center font-bold">
-            Interested in supervising an event? 
-          </h2>
-          <h2 className="text-3xl m-2 text-center font-bold">
-            Sign up <a href="https://forms.gle/6KWJyxhScyH8NF4AA"
-                target="_blank" rel="noopener noreferrer" className="hover:text-lightOrange underline">here</a>
-          </h2>
-          <br />
-          <h3 className="text-xl text-center font-semibold">
-            Application Deadline: October 13th, 2025
-          </h3>
-        </div>
     </div>
     </>
   )
