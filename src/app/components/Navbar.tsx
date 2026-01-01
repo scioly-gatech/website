@@ -22,25 +22,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Desktop Nav */}
         <ul className="hidden lg:flex w-full items-center justify-between text-lg tracking-wider">
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/">HOME</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/YJI2026">YJI 2026</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/aboutUs">ABOUT US</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/getInvolved">GET INVOLVED</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/sponsorships">SPONSORSHIP</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/pastTournaments">PAST TOURNAMENTS</Link>
           </li>
-          <li className="hover:text-lightOrange">
+          <li className="hover:text-[#d1be7b]">
             <Link href="/virtualWorkshops">EVENT WORKSHOPS</Link>
           </li>
         </ul>
