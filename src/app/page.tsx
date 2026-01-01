@@ -1,246 +1,129 @@
-'use client'
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { Lora } from "next/font/google"
-import { useEffect } from "react"
-import {BiSolidQuoteLeft, BiSolidQuoteRight} from 'react-icons/bi'
-import Image from "next/image"
-import EmblaCarousel from '@/app/components/Carousel'
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { Outfit } from "next/font/google";
 
-const play = Lora({
-  subsets:['latin'],
-  display:'swap'
-})
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Regular + Bold
+  display: "swap",
+});
 
-const indexToColor = {
-  0: 'lightOrange',
-  1: 'brightYellow',
-  2: `darkOrange`
-};
+const allPictures = [
+  "/images/2023/2023-1.jpg",
+  "/images/2023/2023-2.jpg",
+  "/images/2023/2023-3.jpg",
+  "/images/2023/2023-4.jpg",
+  "/images/2023/2023-5.jpg",
+  "/images/2023/2023-6.jpg",
+  "/images/2023/2023-7.jpg",
+  "/images/2023/2023-8.jpg",
+];
 
 export default function Home() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [angle, setAngle] = useState(0);
 
-  const allPictures = [
-    "/images/2023/2023-1.jpg", "/images/2023/2023-2.jpg", "/images/2023/2023-3.jpg", "/images/2023/2023-4.jpg", "/images/2023/2023-5.jpg", "/images/2023/2023-6.jpg", "/images/2023/2023-7.jpg", "/images/2023/2023-8.jpg", "/images/2023/2023-9.jpg", "/images/2023/2023-10.jpg", "/images/2023/2023-11.jpg", "/images/2023/2023-12.jpg", "/images/2023/2023-13.jpg", "/images/2023/2023-14.jpg", "/images/2023/2023-15.jpg", "/images/2023/2023-16.jpg", "/images/2023/2023-17.jpg", "/images/2023/2023-18.jpg", "/images/2023/2023-19.jpg", "/images/2023/2023-20.jpg",
-]
+  const rotationSpeed = 0.001; // radians per frame
+
+  useEffect(() => {
+    let animationFrame: number;
+
+    const rotate = () => {
+      setAngle((prev) => prev + rotationSpeed);
+      animationFrame = requestAnimationFrame(rotate);
+    };
+
+    rotate();
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  // Ellipse radii
+  const rx = 320; // horizontal radius
+  const ry = 300; // vertical radius
+  const mobileRx = 180;
+  const mobileRy = 100;
 
   return (
-    <>
+    <main className="w-full flex flex-col items-center bg-[#2c4261] overflow-visible">
+      
+      {/* Orbit Wrapper */}
+      <div className="relative w-full h-[600px] lg:h-[700px] flex justify-center items-center mt-12 mb-12">
+        {/* Center Logo */}
+        <div className="z-20">
+          <Image
+            src="/images/home/Professional SO@GT Logo.png"
+            alt="Science Olympiad Logo"
+            width={ry * 1.25}
+            height={ry * 1.25}
+            className="mx-auto"
+          />
+        </div>
 
-    <main className="bg-amber-50 dark:bg-darkBlue h-full w-full">
-    <div id="topScreen" className="h-[24rem] flex justify-center items-center bg-[url(/images/home/atlantaSky.jpg)] ">
-      <AnimatePresence>
-        <motion.div
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:4}}
-        >
-        <h1 className={`text-6xl text-center border-4 borer-white text-white drop-shadow-titleShadow font-bold lg:p-20 mx-12 w-full, ${play.className}`}><span>Science Olympiad @ Georgia Tech </span></h1>
-      </motion.div>
-      </AnimatePresence>
-    </div>
-    {/* For small screens
-    <div id="carouselSmall" className="flex lg:hidden flex-row justify-center">
-        <EmblaCarousel numOfShownElements={1}
-                      maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 0 }}
-                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
-                        // Make not in view children to be invisible so their shadows do not appear as well
-                        inViewChildren.forEach(child => {
-                          child.classList.add("shadow-2xl");
-                          child.classList.remove("opacity-0");
-                        });
-                        notInViewChildren.forEach(child => {
-                          child.classList.remove("shadow-2xl");
-                          child.classList.add("opacity-0");
-                        });
-                      }}
-                      viewportPadding={"0 50px"}// * For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
-                      contents={allPictures.map((imagePath, index) => {
-                        const mod = index % 3;
-                        if (mod != 0 && mod != 1 && mod != 2) {
-                          return { node: <></>};
-                        }
-                        return {
-                          node: <Image
-                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
-                                  style={{objectFit: "cover"}}
-                                  src={imagePath}
-                                  alt="Slideshow Picture"
-                                  key={index}
-                                  width={467}
-                                  height={0}
-                                />
-                          }
-                      })} />
-      </div>
-      */}
+        {/* Orbiting Images */}
+        <div ref={containerRef} className="absolute w-full h-full flex justify-center items-center">
+          {allPictures.map((src, i) => {
+            const angleOffset = (i / allPictures.length) * 2 * Math.PI + angle;
 
-      {/* For large screens*/}
-      <div id="carouselLarge" className="hidden lg:flex flex-row justify-center">
-        <EmblaCarousel numOfShownElements={3}
-                      maxElementWidth={467}
-                      options={{ dragFree: true, loop: true, watchDrag: () => false, startIndex: 1 }}  // Start 1 instead since the start position in Embla seems to be based on the middle element
-                      onSlidesInViewChange={(inViewChildren, notInViewChildren) => {
-                        // Make not in view children to be invisible so their shadows do not appear as well
-                        inViewChildren.forEach(child => {
-                          child.classList.remove("opacity-0");
-                        });
-                        notInViewChildren.forEach(child => {
-                          child.classList.add("opacity-0");
-                        });
-                      }}
-                      viewportPadding={"0 50px"} //For ensuring that the shadow of the most left and right elements is not cutoff by the buttons
-                      contents={allPictures.map((imagePath, index) => {
-                        const mod = index % 3;
-                        if (mod != 0 && mod != 1 && mod != 2) {
-                          return { node: <></>};
-                        }
+            const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+            const x = (isMobile ? mobileRx : rx) * Math.cos(angleOffset);
+            const y = (isMobile ? mobileRy : ry) * Math.sin(angleOffset);
 
-                        return {
-                          node: <Image
-                                  className={`block border-4 border-${indexToColor[mod]} shadow-2xl shadow-${indexToColor[mod]} rounded-full my-16 transition-opacity opacity-0 duration-300`}
-                                  style={{objectFit: "cover"}}
-                                  src={imagePath}
-                                  alt="Slideshow Picture"
-                                  key={index}
-                                  width={467}
-                                  height={0}
-                                />
-                          }
-                      })} />
+            const scale = Math.abs(Math.sin(angleOffset)) < 0.3 ? 1.5 : 1;
+
+            return (
+              <div
+                key={i}
+                className="absolute transition-transform duration-300"
+                style={{ transform: `translate(${x}px, ${y}px) scale(${scale})` }}
+              >
+                <div className="w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
+                  <Image
+                    src={src}
+                    alt={`Orbit Image ${i + 1}`}
+                    width={120}
+                    height={120}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-<AnimatePresence>
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:3}}
-      key="1"
-    >
-    <div id="mission" className="bg-darkOrange flex flex-col items-center p-8 dark:bg-black mx-0 lg:mx-24">
-        <h2 className={`text-3xl lg:text-5xl ${play.className} border-4 border-black lg:w-1/2 text-center py-2 my-4 dark:text-white dark:border-white`}>Mission Statement</h2>
-        <p className="hidden lg:flex text-3xl text-center dark:text-white"><BiSolidQuoteLeft className="text-darkBlue dark:text-white hidden lg:block"/> Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. <BiSolidQuoteRight className="text-darkBlue dark:text-white hidden lg:block"/></p>
-        <p className="flex lg:hidden text-3xl text-center dark:text-white">&ldquo; Engage Science Olympiad Alumni at Georgia Tech in organizing events and motivating students by serving the Science Olympiad community. &rdquo; </p>
-    </div>
-    </motion.div>
+      {/* White Section */}
+      <section className="w-full bg-white py-10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-8 px-6">
+          
+          {/* Left Side: Image */}
+          <div className="w-full lg:w-1/3">
+            <Image
+              src="/images/home/techtower.jpg" 
+              alt="Tech Tower"
+              width={600}
+              height={400}
+              className="w-full h-auto shadow-lg"
+            />
+          </div>
 
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:1}}
-      key="2"
-    >
-    <div id="serviceSmall" className={`flex lg:hidden flex-col items-center w-full`}>
-      <div className="flex flex-col items-center">
-        <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Service</h2>
-      </div>
-      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> Science Olympiad @ Georgia Tech is proud to announce that it will be hosting our second annual Yellow Jacket Invitational in addition to the Georgia State Division C Science Olympiad competition for the fourth consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for science to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal and memorable competition experience for high school students.</p>
-      <figure className="m-2">
-        <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
-        <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
-      </figure>
-    </div>
-    </motion.div>
+          {/* Right Side: Text */}
+          <div className={`w-full lg:w-2/3 flex flex-col justify-center ${outfit.className}`}>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">
+              We're Buzzing with Excitement...
+            </h2>
+            <p className="text-lg lg:text-xl text-black">
+              The Georgia Tech campus will be the bustling hub for two Science Olympiad competitions in 2026: our 3rd annual Yellow Jacket Invitational and the Georgia Division C State Tournament. Volunteers from Georgia Tech and other top tier universities around the country will apply their expertise to run more than 23 different STEM events and create an unforgettable competition experience.
+            </p>
+          </div>
 
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:1}}
-      key="3"
-    >
-    <div id="tournamentSmall" className={`flex lg:hidden flex-col items-center bg-lightBlue dark:bg-black w-full`}>
-      <div className="flex flex-col items-center">
-        <h2 className={`bg-lightOrange ${play.className} text-6xl p-2 m-2`}>Our Tournament</h2>
-      </div>
-      <p className="text-2xl border-4 border-black p-4 m-4 dark:text-white dark:border-white"> The Georgia Tech campus will be the bustling hub for two events: the Georgia Division C Science Olympiad Tournament and the Yellow Jacket Invitational. Centered around the Clough Undergraduate Learning Commons&apos; lab spaces. Centered around the Clough Undergraduate Learning Commons and using its state-of-the-art lab spaces, these competitions promise an immersive and challenging experience. Participants can look forward to 23 official competitive events, alongside a variety of intriguing trial events scheduled for the day. Additionally, the campus will be alive with interactive workshops and informative sessions. </p>
-      <figure className="m-2">
-        <Image src="/images/home/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
-        <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
-      </figure>
-    </div>
-    </motion.div>
+        </div>
+      </section>
 
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:1}}
-      key="4"
-    >
-    <div id="serviceLarge" className={`hidden lg:flex flex-row justify-evenly items-center p-16 mx-12`}>
-      <div className="flex flex-col items-center">
-        <h2 className={`bg-darkOrange dark:bg-black dark:text-white ${play.className} text-6xl p-2 m-2 lg:py-24 lg:px-8 lg:mr-4 rounded`}>Our Service</h2>
-      </div>
-      <p className="text-2xl w-1/2 border-4 border-black p-4 m-4 dark:text-white dark:border-white">Science Olympiad @ Georgia Tech is proud to announce that it will be hosting the very first Yellow Jacket Invitational in addition to the Georgia State Division C Science Olympiad competition for the third consecutive year. Georgia Tech student volunteers bring their various expertise and immense passion for science to writing exams, fabricating supplies, preparing labs, and hosting workshops to provide an optimal and memorable competition experience for high school students.</p>
-      <figure className="m-2">
-        <Image src="/images/home/main1.jpg" alt="Students competing in the Bridge event at the state competition" width="400" height="267"/>
-        <figcaption className="sr-only">Image of two students competing in the Bridge event and getting their device set up. Science Olympiad volunteers can be seen in the background of the photo taken during the 2023 State Competition.</figcaption>
-      </figure>
-    </div>
-    </motion.div>
-
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration:1}}
-      key="5"
-    >
-    <div id="tournamentLarge" className="bg-darkOrange dark:bg-black hidden lg:flex flex-row justify-evenly items-center p-8 mx-24">
-      <figure>
-        <Image src="/images/home/main2.jpg" alt="Students competing in a build event at the state competition" width="400" height="267"/>
-        <figcaption className="sr-only">Image of two students placing the plane that they built into a box at the Science Olympiad 2023 State Tournament.</figcaption>
-      </figure>
-      <p className="text-2xl w-1/2 border-4 border-black dark:border-white dark:text-white m-4 p-4"> The Georgia Tech campus will be the bustling hub for two events: the Georgia Division C Science Olympiad Tournament and the Yellow Jacket Invitational. Centered around the Clough Undergraduate Learning Commons&apos; lab spaces. Centered around the Clough Undergraduate Learning Commons and using its state-of-the-art lab spaces, these competitions promise an immersive and challenging experience. Participants can look forward to 23 official competitive events, alongside a variety of intriguing trial events scheduled for the day. Additionally, the campus will be alive with interactive workshops and informative sessions. </p>
-      <div className="justify items-center">
-          <h2 className={`bg-lightOrange dark:bg-black dark:text-white ${play.className} text-6xl py-28 px-4 text-center`}>Our Tournament</h2>
-      </div>
-    </div>
-    </motion.div>
-
-  </AnimatePresence>
-
-  <AnimatePresence>
-<div id="sponsors">
-  <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:3}}
-    className="flex flex-row justify-around p-12"
-  >
-
-<div id="logos">
-  <div className={`text-center text-3xl px-12 italic text-white bg-darkBlue dark:bg-black ${play.className}`}>
-      <div className="flex flex-col items-center">
-      <h2 className="text-center">A special thanks to our sponsors for supporting us in hosting our tournaments!</h2>
-        <figure>
-          <Image src="/images/sponsors/seal2.png" alt="Georgia Tech Seal" width="700" height="200"/>
-          <figcaption className="sr-only">Picture of the Georgia Tech Seal next to the words Georgia Institute of Technology</figcaption>
-        </figure>
-      </div>
-    </div>
-      <figure className="flex flex-col items-center shadow-brightYellow border-brightYellow shadow-2xl border-4 p-4 bg-lightBlue">
-        {/** Sponsor Images */}
-        {/* <Image src="/images/sponsors/buzzfund.png" alt="Campus Services" width="350" height="300" className=""/>
-        <figcaption className="sr-only"> Logo for Campus Services </figcaption>
-        <Image src="/images/sponsors/ece.png" alt="School of Electrical and Computer Engineering" width="700" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for School of Electrical and Computer Engineering </figcaption>
-        <Image src="/images/sponsors/gtsf.png" alt="Georgia Tech Alumni Association Student Foundation" width="700" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for Georgia Tech Alumni Association Student Foundation </figcaption> */}
-        <Image src="/images/sponsors/mse.png" alt="School of Materials Science and Engineering" width="600" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for School of Materials Science and Engineering </figcaption>
-        {/* <Image src="/images/sponsors/parent.png" alt="Parents Fund For Student Life & Leadership" width="500" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for Parents Fund For Student Life & Leadership </figcaption>
-        <Image src="/images/sponsors/sei.png" alt="Strategic Energy Institute" width="500" height="400" className=""/>
-        <figcaption className="sr-only"> Logo for Strategic Energy Institute </figcaption>
-        <Image src="/images/sponsors/gtri.png" alt="Georgia Tech Research Institute" width="550" height="400" className="mt-4"/>
-        <figcaption className="sr-only"> Logo for Georgia Tech Research Institute</figcaption> */}
-      </figure>
-  </div>
-  </motion.div>
-    </div>
-    </AnimatePresence>
 
     </main>
-    </>
-  )
+  );
 }
+
