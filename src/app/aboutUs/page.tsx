@@ -37,14 +37,18 @@ export default function MeetTeam() {
       >
         {/* Left Side: About Us Text */}
         <motion.div
-          className="flex-1 flex items-center justify-center p-10 lg:p-16"
+          className="flex-1 h-full"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className={`${play.className} text-6xl lg:text-8xl font-bold text-white drop-shadow-titleShadow italic text-center lg:text-left`}>
-            About Us
-          </h1>
+          <Image
+            src="/images/about/title.png"
+            alt="Title"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
         {/* Right Side: Image (flush to edge) */}
