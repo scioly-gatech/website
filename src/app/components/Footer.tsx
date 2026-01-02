@@ -7,7 +7,7 @@ export default function Footer() {
     const curr = new Date().getFullYear()
 
   return (
-    <div className="bottom-1 min-w-full flex flex-col items-center text-darkBlue bg-lightBlue dark:bg-darkBlue dark:text-lightBlue p-10">
+    <div className="bottom-1 min-w-full flex flex-col items-center text-darkBlue bg-[#d1dded] dark:bg-darkBlue dark:text-lightBlue p-10">
     <nav className="hidden lg:block">
       <ul className="flex flex-row justify-center">
         <li className="p-1 m-1 hover:text-black hover:underline dark:hover:text-white">
@@ -27,8 +27,8 @@ export default function Footer() {
         </li>
       </ul>
     </nav>
-      <p className="left-1/2 text-center">For more information about Science Olympiad, please visit <a href="https://www.soinc.org/" target="_blank" className="underline text-white">https://www.soinc.org/ </a></p>
-      <p className="left-1/2 text-center">Created by <span className="text-yellow-300 font-bold">Science Olympiad @ Georgia Tech </span>{curr}</p>
+      <p className="left-1/2 text-center mb-2">For more information about Science Olympiad, please visit <a href="https://www.soinc.org/" target="_blank" className="underline">https://www.soinc.org/ </a></p>
+      <p className="left-1/2 text-center">Created by <span className="text-[#a89a65] font-bold">Science Olympiad @ Georgia Tech </span>{curr}</p>
       <ul id="socialMedia" className="flex flex-row">
         <li id="instagram" className="m-2">
           <a href="https://www.instagram.com/gtscioly/" target="_blank" className="text-3xl hover:brightness-150"><FaInstagramSquare /></a>
