@@ -112,7 +112,7 @@ export default function Home() {
           {/* Right Side: Text */}
           <div className={`w-full lg:w-2/3 flex flex-col justify-center ${outfit.className}`}>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">
-              We're Buzzing with Excitement...
+              We&apos;re Buzzing with Excitement...
             </h2>
             <p className="text-lg lg:text-xl text-black">
               The Georgia Tech campus will be the bustling hub for two Science Olympiad competitions in 2026: our 3rd annual Yellow Jacket Invitational and the Georgia Division C State Tournament. Volunteers from Georgia Tech and other top tier universities around the country will apply their expertise to run more than 23 different STEM events and create an unforgettable competition experience.
