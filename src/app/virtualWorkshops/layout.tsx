@@ -11,4 +11,4 @@ export default function VirtualWorkshopsLayout({
   children: React.ReactNode;
 }) {
   return children;
-} 
+}

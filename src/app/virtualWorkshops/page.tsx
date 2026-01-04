@@ -1,142 +1,345 @@
 'use client';
 
 import React from 'react';
-import { Container, Typography, Box, Card, CardContent, Button, List, ListItem, ListItemText, Link } from '@mui/material';
-import { workshopData } from './workshopData';
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  Link,
+  Divider,
+  ThemeProvider,
+  createTheme,
+} from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import { motion, AnimatePresence } from "framer-motion"
-import { Lora } from 'next/font/google'
-const play = Lora({ subsets: ['latin'], display: "swap" })
 
-const VirtualWorkshop: React.FC = () => {
-  // Create workshop IDs for linking
-  const getWorkshopId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+import ScienceIcon from '@mui/icons-material/Science';
+import BoltIcon from '@mui/icons-material/Bolt';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import PublicIcon from '@mui/icons-material/Public';
+import AirIcon from '@mui/icons-material/Air';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import ComputerIcon from '@mui/icons-material/Computer';
+import MemoryIcon from '@mui/icons-material/Memory';
+import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import GroupsIcon from '@mui/icons-material/Groups';
+import { Share_Tech_Mono } from 'next/font/google';
 
-  return (
-    <div>
 
-    <div className="dark:bg-black bg-slate-200 w-full">
-      <div className="text-white bg-black p-12 w-full">
-        <AnimatePresence>
-        <motion.div
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            transition={{duration:0.5}}
-            className="text-3xl font-bold flex justify-center items-center"
-          >
-              <div className="flex justify-center text-center lg:w-1/3 lg:mx-12">
-              <h1 className={`border-8 border-lightOrange lg:p-8 tracking-wide text-center text-4xl lg:text-6xl ${play.className} drop-shadow-titleShadow`}>Virtual Workshops</h1>
-              </div>
-        </motion.div>
-        </AnimatePresence>
-      </div>
-    </div>
-    <Container maxWidth="lg" sx={{ py: 2 }}>
-      {/* Table of Contents */}
-      <Card sx={{ mb: 4 }}>
-        <CardContent>
-          <Typography variant="h4" align="center" gutterBottom>
-            Table of Contents
-          </Typography>
-          <List>
-            {workshopData.map((workshop, index) => (
-              <ListItem key={index} sx={{ py: 0.5 }}>
-                <ListItemText>
-                  <Link href={`#${getWorkshopId(workshop.title)}`} underline="hover" color="primary">
-                    {workshop.title}
-                  </Link>
-                </ListItemText>
-              </ListItem>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
+import Image from 'next/image';
+import { workshopData } from './workshopData';
+import { motion } from 'framer-motion';
+import { Outfit } from 'next/font/google';
 
-      {/* Workshop Sections */}
-      {workshopData.map((workshop, index) => (
-        <Box
-          key={index}
-          sx={{ mb: 8 }}
-          id={getWorkshopId(workshop.title)}
-        >
-          <Typography variant="h4" component="h2" gutterBottom>
-            {workshop.title}
-          </Typography>
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+});
 
-          <Box sx={{ mb: 4 }}>
-            <Typography variant="body1" paragraph>
-              {workshop.description}
-            </Typography>
-          </Box>
+const techFont = Share_Tech_Mono({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
 
-          <Box sx={{ display: 'grid', gap: 4, gridTemplateColumns: { md: '1fr 1fr' } }}>
-            {/* Video Section */}
-            <Card>
-              <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  Workshop Recording
-                </Typography>
-                <Box sx={{ position: 'relative', paddingTop: '56.25%' }}>
-                  <iframe
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                    }}
-                    src={workshop.videoUrl}
-                    title="Workshop Video"
-                    allowFullScreen
-                  />
-                </Box>
-              </CardContent>
-            </Card>
+// ------------------- MUI THEME -------------------
+const theme = createTheme({
+  typography: {
+    fontFamily: outfit.style.fontFamily,
+    h2: { fontFamily: techFont.style.fontFamily, fontWeight: 700 }, // main page title
+    h4: { fontFamily: techFont.style.fontFamily, fontWeight: 700 }, // section titles
+    h5: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
+    h6: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
+  },
+});
 
-            {/* Slides Section */}
-            {(workshop.slidesPdfPath || workshop.slidesPath) && (
-              <Card>
-                <CardContent>
-                  <Typography variant="h5" gutterBottom>
-                    Workshop Slides
-                  </Typography>
-                  {workshop.slidesPdfPath && (
-                    <Box sx={{ position: 'relative', paddingTop: '56.25%', mb: 2 }}>
-                      <iframe
-                        style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          width: '100%',
-                          height: '100%',
-                          border: 'none'
-                        }}
-                        src={workshop.slidesPdfPath}
-                        title="Slides Preview"
-                      />
-                    </Box>
-                  )}
-                  {workshop.slidesPath && (
-                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                      <Button
-                        variant="contained"
-                        component="a"
-                        href={workshop.slidesPath}
-                        startIcon={<DownloadIcon />}
-                      >
-                        Download PowerPoint
-                      </Button>
-                    </Box>
-                  )}
-                </CardContent>
-              </Card>
-            )}
-          </Box>
-        </Box>
-      ))}
-    </Container>
-    </div>
-  );
+// ------------------- HELPERS -------------------
+const nonEventTitles = new Set([
+  'Champion Cheatsheets Workshop',
+  'How to Fund a Team Workshop',
+  'How to Structure a Successful Science Olympiad Team',
+  'Science Olympiad Panel',
+  'The Road to Gold',
+]);
+
+const getWorkshopId = (title: string) =>
+  title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+const getEventIcon = (title: string) => {
+  if (title.match(/chem|lab|forensics|potions/i)) return <BiotechIcon fontSize="large" />;
+  if (title.match(/electric|robot|wind/i)) return <BoltIcon fontSize="large" />;
+  if (title.match(/astro|meteor|planet|geo/i)) return <PublicIcon fontSize="large" />;
+  if (title.match(/air|flight|helicopter/i)) return <AirIcon fontSize="large" />;
+  if (title.match(/psych|anatomy|brain/i)) return <PsychologyIcon fontSize="large" />;
+  if (title.match(/code|computer|program/i)) return <ComputerIcon fontSize="large" />;
+  if (title.match(/electronics|circuit/i)) return <ElectricalServicesIcon fontSize="large" />;
+  if (title.match(/memory|logic/i)) return <MemoryIcon fontSize="large" />;
+  if (title.match(/fund/i)) return <AttachMoneyIcon fontSize="large" />;
+  if (title.match(/champion|gold/i)) return <EmojiEventsIcon fontSize="large" />;
+  if (title.match(/team|panel/i)) return <GroupsIcon fontSize="large" />;
+  return <ScienceIcon fontSize="large" />;
 };
 
-export default VirtualWorkshop;
+// ------------------- COMPONENT -------------------
+export default function VirtualWorkshopPage() {
+  const eventWorkshops = workshopData.filter(w => !nonEventTitles.has(w.title));
+  const generalWorkshops = workshopData.filter(w => nonEventTitles.has(w.title));
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Box className="bg-black text-white">
+
+        {/* ---------- HEADER IMAGE ---------- */}
+        <Box sx={{ position: 'relative', height: 420 }}>
+          <Image
+            src="/images/Workshops.jpg"
+            alt="Virtual Workshops"
+            fill
+            priority
+            style={{ objectFit: 'cover' }}
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              inset: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(0,0,0,0.45)',
+            }}
+          >
+            <Box
+              sx={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography
+                className={techFont.className}
+                variant="h2"
+                align="center"
+                sx={{
+                  px: 4,
+                  py: 2,
+                  borderRadius: 3,
+                  border: '3px solid white',
+                  backgroundColor: 'rgba(0,0,0,0.5)',
+                  letterSpacing: 2,
+                }}
+              >
+                Virtual Workshops
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* ---------- GENERAL WORKSHOPS ---------- */}
+        <Container maxWidth="lg" sx={{ py: 10 }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            General Workshops
+          </Typography>
+
+          {/* Row 1 (3 tiles) */}
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 5, flexWrap: 'wrap' }}>
+            {generalWorkshops.slice(0, 3).map(w => (
+              <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
+                <Link href={`#${getWorkshopId(w.title)}`} underline="none">
+                  <Box
+                    sx={{
+                      height: 180, // same as event tiles
+                      width: 280,
+                      bgcolor: '#c1f5d9',
+                      color: 'black',
+                      borderRadius: 2,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                      px: 2,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {getEventIcon(w.title)}
+                    <Typography sx={{ mt: 1, fontWeight: 600 }}>
+                      {w.title}
+                    </Typography>
+                  </Box>
+                </Link>
+              </motion.div>
+            ))}
+          </Box>
+
+          {/* Row 2 (2 tiles) */}
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 4, flexWrap: 'wrap' }}>
+            {generalWorkshops.slice(3, 5).map(w => (
+              <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
+                <Link href={`#${getWorkshopId(w.title)}`} underline="none">
+                  <Box
+                    sx={{
+                      height: 180, // same as event tiles
+                      width: 280,
+                      bgcolor: '#c1f5d9',
+                      color: 'black',
+                      borderRadius: 2,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                      px: 2,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {getEventIcon(w.title)}
+                    <Typography sx={{ mt: 1, fontWeight: 600 }}>
+                      {w.title}
+                    </Typography>
+                  </Box>
+                </Link>
+              </motion.div>
+            ))}
+          </Box>
+        </Container>
+
+
+
+        {/* ---------- DIVIDER ---------- */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 1 }}>
+          <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
+        </Box>
+
+        {/* ---------- EVENT WORKSHOP GRID ---------- */}
+        <Container maxWidth="lg" sx={{ py: 6 }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            Event Workshops
+          </Typography>
+
+          <Box
+            sx={{
+              mt: 4,
+              display: 'grid',
+              gap: 4,
+              gridTemplateColumns: { xs: 'repeat(2,1fr)', md: 'repeat(4,1fr)' },
+            }}
+          >
+            {eventWorkshops.map(w => (
+              <motion.div key={w.title} whileHover={{ scale: 1.1 }}>
+                <Link href={`#${getWorkshopId(w.title)}`} underline="none">
+                  <Box
+                    sx={{
+                      height: 180,
+                      bgcolor: '#c1f5d9',
+                      color: 'black',
+                      borderRadius: 2,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      textAlign: 'center',
+                      px: 2,
+                    }}
+                  >
+                    {getEventIcon(w.title)}
+                    <Typography sx={{ mt: 1 }} fontWeight={600}>
+                      {w.title}
+                    </Typography>
+                  </Box>
+                </Link>
+              </motion.div>
+            ))}
+          </Box>
+        </Container>
+
+        {/* ---------- DIVIDER ---------- */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+          <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
+        </Box>
+
+        {/* ---------- WORKSHOP CONTENT ---------- */}
+        <Container maxWidth="lg" sx={{ py: 5 }}>
+          {workshopData.map(w => (
+            <Box key={w.title} id={getWorkshopId(w.title)} sx={{ mb: 14 }}>
+              <Typography variant="h4" align="center" gutterBottom>
+                {w.title}
+              </Typography>
+
+              <Typography align="center" sx={{ maxWidth: 900, mx: 'auto', mb: 6 }}>
+                {w.description}
+              </Typography>
+
+              <Box
+                sx={{
+                  display: 'grid',
+                  gap: 6,
+                  gridTemplateColumns: { md: '1fr 1fr' },
+                }}
+              >
+                {/* Video */}
+                <Box
+                  sx={{
+                    position: 'relative',
+                    paddingTop: '56.25%',
+                    border: '3px solid white',
+                    borderRadius: 2,
+                  }}
+                >
+                  <iframe
+                    src={w.videoUrl}
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '6px',
+                    }}
+                  />
+                </Box>
+
+                {/* Slides */}
+                {(w.slidesPdfPath || w.slidesPath) && (
+                  <Box sx={{ border: '3px solid white', borderRadius: 2, p: 1 }}>
+                    {w.slidesPdfPath && (
+                      <Box sx={{ position: 'relative', paddingTop: '56.25%', mb: 3 }}>
+                        <iframe
+                          src={w.slidesPdfPath}
+                          style={{
+                            position: 'absolute',
+                            inset: 0,
+                            width: '100%',
+                            height: '100%',
+                            border: 'none',
+                            borderRadius: '6px',
+                          }}
+                        />
+                      </Box>
+                    )}
+
+                    {w.slidesPath && (
+                      <Box textAlign="center">
+                        <Button
+                          variant="contained"
+                          href={w.slidesPath}
+                          startIcon={<DownloadIcon />}
+                        >
+                          Download Slides
+                        </Button>
+                      </Box>
+                    )}
+                  </Box>
+                )}
+              </Box>
+            </Box>
+          ))}
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
+}
