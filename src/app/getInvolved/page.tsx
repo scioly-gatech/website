@@ -75,7 +75,7 @@ export default function Page() {
                 2026 Div C Georgia State Tournament
               </h2>
               <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
-                April 4, 2026
+                April 4th, 2026
               </p>
 
               <p className="text-lg text-black dark:text-neutral-300">
@@ -118,6 +118,59 @@ export default function Page() {
 
           </div>
         </section>
+
+        {/* Divider between tournaments */}
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20">
+          <div className="border-t border-neutral-300 dark:border-neutral-700" />
+        </div>
+
+        {/* YELLOW JACKET INVITATIONAL VOLUNTEER SECTION */}
+        <section className={`${outfit.className} max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20`}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+
+            {/* Image (Left 1/3) */}
+            <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg">
+              <Image
+                src="/images/getInvolved/cat.jpg" // swap if needed
+                alt="Yellow Jacket Invitational"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Text (Right 2/3) */}
+            <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-lightBlue">
+                2026 Yellow Jacket Invitational
+              </h2>
+
+              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
+                January 31st, 2026
+              </p>
+
+              <p className="text-lg text-black dark:text-neutral-300">
+                The Yellow Jacket Invitational is one of Georgia Tech’s largest Science Olympiad
+                outreach events, welcoming middle and high school teams from across the region
+                for a full day of competition.
+              </p>
+
+              <p className="text-lg text-black dark:text-neutral-300">
+                We are looking for volunteers to help with event logistics, proctoring,
+                and general support to ensure a smooth and memorable experience for competitors.
+                No prior Science Olympiad experience is required.
+              </p>
+
+              <a
+                href="https://forms.gle/NSidHDN1Z9D8CAy76"
+                className="inline-block mt-4 bg-[#2c4261] text-white px-8 py-3 rounded-md font-semibold tracking-wide hover:bg-[#2c4261]/90 transition"
+              >
+                Sign Up to Volunteer
+              </a>
+            </div>
+
+          </div>
+        </section>
+
 
         {/* CONTENT SECTION */}
         <section className={`${outfit.className} max-w-5xl mx-auto px-6 md:px-10 mt-24`}>
