@@ -75,7 +75,7 @@ export default function Page() {
                 2026 Div C Georgia State Tournament
               </h2>
               <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
-                April 4, 2026
+                April 4th, 2026
               </p>
 
               <p className="text-lg text-black dark:text-neutral-300">
@@ -119,6 +119,54 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Divider between tournaments */}
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20">
+          <div className="border-t border-neutral-300 dark:border-neutral-700" />
+        </div>
+
+        {/* YELLOW JACKET INVITATIONAL VOLUNTEER SECTION */}
+        <section className={`${outfit.className} max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20`}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+
+            {/* Image (Left 1/3) */}
+            <div className="lg:col-span-1">
+              <Image
+                src="/images/getInvolved/cat.jpg"
+                alt="Yellow Jacket Invitational"
+                width={800}
+                height={600}
+                className="w-full h-auto shadow-lg"
+              />
+            </div>
+
+            {/* Text (Right 2/3) */}
+            <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-lightBlue">
+                2026 Yellow Jacket Invitational
+              </h2>
+
+              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
+                January 31st, 2026
+              </p>
+
+              <p className="text-lg text-black dark:text-neutral-300">
+                We are looking for volunteers to help with event logistics, proctoring,
+                and general support to ensure a smooth and memorable experience for competitors.
+                No prior Science Olympiad experience is required. Free food and t-shirts are provided!
+              </p>
+
+              <a
+                href="https://forms.gle/NSidHDN1Z9D8CAy76"
+                className="inline-block mt-4 bg-[#2c4261] text-white px-8 py-3 rounded-md font-semibold tracking-wide hover:bg-[#2c4261]/90 transition"
+              >
+                Sign Up to Volunteer
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+
         {/* CONTENT SECTION */}
         <section className={`${outfit.className} max-w-5xl mx-auto px-6 md:px-10 mt-24`}>
           <div className="bg-[#2c4261] text-white rounded-2xl shadow-xl p-10 md:p-14 space-y-10">
@@ -126,11 +174,8 @@ export default function Page() {
             {/* Header */}
             <div className="text-center space-y-3">
               <h2 className="text-3xl md:text-4xl font-semibold tracking-wide">
-                Join Science Olympiad
+                Are You a Tech Student? Join Science Olympiad!
               </h2>
-              <p className="text-lg text-white/80">
-                Get involved with Science Olympiad at Georgia Tech
-              </p>
             </div>
 
             {/* Steps */}
@@ -140,7 +185,7 @@ export default function Page() {
                 <span>
                   Visit{' '}
                   <a
-                    href="https://engagesupport.campuslabs.com/hc/en-us"
+                    href="https://gatech.campuslabs.com/engage/"
                     target="_blank"
                     className="underline font-medium hover:text-lightBlue transition"
                   >
@@ -165,20 +210,6 @@ export default function Page() {
                 </span>
               </li>
             </ol>
-
-            {/* Divider */}
-            <div className="border-t border-white/20" />
-
-            {/* Volunteer Section */}
-            <div className="text-center space-y-3">
-              <h3 className="text-2xl font-semibold">
-                General Volunteer Sign-Up
-              </h3>
-              <p className="text-lg text-white/80">
-                Information coming soon.
-              </p>
-            </div>
-
           </div>
         </section>
       </main>
