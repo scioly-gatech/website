@@ -129,12 +129,13 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
             {/* Image (Left 1/3) */}
-            <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg">
+            <div className="lg:col-span-1">
               <Image
-                src="/images/getInvolved/cat.jpg" // swap if needed
+                src="/images/getInvolved/cat.jpg"
                 alt="Yellow Jacket Invitational"
-                fill
-                className="object-cover"
+                width={800}
+                height={600}
+                className="w-full h-auto shadow-lg"
               />
             </div>
 
@@ -149,15 +150,9 @@ export default function Page() {
               </p>
 
               <p className="text-lg text-black dark:text-neutral-300">
-                The Yellow Jacket Invitational is one of Georgia Tech’s largest Science Olympiad
-                outreach events, welcoming middle and high school teams from across the region
-                for a full day of competition.
-              </p>
-
-              <p className="text-lg text-black dark:text-neutral-300">
                 We are looking for volunteers to help with event logistics, proctoring,
                 and general support to ensure a smooth and memorable experience for competitors.
-                No prior Science Olympiad experience is required.
+                No prior Science Olympiad experience is required. Free food and t-shirts are provided!
               </p>
 
               <a
@@ -179,11 +174,8 @@ export default function Page() {
             {/* Header */}
             <div className="text-center space-y-3">
               <h2 className="text-3xl md:text-4xl font-semibold tracking-wide">
-                Join Science Olympiad
+                Are You a Tech Student? Join Science Olympiad!
               </h2>
-              <p className="text-lg text-white/80">
-                Get involved with Science Olympiad at Georgia Tech
-              </p>
             </div>
 
             {/* Steps */}
@@ -193,7 +185,7 @@ export default function Page() {
                 <span>
                   Visit{' '}
                   <a
-                    href="https://engagesupport.campuslabs.com/hc/en-us"
+                    href="https://gatech.campuslabs.com/engage/"
                     target="_blank"
                     className="underline font-medium hover:text-lightBlue transition"
                   >
@@ -218,20 +210,6 @@ export default function Page() {
                 </span>
               </li>
             </ol>
-
-            {/* Divider */}
-            <div className="border-t border-white/20" />
-
-            {/* Volunteer Section */}
-            <div className="text-center space-y-3">
-              <h3 className="text-2xl font-semibold">
-                General Volunteer Sign-Up
-              </h3>
-              <p className="text-lg text-white/80">
-                Information coming soon.
-              </p>
-            </div>
-
           </div>
         </section>
       </main>
