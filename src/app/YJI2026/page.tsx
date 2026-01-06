@@ -122,10 +122,11 @@ export default function CurrentTournament() {
               href="https://docs.google.com/spreadsheets/d/1BT2hHQufuZorei2g5WCbZpkftRFcOr9A5f9TKtuJ2KA/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#0b2e16] hover:bg-[#15592b] text-white font-semibold text-lg px-6 py-3 rounded-lg shadow-md transition-colors duration-300"
+              className="inline-block w-max bg-[#0b2e16] hover:bg-[#15592b] text-white font-semibold text-lg py-3 px-4 rounded-lg shadow-md transition-colors duration-300"
             >
               List of Registered Teams
             </a>
+
           </div>
 
           {/* Right Side */}
