@@ -12,7 +12,11 @@ import {
   createTheme,
 } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-
+import Image from 'next/image';
+import { workshopData } from './workshopData';
+import { motion } from 'framer-motion';
+import { Outfit } from 'next/font/google';
+import { Share_Tech_Mono } from 'next/font/google';
 import ScienceIcon from '@mui/icons-material/Science';
 import BoltIcon from '@mui/icons-material/Bolt';
 import BiotechIcon from '@mui/icons-material/Biotech';
@@ -25,13 +29,6 @@ import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupsIcon from '@mui/icons-material/Groups';
-import { Share_Tech_Mono } from 'next/font/google';
-
-
-import Image from 'next/image';
-import { workshopData } from './workshopData';
-import { motion } from 'framer-motion';
-import { Outfit } from 'next/font/google';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -49,8 +46,8 @@ const techFont = Share_Tech_Mono({
 const theme = createTheme({
   typography: {
     fontFamily: outfit.style.fontFamily,
-    h2: { fontFamily: techFont.style.fontFamily, fontWeight: 700 }, // main page title
-    h4: { fontFamily: techFont.style.fontFamily, fontWeight: 700 }, // section titles
+    h2: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
+    h4: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
     h5: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
     h6: { fontFamily: techFont.style.fontFamily, fontWeight: 700 },
   },
@@ -93,7 +90,15 @@ export default function VirtualWorkshopPage() {
       <Box className="bg-black text-white">
 
         {/* ---------- HEADER IMAGE ---------- */}
-        <Box sx={{ position: 'relative', height: 420 }}>
+        <Box
+          sx={{
+            position: 'relative',
+            height: { xs: 50, sm: 55, md: 60, lg: 65, xl: 70, '2xl': 75 },
+            minHeight: 350,
+            width: '100%',
+            overflow: 'hidden',
+          }}
+        >
           <Image
             src="/images/Workshops.jpg"
             alt="Virtual Workshops"
@@ -101,6 +106,8 @@ export default function VirtualWorkshopPage() {
             priority
             style={{ objectFit: 'cover' }}
           />
+
+          {/* Overlay */}
           <Box
             sx={{
               position: 'absolute',
@@ -109,33 +116,26 @@ export default function VirtualWorkshopPage() {
               alignItems: 'center',
               justifyContent: 'center',
               background: 'rgba(0,0,0,0.45)',
+              px: 2,
             }}
           >
-            <Box
+            <Typography
+              className={techFont.className}
+              variant="h2"
+              align="center"
               sx={{
-                position: 'absolute',
-                inset: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                borderRadius: 3,
+                border: '3px solid white',
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                letterSpacing: 2,
+                px: { xs: 2, sm: 3, md: 4 },
+                py: { xs: 1, sm: 2 },
+                maxWidth: '95vw',
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem', xl: '4.5rem' },
               }}
             >
-              <Typography
-                className={techFont.className}
-                variant="h2"
-                align="center"
-                sx={{
-                  px: 4,
-                  py: 2,
-                  borderRadius: 3,
-                  border: '3px solid white',
-                  backgroundColor: 'rgba(0,0,0,0.5)',
-                  letterSpacing: 2,
-                }}
-              >
-                Virtual Workshops
-              </Typography>
-            </Box>
+              Virtual Workshops
+            </Typography>
           </Box>
         </Box>
 
@@ -145,14 +145,14 @@ export default function VirtualWorkshopPage() {
             General Workshops
           </Typography>
 
-          {/* Row 1 (3 tiles) */}
+          {/* Row 1 */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 5, flexWrap: 'wrap' }}>
             {generalWorkshops.slice(0, 3).map(w => (
               <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
                 <Link href={`#${getWorkshopId(w.title)}`} underline="none">
                   <Box
                     sx={{
-                      height: 180, // same as event tiles
+                      height: 180,
                       width: 280,
                       bgcolor: '#c1f5d9',
                       color: 'black',
@@ -167,23 +167,21 @@ export default function VirtualWorkshopPage() {
                     }}
                   >
                     {getEventIcon(w.title)}
-                    <Typography sx={{ mt: 1, fontWeight: 600 }}>
-                      {w.title}
-                    </Typography>
+                    <Typography sx={{ mt: 1, fontWeight: 600 }}>{w.title}</Typography>
                   </Box>
                 </Link>
               </motion.div>
             ))}
           </Box>
 
-          {/* Row 2 (2 tiles) */}
+          {/* Row 2 */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 4, flexWrap: 'wrap' }}>
             {generalWorkshops.slice(3, 5).map(w => (
               <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
                 <Link href={`#${getWorkshopId(w.title)}`} underline="none">
                   <Box
                     sx={{
-                      height: 180, // same as event tiles
+                      height: 180,
                       width: 280,
                       bgcolor: '#c1f5d9',
                       color: 'black',
@@ -198,9 +196,7 @@ export default function VirtualWorkshopPage() {
                     }}
                   >
                     {getEventIcon(w.title)}
-                    <Typography sx={{ mt: 1, fontWeight: 600 }}>
-                      {w.title}
-                    </Typography>
+                    <Typography sx={{ mt: 1, fontWeight: 600 }}>{w.title}</Typography>
                   </Box>
                 </Link>
               </motion.div>
@@ -208,14 +204,12 @@ export default function VirtualWorkshopPage() {
           </Box>
         </Container>
 
-
-
         {/* ---------- DIVIDER ---------- */}
         <Box sx={{ display: 'flex', justifyContent: 'center', my: 1 }}>
           <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
         </Box>
 
-        {/* ---------- EVENT WORKSHOP GRID ---------- */}
+        {/* ---------- EVENT WORKSHOPS ---------- */}
         <Container maxWidth="lg" sx={{ py: 6 }}>
           <Typography variant="h4" align="center" gutterBottom>
             Event Workshops
@@ -269,11 +263,9 @@ export default function VirtualWorkshopPage() {
               <Typography variant="h4" align="center" gutterBottom>
                 {w.title}
               </Typography>
-
               <Typography align="center" sx={{ maxWidth: 900, mx: 'auto', mb: 6 }}>
                 {w.description}
               </Typography>
-
               <Box
                 sx={{
                   display: 'grid',
@@ -281,54 +273,26 @@ export default function VirtualWorkshopPage() {
                   gridTemplateColumns: { md: '1fr 1fr' },
                 }}
               >
-                {/* Video */}
-                <Box
-                  sx={{
-                    position: 'relative',
-                    paddingTop: '56.25%',
-                    border: '3px solid white',
-                    borderRadius: 2,
-                  }}
-                >
+                <Box sx={{ position: 'relative', paddingTop: '56.25%', border: '3px solid white', borderRadius: 2 }}>
                   <iframe
                     src={w.videoUrl}
                     allowFullScreen
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: '6px',
-                    }}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', borderRadius: '6px' }}
                   />
                 </Box>
-
-                {/* Slides */}
                 {(w.slidesPdfPath || w.slidesPath) && (
                   <Box sx={{ border: '3px solid white', borderRadius: 2, p: 1 }}>
                     {w.slidesPdfPath && (
                       <Box sx={{ position: 'relative', paddingTop: '56.25%', mb: 3 }}>
                         <iframe
                           src={w.slidesPdfPath}
-                          style={{
-                            position: 'absolute',
-                            inset: 0,
-                            width: '100%',
-                            height: '100%',
-                            border: 'none',
-                            borderRadius: '6px',
-                          }}
+                          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none', borderRadius: '6px' }}
                         />
                       </Box>
                     )}
-
                     {w.slidesPath && (
                       <Box textAlign="center">
-                        <Button
-                          variant="contained"
-                          href={w.slidesPath}
-                          startIcon={<DownloadIcon />}
-                        >
+                        <Button variant="contained" href={w.slidesPath} startIcon={<DownloadIcon />}>
                           Download Slides
                         </Button>
                       </Box>
@@ -339,6 +303,7 @@ export default function VirtualWorkshopPage() {
             </Box>
           ))}
         </Container>
+
       </Box>
     </ThemeProvider>
   );

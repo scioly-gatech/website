@@ -8,7 +8,7 @@ import { Outfit } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "700"], // Regular + Bold
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -19,13 +19,13 @@ export default function CurrentTournament() {
     <div className="bg-[#0b2e16] w-full min-h-screen flex flex-col items-center">
 
       {/* Hero Section */}
-      <div className="relative w-full h-[70vh] lg:h-[80vh]">
+      <div className="relative w-full h-[70vh] lg:h-[80vh] overflow-hidden">
         <Image
           src="/images/yji/georgianature2.jpg"
           alt="YJI Hero Image"
           fill
           style={{ objectFit: "cover" }}
-          quality={100} // Keep max quality
+          quality={100}
         />
 
         {/* Title Overlay */}
@@ -34,21 +34,28 @@ export default function CurrentTournament() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="absolute top-10 left-1/2 -translate-x-1/2 px-4 flex flex-col items-center"
+            className="absolute top-10 left-1/2 -translate-x-1/2 px-4 flex flex-col items-center w-full"
           >
-            {/* Title — reverted to original large styling */}
             <h1
-              className={`whitespace-nowrap border-8 border-lightOrange lg:p-8 tracking-wide
-              text-4xl lg:text-6xl ${play.className}
-              drop-shadow-titleShadow bg-black/20 text-white rounded-xl text-center`}
+              className={`
+                border-4 sm:border-6 lg:border-8 border-lightOrange
+                px-4 sm:px-6 lg:px-8
+                py-3 sm:py-4 lg:py-6
+                tracking-wide
+                text-3xl sm:text-4xl lg:text-6xl
+                ${play.className}
+                drop-shadow-titleShadow
+                bg-black/20 text-white rounded-xl text-center
+                max-w-[95vw] sm:max-w-[85vw] lg:max-w-none
+              `}
             >
               Yellow Jacket Invitational
             </h1>
 
-            {/* Date Block — centered & auto-sized */}
-            <div className="mt-10 flex justify-center w-full">
+            {/* Date Block */}
+            <div className="mt-8 flex justify-center w-full">
               <div
-                className={`inline-block bg-[#18522b] text-white ${play.className}
+                className={`bg-[#18522b] text-white ${play.className}
                 px-6 py-2 rounded-md
                 text-base lg:text-xl tracking-widest text-center shadow-lg`}
               >
@@ -62,13 +69,11 @@ export default function CurrentTournament() {
       {/* Countdown Section */}
       <div className="w-full max-w-4xl flex justify-center m-8 p-10">
         <div className="flex flex-col items-center gap-10">
-          
-          {/* Label */}
+
           <span className="uppercase tracking-widest text-2xl lg:text-3xl font-bold opacity-90 text-white">
             Countdown to YJI 2026
           </span>
 
-          {/* Countdown Component */}
           <div className="scale-110 lg:scale-125 mt-2 mb-10">
             <Countdown targetDate="1-31-2026" />
           </div>
@@ -76,17 +81,15 @@ export default function CurrentTournament() {
         </div>
       </div>
 
-
       {/* Registration Section */}
       <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch px-6">
 
-          {/* Left Side: Text (2/3) */}
+          {/* Left Side */}
           <div className={`w-full lg:w-2/3 flex flex-col justify-center gap-6 ${outfit.className} lg:ml-20`}>
-          
-           {/* Heading + Button on same line */}
+
             <div className="flex flex-wrap items-center gap-4">
-              <h2 className="text-3xl lg:text-4xl font-bold whitespace-nowrap">
+              <h2 className="text-3xl lg:text-4xl font-bold">
                 Registration is Now Live!
               </h2>
               <a
@@ -94,7 +97,6 @@ export default function CurrentTournament() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#c2ebb9] hover:bg-[#a0c299] text-black font-semibold text-lg lg:text-xl px-4 py-2 rounded-lg transition-colors duration-300 shadow-md"
-                style={{ width: 'max-content' }}
               >
                 Sign Up
               </a>
@@ -121,16 +123,15 @@ export default function CurrentTournament() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#0b2e16] hover:bg-[#15592b] text-white font-semibold text-lg px-6 py-3 rounded-lg shadow-md transition-colors duration-300"
-              style={{ width: 'max-content' }}
             >
               List of Registered Teams
             </a>
           </div>
 
-          {/* Right Side: Image (1/3) */}
+          {/* Right Side */}
           <div className="w-full lg:w-1/3 flex justify-center items-center lg:mr-20">
             <Image
-              src="/images/yji/yji_win.jpg" // Replace with your image
+              src="/images/yji/yji_win.jpg"
               alt="Registration Image"
               width={400}
               height={400}
@@ -140,8 +141,8 @@ export default function CurrentTournament() {
 
         </div>
       </section>
-
-
-  </div>
-  ); 
+    </div>
+  );
 }
+
+

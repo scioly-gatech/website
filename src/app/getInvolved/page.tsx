@@ -5,13 +5,13 @@ import { Lora } from 'next/font/google'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import { Outfit } from "next/font/google";
+import { Outfit } from 'next/font/google'
 
 const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "700"], // Regular + Bold
-  display: "swap",
-});
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+})
 
 const play = Lora({ subsets: ['latin'], display: 'swap' })
 
@@ -27,11 +27,10 @@ export default function Page() {
         <title>GET INVOLVED</title>
       </Head>
 
-      <main className="dark:bg-black bg-white w-full pb-12">
+      <main className="bg-white w-full pb-12">
 
         {/* HERO SECTION */}
         <div className="relative w-full h-[75vh] overflow-hidden">
-          {/* Parallax Image */}
           <motion.div
             style={{ y }}
             className="absolute inset-0 w-full h-[130%]"
@@ -45,10 +44,8 @@ export default function Page() {
             />
           </motion.div>
 
-          {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/20" />
 
-          {/* Centered Heading */}
           <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -69,23 +66,23 @@ export default function Page() {
         <section className={`${outfit.className} max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20`}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
-            {/* Text (Left 2/3) */}
             <div className="lg:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-lightBlue">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black">
                 2026 Div C Georgia State Tournament
               </h2>
-              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
+
+              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-neutral-700">
                 April 4th, 2026
               </p>
 
-              <p className="text-lg text-black dark:text-neutral-300">
+              <p className="text-lg text-neutral-700">
                 Science Olympiad at Georgia Tech is proud to host the
                 2026 Division C Georgia State Tournament.
                 This event brings together hundreds of high school students from across the state
                 to compete in rigorous science and engineering challenges.
               </p>
 
-              <p className="text-lg text-black dark:text-neutral-300">
+              <p className="text-lg text-neutral-700">
                 We are seeking dedicated volunteers to serve as
                 event supervisors. Supervisors play a critical
                 role in designing, running, and judging individual events, helping ensure a fair,
@@ -99,14 +96,11 @@ export default function Page() {
                 Apply to Be an Event Supervisor
               </a>
 
-              <p className="text-lg text-black dark:text-neutral-300">
+              <p className="text-lg text-neutral-700">
                 Deadline: January 5th, 2026
               </p>
-
-
             </div>
 
-            {/* Image (Right 1/3) */}
             <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg">
               <Image
                 src="/images/2025/YJI/1.jpg"
@@ -119,16 +113,15 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Divider between tournaments */}
+        {/* Divider */}
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20">
-          <div className="border-t border-neutral-300 dark:border-neutral-700" />
+          <div className="border-t border-neutral-300" />
         </div>
 
-        {/* YELLOW JACKET INVITATIONAL VOLUNTEER SECTION */}
+        {/* YJI SECTION */}
         <section className={`${outfit.className} max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20`}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
-            {/* Image (Left 1/3) */}
             <div className="lg:col-span-1">
               <Image
                 src="/images/getInvolved/cat.jpg"
@@ -139,17 +132,16 @@ export default function Page() {
               />
             </div>
 
-            {/* Text (Right 2/3) */}
             <div className="lg:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-lightBlue">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black">
                 2026 Yellow Jacket Invitational
               </h2>
 
-              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-black dark:text-neutral-300">
+              <p className="mt-3 text-xl md:text-2xl font-semibold tracking-wide text-neutral-700">
                 January 31st, 2026
               </p>
 
-              <p className="text-lg text-black dark:text-neutral-300">
+              <p className="text-lg text-neutral-700">
                 We are looking for volunteers to help with event logistics, proctoring,
                 and general support to ensure a smooth and memorable experience for competitors.
                 No prior Science Olympiad experience is required. Free food and t-shirts are provided!
@@ -166,19 +158,16 @@ export default function Page() {
           </div>
         </section>
 
-
-        {/* CONTENT SECTION */}
+        {/* TECH STUDENT SECTION */}
         <section className={`${outfit.className} max-w-5xl mx-auto px-6 md:px-10 mt-24`}>
           <div className="bg-[#2c4261] text-white rounded-2xl shadow-xl p-10 md:p-14 space-y-10">
 
-            {/* Header */}
             <div className="text-center space-y-3">
               <h2 className="text-3xl md:text-4xl font-semibold tracking-wide">
                 Are You a Tech Student? Join Science Olympiad!
               </h2>
             </div>
 
-            {/* Steps */}
             <ol className="max-w-2xl mx-auto text-lg space-y-4 text-white/90">
               <li className="flex gap-3">
                 <span className="font-semibold">1.</span>
@@ -212,11 +201,11 @@ export default function Page() {
             </ol>
           </div>
         </section>
+
       </main>
     </>
   )
 }
-
 
 
 

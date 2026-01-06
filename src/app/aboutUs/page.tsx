@@ -4,13 +4,13 @@ import BeeProfile from "../components/BeeProfile"
 import { Libre_Franklin, Lora } from 'next/font/google'
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Outfit } from "next/font/google";
+import { Outfit } from "next/font/google"
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "700"], // Regular + Bold
+  weight: ["400", "700"],
   display: "swap",
-});
+})
 
 const libre = Libre_Franklin({ subsets: ['latin'] })
 const play = Lora({ subsets: ['latin'], display: "swap" })
@@ -21,7 +21,7 @@ export default function MeetTeam() {
     { id: 1, name: "Ethan Maraldo", role: "President", imgRoute: "/images/execPics/Ethan.jpeg" },
     { id: 2, name: "Femke Kovoor", role: "VP of Club Logistics & Outreach", imgRoute: "/images/execPics/Femke.jpg" },
     { id: 3, name: "Krish Patil", role: "VP of Tournament Logistics", imgRoute: "/images/execPics/Krish.jpeg" },
-    { id: 4, name: "Victor Hesu", role: "VP of Communications", imgRoute: "/images/execPics/Victor.jpg" },
+    { id: 4, name: "Victor Hesu", role: "Director of Communications", imgRoute: "/images/execPics/Victor.jpg" },
     { id: 5, name: "Samrita Shetty", role: "Logistics Co-Director", imgRoute: "/images/execPics/Samrita.jpeg" },
     { id: 6, name: "Rachel Nam", role: "Logistics Co-Director", imgRoute: "/images/execPics/Rachel.jpg" },
     { id: 7, name: "Thomas Becker", role: "Exam Co-Director", imgRoute: "/images/execPics/Thomas.JPG" },
@@ -42,7 +42,7 @@ export default function MeetTeam() {
   }
 
   return (
-    <main className={`bg-slate-200 dark:bg-black flex flex-col items-center w-full ${outfit.className}`}>
+    <main className={`bg-slate-200 flex flex-col items-center w-full ${outfit.className}`}>
 
       {/* Header */}
       <div className="flex flex-col lg:flex-row w-full bg-[url('/images/about/background-1.jpg')] bg-cover bg-center">
@@ -52,7 +52,13 @@ export default function MeetTeam() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <Image src="/images/about/title.png" alt="Title" width={800} height={600} className="w-full h-full object-cover" />
+          <Image
+            src="/images/about/title.png"
+            alt="Title"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
         <motion.div
@@ -61,21 +67,29 @@ export default function MeetTeam() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <Image src="/images/about/team.jpg" alt="Exec Team" width={800} height={600} className="w-full h-full object-cover" />
+          <Image
+            src="/images/about/team.jpg"
+            alt="Exec Team"
+            width={800}
+            height={600}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
       </div>
 
       {/* About */}
-      <p className="text-lg lg:mx-64 mx-8 text-center p-4 dark:text-white mt-6">
+      <p className="text-lg lg:mx-64 mx-8 text-center p-4 text-black mt-6">
         Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience.
         <br /><br />
-        We work around the year to promote Science Olympiad opportunities for students both within and outside of Georgia. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 5th year in a row and our 3rd annual Yellow Jacket Invitational!
+        We work year-round to promote Science Olympiad opportunities for students both within and outside of Georgia. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 5th year in a row and our 3rd annual Yellow Jacket Invitational!
       </p>
 
       <div className="border border-black w-[80%] my-12" />
 
       {/* Team Header */}
-      <h1 className={`text-lightBlue dark:text-darkBlue dark:bg-lightBlue font-bold text-3xl border-2 border-white p-6 shadow-lg bg-darkBlue w-72 flex justify-center ${play.className}`}>
+      <h1
+        className={`text-lightBlue font-bold text-3xl border-2 border-white p-6 shadow-lg bg-darkBlue w-72 flex justify-center ${play.className}`}
+      >
         Our Team
       </h1>
 
@@ -91,7 +105,9 @@ export default function MeetTeam() {
         <h2 className="text-2xl font-bold text-center mb-8">Presidents</h2>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
-            {profiles.slice(0, 4).map(p => <BeeProfile key={p.id} {...p} />)}
+            {profiles.slice(0, 4).map(p => (
+              <BeeProfile key={p.id} {...p} />
+            ))}
           </div>
         </div>
       </motion.section>
@@ -129,5 +145,6 @@ export default function MeetTeam() {
     </main>
   )
 }
+
 
 

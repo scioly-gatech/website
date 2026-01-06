@@ -70,7 +70,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
               flex flex-col items-center justify-center
               w-28 h-28 lg:w-32 lg:h-32
               rounded-2xl
-              bg-white/80 dark:bg-black/30
+              bg-white/80
               backdrop-blur-md
               shadow-lg
             "
@@ -87,4 +87,5 @@ export default function Countdown({ targetDate }: CountdownProps) {
     </div>
   );
 }
+
 
