@@ -21,7 +21,7 @@ export default function MeetTeam() {
     { id: 1, name: "Ethan Maraldo", role: "President", imgRoute: "/images/execPics/Ethan.jpeg" },
     { id: 2, name: "Femke Kovoor", role: "VP of Club Logistics & Outreach", imgRoute: "/images/execPics/Femke.jpg" },
     { id: 3, name: "Krish Patil", role: "VP of Tournament Logistics", imgRoute: "/images/execPics/Krish.jpeg" },
-    { id: 4, name: "Victor Hesu", role: "Director of Communications", imgRoute: "/images/execPics/Victor.jpg" },
+    { id: 4, name: "Victor Hesu", role: "VP of Communications", imgRoute: "/images/execPics/Victor.jpg" },
     { id: 5, name: "Samrita Shetty", role: "Logistics Co-Director", imgRoute: "/images/execPics/Samrita.jpeg" },
     { id: 6, name: "Rachel Nam", role: "Logistics Co-Director", imgRoute: "/images/execPics/Rachel.jpg" },
     { id: 7, name: "Thomas Becker", role: "Exam Co-Director", imgRoute: "/images/execPics/Thomas.JPG" },
