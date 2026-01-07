@@ -34,9 +34,9 @@ export default function Navbar() {
           <li className="hover:text-[#d1be7b]">
             <Link href="/getInvolved">GET INVOLVED</Link>
           </li>
-          <li className="hover:text-[#d1be7b]">
+          {/* <li className="hover:text-[#d1be7b]">
             <Link href="/sponsorships">SPONSORSHIP</Link>
-          </li>
+          </li> */}
           <li className="hover:text-[#d1be7b]">
             <Link href="/pastTournaments">PAST TOURNAMENTS</Link>
           </li>

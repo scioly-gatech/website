@@ -1,16 +1,7 @@
 'use client';
 
 import React from 'react';
-import {
-  Container,
-  Typography,
-  Box,
-  Button,
-  Link,
-  Divider,
-  ThemeProvider,
-  createTheme,
-} from '@mui/material';
+import { Container, Typography, Box, Button, Link, Divider, ThemeProvider, createTheme } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import Image from 'next/image';
 import { workshopData } from './workshopData';
@@ -42,7 +33,6 @@ const techFont = Share_Tech_Mono({
   display: 'swap',
 });
 
-// ------------------- MUI THEME -------------------
 const theme = createTheme({
   typography: {
     fontFamily: outfit.style.fontFamily,
@@ -53,7 +43,6 @@ const theme = createTheme({
   },
 });
 
-// ------------------- HELPERS -------------------
 const nonEventTitles = new Set([
   'Champion Cheatsheets Workshop',
   'How to Fund a Team Workshop',
@@ -80,10 +69,18 @@ const getEventIcon = (title: string) => {
   return <ScienceIcon fontSize="large" />;
 };
 
-// ------------------- COMPONENT -------------------
 export default function VirtualWorkshopPage() {
   const eventWorkshops = workshopData.filter(w => !nonEventTitles.has(w.title));
   const generalWorkshops = workshopData.filter(w => nonEventTitles.has(w.title));
+
+  const tileVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, type: 'spring', stiffness: 100 },
+    }),
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -106,8 +103,6 @@ export default function VirtualWorkshopPage() {
             priority
             style={{ objectFit: 'cover' }}
           />
-
-          {/* Overlay */}
           <Box
             sx={{
               position: 'absolute',
@@ -119,23 +114,28 @@ export default function VirtualWorkshopPage() {
               px: 2,
             }}
           >
-            <Typography
-              className={techFont.className}
-              variant="h2"
-              align="center"
-              sx={{
-                borderRadius: 3,
-                border: '3px solid white',
-                backgroundColor: 'rgba(0,0,0,0.5)',
-                letterSpacing: 2,
-                px: { xs: 2, sm: 3, md: 4 },
-                py: { xs: 1, sm: 2 },
-                maxWidth: '95vw',
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem', xl: '4.5rem' },
-              }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
             >
-              Virtual Workshops
-            </Typography>
+              <Typography
+                className={techFont.className}
+                variant="h2"
+                align="center"
+                sx={{
+                  border: '2px solid white',
+                  backgroundColor: 'rgba(0,0,0,0.5)',
+                  letterSpacing: 2,
+                  px: { xs: 2, sm: 3, md: 4 },
+                  py: { xs: 1, sm: 2 },
+                  maxWidth: '95vw',
+                  fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem', xl: '4.5rem' },
+                }}
+              >
+                Virtual Workshops
+              </Typography>
+            </motion.div>
           </Box>
         </Box>
 
@@ -145,39 +145,17 @@ export default function VirtualWorkshopPage() {
             General Workshops
           </Typography>
 
-          {/* Row 1 */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 5, flexWrap: 'wrap' }}>
-            {generalWorkshops.slice(0, 3).map(w => (
-              <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
-                <Link href={`#${getWorkshopId(w.title)}`} underline="none">
-                  <Box
-                    sx={{
-                      height: 180,
-                      width: 280,
-                      bgcolor: '#c1f5d9',
-                      color: 'black',
-                      borderRadius: 2,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      textAlign: 'center',
-                      px: 2,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {getEventIcon(w.title)}
-                    <Typography sx={{ mt: 1, fontWeight: 600 }}>{w.title}</Typography>
-                  </Box>
-                </Link>
-              </motion.div>
-            ))}
-          </Box>
-
-          {/* Row 2 */}
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 4, flexWrap: 'wrap' }}>
-            {generalWorkshops.slice(3, 5).map(w => (
-              <motion.div key={w.title} whileHover={{ scale: 1.08 }}>
+            {generalWorkshops.map((w, i) => (
+              <motion.div
+                key={w.title}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={tileVariants}
+                whileHover={{ scale: 1.05, opacity: 0.9, transition: { duration: 0.3 } }}
+              >
                 <Link href={`#${getWorkshopId(w.title)}`} underline="none">
                   <Box
                     sx={{
@@ -205,9 +183,15 @@ export default function VirtualWorkshopPage() {
         </Container>
 
         {/* ---------- DIVIDER ---------- */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', my: 1 }}>
-          <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Box sx={{ display: 'flex', justifyContent: 'center', my: 1 }}>
+            <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
+          </Box>
+        </motion.div>
 
         {/* ---------- EVENT WORKSHOPS ---------- */}
         <Container maxWidth="lg" sx={{ py: 6 }}>
@@ -223,8 +207,16 @@ export default function VirtualWorkshopPage() {
               gridTemplateColumns: { xs: 'repeat(2,1fr)', md: 'repeat(4,1fr)' },
             }}
           >
-            {eventWorkshops.map(w => (
-              <motion.div key={w.title} whileHover={{ scale: 1.1 }}>
+            {eventWorkshops.map((w, i) => (
+              <motion.div
+                key={w.title}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={tileVariants}
+                whileHover={{ scale: 1.05, opacity: 0.9, transition: { duration: 0.3 } }}
+              >
                 <Link href={`#${getWorkshopId(w.title)}`} underline="none">
                   <Box
                     sx={{
@@ -241,9 +233,7 @@ export default function VirtualWorkshopPage() {
                     }}
                   >
                     {getEventIcon(w.title)}
-                    <Typography sx={{ mt: 1 }} fontWeight={600}>
-                      {w.title}
-                    </Typography>
+                    <Typography sx={{ mt: 1, fontWeight: 600 }}>{w.title}</Typography>
                   </Box>
                 </Link>
               </motion.div>
@@ -252,55 +242,69 @@ export default function VirtualWorkshopPage() {
         </Container>
 
         {/* ---------- DIVIDER ---------- */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
-          <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
-        </Box>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+            <Divider sx={{ width: '70%', borderColor: 'white', borderWidth: 1 }} />
+          </Box>
+        </motion.div>
 
         {/* ---------- WORKSHOP CONTENT ---------- */}
         <Container maxWidth="lg" sx={{ py: 5 }}>
-          {workshopData.map(w => (
-            <Box key={w.title} id={getWorkshopId(w.title)} sx={{ mb: 14 }}>
-              <Typography variant="h4" align="center" gutterBottom>
-                {w.title}
-              </Typography>
-              <Typography align="center" sx={{ maxWidth: 900, mx: 'auto', mb: 6 }}>
-                {w.description}
-              </Typography>
-              <Box
-                sx={{
-                  display: 'grid',
-                  gap: 6,
-                  gridTemplateColumns: { md: '1fr 1fr' },
-                }}
-              >
-                <Box sx={{ position: 'relative', paddingTop: '56.25%', border: '3px solid white', borderRadius: 2 }}>
-                  <iframe
-                    src={w.videoUrl}
-                    allowFullScreen
-                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', borderRadius: '6px' }}
-                  />
-                </Box>
-                {(w.slidesPdfPath || w.slidesPath) && (
-                  <Box sx={{ border: '3px solid white', borderRadius: 2, p: 1 }}>
-                    {w.slidesPdfPath && (
-                      <Box sx={{ position: 'relative', paddingTop: '56.25%', mb: 3 }}>
-                        <iframe
-                          src={w.slidesPdfPath}
-                          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none', borderRadius: '6px' }}
-                        />
-                      </Box>
-                    )}
-                    {w.slidesPath && (
-                      <Box textAlign="center">
-                        <Button variant="contained" href={w.slidesPath} startIcon={<DownloadIcon />}>
-                          Download Slides
-                        </Button>
-                      </Box>
-                    )}
+          {workshopData.map((w, i) => (
+            <motion.div
+              key={w.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+            >
+              <Box id={getWorkshopId(w.title)} sx={{ mb: 14 }}>
+                <Typography variant="h4" align="center" gutterBottom>
+                  {w.title}
+                </Typography>
+                <Typography align="center" sx={{ maxWidth: 900, mx: 'auto', mb: 6 }}>
+                  {w.description}
+                </Typography>
+                <Box
+                  sx={{
+                    display: 'grid',
+                    gap: 6,
+                    gridTemplateColumns: { md: '1fr 1fr' },
+                  }}
+                >
+                  <Box sx={{ position: 'relative', paddingTop: '56.25%', border: '3px solid white', borderRadius: 2 }}>
+                    <iframe
+                      src={w.videoUrl}
+                      allowFullScreen
+                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', borderRadius: '6px' }}
+                    />
                   </Box>
-                )}
+                  {(w.slidesPdfPath || w.slidesPath) && (
+                    <Box sx={{ border: '3px solid white', borderRadius: 2, p: 1 }}>
+                      {w.slidesPdfPath && (
+                        <Box sx={{ position: 'relative', paddingTop: '56.25%', mb: 3 }}>
+                          <iframe
+                            src={w.slidesPdfPath}
+                            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none', borderRadius: '6px' }}
+                          />
+                        </Box>
+                      )}
+                      {w.slidesPath && (
+                        <Box textAlign="center">
+                          <Button variant="contained" href={w.slidesPath} startIcon={<DownloadIcon />}>
+                            Download Slides
+                          </Button>
+                        </Box>
+                      )}
+                    </Box>
+                  )}
+                </Box>
               </Box>
-            </Box>
+            </motion.div>
           ))}
         </Container>
 
