@@ -13,36 +13,32 @@ const outfit = Outfit({
 
 export default function ContactUs() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      {/* Container for both sections */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 w-full max-w-6xl px-4">
 
         {/* LEFT: Rolling Contact Image */}
-        <div className="flex items-center justify-center p-10 lg:p-16">
-          <motion.div
-            className="relative w-full max-w-md h-80 lg:h-[28rem]"
-            initial={{ rotate: -360, opacity: 0 }}
-            animate={{ rotate: 0, opacity: 1 }}
-            transition={{
-              duration: 1.2,
-              ease: 'easeOut',
-            }}
-          >
-            <Image
-              src="/images/contact/contact.png"
-              alt="Contact Us"
-              fill
-              className="object-cover rounded-2xl"
-              priority
-            />
-          </motion.div>
-        </div>
+        <motion.div
+          className="relative w-72 sm:w-80 md:w-96 h-64 sm:h-72 md:h-80 lg:h-[28rem]"
+          initial={{ rotate: -360, opacity: 0 }}
+          animate={{ rotate: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+        >
+          <Image
+            src="/images/contact/contact.png"
+            alt="Contact Us"
+            fill
+            className="object-contain rounded-2xl"
+            priority
+          />
+        </motion.div>
 
         {/* RIGHT: Logo + Contact Info */}
         <div
-          className={`flex flex-col items-center justify-center px-8 lg:px-20 text-center ${outfit.className}`}
+          className={`flex flex-col items-center text-center ${outfit.className} mb-8`}
         >
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-2 lg:mb-4">
             <Image
               src="/images/officialLogo.png"
               alt="Science Olympiad at Georgia Tech Logo"
@@ -52,12 +48,13 @@ export default function ContactUs() {
           </div>
 
           {/* Text */}
-          <div className="text-lg max-w-xl space-y-5">
+          <div className="text-lg space-y-4 mb-8 max-w-lg">
             <p>
               If you have any questions or comments regarding competing,
               sponsoring, or anything else related to Science Olympiad at
               Georgia Tech, we would love to hear from you!
             </p>
+
           </div>
         </div>
 
