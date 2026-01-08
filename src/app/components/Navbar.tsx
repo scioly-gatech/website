@@ -43,6 +43,9 @@ export default function Navbar() {
           <li className="hover:text-[#d1be7b]">
             <Link href="/virtualWorkshops">EVENT WORKSHOPS</Link>
           </li>
+          <li className="hover:text-[#d1be7b]">
+            <Link href="/contactUs">CONTACT US</Link>
+          </li>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -99,11 +102,11 @@ export default function Navbar() {
                   Get Involved
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/sponsorships" onClick={toggle}>
                   Sponsorship
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/pastTournaments" onClick={toggle}>
                   Past Tournaments

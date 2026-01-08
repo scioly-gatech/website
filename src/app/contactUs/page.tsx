@@ -1,38 +1,67 @@
+'use client'
+
 import React from 'react'
-import {FaInstagramSquare} from "react-icons/fa"
-import { Lora } from 'next/font/google'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { Outfit } from 'next/font/google'
 
-
-const play = Lora({
+const outfit = Outfit({
   subsets: ['latin'],
-  display: "swap"
- })
+  weight: ['400', '700'],
+  display: 'swap',
+})
 
 export default function ContactUs() {
   return (
-  <>
-    <div className="bg-amber-50 dark:bg-black h-full">
-        <div id="all content" className="max-w-full flex flex-col items-center">
-          <div id="header" className="bg-[url('/images/contact/contact.jpg')] w-full flex justify-center items-center h-48">
-            <h1 className={`text-white font-bold border-8 p-4 m-16 text-5xl md:text-7xl text-center ${play.className} drop-shadow-titleShadow`}>Contact Us </h1>
-          </div>
-        <p className="text-blackborder-4 border-black bg-lightOrange text-center text-2xl m-8 lg:mx-72 p-4 shadow-2xl shadow-darkOrange">
-          If you have any questions or comments regarding competing, sponsoring, or anything else related to Science Olympiad at Georgia Tech, we would love to hear from you!
-          <br />
-          <br />
-         <span className="font-bold">Email: </span><a href="malito:scioly.gatech@gmail.com" className="hover:text-darkOrange">scioly.gatech@gmail.com</a>
-         <br />
-         <span className="font-bold">Instagram: </span><a href="https://www.instagram.com/gtscioly/" target="_blank" className="hover:text-darkOrange">@gtscioly</a>
-        </p>
-        <figure className="mb-8">
-          <Image src="/images/officialLogo.png" alt="Picture of the Science Olympiad at Georgia Tech Logo" width="350" height="350"/>
-          <figcaption className="sr-only">
-            Picture of the Science Olympiad at Georgia Tech Logo
-          </figcaption>
-        </figure>
+    <div className="min-h-screen bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+
+        {/* LEFT: Rolling Contact Image */}
+        <div className="flex items-center justify-center p-10 lg:p-16">
+          <motion.div
+            className="relative w-full max-w-md h-80 lg:h-[28rem]"
+            initial={{ rotate: -360, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{
+              duration: 1.2,
+              ease: 'easeOut',
+            }}
+          >
+            <Image
+              src="/images/contact/contact.png"
+              alt="Contact Us"
+              fill
+              className="object-cover rounded-2xl"
+              priority
+            />
+          </motion.div>
         </div>
+
+        {/* RIGHT: Logo + Contact Info */}
+        <div
+          className={`flex flex-col items-center justify-center px-8 lg:px-20 text-center ${outfit.className}`}
+        >
+          {/* Logo */}
+          <div className="mb-8">
+            <Image
+              src="/images/officialLogo.png"
+              alt="Science Olympiad at Georgia Tech Logo"
+              width={280}
+              height={280}
+            />
+          </div>
+
+          {/* Text */}
+          <div className="text-lg max-w-xl space-y-5">
+            <p>
+              If you have any questions or comments regarding competing,
+              sponsoring, or anything else related to Science Olympiad at
+              Georgia Tech, we would love to hear from you!
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-    </>
   )
 }
