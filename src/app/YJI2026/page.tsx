@@ -69,7 +69,6 @@ export default function CurrentTournament() {
       {/* Countdown Section */}
       <div className="w-full max-w-4xl flex justify-center m-8 p-10">
         <div className="flex flex-col items-center gap-10">
-
           <span className="uppercase tracking-widest text-2xl lg:text-3xl font-bold opacity-90 text-white">
             Countdown to YJI 2026
           </span>
@@ -77,7 +76,6 @@ export default function CurrentTournament() {
           <div className="scale-110 lg:scale-125 mt-2 mb-10">
             <Countdown targetDate="1-31-2026" />
           </div>
-
         </div>
       </div>
 
@@ -93,7 +91,7 @@ export default function CurrentTournament() {
                 Registration is Now Live!
               </h2>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing&ouid=115768010646187932553"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#c2ebb9] hover:bg-[#a0c299] text-black font-semibold text-lg lg:text-xl px-4 py-2 rounded-lg transition-colors duration-300 shadow-md"
@@ -126,7 +124,6 @@ export default function CurrentTournament() {
             >
               List of Registered Teams
             </a>
-
           </div>
 
           {/* Right Side */}
@@ -139,11 +136,55 @@ export default function CurrentTournament() {
               className="w-full h-auto shadow-lg"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Pokémon Trial Event Section */}
+      <section className="w-full bg-[#f6f9f6] py-20">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-8">
+
+          <div className="flex items-center gap-3">
+            <h2 className={`text-3xl lg:text-4xl font-bold ${outfit.className}`}>
+              Pokémon Trial Event
+            </h2>
+
+            <Image
+              src="/images/yji/pikachu.png"
+
+              alt="Pikachu"
+              width={40}
+              height={40}
+              className="w-8 h-8 lg:w-10 lg:h-10"
+            />
+          </div>
+
+
+          <p className="text-lg text-center max-w-3xl">
+            YJI 2026 will feature a special <strong>Pokémon Trial Event</strong>!  
+            See rules sheet below.
+          </p>
+
+          {/* PDF Embed */}
+          <div className="w-full max-w-3xl border rounded-lg overflow-hidden shadow-md bg-white">
+            <iframe
+              src="/images/yji/PokemonRules.pdf"
+              title="Pokémon Trial Event Rules"
+              className="w-full h-[420px]"
+            />
+          </div>
+
+          <a
+            href="/images/yji/PokemonRules.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0b2e16] font-semibold underline hover:text-[#15592b]"
+          >
+            Open rules PDF in a new tab
+          </a>
 
         </div>
       </section>
     </div>
   );
 }
-
 
