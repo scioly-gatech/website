@@ -67,15 +67,29 @@ export default function CurrentTournament() {
       </div>
 
       {/* Countdown Section */}
-      <div className="w-full max-w-4xl flex justify-center m-8 p-10">
+      <div className="w-full max-w-4xl flex justify-center mt-12 px-6">
         <div className="flex flex-col items-center gap-10">
-          <span className="uppercase tracking-widest text-2xl lg:text-3xl font-bold opacity-90 text-white">
+          <span className="uppercase tracking-widest text-2xl lg:text-3xl font-bold opacity-90 text-white text-center">
             Countdown to YJI 2026
           </span>
 
-          <div className="scale-110 lg:scale-125 mt-2 mb-10">
+          <div className="scale-110 lg:scale-125">
             <Countdown targetDate="1-31-2026" />
           </div>
+        </div>
+      </div>
+
+      {/* YouTube Video Section - Smaller Size and Corrected URL */}
+      {/* max-w-2xl makes it smaller than the countdown above */}
+      <div className="w-full max-w-2xl px-6 mt-20 mb-20">
+        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-[#18522b]/50">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/fKM0NIgYnbk" 
+            title="YJI Tournament Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
 
@@ -127,13 +141,13 @@ export default function CurrentTournament() {
           </div>
 
           {/* Right Side */}
-          <div className="w-full lg:w-1/3 flex justify-center items-center lg:mr-20">
+          <div className="w-full lg:w-1/3 flex justify-center items-center lg:mr-20 mt-10 lg:mt-0">
             <Image
               src="/images/yji/yji_win.jpg"
               alt="Registration Image"
               width={400}
               height={400}
-              className="w-full h-auto shadow-lg"
+              className="w-full h-auto shadow-lg rounded-lg"
             />
           </div>
         </div>
@@ -150,14 +164,12 @@ export default function CurrentTournament() {
 
             <Image
               src="/images/yji/pikachu.png"
-
               alt="Pikachu"
               width={40}
               height={40}
               className="w-8 h-8 lg:w-10 lg:h-10"
             />
           </div>
-
 
           <p className="text-lg text-center max-w-3xl">
             YJI 2026 will feature a special <strong>Pokémon Trial Event</strong>!  
@@ -187,4 +199,3 @@ export default function CurrentTournament() {
     </div>
   );
 }
-
