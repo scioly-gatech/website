@@ -66,6 +66,51 @@ export default function CurrentTournament() {
         </AnimatePresence>
       </div>
 
+      {/* Emergency Alert Banner */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="absolute inset-0 flex items-center justify-center z-20 px-4 sm:px-8 pointer-events-none"
+      >
+        <div className="w-full max-w-[90vw] sm:max-w-4xl lg:max-w-5xl pointer-events-auto">
+          <div
+            className="
+              bg-red-700/95 backdrop-blur-md
+              text-white
+              border-2 border-red-900
+              rounded-xl sm:rounded-2xl
+              shadow-2xl
+              px-4 sm:px-6 lg:px-8
+              py-3 sm:py-4 lg:py-5
+              flex items-center justify-center gap-3 sm:gap-4 lg:gap-5
+              text-center
+            "
+          >
+            {/* Left Icon */}
+            <div className="flex items-center justify-center bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 animate-pulse shrink-0">
+              <span className="text-lg sm:text-2xl lg:text-3xl">⚠️</span>
+            </div>
+
+            {/* Alert Text */}
+            <p className="text-xs sm:text-sm lg:text-lg font-semibold tracking-wide leading-snug">
+              <span className="uppercase font-bold">Emergency Notice:</span>{" "}
+              Due to adverse weather conditions, all in-person tournament operations have been{" "}
+              <span className="underline font-bold">cancelled</span> as mandated by the{" "}
+              <span className="font-bold">Georgia Tech Office of Emergency Management</span>.
+            </p>
+
+            {/* Right Icon */}
+            <div className="flex items-center justify-center bg-white/20 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 animate-pulse shrink-0">
+              <span className="text-lg sm:text-2xl lg:text-3xl">⚠️</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+
+
+
       {/* Countdown Section */}
       <div className="w-full max-w-4xl flex justify-center mt-12 px-6">
         <div className="flex flex-col items-center gap-10">
