@@ -29,6 +29,13 @@ export const workshopData: Workshop[] = [
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Astronomy_ReachfortheStars(Div.B_C)Workshop.pdf"
   },
   {
+    title: "Boomilever",
+    description: "Learn how to maximize your efficiency ratio by mastering wood selection and tension-based design.",
+    videoUrl: "https://www.youtube.com/embed/QKuixllEI1g?si=gcHoA0Zntkf1qSf_",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Boomilever (Div. B_C) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Boomilever (Div. B_C) Workshop.pdf"
+  },
+  {
     title: "Bungee Drop",
     description: "Master the physics of elastic materials and energy conservation in this Division C event workshop. Learn how to design, test, and optimize your bungee system while understanding the mathematical principles behind the perfect drop.",
     videoUrl: "https://www.youtube.com/embed/lE7pdED0uNY",
@@ -48,6 +55,13 @@ export const workshopData: Workshop[] = [
     videoUrl: "https://www.youtube.com/embed/0yMjDksDIX0",
     slidesPath: "/VirtualWorkshop24Materials/slides/ChemLab(Div.C)Workshop.pptx",
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/ChemLab(Div.C)Workshop.pdf"
+  },
+  {
+    title: "Circuit Lab",
+    description: "Master the flow of electricity by diving into Kirchhoff's Laws, logic gates, and breadboarding.",
+    videoUrl: "https://www.youtube.com/embed/RAsZaqX4D6A?si=Sxjf11pwEMZ7eV4o",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Circuit Lab (Div. B_C) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Circuit Lab (Div. B_C) Workshop.pdf"
   },
   {
     title: "Codebusters",
@@ -92,6 +106,11 @@ export const workshopData: Workshop[] = [
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/ElectricVehicle(Div.C)Workshop.pdf"
   },
   {
+    title: "Engineering CAD",
+    description: "Transform your creative concepts into high-precision 3D models using industry-standard design tools.",
+    videoUrl: "https://www.youtube.com/embed/Dmgy9HX3LNA?si=DcXga47bClc5Z32b",
+  },
+  {
     title: "Entomology",
     description: "Discover the fascinating world of insects! Learn insect identification, morphology, and life cycles essential for the Entomology event. This workshop covers key characteristics of major insect orders and families.",
     videoUrl: "https://www.youtube.com/embed/INnZGiHwDtk",
@@ -120,6 +139,20 @@ export const workshopData: Workshop[] = [
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Helicopters(Div.B_C)Workshop.pdf"
   },
   {
+    title: "Heredity",
+    description: "Decode the mysteries of genetic inheritance, pedigrees, and molecular biology to ace your next exam.",
+    videoUrl: "https://www.youtube.com/embed/FOnIez1rw7U?si=i4gcTqEooSyoQFfR",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Heredity (Div. B) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Heredity (Div. B) Workshop.pdf"
+  },
+  {
+    title: "Hovercraft",
+    description: "Balance the physics of fluid mechanics and motor calibration to achieve the perfect friction-less run.",
+    videoUrl: "https://www.youtube.com/embed/RGrZ24GyxvU?si=S7avqQXr-M2d8k_v",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Hovercraft (Div. B_C) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Hovercraft (Div. B_C) Workshop.pdf"
+  },
+  {
     title: "How to Fund a Team Workshop",
     description: "Learn practical strategies for securing funding and resources for your Science Olympiad team. This workshop covers grant writing, fundraising events, and building community partnerships to support your team's success.",
     videoUrl: "https://www.youtube.com/embed/_TazlZ9z2U8",
@@ -132,6 +165,13 @@ export const workshopData: Workshop[] = [
     videoUrl: "https://www.youtube.com/embed/_TazlZ9z2U8",
     slidesPath: "/VirtualWorkshop24Materials/slides/HowtoStructureaSuccessfulSciOlyTeam.pptx",
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/HowtoStructureaSuccessfulSciOlyTeam.pdf"
+  },
+  {
+    title: "Machines",
+    description: "Gain a mechanical advantage by perfecting your calculations for torque and simple machine efficiency.",
+    videoUrl: "https://www.youtube.com/embed/Xml86wnSOTM?si=_EVoni_dMYxvwtev",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Machines (Div. B_C) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Machines (Div. B_C) Workshop.pdf"
   },
   {
     title: "Materials Science",
@@ -197,6 +237,13 @@ export const workshopData: Workshop[] = [
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/RobotTour(Div.C)Workshop.pdf"
   },
   {
+    title: "Rocks & Minerals",
+    description: "Sharpen your identification skills and geological knowledge to conquer every timed station.",
+    videoUrl: "https://www.youtube.com/embed/CjqVkRxld_o?si=rNmblqX3z1GnpJnd",
+    slidesPath: "/VirtualWorkshop24Materials/pdfs/Rocks & Minerals (Div. B_C) Workshop.pdf",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Rocks & Minerals (Div. B_C) Workshop.pdf"
+  },
+  {
     title: "Science Olympiad Panel",
     description: "Join experienced Science Olympiad coaches and alumni as they share insights, strategies, and tips for competition success. Learn from their experiences and get answers to your burning questions.",
     videoUrl: "https://www.youtube.com/embed/XdahWTU3T34"
@@ -221,6 +268,13 @@ export const workshopData: Workshop[] = [
     videoUrl: "https://www.youtube.com/embed/HqQhVN6VCGg",
     slidesPath: "/VirtualWorkshop24Materials/slides/Tower(Div.B_C)Workshop.pptx",
     slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Tower(Div.B_C)Workshop.pdf"
+  },
+  {
+    title: "Water Quality",
+    description: "Navigate the complexities of aquatic ecosystems, from chemical testing to identifying macroinvertebrates.",
+    videoUrl: "https://www.youtube.com/embed/Oz4KldQR0aM?si=Vk5bRCyVS3cLFNXB",
+    slidesPath: "/VirtualWorkshop24Materials/slides/Water Quality (Div. B_C) Workshop.pptx",
+    slidesPdfPath: "/VirtualWorkshop24Materials/pdfs/Water Quality (Div. B_C) Workshop.pdf"
   },
   {
     title: "Write It Do It",

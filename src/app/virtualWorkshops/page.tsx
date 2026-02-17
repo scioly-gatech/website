@@ -23,6 +23,7 @@ import BoltIcon from '@mui/icons-material/Bolt';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import PublicIcon from '@mui/icons-material/Public';
 import AirIcon from '@mui/icons-material/Air';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import ComputerIcon from '@mui/icons-material/Computer';
 import MemoryIcon from '@mui/icons-material/Memory';
@@ -30,6 +31,9 @@ import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupsIcon from '@mui/icons-material/Groups';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import CoronavirusIcon from '@mui/icons-material/Coronavirus';
+import CreateIcon from '@mui/icons-material/Create';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -61,20 +65,38 @@ const nonEventTitles = new Set([
   'The Road to Gold',
 ]);
 
+const newEvents2026 = new Set([
+  'Boomilever',
+  'Circuit Lab',
+  'Water Quality',
+  'Heredity',
+  'Hovercraft',
+  'Machines',
+  'Rocks & Minerals',
+  'Engineering CAD',
+]);
+
+const NEW_EVENT_COLOR = '#b3e5fc'; // Light Blue
+const DEFAULT_EVENT_COLOR = '#c1f5d9'; // Light Green
+
 const getWorkshopId = (title: string) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 const getEventIcon = (title: string) => {
-  if (title.match(/chem|lab|forensics|potions/i)) return <BiotechIcon fontSize="large" />;
+  if (title.match(/chem|forensics|potions/i)) return <BiotechIcon fontSize="large" />;
   if (title.match(/electric|robot|wind/i)) return <BoltIcon fontSize="large" />;
-  if (title.match(/astro|meteor|planet|geo/i)) return <PublicIcon fontSize="large" />;
+  if (title.match(/astro|meteor|planet|geo|rock|fossil/i)) return <PublicIcon fontSize="large" />;
   if (title.match(/air|flight|helicopter/i)) return <AirIcon fontSize="large" />;
   if (title.match(/psych|anatomy|brain/i)) return <PsychologyIcon fontSize="large" />;
-  if (title.match(/code|computer|program/i)) return <ComputerIcon fontSize="large" />;
+  if (title.match(/optics/i)) return <VisibilityIcon fontSize="large" />;
+  if (title.match(/disease|microbe/i)) return <CoronavirusIcon fontSize="large" />;
+  if (title.match(/machine|scramb|miss|boomi|bungee|hover|tower/i)) return <ConstructionIcon fontSize="large" />;
+  if (title.match(/code|computer|program|engin/i)) return <ComputerIcon fontSize="large" />;
   if (title.match(/electronics|circuit/i)) return <ElectricalServicesIcon fontSize="large" />;
   if (title.match(/memory|logic/i)) return <MemoryIcon fontSize="large" />;
   if (title.match(/fund/i)) return <AttachMoneyIcon fontSize="large" />;
   if (title.match(/champion|gold/i)) return <EmojiEventsIcon fontSize="large" />;
+  if (title.match(/write/i)) return <CreateIcon fontSize="large" />;
   if (title.match(/team|panel/i)) return <GroupsIcon fontSize="large" />;
   return <ScienceIcon fontSize="large" />;
 };
@@ -87,7 +109,7 @@ export default function VirtualWorkshopPage() {
     <ThemeProvider theme={theme}>
       <Box className="bg-black text-white">
 
-        {/* ---------- HEADER IMAGE (animated) ---------- */}
+        {/* ---------- HEADER IMAGE ---------- */}
         <Box
           sx={{
             position: 'relative',
@@ -168,7 +190,7 @@ export default function VirtualWorkshopPage() {
                     sx={{
                       height: 180,
                       width: 280,
-                      bgcolor: '#c1f5d9',
+                      bgcolor: newEvents2026.has(w.title) ? NEW_EVENT_COLOR : DEFAULT_EVENT_COLOR,
                       color: 'black',
                       borderRadius: 2,
                       display: 'flex',
@@ -201,6 +223,20 @@ export default function VirtualWorkshopPage() {
             Event Workshops
           </Typography>
 
+          {/* ---------- LEGEND ---------- */}
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, mb: 6, mt: 4, flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box sx={{ width: 20, height: 20, bgcolor: DEFAULT_EVENT_COLOR, borderRadius: 0.5 }} />
+              <Typography variant="body2">Returning Events</Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box sx={{ width: 20, height: 20, bgcolor: NEW_EVENT_COLOR, borderRadius: 0.5 }} />
+              <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                New to 2025-26 Season
+              </Typography>
+            </Box>
+          </Box>
+
           <Box
             sx={{
               mt: 4,
@@ -222,7 +258,7 @@ export default function VirtualWorkshopPage() {
                   <Box
                     sx={{
                       height: 180,
-                      bgcolor: '#c1f5d9',
+                      bgcolor: newEvents2026.has(w.title) ? NEW_EVENT_COLOR : DEFAULT_EVENT_COLOR,
                       color: 'black',
                       borderRadius: 2,
                       display: 'flex',
