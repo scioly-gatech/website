@@ -83,22 +83,21 @@ export default function Page() {
               </p>
 
               <p className="text-lg text-neutral-700">
-                We are seeking dedicated volunteers to serve as
-                event supervisors. Supervisors play a critical
-                role in designing, running, and judging individual events, helping ensure a fair,
-                educational, and exciting experience for all participants.
+                We are looking for volunteers to help with event logistics, proctoring,
+                and general support to ensure a smooth and memorable experience for competitors.
+                No prior Science Olympiad experience is required. Free food and t-shirts are provided!
               </p>
 
               <a
-                href="https://forms.gle/71n3rBztDKqZP4Yq5"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSekFTVWk0ZQ-mK0fVWTKB21nae7Nm60SFrXWxuVJWlGmNUWpA/viewform"
                 className="inline-block mt-4 bg-[#2c4261] text-white px-8 py-3 rounded-md font-semibold tracking-wide hover:bg-[#2c4261]/90 transition"
               >
-                Apply to Be an Event Supervisor
+                Sign-Up to Volunteer
               </a>
 
-              <p className="text-lg text-neutral-700">
+              {/* <p className="text-lg text-neutral-700">
                 Deadline: January 5th, 2026
-              </p>
+              </p> */}
             </div>
 
             <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-lg">
@@ -118,7 +117,7 @@ export default function Page() {
           <div className="border-t border-neutral-300" />
         </div>
 
-        {/* YJI SECTION */}
+        {/* YJI SECTION
         <section className={`${outfit.className} max-w-7xl mx-auto px-6 md:px-10 lg:px-16 mt-20`}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
 
@@ -156,7 +155,7 @@ export default function Page() {
             </div>
 
           </div>
-        </section>
+        </section> */}
 
         {/* TECH STUDENT SECTION */}
         <section className={`${outfit.className} max-w-5xl mx-auto px-6 md:px-10 mt-24`}>

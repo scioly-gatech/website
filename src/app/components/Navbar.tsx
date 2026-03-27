@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/">HOME</Link>
           </li>
           <li className="hover:text-[#d1be7b]">
-            <Link href="/YJI2026">YJI 2026</Link>
+            <Link href="/pastTournaments/YJI2026">YJI 2026</Link>
           </li>
           <li className="hover:text-[#d1be7b]">
             <Link href="/aboutUs">ABOUT US</Link>
