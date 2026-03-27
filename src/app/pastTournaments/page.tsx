@@ -98,7 +98,7 @@ export default function CurrentTournament() {
             Yellow Jacket Invitational
           </p>
           <ul className="flex flex-col items-center">
-            {['YJI2024', 'YJI2025'].map((year, i) => (
+            {['YJI2024', 'YJI2025', 'YJI2026'].map((year, i) => (
               <li
                 key={year}
                 className="my-6 transition duration-500 hover:opacity-60 hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)]"
