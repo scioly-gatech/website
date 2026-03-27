@@ -83,7 +83,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/YJI2026" onClick={toggle}>
+                <Link href="/pastTournaments/YJI2026" onClick={toggle}>
                   YJI 2026
                 </Link>
               </li>
