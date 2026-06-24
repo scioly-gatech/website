@@ -1,0 +1,205 @@
+.continuous-scroll {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cs-sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #020810 0%,
+    #041830 6%,
+    #062040 18%,
+    #0a2848 35%,
+    #062040 55%,
+    #041830 72%,
+    #062040 88%,
+    #020810 100%
+  );
+}
+
+.cs-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.layer-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cs-stars {
+  inset: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+.cs-starfield {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 50%, transparent 50%),
+    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 50% 15%, rgba(212,200,150,0.7) 50%, transparent 50%),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 20% 80%, rgba(212,200,150,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 90% 25%, rgba(255,255,255,0.5) 50%, transparent 50%);
+}
+
+.cs-starfield-dense {
+  background-image:
+    radial-gradient(1px 1px at 5% 35%, rgba(255,255,255,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.25) 50%, transparent 50%),
+    radial-gradient(1px 1px at 25% 12%, rgba(212,200,150,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 42% 72%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.45) 50%, transparent 50%),
+    radial-gradient(1px 1px at 68% 18%, rgba(212,200,150,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 78% 58%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 92% 42%, rgba(255,255,255,0.35) 50%, transparent 50%);
+  opacity: 0.7;
+}
+
+.cs-gold-particles {
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 12% 45%, rgba(179, 163, 105, 0.25) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 28% 65%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 45% 35%, rgba(179, 163, 105, 0.15) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 62% 55%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 75% 40%, rgba(179, 163, 105, 0.18) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 88% 60%, rgba(179, 163, 105, 0.22) 50%, transparent 50%);
+}
+
+.cs-particles {
+  inset: 0;
+  height: 100%;
+}
+
+.cs-haze {
+  height: 26vh;
+  max-height: 260px;
+  min-height: 120px;
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+}
+
+.cs-haze-a { top: 16%; opacity: 0.42; }
+.cs-haze-b { top: 46%; opacity: 0.5; }
+.cs-haze-c { top: 74%; opacity: 0.38; }
+
+.cs-gold-haze {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(179, 163, 105, 0),
+    rgba(179, 163, 105, 0.16) 24%,
+    rgba(212, 200, 150, 0.26) 50%,
+    rgba(179, 163, 105, 0.16) 76%,
+    rgba(179, 163, 105, 0)
+  );
+}
+
+.cs-gold-haze-strong {
+  background: linear-gradient(
+    90deg,
+    rgba(179, 163, 105, 0),
+    rgba(179, 163, 105, 0.2) 24%,
+    rgba(212, 200, 150, 0.32) 50%,
+    rgba(179, 163, 105, 0.2) 76%,
+    rgba(179, 163, 105, 0)
+  );
+}
+
+.cs-clouds {
+  height: 22vh;
+  max-height: 220px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.cs-clouds-a { top: 4%; }
+.cs-clouds-b { top: 18%; }
+.cs-clouds-c { top: 34%; }
+.cs-clouds-d { top: 52%; }
+.cs-clouds-e { top: 70%; }
+.cs-clouds-f { top: 12%; }
+.cs-clouds-g { top: 44%; }
+.cs-clouds-h { top: 82%; }
+
+/* Mountains — stack from seam downward */
+.cs-drift {
+  height: 46vh;
+  max-height: 460px;
+  min-height: 260px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 65%, transparent 100%);
+}
+
+.cs-drift-a { top: 0;   opacity: 0.42; }
+.cs-drift-b { top: 7%;  opacity: 0.46; }
+.cs-drift-c { top: 14%; opacity: 0.44; }
+.cs-drift-d { top: 22%; opacity: 0.5; }
+.cs-drift-e { top: 30%; opacity: 0.48; }
+.cs-drift-f { top: 38%; opacity: 0.54; }
+.cs-drift-g { top: 46%; opacity: 0.52; }
+.cs-drift-h { top: 54%; opacity: 0.56; }
+.cs-drift-i { top: 62%; opacity: 0.54; }
+.cs-drift-j { top: 70%; opacity: 0.58; }
+.cs-drift-k { top: 78%; opacity: 0.55; }
+.cs-drift-l { top: 86%; opacity: 0.6; }
+.cs-drift-m { top: 18%; opacity: 0.47; }
+.cs-drift-n { top: 58%; opacity: 0.56; }
+.cs-drift-o { top: 92%; opacity: 0.58; }
+.cs-drift-p { top: 26%; opacity: 0.5; }
+.cs-drift-q { top: 82%; opacity: 0.57; }
+.cs-drift-r { top: 40%; opacity: 0.55; }
+.cs-drift-s { top: 96%; opacity: 0.6; }
+
+/* Forests */
+.cs-forest {
+  height: 30vh;
+  max-height: 300px;
+  min-height: 170px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 58%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 58%, transparent 95%);
+}
+
+.cs-forest-1 { top: 1%;  opacity: 0.5; }
+.cs-forest-2 { top: 12%; opacity: 0.48; }
+.cs-forest-3 { top: 24%; opacity: 0.52; }
+.cs-forest-4 { top: 36%; opacity: 0.5; }
+.cs-forest-5 { top: 50%; opacity: 0.54; }
+.cs-forest-6 { top: 64%; opacity: 0.5; }
+.cs-forest-7 { top: 78%; opacity: 0.55; }
+.cs-forest-8 { top: 20%; opacity: 0.49; }
+.cs-forest-9 { top: 58%; opacity: 0.53; }
+.cs-forest-10 { top: 86%; opacity: 0.54; }
+.cs-forest-11 { top: 30%; opacity: 0.5; }
+.cs-forest-12 { top: 72%; opacity: 0.55; }
+.cs-forest-13 { top: 42%; opacity: 0.52; }
+.cs-forest-14 { top: 92%; opacity: 0.56; }
+
+@media (max-width: 768px) {
+  .cs-drift {
+    height: 32vh;
+    min-height: 180px;
+  }
+
+  .cs-drift-j, .cs-drift-k, .cs-drift-l, .cs-drift-o, .cs-drift-q, .cs-drift-s { display: none; }
+  .cs-forest-6, .cs-forest-7, .cs-forest-10, .cs-forest-12, .cs-forest-14 { display: none; }
+  .cs-clouds-e, .cs-clouds-h { display: none; }
+  .cs-haze-c { display: none; }
+}
